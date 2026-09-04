@@ -817,3 +817,30 @@ document.addEventListener('DOMContentLoaded', function () {
   init3DCurvedArcReel();
 });
 
+
+
+  // Horizontal Accordion hover/click logic
+  const accordionPanels = document.querySelectorAll('.h-accordion-panel');
+  accordionPanels.forEach(panel => {
+    // We add mouseenter for desktop smooth feeling, click for mobile 
+    panel.addEventListener('mouseenter', function() {
+      if(window.innerWidth > 960) {
+        accordionPanels.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+      }
+    });
+    panel.addEventListener('click', function() {
+      if(window.innerWidth <= 960) {
+        // Toggle on mobile
+        const isActive = this.classList.contains('active');
+        accordionPanels.forEach(p => p.classList.remove('active'));
+        if(!isActive) {
+          this.classList.add('active');
+        }
+      } else {
+        // Just activate on click for desktop too if hovered is somehow bypassed
+        accordionPanels.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+      }
+    });
+  });

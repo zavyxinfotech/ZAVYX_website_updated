@@ -1,0 +1,87 @@
+:root {
+  --raw-ink-950: #170510;
+  --raw-ink-900: #210911;
+  --raw-ink-800: #300f1a;
+  --raw-ink-700: #481a28;
+  --raw-bone-50: #f3f2f4;
+  --raw-bone-400: #9b8f92;
+  --raw-bone-500: #7c7075;
+  --raw-magenta-500: #ec1263;
+  --raw-magenta-300: #ff5c96;
+  --raw-azure-500: #29abe2;
+  --raw-azure-300: #7fd4ff;
+  --raw-navy-900: #0f1358;
+  --raw-green-500: #39b54a;
+  --raw-gold-500: #f5a623;
+
+  --ink-void: var(--raw-ink-950);
+  --ink-deep: var(--raw-ink-900);
+  --ink-surface: var(--raw-ink-800);
+  --ink-edge: var(--raw-ink-700);
+  --ink-bone: var(--raw-bone-50);
+  --ink-bone-dim: var(--raw-bone-500);
+  --accent-figure: var(--raw-magenta-500);
+  --accent-figure-hi: var(--raw-magenta-300);
+  --accent-room: var(--raw-azure-500);
+  --accent-room-hi: var(--raw-azure-300);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--ink-void);
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  color: var(--ink-bone);
+}
+
+.track {
+  height: 2200vh;
+}
+
+.sticky-stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.dom-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.overlay-content {
+  max-width: 800px;
+}
+
+.title-wordmark {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.brand-zavyx { color: var(--raw-navy-900); display: block; font-size: 4rem;}
+.brand-info { color: var(--raw-green-500); }
+.brand-tech { color: var(--raw-magenta-500); }
+
+.copy-rhythm {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.copy-rhythm div {
+  margin-bottom: 1rem;
+}
