@@ -7240,8 +7240,10 @@ html body span.logo-gradient-text {
    HCL-STYLE HERO & AI ENGINE (LIGHT WAVE THEME)
    ========================================================= */
 .hero.hero-home {
-  background: #ffffff !important;
-  color: #0F172A !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(11, 25, 44, 0.86) 45%, rgba(35, 182, 243, 0.38) 78%, rgba(215, 14, 105, 0.30) 100%),
+    url('../images/hero_bg_home.png') center center/cover no-repeat,
+    #0B192C !important;
+  color: #FFFFFF !important;
   position: relative;
   overflow: hidden;
 }
