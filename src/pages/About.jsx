@@ -2,11 +2,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award } from 'lucide-react';
 import imgFounder from '../../assets/images/team/Founder.webp';
-import imgDirector from '../../assets/images/team/Director.webp';
-import imgHR from '../../assets/images/team/HR.webp';
+import imgDirector from '../../assets/images/team/Head_of_operations.webp';
+import imgHR from '../../assets/images/team/HR_Manager.webp';
 import imgRM from '../../assets/images/team/Relationship_Manager.webp';
 import imgUX from '../../assets/images/team/UI_Ux_Designer.jpeg';
-import imgDev from '../../assets/images/team/developer_developer.webp';
+import imgDev from '../../assets/images/team/Full_Stack_developer.webp';
 import imgDA from '../../assets/images/team/Data_Analyst.webp';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
@@ -206,12 +206,12 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 sm:gap-16 lg:gap-12 mt-10">
           {[
             { 
-              name: "RAHUL S", title: "CHIEF EXECUTIVE OFFICER", 
+              name: "RAHUL S", title: "FOUNDER", 
               desc: "Drives the company's vision and strategy to scale global enterprise operations safely.",
               img: imgFounder, colorId: 'amber'
             },
             { 
-              name: "PRIYA M", title: "EXECUTIVE DIRECTOR", 
+              name: "PRIYA M", title: "HEAD OF OPERATIONS", 
               desc: "Oversees structural growth and high-level management across all engineering sectors.",
               img: imgDirector, colorId: 'sky'
             },
@@ -221,7 +221,7 @@ export default function About() {
               img: imgRM, colorId: 'rose'
             },
             { 
-              name: "ANANYA K", title: "HEAD OF HUMAN RESOURCES", 
+              name: "ANANYA K", title: "HR MANAGER", 
               desc: "Cultivates our world-class talent and maintains a cutting-edge operational environment.",
               img: imgHR, colorId: 'emerald'
             },
@@ -231,7 +231,7 @@ export default function About() {
               img: imgUX, colorId: 'sky'
             },
             { 
-              name: "ARJUN K", title: "SOFTWARE DEVELOPER", 
+              name: "ARJUN K", title: "FULL STACK DEVELOPER", 
               desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
               img: imgDev, colorId: 'emerald'
             },
