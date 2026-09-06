@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
+import logoUrl from '../../assets/logo/logo.png';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ export default function Navbar() {
         <div className="flex-[0.5] md:flex-1">
           <Link to="/" className="inline-flex items-center gap-2 relative z-50 transition-all">
             <img 
-              src="/assets/logo/logo.png" 
+              src={logoUrl} 
               alt="ZAVYX Infotech" 
               className="h-9 md:h-12 lg:h-14 w-auto object-contain dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.8))_drop-shadow(0_0_2px_rgba(255,255,255,0.5))] transition-all duration-300"
             />
