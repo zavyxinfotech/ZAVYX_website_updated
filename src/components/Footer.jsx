@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import logoUrl from '../../assets/logo/logo.png';
 
 export default function Footer() {
@@ -28,13 +28,13 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-9 h-9 rounded-full bg-slate-800/80 border border-slate-700/50 shadow-sm flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-400/50 hover:bg-slate-800 transition-all">
-                <Facebook className="w-4 h-4 fill-current" />
+                <FaFacebook className="w-4 h-4" />
               </a>
               <a href="#" className="w-9 h-9 rounded-full bg-slate-800/80 border border-slate-700/50 shadow-sm flex items-center justify-center text-slate-400 hover:text-pink-400 hover:border-pink-400/50 hover:bg-slate-800 transition-all">
-                <Instagram className="w-4 h-4" strokeWidth={2.5} />
+                <FaInstagram className="w-4 h-4" />
               </a>
               <a href="#" className="w-9 h-9 rounded-full bg-slate-800/80 border border-slate-700/50 shadow-sm flex items-center justify-center text-slate-400 hover:text-sky-500 hover:border-sky-500/50 hover:bg-slate-800 transition-all">
-                <Linkedin className="w-4 h-4 fill-current" />
+                <FaLinkedinIn className="w-4 h-4" />
               </a>
             </div>
           </div>
