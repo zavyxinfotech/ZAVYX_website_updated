@@ -206,37 +206,37 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 sm:gap-16 lg:gap-12 mt-10">
           {[
             { 
-              name: "FOUNDER", title: "FOUNDER", 
+              name: "SAKTHIVEL S", title: "FOUNDER", 
               desc: "Drives the company's vision and strategy to scale global enterprise operations safely.",
               img: imgFounder, colorId: 'amber'
             },
             { 
-              name: "HEAD OF OPERATIONS", title: "HEAD OF OPERATIONS", 
+              name: "SARANYA SAKTHIVEL", title: "HEAD OF OPERATIONS", 
               desc: "Oversees structural growth and high-level management across all engineering sectors.",
               img: imgDirector, colorId: 'sky'
             },
             { 
-              name: "RELATIONSHIP MANAGER", title: "RELATIONSHIP MANAGER", 
+              name: "RAMYA R", title: "RELATIONSHIP MANAGER", 
               desc: "Acts as a key communication point between clients and the project team throughout the engagement.",
               img: imgRM, colorId: 'rose'
             },
             { 
-              name: "HR MANAGER", title: "HR MANAGER", 
+              name: "ARCHANA S", title: "HR MANAGER", 
               desc: "Cultivates our world-class talent and maintains a cutting-edge operational environment.",
               img: imgHR, colorId: 'emerald'
             },
             { 
-              name: "UI/UX DESIGNER", title: "UI/UX DESIGNER", 
+              name: "VIJAYADARSHINI N M", title: "UI/UX DESIGNER", 
               desc: "Creates user experiences and interfaces designed around usability, clarity and business objectives.",
               img: imgUX, colorId: 'sky'
             },
             { 
-              name: "FULL STACK DEVELOPER", title: "FULL STACK DEVELOPER", 
+              name: "VASUKI T", title: "FULL STACK DEVELOPER", 
               desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
               img: imgDev, colorId: 'emerald'
             },
             { 
-              name: "DATA ANALYST", title: "DATA ANALYST", 
+              name: "NITHYA SRI S", title: "DATA ANALYST", 
               desc: "Analyzes datasets to streamline metrics and drastically improve digital workflow efficiency.",
               img: imgDA, colorId: 'amber'
             }
@@ -264,7 +264,7 @@ export default function About() {
                    </div>
                  </div>
 
-                 <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider mb-2">ZAVYX TEAM</h3>
+                 <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider mb-2">{member.title}</h3>
                  <p className="text-xs sm:text-[13px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-4">{member.name}</p>
                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px]">
                    {member.desc}
