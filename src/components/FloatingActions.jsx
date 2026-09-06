@@ -1,28 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Phone, Bot, X, ArrowUp } from 'lucide-react';
+import logoUrl from '../../assets/logo/logo.png';
 
 export default function FloatingActions() {
   const [chatOpen, setChatOpen] = useState(false);
-  const [introState, setIntroState] = useState('hidden'); // hidden -> sliding-in -> sliding-out -> icon-only
+  const [introState, setIntroState] = useState('hidden'); 
+  const [inputValue, setInputValue] = useState('');
+  const messagesEndRef = useRef(null);
+
+  const [messages, setMessages] = useState([
+    { text: "Hi there! 👋 I'm ZEDEX. Welcome to Zavyx InfoTech. How can we help you scale your business today?", sender: 'bot' }
+  ]);
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    // 1. Wait 2 seconds, slide in the full banner
-    const t1 = setTimeout(() => {
-      setIntroState('sliding-in');
-    }, 2000);
-    
-    // 2. Wait 6 seconds, slide it out
-    const t2 = setTimeout(() => {
-      setIntroState('sliding-out');
-    }, 6000);
-
-    // 3. Wait 6.5 seconds, show just the normal icon
-    const t3 = setTimeout(() => {
-      setIntroState('icon-only');
-    }, 6500);
-
+    const t1 = setTimeout(() => setIntroState('sliding-in'), 2000);
+    const t2 = setTimeout(() => setIntroState('sliding-out'), 6000);
+    const t3 = setTimeout(() => setIntroState('icon-only'), 6500);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isTyping, chatOpen]);
+
+  const handleSendMessage = (text) => {
+    if (!text.trim()) return;
+    
+    // Add user message
+    setMessages(prev => [...prev, { text, sender: 'user' }]);
+    setInputValue('');
+    setIsTyping(true);
+
+    // Simulate ZEDEX response
+    setTimeout(() => {
+      setIsTyping(false);
+      let reply = "Thank you for reaching out! Our team will get back to you shortly. For immediate assistance, please call us.";
+      
+      const lowerText = text.toLowerCase();
+      if (lowerText.includes('website') || lowerText.includes('web')) {
+        reply = "We build high-performance modern web apps tailored for speed, SEO, and engagement. Would you like a quote?";
+      } else if (lowerText.includes('quote') || lowerText.includes('price') || lowerText.includes('cost')) {
+        reply = "Pricing depends on your specific requirements. Please fill out our contact form or call us directly at +91 63827 21178 for a discussion!";
+      } else if (lowerText.includes('contact') || lowerText.includes('call')) {
+        reply = "You can call or WhatsApp us at +91 63827 21178 or email hello@zavyx.in.";
+      }
+      
+      setMessages(prev => [...prev, { text: reply, sender: 'bot' }]);
+    }, 1200);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSendMessage(inputValue);
+    }
+  };
 
   return (
     <div className="fixed bottom-6 right-0 z-50 flex flex-col gap-3 items-end">
@@ -63,12 +99,12 @@ export default function FloatingActions() {
             ${introState === 'sliding-in' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
           `}>
             <div>
-              <div className="font-bold text-slate-900 text-sm mb-0.5 leading-snug">ZAVYX AI Assistant</div>
+              <div className="font-bold text-slate-900 text-sm mb-0.5 leading-snug">ZEDEX Assistant</div>
               <div className="text-xs text-slate-500 font-medium whitespace-nowrap">Instant answers & smart routing.</div>
             </div>
             <button 
               onClick={() => { setChatOpen(true); setIntroState('icon-only'); }}
-              className="bg-gradient-to-tr from-pink-600 to-rose-400 text-white rounded-lg px-4 py-2 text-xs font-bold hover:opacity-90 transition-opacity shadow-sm whitespace-nowrap"
+              className="bg-sky-600 text-white rounded-lg px-4 py-2 text-xs font-bold hover:bg-sky-700 transition-colors shadow-sm whitespace-nowrap"
             >
               Start Chat
             </button>
@@ -79,19 +115,24 @@ export default function FloatingActions() {
         {(introState === 'icon-only' || chatOpen) && (
           <button 
             onClick={() => setChatOpen(!chatOpen)}
-            className="group flex items-center bg-gradient-to-tr from-pink-600 to-rose-400 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-[110px] h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
+            className="group flex items-center bg-sky-600 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-[110px] h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
           >
             <div className="w-12 h-12 flex items-center justify-center shrink-0">
               {chatOpen ? <X className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
             </div>
-            <span className="whitespace-nowrap font-bold text-sm select-none">AI Assist</span>
+            <span className="whitespace-nowrap font-bold text-sm select-none">ZEDEX</span>
           </button>
         )}
 
-        {/* Redesigned Premium AI UI */}
+        {/* Redesigned Premium AI UI with Functional Chat */}
         {chatOpen && (
-          <div className="fixed top-0 sm:top-24 bottom-0 sm:bottom-6 right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[600px] bg-white sm:rounded-2xl shadow-2xl border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-10 sm:zoom-in-95 duration-300">
+          <div className="fixed top-0 sm:top-24 bottom-0 sm:bottom-6 right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[600px] bg-white sm:rounded-2xl shadow-2xl border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-10 sm:zoom-in-95 duration-300 relative">
             
+            {/* Background Logo Watermark */}
+            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03] z-0">
+              <img src={logoUrl} alt="" className="w-48 h-auto" />
+            </div>
+
             {/* Header */}
             <div className="bg-sky-600 text-white p-4 flex items-center justify-between shrink-0 shadow-sm relative z-10">
               <div className="flex items-center gap-3">
@@ -99,8 +140,8 @@ export default function FloatingActions() {
                   <Bot className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[15px] leading-tight">ZAVYX Support</h3>
-                  <p className="text-sky-100 text-[12px]">Typically replies instantly</p>
+                  <h3 className="font-semibold text-[15px] leading-tight">ZEDEX AI Assist</h3>
+                  <p className="text-sky-100 text-[12px]">Powered by ZAVYX InfoTech</p>
                 </div>
               </div>
               <button 
@@ -112,42 +153,69 @@ export default function FloatingActions() {
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-4">
+            <div className="flex-1 overflow-y-auto p-4 bg-transparent flex flex-col gap-4 relative z-10 scrollbar-hide">
               
-              {/* Bot Message */}
-              <div className="flex gap-2.5 max-w-[85%]">
-                <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-1">
-                  <Bot className="w-4.5 h-4.5 text-sky-600" />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-sm">
-                    <p className="text-[14px] text-slate-700 leading-relaxed">
-                      Hi there! 👋 Welcome to Zavyx InfoTech. How can we help you scale your business today?
-                    </p>
+              {messages.map((msg, idx) => (
+                <div key={idx} className={`flex gap-2.5 max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 ${msg.sender === 'user' ? 'self-end flex-row-reverse' : ''}`}>
+                  {msg.sender === 'bot' && (
+                    <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-sky-200">
+                      <Bot className="w-4.5 h-4.5 text-sky-600" />
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-1.5">
+                    <div className={`border p-3.5 shadow-sm ${msg.sender === 'user' ? 'bg-sky-600 text-white rounded-2xl rounded-tr-sm border-sky-700' : 'bg-white text-slate-700 rounded-2xl rounded-tl-sm border-slate-200'}`}>
+                      <p className="text-[14px] leading-relaxed break-words">
+                        {msg.text}
+                      </p>
+                    </div>
+                    {/* Quick Replies for initial greeting only */}
+                    {idx === 0 && msg.sender === 'bot' && (
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        <button onClick={() => handleSendMessage('Website Development')} className="px-3 py-1.5 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full text-[12px] font-medium text-sky-700 hover:bg-sky-50 transition-colors shadow-sm">Website Development</button>
+                        <button onClick={() => handleSendMessage('Get a Quote')} className="px-3 py-1.5 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full text-[12px] font-medium text-sky-700 hover:bg-sky-50 transition-colors shadow-sm">Get a Quote</button>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex flex-wrap gap-2 mt-1">
-                    <button className="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[12px] font-medium text-sky-600 hover:bg-sky-50 hover:border-sky-200 transition-colors shadow-sm">Website Development</button>
-                    <button className="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[12px] font-medium text-sky-600 hover:bg-sky-50 hover:border-sky-200 transition-colors shadow-sm">Get a Quote</button>
+                </div>
+              ))}
+              
+              {isTyping && (
+                <div className="flex gap-2.5 max-w-[85%] animate-in fade-in">
+                  <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-sky-200">
+                    <Bot className="w-4.5 h-4.5 text-sky-600" />
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-sm flex items-center gap-1 h-[42px]">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '0ms' }}></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '150ms' }}></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '300ms' }}></div>
                   </div>
                 </div>
-              </div>
-
+              )}
+              
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Input Area */}
-            <div className="p-3 bg-white border-t border-slate-100 shrink-0">
-              <div className="flex items-center bg-slate-100 rounded-full px-4 py-2">
+            <div className="p-3 bg-white border-t border-slate-100 shrink-0 relative z-10">
+              <div className="flex items-center bg-slate-100 rounded-full px-4 py-2 border border-slate-200 focus-within:border-sky-400 focus-within:ring-2 focus-within:ring-sky-100 transition-all">
                 <input 
                   type="text" 
-                  placeholder="Write a message..." 
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask ZEDEX anything..." 
                   className="flex-1 bg-transparent border-none outline-none text-[14.5px] text-slate-800 placeholder:text-slate-500 py-1"
                 />
-                <button className="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center shrink-0 hover:bg-sky-700 transition-colors shadow-sm ml-2">
+                <button 
+                  onClick={() => handleSendMessage(inputValue)}
+                  disabled={!inputValue.trim()}
+                  className="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center shrink-0 hover:bg-sky-700 transition-colors shadow-sm ml-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
                   <ArrowUp className="w-4 h-4" />
                 </button>
               </div>
               <div className="text-center mt-2">
-                <span className="text-[10px] text-slate-400 font-bold tracking-wider">POWERED BY ZAVYX AI</span>
+                <span className="text-[10px] text-slate-400 font-bold tracking-wider">POWERED BY ZEDEX AI</span>
               </div>
             </div>
 
