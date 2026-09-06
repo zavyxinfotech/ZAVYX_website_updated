@@ -203,26 +203,76 @@ export default function About() {
           </p>
         </ScrollSlideSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 sm:gap-16 lg:gap-12 mt-10">
           {[
-            { name: "Founder", title: "Chief Executive Officer", img: imgFounder, color: 'text-amber-500' },
-            { name: "Director", title: "Executive Director", img: imgDirector, color: 'text-sky-500' },
-            { name: "Relationship Manager", title: "Client Relations", img: imgRM, color: 'text-rose-500' },
-            { name: "HR Manager", title: "Human Resources", img: imgHR, color: 'text-emerald-500' },
-            { name: "UI/UX Designer", title: "Product Design", img: imgUX, color: 'text-sky-500' },
-            { name: "Developer", title: "Software Engineer", img: imgDev, color: 'text-emerald-500' },
-            { name: "Data Analyst", title: "Analytics & Insights", img: imgDA, color: 'text-amber-500' }
-          ].map((member, idx) => (
-            <ScrollSlideSection key={idx} delay={`${idx * 100}ms`} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-md">
-               <div className="h-64 sm:h-72 overflow-hidden bg-slate-200">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" />
-               </div>
-               <div className="p-6 text-center transform transition-transform duration-300 group-hover:-translate-y-2 relative z-10 bg-white dark:bg-slate-800">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{member.name}</h3>
-                  <p className={`text-sm font-semibold mt-1 uppercase tracking-wider ${member.color}`}>{member.title}</p>
-               </div>
-            </ScrollSlideSection>
-          ))}
+            { 
+              name: "RAHUL S", title: "CHIEF EXECUTIVE OFFICER", 
+              desc: "Drives the company's vision and strategy to scale global enterprise operations safely.",
+              img: imgFounder, colorId: 'amber'
+            },
+            { 
+              name: "PRIYA M", title: "EXECUTIVE DIRECTOR", 
+              desc: "Oversees structural growth and high-level management across all engineering sectors.",
+              img: imgDirector, colorId: 'sky'
+            },
+            { 
+              name: "RAMYA R", title: "RELATIONSHIP MANAGER", 
+              desc: "Acts as a key communication point between clients and the project team throughout the engagement.",
+              img: imgRM, colorId: 'rose'
+            },
+            { 
+              name: "ANANYA K", title: "HEAD OF HUMAN RESOURCES", 
+              desc: "Cultivates our world-class talent and maintains a cutting-edge operational environment.",
+              img: imgHR, colorId: 'emerald'
+            },
+            { 
+              name: "VIJAYADARSHINI N M", title: "UI/UX DESIGNER", 
+              desc: "Creates user experiences and interfaces designed around usability, clarity and business objectives.",
+              img: imgUX, colorId: 'sky'
+            },
+            { 
+              name: "ARJUN K", title: "SOFTWARE DEVELOPER", 
+              desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
+              img: imgDev, colorId: 'emerald'
+            },
+            { 
+              name: "SNEHA V", title: "DATA ANALYST", 
+              desc: "Analyzes datasets to streamline metrics and drastically improve digital workflow efficiency.",
+              img: imgDA, colorId: 'amber'
+            }
+          ].map((member, idx) => {
+             const rings = {
+                sky: 'border-t-sky-500 border-r-sky-500 group-hover:border-b-sky-500 group-hover:border-l-sky-500 group-hover:shadow-[0_0_30px_rgba(14,165,233,0.3)]',
+                amber: 'border-t-amber-500 border-r-amber-500 group-hover:border-b-amber-500 group-hover:border-l-amber-500 group-hover:shadow-[0_0_30px_rgba(245,158,11,0.3)]',
+                emerald: 'border-t-emerald-500 border-r-emerald-500 group-hover:border-b-emerald-500 group-hover:border-l-emerald-500 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.3)]',
+                rose: 'border-t-rose-500 border-r-rose-500 group-hover:border-b-rose-500 group-hover:border-l-rose-500 group-hover:shadow-[0_0_30px_rgba(244,63,94,0.3)]',
+             };
+             
+             return (
+               <ScrollSlideSection key={idx} delay={`${(idx % 4) * 100}ms`} className="flex flex-col text-center px-1 sm:px-4 items-center">
+                 
+                 <div className="relative w-[210px] h-[210px] sm:w-[240px] sm:h-[240px] mb-8 group cursor-pointer shrink-0">
+                   {/* Background track circle */}
+                   <div className="absolute inset-0 rounded-full border-[8px] border-slate-100 dark:border-slate-800"></div>
+                   
+                   {/* Animated foreground ring */}
+                   <div className={`absolute inset-0 rounded-full border-[8px] border-b-transparent border-l-transparent transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-[360deg] z-10 ${rings[member.colorId]}`}></div>
+                   
+                   {/* Inner circular image wrapper for perfect cut */}
+                   <div className="absolute inset-[10px] sm:inset-[12px] rounded-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-2 border-white dark:border-slate-800 z-0">
+                     <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                   </div>
+                 </div>
+
+                 <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider mb-2">{member.title}</h3>
+                 <p className="text-xs sm:text-[13px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-4">{member.name}</p>
+                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px]">
+                   {member.desc}
+                 </p>
+                 
+               </ScrollSlideSection>
+             );
+          })}
         </div>
       </section>
 
