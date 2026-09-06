@@ -18,7 +18,7 @@ import {
   LifeBuoy
 } from 'lucide-react';
 
-import heroBg from '../../assets/images/hero_bg_services.png';
+import heroVid from '../../assets/Videos/animo-showcase-stream-720p.webm';
 import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
 import imgEcom from '../../assets/images/E_commerce_Stores_Service_background.png';
 import imgCrm from '../../assets/images/CRM_ERM_service_background.png';
@@ -187,10 +187,13 @@ export default function Services() {
           </ScrollSlideSection>
 
           <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
-            <img 
-              src={heroBg} 
-              alt="Services infrastructure" 
-              className="w-full h-full object-cover"
+            <video 
+              src={heroVid} 
+              className="w-full h-full object-cover" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
           </ScrollSlideSection>
