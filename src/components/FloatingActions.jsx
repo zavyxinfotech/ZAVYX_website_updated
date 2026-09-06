@@ -134,7 +134,7 @@ export default function FloatingActions() {
 
       {/* Redesigned Premium AI UI with Functional Chat & Minimal Theme */}
       {chatOpen && (
-        <div className="fixed bottom-0 sm:bottom-[88px] right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[calc(100vh-140px)] sm:max-h-[600px] bg-white sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-[50] animate-in fade-in sm:slide-in-from-bottom-6 sm:zoom-in-95 slide-in-from-bottom-0 duration-300 relative">
+        <div className="fixed bottom-0 sm:bottom-[88px] right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[calc(100vh-140px)] sm:max-h-[600px] bg-white sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-[60] animate-in fade-in sm:slide-in-from-bottom-6 sm:zoom-in-95 slide-in-from-bottom-0 duration-300">
           
           {/* Background Logo Watermark */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03] z-0">
