@@ -12,11 +12,10 @@ import {
   Palette,
   ArrowRight,
   CheckCircle,
-  ShieldCheck,
-  TrendingUp,
-  Cpu,
   LifeBuoy
 } from 'lucide-react';
+
+import { ParticleWave, AnimatedHeroText } from '../components/HeroEffects';
 
 import heroVid from '../../assets/Videos/animo-showcase-stream-720p.webm';
 import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
@@ -154,9 +153,7 @@ export default function Services() {
       
       {/* 1. HERO BANNER */}
       <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-sky-900/5 dark:bg-sky-900/10 blur-3xl rounded-full"></div>
-        </div>
+        <ParticleWave />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
@@ -165,7 +162,7 @@ export default function Services() {
               OUR TECHNICAL CAPABILITIES
             </h4>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]">
-              End-to-End Technology &<br className="hidden lg:block" /> Software Services
+              <AnimatedHeroText text="End-to-End Technology & Software Services" />
             </h1>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
               From modern web products to enterprise AI integration, explore how ZAVYX Infotech delivers end-to-end software structural builds and automation.
@@ -244,7 +241,7 @@ export default function Services() {
       </section>
 
       {/* 3. WHY CHOOSE US */}
-      <section className="bg-white dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800 overflow-hidden relative">
+      <section className="py-24 border-y border-slate-200 dark:border-slate-800 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <ScrollSlideSection className="shrink-0 relative">

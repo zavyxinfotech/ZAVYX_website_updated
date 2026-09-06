@@ -8,6 +8,7 @@ import imgRM from '../../assets/images/team/Relationship_Manager.webp';
 import imgUX from '../../assets/images/team/UI_Ux_Designer.jpeg';
 import imgDev from '../../assets/images/team/Full_Stack_developer.webp';
 import imgDA from '../../assets/images/team/Data_Analyst.webp';
+import { ParticleWave, AnimatedHeroText } from '../components/HeroEffects';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
   const ref = useRef(null);
@@ -38,9 +39,7 @@ export default function About() {
       
       {/* 1. HERO SECTION */}
       <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-sky-900/5 dark:bg-sky-900/10 blur-3xl rounded-full"></div>
-        </div>
+        <ParticleWave />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
@@ -49,7 +48,7 @@ export default function About() {
               Experience The Best IT Solutions
             </h4>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]">
-              Where Creativity Meets<br className="hidden lg:block" /> Cutting-Edge Technology
+              <AnimatedHeroText text="Where Creativity Meets Cutting-Edge Technology" />
             </h1>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
@@ -165,7 +164,7 @@ export default function About() {
       </section>
 
       {/* 4. MISSION & VISION OVERLAP */}
-      <section className="py-16 md:py-24 bg-slate-100 dark:bg-slate-800/20 relative mx-4 sm:mx-8 rounded-[40px] mb-20 overflow-hidden">
+      <section className="py-16 md:py-24 relative mx-4 sm:mx-8 rounded-[40px] mb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           
           <ScrollSlideSection className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 p-8 sm:p-12 rounded-[30px] shadow-xl relative overflow-hidden group">
