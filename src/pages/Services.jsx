@@ -153,19 +153,49 @@ export default function Services() {
     <div className="bg-slate-50 dark:bg-[#050B14] min-h-screen transition-colors duration-300">
       
       {/* 1. HERO BANNER */}
-      <section className="relative pt-24 sm:pt-32 pb-4 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto z-10 w-full overflow-hidden">
-         <ScrollSlideSection className="w-full h-[300px] sm:h-[400px] lg:h-[450px] relative rounded-3xl sm:rounded-[40px] overflow-hidden shadow-2xl">
-            <img src={heroBg} alt="Services Header" className="absolute inset-0 w-full h-full object-cover rounded-3xl sm:rounded-[40px]" />
-            <div className="absolute inset-0 bg-slate-900/60 dark:bg-slate-900/80 mix-blend-multiply"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-               <h1 className="text-5xl sm:text-7xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg">Services</h1>
-               <div className="flex items-center gap-3 text-sm sm:text-base font-bold text-white/90 uppercase tracking-widest bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20">
-                  <Link to="/" className="hover:text-sky-400 transition-colors">Home</Link>
-                  <span>&rarr;</span>
-                  <span className="text-sky-400">Services</span>
-               </div>
+      <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-sky-900/5 dark:bg-sky-900/10 blur-3xl rounded-full"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <ScrollSlideSection className="flex flex-col text-center lg:text-left">
+            <h4 className="text-sky-500 font-semibold tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
+              <span className="w-1.5 h-6 bg-sky-500 inline-block block"></span>
+              OUR TECHNICAL CAPABILITIES
+            </h4>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]">
+              End-to-End Technology &<br className="hidden lg:block" /> Software Services
+            </h1>
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
+              From modern web products to enterprise AI integration, explore how ZAVYX Infotech delivers end-to-end software structural builds and automation.
+            </p>
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-8">
+              <Link
+                to="/contact"
+                className="px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-rose-600 hover:opacity-95 transition-all text-base sm:text-lg shadow-xl hover:scale-[1.02]"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-500 transition-all text-base sm:text-lg shadow-sm group"
+              >
+                Our Agency <ArrowRight className="w-5 h-5 text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
-         </ScrollSlideSection>
+          </ScrollSlideSection>
+
+          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+            <img 
+              src={heroBg} 
+              alt="Services infrastructure" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          </ScrollSlideSection>
+          
+        </div>
       </section>
 
       {/* 2. WHAT WE DO */}
