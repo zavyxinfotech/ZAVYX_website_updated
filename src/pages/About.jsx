@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award } from 'lucide-react';
+import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award, ArrowRight } from 'lucide-react';
 import imgFounder from '../../assets/images/team/Founder.webp';
 import imgDirector from '../../assets/images/team/Head_of_operations.webp';
 import imgHR from '../../assets/images/team/HR_Manager.webp';
@@ -54,12 +54,18 @@ export default function About() {
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <Link to="/contact" className="px-8 py-3.5 rounded-full bg-sky-500 text-white font-bold hover:bg-sky-400 transition-colors shadow-[0_0_20px_rgba(14,165,233,0.3)]">
-                Explore More &rarr;
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-8">
+              <Link
+                to="/contact"
+                className="px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-rose-600 hover:opacity-95 transition-all text-base sm:text-lg shadow-xl hover:scale-[1.02]"
+              >
+                Explore More
               </Link>
-              <Link to="/services" className="px-8 py-3.5 rounded-full bg-transparent border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:border-slate-400 dark:hover:border-white transition-colors">
-                View All Services
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-500 transition-all text-base sm:text-lg shadow-sm group"
+              >
+                View All Services <ArrowRight className="w-5 h-5 text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </ScrollSlideSection>
@@ -274,6 +280,32 @@ export default function About() {
              );
           })}
         </div>
+      </section>
+
+      {/* 6. CTA SECTION */}
+      <section className="py-20 md:py-28 bg-transparent overflow-hidden text-center max-w-4xl mx-auto px-4 sm:px-6 relative z-20">
+        <ScrollSlideSection>
+           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">
+             Have a Business Challenge to Solve?
+           </h2>
+           <p className="text-slate-600 dark:text-slate-400 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+             Tell us what you're trying to build, improve or automate. We'll help you understand the possible technology approach and next steps.
+           </p>
+           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+             <Link
+               to="/contact"
+               className="px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-rose-600 hover:opacity-95 transition-all text-base sm:text-lg shadow-xl hover:scale-[1.02]"
+             >
+               Talk to Our Team
+             </Link>
+             <Link
+               to="/services"
+               className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-500 transition-all text-base sm:text-lg shadow-sm group"
+             >
+               Explore Services <ArrowRight className="w-5 h-5 text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+             </Link>
+           </div>
+        </ScrollSlideSection>
       </section>
 
       <style>{`
