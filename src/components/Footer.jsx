@@ -59,17 +59,17 @@ export default function Footer() {
       </div>
 
       {/* Massive Typography Banner Bottom matched to reference UI fading into background perfectly */}
-      <div className="absolute bottom-0 left-0 w-full select-none flex justify-center pointer-events-none z-0">
+      <div className="w-full select-none flex justify-center items-end pointer-events-none relative z-0 overflow-hidden leading-[0.8] mt-10 md:mt-0">
         <h1 
-          className="text-[22vw] sm:text-[24vw] md:text-[26vw] font-black tracking-tighter text-center w-full text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-emerald-500 via-amber-500 to-rose-500 opacity-[0.06] dark:opacity-[0.08] translate-y-6 md:translate-y-8 leading-none"
+          className="text-[25vw] sm:text-[26vw] md:text-[27.5vw] font-black tracking-tighter text-center w-full text-transparent bg-clip-text bg-gradient-to-r from-sky-500/15 via-emerald-500/15 via-amber-400/15 to-rose-500/15 dark:from-sky-500/5 dark:via-emerald-500/5 dark:via-amber-400/5 dark:to-rose-500/5 pb-12 sm:pb-16 opacity-70"
         >
           ZAVYX
         </h1>
       </div>
       
       {/* Copyright Bar Overlay */}
-      <div className="absolute bottom-2 md:bottom-6 w-full text-center z-10 pointer-events-auto">
-        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.2em]">
+      <div className="absolute bottom-4 sm:bottom-6 w-full text-center z-10 pointer-events-auto">
+        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.2em] bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm inline-block px-4 py-1 rounded-full">
            © {new Date().getFullYear()} ZAVYX InfoTech
         </p>
       </div>
