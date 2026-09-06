@@ -6,7 +6,6 @@ import logoUrl from '../../assets/logo/logo.png';
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const [isDark, setIsDark] = useState(() => {
@@ -30,14 +29,7 @@ export default function Navbar() {
     { title: 'Cloud & Infrastructure', path: '/services/cloud-infrastructure', color: 'text-sky-600 bg-sky-50' },
   ];
 
-  const aboutList = [
-    { title: 'Company Overview', path: '/about#company' },
-    { title: 'Mission & Vision', path: '/about#mission' },
-    { title: 'Our Team', path: '/about#team' },
-    { title: 'Tech Capabilities', path: '/about#capabilities' },
-    { title: 'Our Culture', path: '/about#culture' },
-    { title: 'Careers', path: '/about#careers' },
-  ];
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -68,31 +60,14 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* About Dropdown */}
-          <div 
-            className="relative group"
-            onMouseEnter={() => setActiveDropdown('about')}
-            onMouseLeave={() => setActiveDropdown(null)}
+          <Link 
+            to="/about" 
+            className={`text-slate-800 dark:text-slate-100 font-semibold hover:text-sky-600 dark:hover:text-sky-400 transition-colors relative py-1 ${
+              location.pathname === '/about' ? 'text-sky-600 dark:text-sky-400 border-b-2 border-sky-500' : ''
+            }`}
           >
-            <button className="flex items-center gap-1 text-slate-800 dark:text-slate-100 font-semibold hover:text-sky-600 dark:hover:text-sky-400 transition-colors py-1 cursor-pointer">
-              About Us
-              <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-slate-500 group-hover:text-sky-600 dark:group-hover:text-sky-400" />
-            </button>
-
-            <div className="absolute top-[calc(100%+26px)] left-1/2 -translate-x-1/2 w-64 bg-white dark:bg-slate-900 rounded-2xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="flex flex-col gap-1">
-                {aboutList.map((item, idx) => (
-                  <Link
-                    key={idx}
-                    to={item.path}
-                    className="px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50/80 dark:hover:bg-slate-800 rounded-xl transition-all font-medium"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+            About Us
+          </Link>
 
           {/* Services Dropdown */}
           <div 
@@ -180,39 +155,13 @@ export default function Navbar() {
             <span className="font-bold text-slate-800 dark:text-slate-100 text-[16px]">Home</span>
           </Link>
 
-          {/* About Us Dropdown - Mobile */}
-          <div className="flex flex-col border-b border-slate-200/50 dark:border-slate-800/80 shrink-0">
-            <div className="flex items-center justify-between px-6 py-4">
-              <Link 
-                to="/about" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="font-bold text-slate-800 dark:text-slate-100 text-[16px] flex-1"
-              >
-                About Us
-              </Link>
-              <button 
-                onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                className="p-1 text-slate-800 dark:text-slate-100 focus:outline-none"
-              >
-                <ChevronDown className={`w-5 h-5 transition-transform ${mobileAboutOpen ? 'rotate-180 text-sky-600 dark:text-sky-400' : ''}`} />
-              </button>
-            </div>
-            
-            {mobileAboutOpen && (
-              <div className="flex flex-col bg-slate-100/40 dark:bg-slate-800/40 backdrop-blur-md pl-6 py-2">
-                {aboutList.map((item, idx) => (
-                  <Link
-                    key={idx}
-                    to={item.path}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="py-3 px-2 text-[14px] font-semibold text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-2"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          <Link 
+            to="/about" 
+            onClick={() => setMobileMenuOpen(false)}
+            className="px-6 py-4 border-b border-slate-200/50 dark:border-slate-800/80 transition-colors shrink-0"
+          >
+            <span className="font-bold text-slate-800 dark:text-slate-100 text-[16px]">About Us</span>
+          </Link>
 
           {/* Services Dropdown - Mobile */}
           <div className="flex flex-col border-b border-slate-200/50 dark:border-slate-800/80 shrink-0">
