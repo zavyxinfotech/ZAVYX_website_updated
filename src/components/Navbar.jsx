@@ -51,7 +51,7 @@ export default function Navbar() {
             <img 
               src={logoUrl} 
               alt="ZAVYX Infotech" 
-              className="h-9 md:h-12 lg:h-14 w-auto object-contain dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.8))_drop-shadow(0_0_2px_rgba(255,255,255,0.5))] transition-all duration-300"
+              className="h-12 sm:h-14 md:h-16 lg:h-16 w-auto object-contain dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.8))_drop-shadow(0_0_2px_rgba(255,255,255,0.5))] transition-all duration-300"
             />
           </Link>
         </div>

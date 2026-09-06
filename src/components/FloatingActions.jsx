@@ -29,7 +29,7 @@ export default function FloatingActions() {
       
       {/* Call Now Option */}
       <a 
-        href="tel:+1234567890" 
+        href="tel:+916382721178" 
         className="group flex items-center bg-sky-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-32 h-12 overflow-hidden"
       >
         <div className="w-12 h-12 flex items-center justify-center shrink-0">
@@ -40,7 +40,7 @@ export default function FloatingActions() {
 
       {/* WhatsApp Option (Exact SVG) */}
       <a 
-        href="https://wa.me/1234567890" 
+        href="https://wa.me/916382721178" 
         target="_blank" 
         rel="noreferrer" 
         className="group flex items-center bg-emerald-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-36 h-12 overflow-hidden"
@@ -90,66 +90,64 @@ export default function FloatingActions() {
 
         {/* Redesigned Premium AI UI */}
         {chatOpen && (
-          <div className="fixed top-0 sm:top-24 bottom-0 sm:bottom-6 right-0 sm:right-6 w-full sm:w-[40vw] h-[100dvh] sm:h-auto sm:max-w-[450px] sm:max-h-[85vh] bg-gradient-to-b from-[#f8f0f3] to-white sm:rounded-[36px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-0 sm:border border-slate-200/50 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-10 sm:zoom-in-95 duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]">
+          <div className="fixed top-0 sm:top-24 bottom-0 sm:bottom-6 right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[600px] bg-white sm:rounded-2xl shadow-2xl border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-10 sm:zoom-in-95 duration-300">
             
-            {/* Header / Nav */}
-            <div className="flex justify-between items-center p-6 bg-transparent shrink-0 pt-8 sm:pt-6">
+            {/* Header */}
+            <div className="bg-sky-600 text-white p-4 flex items-center justify-between shrink-0 shadow-sm relative z-10">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <Bot className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[15px] leading-tight">ZAVYX Support</h3>
+                  <p className="text-sky-100 text-[12px]">Typically replies instantly</p>
+                </div>
+              </div>
               <button 
                 onClick={() => setChatOpen(false)} 
-                className="w-10 h-10 bg-white/60 backdrop-blur-md rounded-full flex items-center justify-center shadow-sm text-slate-700 hover:bg-white hover:text-slate-900 transition-all border border-slate-200/50"
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5 text-white" />
               </button>
             </div>
 
-            {/* Glowing Orb Centerpiece */}
-            <div className="flex-1 flex flex-col items-center justify-center px-8 -mt-8">
-              <div className="relative mb-10 w-32 h-32">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#ff3b86] via-[#a855f7] to-[#818cf8] blur-xl opacity-60 animate-pulse"></div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#ff3b86] via-[#a855f7] to-[#818cf8] shadow-[inset_0_-10px_20px_rgba(0,0,0,0.2)] flex items-center justify-center">
-                  <div className="w-full h-full rounded-full bg-gradient-to-bl from-white/40 to-transparent"></div>
+            {/* Messages Area */}
+            <div className="flex-1 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-4">
+              
+              {/* Bot Message */}
+              <div className="flex gap-2.5 max-w-[85%]">
+                <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-1">
+                  <Bot className="w-4.5 h-4.5 text-sky-600" />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-sm">
+                    <p className="text-[14px] text-slate-700 leading-relaxed">
+                      Hi there! 👋 Welcome to Zavyx InfoTech. How can we help you scale your business today?
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    <button className="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[12px] font-medium text-sky-600 hover:bg-sky-50 hover:border-sky-200 transition-colors shadow-sm">Website Development</button>
+                    <button className="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[12px] font-medium text-sky-600 hover:bg-sky-50 hover:border-sky-200 transition-colors shadow-sm">Get a Quote</button>
+                  </div>
                 </div>
               </div>
 
-              <h2 className="text-[28px] text-center font-medium text-slate-800 leading-[1.2] tracking-tight">
-                Hey there,<br />What are you<br />looking for today?
-              </h2>
             </div>
 
-            {/* Suggested Tags Area */}
-            <div className="px-5 flex gap-3 overflow-x-auto pb-6 scrollbar-hide shrink-0 snap-x">
-              <button className="snap-center whitespace-nowrap px-5 py-3.5 rounded-full bg-white border border-slate-200/80 text-[13.5px] font-medium text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
-                I need a new website
-              </button>
-              <button className="snap-center whitespace-nowrap px-5 py-3.5 rounded-full bg-white border border-slate-200/80 text-[13.5px] font-medium text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
-                CRM/ERP solutions
-              </button>
-              <button className="snap-center whitespace-nowrap px-5 py-3.5 rounded-full bg-white border border-slate-200/80 text-[13.5px] font-medium text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
-                AI integrations
-              </button>
-            </div>
-
-            {/* Bottom Search Input Wrapper */}
-            <div className="p-4 pt-1 mb-0 sm:mb-2 mx-4 bg-white/70 backdrop-blur-xl border border-white rounded-[28px] flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] shrink-0">
-              
-              {/* Context Tag */}
-              <div className="px-4 py-3 flex items-center gap-2 border-b border-slate-100/60 transition-all">
-                 <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-[#ff3b86] to-[#a855f7] flex items-center justify-center shadow-inner">
-                   <div className="w-2.5 h-2.5 rounded-full bg-white/90"></div>
-                 </div>
-                 <span className="text-[13px] font-semibold text-slate-600">ZAVYX AI Standard</span>
-              </div>
-              
-              {/* Input Field */}
-              <div className="flex items-center gap-3 p-2 pl-4">
+            {/* Input Area */}
+            <div className="p-3 bg-white border-t border-slate-100 shrink-0">
+              <div className="flex items-center bg-slate-100 rounded-full px-4 py-2">
                 <input 
                   type="text" 
-                  placeholder="Start searching" 
-                  className="flex-1 bg-transparent border-none outline-none text-[15px] text-slate-800 font-medium placeholder:text-slate-400 placeholder:font-normal"
+                  placeholder="Write a message..." 
+                  className="flex-1 bg-transparent border-none outline-none text-[14.5px] text-slate-800 placeholder:text-slate-500 py-1"
                 />
-                <button className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#a855f7] to-[#818cf8] text-white flex items-center justify-center shrink-0 shadow-md hover:opacity-90 transition-opacity">
-                  <ArrowUp className="w-4.5 h-4.5" />
+                <button className="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center shrink-0 hover:bg-sky-700 transition-colors shadow-sm ml-2">
+                  <ArrowUp className="w-4 h-4" />
                 </button>
+              </div>
+              <div className="text-center mt-2">
+                <span className="text-[10px] text-slate-400 font-bold tracking-wider">POWERED BY ZAVYX AI</span>
               </div>
             </div>
 

@@ -1,10 +1,51 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Globe, ShoppingCart, Database, MessageCircle, Bot, 
   Smartphone, TrendingUp, PenTool, Cloud
 } from 'lucide-react';
 import ScrollAnimatedHeading from './ScrollAnimatedHeading';
+
+const AnimatedServiceCard = ({ svc, borderClasses, index }) => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      // Toggle visibility on every scroll up and down
+      setIsVisible(entry.isIntersecting);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const Icon = svc.icon;
+
+  return (
+    <Link 
+      ref={ref}
+      to={svc.path}
+      className={`group relative flex flex-col items-center text-center p-4 lg:p-6 transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:bg-white dark:hover:bg-slate-900/40 overflow-hidden cursor-pointer ${borderClasses} ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}
+      style={{ transitionDelay: isVisible ? `${(index % 3) * 75}ms` : '0ms' }}
+    >
+      <div className={`absolute inset-0 bg-gradient-to-br ${svc.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      <div className={`absolute left-0 top-0 bottom-0 w-[4px] ${svc.bgColor} scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center z-10`}></div>
+      
+      <div className="mb-3 p-3.5 rounded-full bg-white dark:bg-slate-800/50 shadow-sm transition-all duration-300 group-hover:bg-sky-50 dark:group-hover:bg-slate-800 border-2 border-transparent group-hover:shadow-[0_0_20px_rgba(14,165,233,0.15)] relative z-10">
+        <Icon className={`w-8 h-8 lg:w-10 lg:h-10 text-slate-700 dark:text-slate-300 group-hover:${svc.iconColor} transition-colors duration-300`} strokeWidth={1.5} />
+      </div>
+      
+      <h3 className="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors relative z-10 lg:whitespace-nowrap">
+        {svc.title}
+      </h3>
+      
+      <p className="text-slate-600 dark:text-slate-400 text-sm md:text-[15px] lg:text-base font-medium leading-relaxed md:leading-snug max-w-[280px] lg:max-w-[320px] relative z-10">
+        {svc.desc}
+      </p>
+    </Link>
+  );
+};
 
 export default function GridServices() {
   const services = [
@@ -40,7 +81,6 @@ export default function GridServices() {
         {/* Parent container holds NO borders, completely unbounding the outside rim */}
         <div className="grid grid-cols-1 md:grid-cols-3 bg-transparent shadow-none">
           {services.map((svc, idx) => {
-            const Icon = svc.icon;
             
             // Mathematically mapping inner-mesh borders tightly mapping 3x3 array 
             // Eliminates outside bounding box lines perfectly
@@ -61,30 +101,12 @@ export default function GridServices() {
             if (!isBottomEdge) borderClasses += "md:border-b-[1px] "; // Inner horizontal seams
 
             return (
-              <Link 
-                key={idx}
-                to={svc.path}
-                className={`group relative flex flex-col items-center text-center p-4 lg:p-6 transition-all duration-300 hover:bg-white dark:hover:bg-slate-900/40 overflow-hidden cursor-pointer ${borderClasses}`}
-              >
-                {/* Dynamically mapped minimal color shade overlay matching brand token */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${svc.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-
-                {/* Precision left border highlight mapped to literal logo/shade colors natively */}
-                <div className={`absolute left-0 top-0 bottom-0 w-[4px] ${svc.bgColor} scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center z-10`}></div>
-                
-                {/* Floating Icon Wrapper */}
-                <div className="mb-3 p-3.5 rounded-full bg-white dark:bg-slate-800/50 shadow-sm transition-all duration-300 group-hover:bg-sky-50 dark:group-hover:bg-slate-800 border-2 border-transparent group-hover:shadow-[0_0_20px_rgba(14,165,233,0.15)] relative z-10">
-                  <Icon className={`w-8 h-8 lg:w-10 lg:h-10 text-slate-700 dark:text-slate-300 group-hover:${svc.iconColor} transition-colors duration-300`} strokeWidth={1.5} />
-                </div>
-                
-                <h3 className="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors relative z-10 lg:whitespace-nowrap">
-                  {svc.title}
-                </h3>
-                
-                <p className="text-slate-600 dark:text-slate-400 text-sm md:text-[15px] lg:text-base font-medium leading-relaxed md:leading-snug max-w-[280px] lg:max-w-[320px] relative z-10">
-                  {svc.desc}
-                </p>
-              </Link>
+              <AnimatedServiceCard 
+                key={idx} 
+                svc={svc} 
+                borderClasses={borderClasses} 
+                index={idx}
+              />
             )
           })}
         </div>

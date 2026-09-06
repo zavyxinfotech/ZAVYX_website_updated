@@ -41,9 +41,10 @@ export default function Footer() {
             <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wider">Get In Touch</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 w-full" />
             <div className="flex flex-col gap-3">
-              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">+91 93608 04323</span>
-              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">vasukip2004@gmail.com</span>
-              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">Tamil Nadu, India</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">+91 63827 21178</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">hello@zavyx.in</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium max-w-sm">TeesZone Clothing Private Limited. #2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
               
               <Link 
                 to="/contact" 
