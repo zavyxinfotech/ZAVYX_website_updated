@@ -186,16 +186,15 @@ export default function Services() {
             </div>
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] bg-transparent">
             <video 
               src={heroVid} 
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-contain" 
               autoPlay 
               muted 
               loop 
               playsInline 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
           </ScrollSlideSection>
           
         </div>
