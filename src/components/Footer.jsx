@@ -11,39 +11,39 @@ export default function Footer() {
           
           {/* Column 1 */}
           <div className="flex flex-col">
-            <h3 className="text-sm md:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider">Quick Links</h3>
+            <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wider">Quick Links</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 w-full" />
             <div className="flex flex-col gap-3">
-              <Link to="/" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Home</Link>
-              <Link to="/about" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">About Us</Link>
-              <Link to="/services" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Services</Link>
-              <Link to="/contact" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Contact Us</Link>
-              <Link to="#" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors mt-2">Privacy Policy</Link>
-              <Link to="#" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Terms of Service</Link>
+              <Link to="/" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Home</Link>
+              <Link to="/about" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">About Us</Link>
+              <Link to="/services" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Services</Link>
+              <Link to="/contact" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Contact Us</Link>
+              <Link to="#" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors mt-2">Privacy Policy</Link>
+              <Link to="#" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Terms of Service</Link>
             </div>
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col">
-            <h3 className="text-sm md:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Services</h3>
+            <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Services</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 w-full" />
             <div className="flex flex-col gap-3">
-              <Link to="/services/websites-web-apps" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Websites & Web Apps</Link>
-              <Link to="/services/crm-erp-systems" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">CRM & ERP Systems</Link>
-              <Link to="/services/mobile-apps" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Mobile Apps</Link>
-              <Link to="/services/ai-automation" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">AI & Automation</Link>
-              <Link to="/services/cloud-infrastructure" className="text-sm md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Cloud Solutions</Link>
+              <Link to="/services/websites-web-apps" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Websites & Web Apps</Link>
+              <Link to="/services/crm-erp-systems" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">CRM & ERP Systems</Link>
+              <Link to="/services/mobile-apps" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Mobile Apps</Link>
+              <Link to="/services/ai-automation" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">AI & Automation</Link>
+              <Link to="/services/cloud-infrastructure" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Cloud Solutions</Link>
             </div>
           </div>
 
           {/* Column 3 */}
           <div className="flex flex-col">
-            <h3 className="text-sm md:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider">Get In Touch</h3>
+            <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wider">Get In Touch</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 w-full" />
             <div className="flex flex-col gap-3">
-              <span className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">+91 93608 04323</span>
-              <span className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">vasukip2004@gmail.com</span>
-              <span className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">Tamil Nadu, India</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">+91 93608 04323</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">vasukip2004@gmail.com</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">Tamil Nadu, India</span>
               
               <Link 
                 to="/contact" 
@@ -68,7 +68,7 @@ export default function Footer() {
       
       {/* Copyright Bar Overlay */}
       <div className="absolute bottom-2 md:bottom-6 w-full text-center z-10 pointer-events-auto">
-        <p className="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.2em]">
+        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.2em]">
            © {new Date().getFullYear()} ZAVYX InfoTech
         </p>
       </div>

@@ -43,7 +43,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       
       {/* Navbar Container */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between bg-transparent md:bg-white/60 dark:md:bg-slate-900/80 md:backdrop-blur-xl md:rounded-xl px-4 md:px-6 py-4 md:py-3 mt-0 md:mt-4 relative z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl rounded-b-2xl md:rounded-xl px-4 md:px-6 py-4 md:py-3 mt-0 md:mt-4 relative z-50 shadow-sm md:shadow-none">
         
         {/* Brand Logo - Aligned Left */}
         <div className="flex-[0.5] md:flex-1">
@@ -207,7 +207,6 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="py-3 px-2 text-[14px] font-semibold text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-2"
                   >
-                    <span className="w-[5px] h-[5px] rounded-full bg-slate-400"></span>
                     {item.title}
                   </Link>
                 ))}
@@ -242,7 +241,6 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="py-3 px-2 text-[14px] font-semibold text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-2"
                   >
-                    <span className={`w-[5px] h-[5px] rounded-full ${svc.color.split(' ')[0].replace('text', 'bg')}`}></span>
                     {svc.title}
                   </Link>
                 ))}

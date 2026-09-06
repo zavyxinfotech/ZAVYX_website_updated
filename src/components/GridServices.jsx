@@ -20,8 +20,8 @@ export default function GridServices() {
   ];
 
   return (
-    // pt-32 adds essential massive gap separating gracefully from absolute attached hero boundaries beneath
-    <section className="pt-24 lg:pt-40 lg:py-0 min-h-screen flex flex-col justify-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    // pt-12 (mobile) lg:pt-40 adds essential massive gap separating gracefully from absolute attached hero boundaries beneath
+    <section className="pt-12 lg:pt-40 lg:py-0 min-h-[80vh] flex flex-col justify-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
       <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Compact Header Section */}

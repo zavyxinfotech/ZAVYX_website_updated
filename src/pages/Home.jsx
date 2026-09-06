@@ -13,6 +13,35 @@ import {
 import GridServices from '../components/GridServices';
 import ScrollAnimatedHeading from '../components/ScrollAnimatedHeading';
 
+const ScrollSlideSection = ({ children, className = '' }) => {
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.05, rootMargin: '0px 0px -50px 0px' }
+    );
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div 
+      ref={containerRef} 
+      className={`transition-all duration-1000 ease-out transform ${
+        isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+};
+
 import { 
   FaReact, FaNodeJs, FaAws, FaPython, FaDocker, FaDatabase, FaJsSquare, FaGithub, FaFigma,
   FaVuejs, FaAngular, FaPhp, FaJava, FaSwift, FaLinux, FaAndroid, FaApple, FaDigitalOcean, FaGitlab
@@ -250,7 +279,7 @@ export default function Home() {
         <ParticleWave />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-center text-center">
             
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight mb-8 max-w-5xl mx-auto h-auto">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold leading-tight tracking-tight mb-8 max-w-5xl mx-auto h-auto">
             <AnimatedHeroText text="We build the tech your business runs on." />
           </h1>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8">
@@ -272,10 +301,13 @@ export default function Home() {
       </section>
 
       {/* COMPREHENSIVE SERVICES GRID SECTION */}
-      <GridServices />
+      <ScrollSlideSection>
+        <GridServices />
+      </ScrollSlideSection>
 
       {/* ENTERPRISE TECHNOLOGY STACK SECTION INLINED */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden relative">
+      <ScrollSlideSection>
+      <section className="py-12 lg:py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden relative">
         <style>
           {`
             @keyframes marquee-left {
@@ -414,6 +446,7 @@ export default function Home() {
         </div>
 
       </section>
+      </ScrollSlideSection>
 
     </div>
   );
