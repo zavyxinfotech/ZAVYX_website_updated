@@ -12,6 +12,9 @@ import {
   Palette,
   ArrowRight,
   CheckCircle,
+  ShieldCheck,
+  TrendingUp,
+  Cpu,
   LifeBuoy
 } from 'lucide-react';
 
