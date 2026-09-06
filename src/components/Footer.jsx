@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoUrl from '../../assets/logo/logo.png';
 
 export default function Footer() {
   return (
@@ -43,8 +44,11 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">+91 63827 21178</span>
               <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">hello@zavyx.in</span>
-              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium max-w-sm">TeesZone Clothing Private Limited. #2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
-              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
+              <div className="flex flex-col gap-0.5 max-w-sm mt-1">
+                <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">TeesZone Clothing Private Limited.</span>
+                <span className="text-[13px] md:text-sm text-slate-500 dark:text-slate-400 leading-snug">#2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
+              </div>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium mt-1">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
               
               <Link 
                 to="/contact" 
@@ -58,18 +62,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Massive Typography Banner Bottom matched to reference UI fading into background perfectly */}
-      <div className="w-full select-none flex justify-center items-end pointer-events-none relative z-0 overflow-hidden leading-[0.8] mt-10 md:mt-0">
-        <h1 
-          className="text-[25vw] sm:text-[26vw] md:text-[27.5vw] font-black tracking-tighter text-center w-full text-transparent bg-clip-text bg-gradient-to-r from-sky-500/15 via-emerald-500/15 via-amber-400/15 to-rose-500/15 dark:from-sky-500/5 dark:via-emerald-500/5 dark:via-amber-400/5 dark:to-rose-500/5 pb-12 sm:pb-16 opacity-70"
-        >
-          ZAVYX
-        </h1>
-      </div>
-      
-      {/* Copyright Bar Overlay */}
-      <div className="absolute bottom-4 sm:bottom-6 w-full text-center z-10 pointer-events-auto">
-        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.2em] bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm inline-block px-4 py-1 rounded-full">
+      {/* Footer Logo and Copyright Bar */}
+      {/* Footer Logo and Copyright Bar */}
+      <div className="w-full text-center z-10 py-10 mt-auto flex flex-col items-center">
+        <img src={logoUrl} alt="ZAVYX Infotech" className="h-10 md:h-12 w-auto object-contain dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.8))_drop-shadow(0_0_2px_rgba(255,255,255,0.5))] transition-all duration-300 opacity-60 dark:opacity-80 grayscale hover:grayscale-0 hover:opacity-100 mb-4" />
+        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-[0.1em]">
            © {new Date().getFullYear()} ZAVYX InfoTech
         </p>
       </div>
