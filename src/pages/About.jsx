@@ -1,6 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award } from 'lucide-react';
+import imgFounder from '../../assets/images/team/Founder.webp';
+import imgDirector from '../../assets/images/team/Director.webp';
+import imgHR from '../../assets/images/team/HR.webp';
+import imgRM from '../../assets/images/team/Relationship_Manager.webp';
+import imgUX from '../../assets/images/team/UI_Ux_Designer.jpeg';
+import imgDev from '../../assets/images/team/developer_developer.webp';
+import imgDA from '../../assets/images/team/Data_Analyst.webp';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
   const ref = useRef(null);
@@ -71,16 +78,17 @@ export default function About() {
 
       {/* 2. MARQUEE BANNER */}
       <div className="bg-sky-500 py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-full shadow-xl">
-        <div className="animate-[marquee_20s_linear_infinite] flex items-center justify-around w-full gap-8 min-w-max text-white font-bold tracking-widest uppercase text-sm">
-          <span>*</span><span>Website Development</span>
-          <span>*</span><span>UX/UI Design</span>
-          <span>*</span><span>CRM / ERP Solutions</span>
-          <span>*</span><span>AI Automation</span>
-          <span>*</span><span>Cloud Infrastructure</span>
-          <span>*</span><span>Mobile Apps</span>
-          <span>*</span><span>Website Development</span>
-          <span>*</span><span>UX/UI Design</span>
-          <span>*</span><span>CRM / ERP Solutions</span>
+        <div className="animate-[marquee_20s_linear_infinite] flex items-center justify-around min-w-max text-white font-bold tracking-widest uppercase text-sm">
+          {[...Array(6)].map((_, i) => (
+            <React.Fragment key={i}>
+              <span className="mx-6">*</span><span>Website Development</span>
+              <span className="mx-6">*</span><span>UX/UI Design</span>
+              <span className="mx-6">*</span><span>CRM / ERP Solutions</span>
+              <span className="mx-6">*</span><span>AI Automation</span>
+              <span className="mx-6">*</span><span>Cloud Infrastructure</span>
+              <span className="mx-6">*</span><span>Mobile Apps</span>
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
@@ -91,7 +99,7 @@ export default function About() {
           {/* Left Collage */}
           <ScrollSlideSection className="relative grid grid-cols-2 gap-4 h-[350px] sm:h-[500px]">
              {/* Center Badge Oval/Circle */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-sky-500 rounded-full border-[6px] sm:border-8 border-slate-50 dark:border-slate-900 flex items-center justify-center text-white text-center font-bold leading-tight shadow-xl">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-rose-500 rounded-full border-[6px] sm:border-8 border-slate-50 dark:border-slate-900 flex items-center justify-center text-white text-center font-bold leading-tight shadow-xl">
                <span className="text-xs sm:text-sm uppercase tracking-wider">Startup<br />Energy</span>
              </div>
              
@@ -115,12 +123,12 @@ export default function About() {
 
           {/* Right Content */}
           <ScrollSlideSection delay="100ms" className="flex flex-col text-left">
-            <h4 className="text-sky-500 font-semibold tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
-              <span className="w-6 h-0.5 bg-sky-500 inline-block block"></span>
+            <h4 className="text-amber-500 font-semibold tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
+              <span className="w-6 h-0.5 bg-amber-500 inline-block block"></span>
               About Us
             </h4>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
-              Transforming <span className="text-sky-500">Ideas</span><br /> into Digital Reality
+              Transforming <span className="text-rose-500">Ideas</span><br /> into Digital Reality
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 border-l-4 border-emerald-500 pl-4">
               ZAVYX InfoTech was founded with a singular purpose: to deliver unparalleled digital experiences that empower businesses to scale securely and efficiently. We are hitting the ground running on day one with relentless startup energy.
@@ -182,10 +190,10 @@ export default function About() {
       {/* 5. OUR TEAM */}
       <section className="py-20 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 overflow-hidden">
         <ScrollSlideSection className="text-center max-w-3xl mx-auto mb-16">
-          <h4 className="text-emerald-500 font-semibold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
-            <span className="w-6 h-0.5 bg-emerald-500 inline-block block"></span>
+          <h4 className="text-sky-500 font-semibold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
+            <span className="w-6 h-0.5 bg-sky-500 inline-block block"></span>
             Our Professionals
-            <span className="w-6 h-0.5 bg-emerald-500 inline-block block"></span>
+            <span className="w-6 h-0.5 bg-sky-500 inline-block block"></span>
           </h4>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">
             Meet the Minds Behind the Machine
@@ -197,10 +205,13 @@ export default function About() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { name: "Rahul S.", title: "Chief Executive Officer", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
-            { name: "Priya M.", title: "Lead Software Architect", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
-            { name: "Arjun K.", title: "Head of Marketing Strategy", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
-            { name: "Sneha V.", title: "Senior UI/UX Designer", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" }
+            { name: "Founder", title: "Chief Executive Officer", img: imgFounder, color: 'text-amber-500' },
+            { name: "Director", title: "Executive Director", img: imgDirector, color: 'text-sky-500' },
+            { name: "Relationship Manager", title: "Client Relations", img: imgRM, color: 'text-rose-500' },
+            { name: "HR Manager", title: "Human Resources", img: imgHR, color: 'text-emerald-500' },
+            { name: "UI/UX Designer", title: "Product Design", img: imgUX, color: 'text-sky-500' },
+            { name: "Developer", title: "Software Engineer", img: imgDev, color: 'text-emerald-500' },
+            { name: "Data Analyst", title: "Analytics & Insights", img: imgDA, color: 'text-amber-500' }
           ].map((member, idx) => (
             <ScrollSlideSection key={idx} delay={`${idx * 100}ms`} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-md">
                <div className="h-64 sm:h-72 overflow-hidden bg-slate-200">
@@ -208,7 +219,7 @@ export default function About() {
                </div>
                <div className="p-6 text-center transform transition-transform duration-300 group-hover:-translate-y-2 relative z-10 bg-white dark:bg-slate-800">
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">{member.name}</h3>
-                  <p className="text-sm font-semibold text-sky-500 mt-1 uppercase tracking-wider">{member.title}</p>
+                  <p className={`text-sm font-semibold mt-1 uppercase tracking-wider ${member.color}`}>{member.title}</p>
                </div>
             </ScrollSlideSection>
           ))}

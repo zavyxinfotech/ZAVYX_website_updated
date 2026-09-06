@@ -101,11 +101,11 @@ export default function FloatingActions() {
           {/* Animated Intro Popup */}
           {(introState === 'sliding-in' || introState === 'sliding-out') && !chatOpen && (
             <div className={`
-              absolute right-0 top-0 bg-white border border-slate-200 shadow-xl rounded-l-2xl p-4 flex items-center gap-4 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+              absolute right-0 top-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-l-2xl p-4 flex items-center gap-4 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
               ${introState === 'sliding-in' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
             `}>
               <div>
-                <div className="font-bold text-slate-900 text-sm mb-0.5 leading-snug">ZEDEX Assistant</div>
+                <div className="font-bold text-slate-900 dark:text-white text-sm mb-0.5 leading-snug">ZEDEX Assistant</div>
                 <div className="text-xs text-slate-500 font-medium whitespace-nowrap">Instant answers & smart routing.</div>
               </div>
               <button 
@@ -121,7 +121,7 @@ export default function FloatingActions() {
           {(introState === 'icon-only' || chatOpen) && (
             <button 
               onClick={() => setChatOpen(!chatOpen)}
-              className="group flex items-center bg-white text-slate-800 rounded-l-xl shadow-lg border border-slate-100 transition-all duration-300 w-12 hover:w-[115px] h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
+              className="group flex items-center bg-white dark:bg-slate-900 text-slate-800 dark:text-white rounded-l-xl shadow-lg border border-slate-100 dark:border-slate-800 transition-all duration-300 w-12 hover:w-[115px] h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
             >
               <div className="w-12 h-12 flex items-center justify-center shrink-0">
                 {chatOpen ? <X className="w-5 h-5 text-slate-400" /> : <img src={faviconUrl} alt="ZEDEX" className="w-6 h-6 object-contain" />}
@@ -134,7 +134,7 @@ export default function FloatingActions() {
 
       {/* Redesigned Premium AI UI with Functional Chat & Minimal Theme */}
       {chatOpen && (
-        <div className="fixed bottom-0 sm:bottom-[88px] right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[calc(100vh-140px)] sm:max-h-[600px] bg-white sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-0 sm:border border-slate-200 flex flex-col overflow-hidden z-[60] animate-in fade-in sm:slide-in-from-bottom-6 sm:zoom-in-95 slide-in-from-bottom-0 duration-300">
+        <div className="fixed bottom-0 sm:bottom-[88px] right-0 sm:right-6 w-full sm:w-[380px] h-[100dvh] sm:h-[calc(100vh-140px)] sm:max-h-[600px] bg-white dark:bg-slate-900 sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-0 sm:border border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden z-[60] animate-in fade-in sm:slide-in-from-bottom-6 sm:zoom-in-95 slide-in-from-bottom-0 duration-300">
           
           {/* Background Logo Watermark */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03] z-0">
@@ -145,13 +145,13 @@ export default function FloatingActions() {
           <div className="w-full h-1 bg-gradient-to-r from-sky-400 via-emerald-400 via-amber-400 to-rose-400 shrink-0 z-10"></div>
 
           {/* Header */}
-          <div className="bg-white border-b border-slate-100 p-4 flex items-center justify-between shrink-0 relative z-10">
+          <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 p-4 flex items-center justify-between shrink-0 relative z-10 transition-colors">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm p-1.5">
+              <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center shadow-sm p-1.5 transition-colors">
                 <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold text-[15px] text-slate-800 leading-tight">ZEDEX AI Assist</h3>
+                <h3 className="font-bold text-[15px] text-slate-800 dark:text-white leading-tight">ZEDEX AI Assist</h3>
                 <p className="text-slate-400 text-[12px] font-medium mt-0.5">Powered by ZAVYX InfoTech</p>
               </div>
             </div>
@@ -169,12 +169,12 @@ export default function FloatingActions() {
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex gap-3 max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 ${msg.sender === 'user' ? 'self-end flex-row-reverse' : ''}`}>
                 {msg.sender === 'bot' && (
-                  <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 p-1.5">
+                  <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 dark:border-slate-700 p-1.5 transition-colors">
                     <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
                   </div>
                 )}
                 <div className="flex flex-col gap-1.5">
-                  <div className={`border p-3.5 shadow-sm ${msg.sender === 'user' ? 'bg-slate-800 text-white rounded-2xl rounded-tr-sm border-slate-700' : 'bg-white text-slate-700 rounded-2xl rounded-tl-sm border-slate-200'}`}>
+                  <div className={`border p-3.5 shadow-sm ${msg.sender === 'user' ? 'bg-slate-800 dark:bg-slate-800 text-white rounded-2xl rounded-tr-sm border-slate-700' : 'bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 rounded-2xl rounded-tl-sm border-slate-200 dark:border-slate-700/50'}`}>
                     <p className="text-[13.5px] leading-relaxed break-words">
                       {msg.text}
                     </p>
@@ -182,10 +182,10 @@ export default function FloatingActions() {
                   {/* Quick Replies for initial greeting only */}
                   {idx === 0 && msg.sender === 'bot' && (
                     <div className="flex flex-wrap gap-2 mt-2">
-                      <button onClick={() => handleSendMessage('Website Development')} className="px-3 py-1.5 bg-white border border-slate-200 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 hover:bg-slate-50 transition-colors shadow-sm">Website Development</button>
-                      <button onClick={() => handleSendMessage('Mobile Apps')} className="px-3 py-1.5 bg-white border border-slate-200 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 hover:bg-slate-50 transition-colors shadow-sm">Mobile Apps</button>
-                      <button onClick={() => handleSendMessage('AI Automation')} className="px-3 py-1.5 bg-white border border-slate-200 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 hover:bg-slate-50 transition-colors shadow-sm">AI Automation</button>
-                      <button onClick={() => handleSendMessage('CRM Solutions')} className="px-3 py-1.5 bg-white border border-slate-200 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 hover:bg-slate-50 transition-colors shadow-sm">CRM Solutions</button>
+                      <button onClick={() => handleSendMessage('Website Development')} className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">Website Development</button>
+                      <button onClick={() => handleSendMessage('Mobile Apps')} className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">Mobile Apps</button>
+                      <button onClick={() => handleSendMessage('AI Automation')} className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">AI Automation</button>
+                      <button onClick={() => handleSendMessage('CRM Solutions')} className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-full text-[12px] font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">CRM Solutions</button>
                     </div>
                   )}
                 </div>
@@ -194,10 +194,10 @@ export default function FloatingActions() {
             
             {isTyping && (
               <div className="flex gap-2.5 max-w-[85%] animate-in fade-in">
-                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 p-1.5">
+                <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 dark:border-slate-700 p-1.5">
                   <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
                 </div>
-                <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-sm flex items-center gap-1 h-[42px]">
+                <div className="bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 rounded-2xl rounded-tl-sm p-3.5 shadow-sm flex items-center gap-1 h-[42px]">
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '0ms' }}></div>
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '150ms' }}></div>
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '300ms' }}></div>
@@ -209,15 +209,15 @@ export default function FloatingActions() {
           </div>
 
           {/* Input Area */}
-          <div className="p-3 bg-white border-t border-slate-100 shrink-0 relative z-10">
-            <div className="flex items-center bg-slate-50 rounded-full px-4 py-2 border border-slate-200 focus-within:border-slate-300 transition-all">
+          <div className="p-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shrink-0 relative z-10 transition-colors">
+            <div className="flex items-center bg-slate-50 dark:bg-slate-800/80 rounded-full px-4 py-2 border border-slate-200 dark:border-slate-700 focus-within:border-slate-300 dark:focus-within:border-slate-600 transition-all">
               <input 
                 type="text" 
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask ZEDEX anything..." 
-                className="flex-1 bg-transparent border-none outline-none text-[14px] text-slate-800 placeholder:text-slate-400 py-1"
+                className="flex-1 bg-transparent border-none outline-none text-[14px] text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 py-1"
               />
               <button 
                 onClick={() => handleSendMessage(inputValue)}
