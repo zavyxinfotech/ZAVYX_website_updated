@@ -104,20 +104,20 @@ export default function About() {
              </div>
              
              {/* Box 1 - Top Left */}
-             <div className="rounded-tl-[80px] rounded-br-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 relative z-10 w-full h-[90%] align-bottom self-end">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 1" className="w-full h-full object-cover" />
+             <div className="rounded-tl-[80px] rounded-br-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-sky-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[90%] align-bottom self-end">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 2 - Top Right */}
-             <div className="rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 relative z-0 w-[90%] h-full">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 2" className="w-full h-full object-cover" />
+             <div className="rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-emerald-500 transition-colors duration-500 cursor-pointer relative z-0 w-[90%] h-full">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 3 - Bottom Left */}
-             <div className="rounded-bl-[80px] rounded-tr-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 relative z-0 w-[80%] h-[90%] justify-self-end mt-4">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 3" className="w-full h-full object-cover" />
+             <div className="rounded-bl-[80px] rounded-tr-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-amber-500 transition-colors duration-500 cursor-pointer relative z-0 w-[80%] h-[90%] justify-self-end mt-4">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 4 - Bottom Right */}
-             <div className="rounded-br-[80px] rounded-tl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 relative z-10 w-full h-[80%] mt-4">
-                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 4" className="w-full h-full object-cover" />
+             <div className="rounded-br-[80px] rounded-tl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-rose-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[80%] mt-4">
+                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
           </ScrollSlideSection>
 
@@ -128,7 +128,7 @@ export default function About() {
               About Us
             </h4>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
-              Transforming <span className="text-rose-500">Ideas</span><br /> into Digital Reality
+              Transforming Ideas<br /> into Digital Reality
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 border-l-4 border-emerald-500 pl-4">
               ZAVYX InfoTech was founded with a singular purpose: to deliver unparalleled digital experiences that empower businesses to scale securely and efficiently. We are hitting the ground running on day one with relentless startup energy.
