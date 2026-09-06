@@ -78,7 +78,7 @@ export default function About() {
 
       {/* 2. MARQUEE BANNER */}
       <div className="bg-sky-500 py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-full shadow-xl">
-        <div className="animate-[marquee_20s_linear_infinite] flex items-center justify-around min-w-max text-white font-bold tracking-widest uppercase text-sm">
+        <div className="animate-[marquee_50s_linear_infinite] flex items-center justify-around min-w-max text-white font-bold tracking-widest uppercase text-sm">
           {[...Array(6)].map((_, i) => (
             <React.Fragment key={i}>
               <span className="mx-6">*</span><span>Website Development</span>
