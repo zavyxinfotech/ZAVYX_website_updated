@@ -21,10 +21,10 @@ export default function Footer() {
               Empowering growing businesses with intelligent web architecture, seamless automation, and scalable CRM environments.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-all">
+              <a href="https://www.facebook.com/zavyxindia/" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-all">
                 <FaFacebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-pink-500 dark:hover:text-pink-400 transition-all">
+              <a href="https://www.instagram.com/zavyx_infotech?igsi=cG15M3dzMmNxeW9p" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-pink-500 dark:hover:text-pink-400 transition-all">
                 <FaInstagram className="w-4 h-4" />
               </a>
             </div>
