@@ -64,8 +64,9 @@ export default function Footer() {
               <span className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 font-medium">+91 63827 21178</span>
               <span className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 font-medium">hello@zavyx.in</span>
               <div className="flex flex-col gap-1 max-w-sm mt-1">
-                <span className="text-[15px] md:text-base text-slate-800 dark:text-slate-200 font-bold leading-snug">TeesZone Clothing Private Limited.</span>
-                <span className="text-[13px] md:text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[90%]">#2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
+                <span className="text-[15px] md:text-base text-slate-800 dark:text-slate-200 font-bold leading-snug">ZAVYX InfoTech Private Limited</span>
+                <span className="text-xs md:text-[13px] text-slate-500 dark:text-slate-400 font-medium leading-snug mt-[-2px]">(TeesZone Clothing Private Limited)</span>
+                <span className="text-[13px] md:text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[90%] mt-1">#2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
               </div>
               <span className="text-[15px] md:text-base text-sky-500 dark:text-sky-400 font-semibold mt-1">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
             </div>

@@ -18,7 +18,7 @@ import {
   LifeBuoy
 } from 'lucide-react';
 
-import { ParticleWave, AnimatedHeroText } from '../components/HeroEffects';
+import { AnimatedHeroText } from '../components/HeroEffects';
 
 import heroVid from '../../assets/Videos/animo-showcase-stream-720p.webm';
 import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
@@ -156,15 +156,15 @@ export default function Services() {
       
       {/* 1. HERO BANNER */}
       <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        <ParticleWave />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
-            <h4 className="text-sky-500 font-semibold tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
+            <h4 className="text-sky-500 font-bold tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
               <span className="w-1.5 h-6 bg-sky-500 inline-block block"></span>
               OUR TECHNICAL CAPABILITIES
             </h4>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
               <AnimatedHeroText text="End-to-End Technology & Software Services" />
             </h1>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
@@ -173,15 +173,21 @@ export default function Services() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-8">
               <Link
                 to="/contact"
-                className="px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-rose-600 hover:opacity-95 transition-all text-base sm:text-lg shadow-xl hover:scale-[1.02]"
+                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                Get Started
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  Get Started <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                </span>
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-500 transition-all text-base sm:text-lg shadow-sm group"
+                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                Our Agency <ArrowRight className="w-5 h-5 text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  Our Agency <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                </span>
               </Link>
             </div>
           </ScrollSlideSection>
@@ -208,7 +214,7 @@ export default function Services() {
                <span className="w-4 h-4 bg-emerald-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
                What we do
              </h4>
-             <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
+             <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
                Empowering You to<br />
                <span className="text-slate-500 dark:text-slate-400">Achieve Lasting<br />Digital Transformation</span>
              </h2>
@@ -252,7 +258,7 @@ export default function Services() {
                  <span className="w-4 h-4 bg-amber-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
                  Why Choose Us?
                </h4>
-               <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight mb-10">
+               <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-10">
                  Why Choose Us for <span className="text-slate-500 dark:text-slate-400 font-light">Your Tech Transformation Strategy?</span>
                </h2>
                
@@ -298,7 +304,7 @@ export default function Services() {
               <span className="w-4 h-4 bg-sky-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
               Our Services
             </h4>
-            <h2 className="text-4xl sm:text-5xl border-slate-900 font-extrabold text-slate-900 dark:text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1]">
               Tailored Services to <span className="text-slate-500 dark:text-slate-400 font-light">Grow & Protect Your Tech Ecosystem</span>
             </h2>
          </ScrollSlideSection>
@@ -314,7 +320,7 @@ export default function Services() {
                     <Link to={svc.path} className="group block bg-white dark:bg-slate-800 rounded-[40px] overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-500 h-[420px] flex flex-col relative">
                        {/* Top Text Content */}
                        <div className="p-8 relative z-10 flex-1">
-                          <h3 className={`text-2xl font-extrabold text-slate-900 dark:text-white mb-3 transition-colors duration-300 ${svc.hoverColor}`}>
+                          <h3 className={`text-2xl font-bold text-slate-900 dark:text-white mb-3 transition-colors duration-300 ${svc.hoverColor}`}>
                              {svc.title}
                           </h3>
                           <p className="text-slate-500 dark:text-slate-400 text-sm md:text-[15px] font-medium leading-relaxed max-w-[85%]">
