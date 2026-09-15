@@ -6,6 +6,16 @@ import {
 } from 'lucide-react';
 import ScrollAnimatedHeading from './ScrollAnimatedHeading';
 
+import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
+import imgEcom from '../../assets/images/E_commerce_Stores_Service_background.png';
+import imgCrm from '../../assets/images/CRM_ERM_service_background.png';
+import imgWa from '../../assets/images/WhatsApp_API_and_chatbots.jpeg';
+import imgAi from '../../assets/images/Ai_Automation_service_background.png';
+import imgMob from '../../assets/images/mobile_apps.jpeg';
+import imgSeo from '../../assets/images/Digital_marketing_SEO_service_background.png';
+import imgBrand from '../../assets/images/Branding_creative_service_background.png';
+import imgCloud from '../../assets/images/Cloud_Infrastructure_service_background.png';
+
 const AnimatedServiceCard = ({ svc, borderClasses, index }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -27,22 +37,26 @@ const AnimatedServiceCard = ({ svc, borderClasses, index }) => {
       to={svc.path}
       className={`group relative flex flex-col items-center text-center p-4 lg:p-6 transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] overflow-hidden cursor-pointer ${borderClasses} ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}
     >
-      {/* Pop-up Image from the bottom line */}
-      <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-all duration-[400ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] z-0 pointer-events-none opacity-0 group-hover:opacity-100">
-        <div className="absolute inset-0 bg-slate-900/60 z-10" />
-        <img src={svc.image} className="w-full h-full object-cover" alt="" />
+      {/* Pop-up Crystal Clear Image on Hover (No dark glassmorphism overlay) */}
+      <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-all duration-[450ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] z-0 pointer-events-none opacity-0 group-hover:opacity-100 overflow-hidden">
+        {/* Subtle top & bottom gradient vignette for text contrast without obscuring center image clarity */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/50 z-10 pointer-events-none" />
+        <img 
+          src={svc.image} 
+          className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" 
+          alt={svc.title} 
+        />
       </div>
 
       {/* Bottom Right Edge Fade-In Arrow */}
-      <div className="absolute right-6 bottom-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-[400ms] ease-out z-20 text-white">
-        <ArrowRight className="w-6 h-6" strokeWidth={2} />
+      <div className="absolute right-6 bottom-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-[400ms] ease-out z-20 text-white drop-shadow-md">
+        <ArrowRight className="w-6 h-6" strokeWidth={2.5} />
       </div>
 
-      {/* Existing Background glowing effects */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${svc.glowColor} opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-0`}></div>
-      <div className={`absolute left-0 top-0 bottom-0 w-[4px] ${svc.bgColor} scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center z-10`}></div>
+      {/* Left accent border bar on hover */}
+      <div className={`absolute left-0 top-0 bottom-0 w-[4px] ${svc.bgColor} scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center z-20`}></div>
       
-      <h3 className="text-lg lg:text-xl font-bold text-slate-900 dark:text-white group-hover:text-white mb-4 transition-colors duration-[400ms] relative z-10 lg:whitespace-nowrap">
+      <h3 className="text-lg lg:text-xl font-normal text-slate-900 dark:text-white group-hover:text-white mb-4 transition-all duration-[400ms] relative z-20 lg:whitespace-nowrap group-hover:drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
         {svc.title}
       </h3>
 
@@ -59,15 +73,15 @@ const AnimatedServiceCard = ({ svc, borderClasses, index }) => {
 
 export default function GridServices() {
   const services = [
-    { icon: Globe, title: 'Websites & Web Apps', desc: 'High-performance modern web apps tailored for speed, SEO, and engagement.', path: '/services/websites-web-apps', iconColor: 'text-sky-500', minimalColor: 'text-sky-500/60', minimalBg: 'bg-sky-500/5', bgColor: 'bg-sky-500', glowColor: 'from-sky-500/10', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80' },
-    { icon: ShoppingCart, title: 'E-commerce Stores', desc: 'Scalable custom storefronts optimized for maximum conversion and fast checkouts.', path: '/services/ecommerce-stores', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80' },
-    { icon: Database, title: 'CRM & ERP Systems', desc: 'Custom enterprise software to streamline workflow, inventory, and relations.', path: '/services/crm-erp-systems', iconColor: 'text-emerald-500', minimalColor: 'text-emerald-500/60', minimalBg: 'bg-emerald-500/5', bgColor: 'bg-emerald-500', glowColor: 'from-emerald-500/10', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80' },
-    { icon: MessageCircle, title: 'WhatsApp API & Bots', desc: 'Automated WhatsApp workflows for real-time client engagement and support.', path: '/services/whatsapp-api-bots', iconColor: 'text-amber-500', minimalColor: 'text-amber-500/60', minimalBg: 'bg-amber-500/5', bgColor: 'bg-amber-500', glowColor: 'from-amber-500/10', image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80' },
-    { icon: Bot, title: 'AI & Automation', desc: 'Intelligent AI bots and process automation to cut costs and increase output.', path: '/services/ai-automation', iconColor: 'text-sky-500', minimalColor: 'text-sky-500/60', minimalBg: 'bg-sky-500/5', bgColor: 'bg-sky-500', glowColor: 'from-sky-500/10', image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80' },
-    { icon: Smartphone, title: 'Mobile Apps', desc: 'Native and cross-platform apps engineered for fluid user experience.', path: '/services/mobile-apps', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80' },
-    { icon: TrendingUp, title: 'Digital Marketing & SEO', desc: 'Data-driven scaling strategies ensuring top-tier rankings and lead flow.', path: '/services/digital-marketing-seo', iconColor: 'text-amber-500', minimalColor: 'text-amber-500/60', minimalBg: 'bg-amber-500/5', bgColor: 'bg-amber-500', glowColor: 'from-amber-500/10', image: 'https://images.unsplash.com/photo-1432888117286-3ee44053e198?auto=format&fit=crop&w=600&q=80' },
-    { icon: PenTool, title: 'Branding & Creative', desc: 'Premium visual identity systems positioning you at the pinnacle of industry.', path: '/services/branding-creative', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80' },
-    { icon: Cloud, title: 'Cloud & Infrastructure', desc: 'Cloud infrastructure management, security hardening, and stable deployments.', path: '/services/cloud-infrastructure', iconColor: 'text-emerald-500', minimalColor: 'text-emerald-500/60', minimalBg: 'bg-emerald-500/5', bgColor: 'bg-emerald-500', glowColor: 'from-emerald-500/10', image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80' }
+    { icon: Globe, title: 'Websites & Web Apps', desc: 'High-performance modern web apps tailored for speed, SEO, and engagement.', path: '/services/websites-web-apps', iconColor: 'text-sky-500', minimalColor: 'text-sky-500/60', minimalBg: 'bg-sky-500/5', bgColor: 'bg-sky-500', glowColor: 'from-sky-500/10', image: imgWeb },
+    { icon: ShoppingCart, title: 'E-commerce Stores', desc: 'Scalable custom storefronts optimized for maximum conversion and fast checkouts.', path: '/services/ecommerce-stores', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: imgEcom },
+    { icon: Database, title: 'CRM & ERP Systems', desc: 'Custom enterprise software to streamline workflow, inventory, and relations.', path: '/services/crm-erp-systems', iconColor: 'text-emerald-500', minimalColor: 'text-emerald-500/60', minimalBg: 'bg-emerald-500/5', bgColor: 'bg-emerald-500', glowColor: 'from-emerald-500/10', image: imgCrm },
+    { icon: MessageCircle, title: 'WhatsApp API & Bots', desc: 'Automated WhatsApp workflows for real-time client engagement and support.', path: '/services/whatsapp-api-bots', iconColor: 'text-amber-500', minimalColor: 'text-amber-500/60', minimalBg: 'bg-amber-500/5', bgColor: 'bg-amber-500', glowColor: 'from-amber-500/10', image: imgWa },
+    { icon: Bot, title: 'AI & Automation', desc: 'Intelligent AI bots and process automation to cut costs and increase output.', path: '/services/ai-automation', iconColor: 'text-sky-500', minimalColor: 'text-sky-500/60', minimalBg: 'bg-sky-500/5', bgColor: 'bg-sky-500', glowColor: 'from-sky-500/10', image: imgAi },
+    { icon: Smartphone, title: 'Mobile Apps', desc: 'Native and cross-platform apps engineered for fluid user experience.', path: '/services/mobile-apps', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: imgMob },
+    { icon: TrendingUp, title: 'Digital Marketing & SEO', desc: 'Data-driven scaling strategies ensuring top-tier rankings and lead flow.', path: '/services/digital-marketing-seo', iconColor: 'text-amber-500', minimalColor: 'text-amber-500/60', minimalBg: 'bg-amber-500/5', bgColor: 'bg-amber-500', glowColor: 'from-amber-500/10', image: imgSeo },
+    { icon: PenTool, title: 'Branding & Creative', desc: 'Premium visual identity systems positioning you at the pinnacle of industry.', path: '/services/branding-creative', iconColor: 'text-rose-500', minimalColor: 'text-rose-500/60', minimalBg: 'bg-rose-500/5', bgColor: 'bg-rose-500', glowColor: 'from-rose-500/10', image: imgBrand },
+    { icon: Cloud, title: 'Cloud & Infrastructure', desc: 'Cloud infrastructure management, security hardening, and stable deployments.', path: '/services/cloud-infrastructure', iconColor: 'text-emerald-500', minimalColor: 'text-emerald-500/60', minimalBg: 'bg-emerald-500/5', bgColor: 'bg-emerald-500', glowColor: 'from-emerald-500/10', image: imgCloud }
   ];
 
   return (

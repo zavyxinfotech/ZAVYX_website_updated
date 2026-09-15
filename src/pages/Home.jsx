@@ -12,7 +12,23 @@ import {
   Play,
   Pause,
   TrendingUp,
-  Sparkles
+  Sparkles,
+  Gem,
+  Users,
+  Shield,
+  Quote,
+  Search,
+  FileText,
+  Pencil,
+  Rocket,
+  ShoppingCart,
+  Factory,
+  HeartPulse,
+  GraduationCap,
+  Building2,
+  Truck,
+  Tv,
+  LayoutGrid
 } from 'lucide-react';
 import GridServices from '../components/GridServices';
 import ScrollAnimatedHeading from '../components/ScrollAnimatedHeading';
@@ -56,37 +72,37 @@ import {
 import { TbBrandNextjs, TbBrandTailwind } from 'react-icons/tb';
 
 const stackRow1 = [
-  { name: 'Tailwind CSS', icon: TbBrandTailwind, hex: '#06B6D4' },
-  { name: 'Node.js', icon: FaNodeJs, hex: '#339933' },
-  { name: 'GitHub', icon: FaGithub, hex: '#888888' },
-  { name: 'MongoDB', icon: FaDatabase, hex: '#47A248' },
-  { name: 'PHP', icon: FaPhp, hex: '#777BB4' },
-  { name: 'Express', icon: FaNodeJs, hex: '#555555' },
   { name: 'React', icon: FaReact, hex: '#61DAFB' },
-  { name: 'MySQL', icon: FaDatabase, hex: '#00758F' },
+  { name: 'Node.js', icon: FaNodeJs, hex: '#5FA04E' }, // Real Node.js color
+  { name: 'AWS', icon: FaAws, hex: '#FF9900' },
+  { name: 'Python', icon: FaPython, hex: '#3776AB' },
+  { name: 'Docker', icon: FaDocker, hex: '#2496ED' },
+  { name: 'MongoDB', icon: FaDatabase, hex: '#47A248' },
   { name: 'JavaScript', icon: FaJsSquare, hex: '#F7DF1E' },
-  { name: 'Next.js', icon: TbBrandNextjs, hex: '#A0A0A0' },
-  { name: 'TypeScript', icon: FaJsSquare, hex: '#3178C6' }
-];
-
-const whyChooseFeatures = [
-  { num: '01', title: 'Modern Technology', desc: 'We use current tools and development practices to create solutions that are practical, maintainable and ready to scale.', icon: Code },
-  { num: '02', title: 'Dedicated Attention', desc: 'As a growing team, we keep communication direct and give every project focused attention.', icon: CheckCircle },
-  { num: '03', title: 'Transparent Process', desc: 'Clear requirements, milestones and communication keep projects predictable from start to finish.', icon: Globe },
-  { num: '04', title: 'Built Around You', desc: 'We understand your business needs before recommending technology, helping ensure the solution actually fits your workflow.', icon: Bot }
-];
-
-const processSteps = [
-  { step: '01', title: 'Discover', desc: 'Understand the business, users, goals and challenges.' },
-  { step: '02', title: 'Plan', desc: 'Define requirements, scope, technology and milestones.' },
-  { step: '03', title: 'Design', desc: 'Create a clear, intuitive and brand-aligned experience.' },
-  { step: '04', title: 'Develop', desc: 'Build, integrate and test the solution.' },
-  { step: '05', title: 'Launch & Support', desc: 'Deploy the solution and continue improving it based on real needs.' }
+  { name: 'GitHub', icon: FaGithub, hex: '#181717' },
+  { name: 'Tailwind CSS', icon: TbBrandTailwind, hex: '#06B6D4' },
+  { name: 'Vue.js', icon: FaVuejs, hex: '#4FC08D' },
+  { name: 'DigitalOcean', icon: FaDigitalOcean, hex: '#0080FF' },
+  { name: 'PHP', icon: FaPhp, hex: '#777BB4' },
+  { name: 'Next.js', icon: TbBrandNextjs, hex: '#000000' }
 ];
 
 export default function Home() {
+  const [activeIndustry, setActiveIndustry] = useState(null);
+
+  const industriesList = [
+    { title: 'Retail & E-commerce', icon: ShoppingCart, hex: '#0284C7', subheading: 'Digital storefronts connecting the globe', desc: 'Transform your retail experience with advanced e-commerce solutions, seamless integrations, and modern digital shopping platforms engineered for performance and scale.' },
+    { title: 'Manufacturing', icon: Factory, hex: '#EA580C', subheading: 'Smart production and automation', desc: 'Optimize your supply chain and factory floor operations with real-time tracking, intelligent integrations, and highly reliable modern production software.' },
+    { title: 'Healthcare', icon: HeartPulse, hex: '#16A34A', subheading: 'Secure and connected patient care', desc: 'Enhance patient care with highly secure, compliant digital health platforms, telemedicine applications, and streamlined digital medical record systems.' },
+    { title: 'Education', icon: GraduationCap, hex: '#2563EB', subheading: 'E-learning and campus technology', desc: 'Empower remote learning through intuitive educational platforms, robust student portals, and highly scalable virtual classroom environments.' },
+    { title: 'Real Estate', icon: Building2, hex: '#7C3AED', subheading: 'Innovative property tech solutions', desc: 'Bridge the gap between property agents and buyers using advanced digital property management softwares, immersive virtual tours, and modern CRM platforms.' },
+    { title: 'Logistics', icon: Truck, hex: '#E11D48', subheading: 'Supply chain tracking & optimization', desc: 'Monitor easily and manage fleets globally in real time with our customized digital routing, intelligent logistics tracking, and warehouse management systems.' },
+    { title: 'Media & Entertainment', icon: Tv, hex: '#0D9488', subheading: 'High-bandwidth content delivery', desc: 'Instantly deliver high-quality digital content flawlessly to your audience with our reliable, high-uptime streaming architecture and active engagement tools.' },
+    { title: 'Travel & Tourism', icon: Globe, hex: '#14B8A6', subheading: 'Booking and hospitality portals', desc: 'Create unforgettable trips for your customers using comprehensive online booking engines, dynamic hospitality systems, and specialized travel CRMs.' }
+  ];
+
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300">
+    <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300">
       
       {/* REDESIGNED HERO SECTION MATCHING EXACT REFERENCE LAYOUT */}
       <section className="relative overflow-hidden bg-white dark:bg-slate-900 pt-24 pb-16 lg:pt-32 lg:pb-24 min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center transition-colors duration-300">
@@ -99,12 +115,12 @@ export default function Home() {
               
               {/* Hero Headline with highlighted keyword */}
               <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
-                Digital Solutions That Move Your Business <span className="text-slate-900 dark:text-white font-normal inline-block">Forward.</span>
+                Digital Solutions That Move Your Business <span className="text-slate-900 dark:text-white font-normal inline-block">Forward</span>
               </h1>
 
               {/* Sub-headline / Paragraph */}
               <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl font-normal">
-                At ZAVYX Infotech, we help businesses leverage technology to work smarter, connect better and achieve more.
+                At ZAVYX Infotech, we empower businesses with smart technology solutions that streamline operations, strengthen connections, and drive sustainable growth.
               </p>
 
               {/* CTA Buttons Row - Using Signature Project Button Style */}
@@ -113,9 +129,9 @@ export default function Home() {
                   to="/contact"
                   className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                 >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                    Get Started <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                    Get Started <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
@@ -123,9 +139,9 @@ export default function Home() {
                   to="/services"
                   className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                 >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                    Explore Our Services <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                    Explore Our Services <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -232,39 +248,91 @@ export default function Home() {
         <GridServices />
       </ScrollSlideSection>
 
-      {/* WHY CHOOSE ZAVYX SECTION */}
+      {/* ABOUT ZAVYX SECTION */}
       <ScrollSlideSection>
-        <section className="py-20 lg:py-32 bg-transparent transition-colors duration-300 relative z-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-              <div className="lg:w-1/3 flex flex-col justify-center text-center lg:text-left">
-                <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-4">Why Choose ZAVYX</h2>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
-                  Built for businesses that are ready to move forward.
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                  We're a growing technology company with a focused team, modern infrastructure and a straightforward approach to delivering digital solutions.
+        <section className="py-16 lg:py-24 bg-transparent transition-colors duration-300 relative z-20">
+          <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Left Column: Text & Features */}
+              <div className="lg:col-span-6 flex flex-col text-left">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">ABOUT ZAVYX</span>
+                  <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
+                </div>
+                
+                <ScrollAnimatedHeading 
+                  text="A Technology Partner You Can Trust" 
+                  className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 transition-opacity"
+                />
+
+                <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-8 font-normal max-w-xl">
+                  ZAVYX Infotech Private Limited is a growing technology company focused on helping businesses use modern digital solutions to work smarter, connect better and grow with confidence.
                 </p>
-              </div>
-              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-8">
-                {whyChooseFeatures.map((f, i) => {
-                  const Icon = f.icon;
-                  return (
-                    <div key={i} className="flex flex-col group p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-sky-500/30">
-                      <div className="flex items-center justify-between mb-5">
-                        <div className="w-12 h-12 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-300">
-                           <Icon className="w-6 h-6" />
-                        </div>
-                        <span className="text-4xl font-extrabold text-slate-200 dark:text-slate-800 transition-colors group-hover:text-sky-500/10">{f.num}</span>
-                      </div>
-                      <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{f.title}</h4>
-                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                        {f.desc}
-                      </p>
+
+                <div className="mb-10">
+                  <Link
+                    to="/about"
+                    className="relative inline-flex h-12 sm:h-13 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                  >
+                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#0B1F3A] dark:bg-white text-white dark:text-[#0B1F3A] font-normal px-6 gap-2 text-sm sm:text-base z-10 transition-all border border-transparent group-hover:border-transparent">
+                      Learn More About Us <ArrowRight className="w-4 h-4 text-white dark:text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                </div>
+
+                {/* 3 Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-200/80 dark:border-slate-800">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-slate-800/80 border border-sky-100 dark:border-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 shrink-0">
+                      <Gem className="w-5 h-5" />
                     </div>
-                  );
-                })}
+                    <span className="text-xs sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                      Client-Centric Approach
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-slate-800/80 border border-sky-100 dark:border-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 shrink-0">
+                      <Users className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                      Collaborative and Transparent
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-slate-800/80 border border-sky-100 dark:border-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 shrink-0">
+                      <Shield className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                      Reliable and Supportive
+                    </span>
+                  </div>
+                </div>
+
               </div>
+
+              {/* Right Column: Team Image with Floating Quote Overlay */}
+              <div className="lg:col-span-6 relative flex justify-center">
+                <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 dark:border-slate-800">
+                  <img 
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" 
+                    alt="ZAVYX Team Collaboration" 
+                    className="w-full h-[360px] sm:h-[420px] lg:h-[450px] object-cover"
+                  />
+                  {/* Floating Quote Card */}
+                  <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl p-5 border border-slate-100 dark:border-slate-800 max-w-[280px] sm:max-w-[310px] z-20">
+                    <Quote className="w-6 h-6 text-sky-500 fill-sky-500/20 mb-2 rotate-180" />
+                    <p className="text-xs sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-snug mb-3">
+                      Building meaningful digital solutions for businesses and communities.
+                    </p>
+                    <div className="w-16 h-1 rounded-full bg-gradient-to-r from-sky-500 via-rose-500 via-emerald-500 to-amber-500"></div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -272,38 +340,164 @@ export default function Home() {
 
       {/* OUR PROCESS SECTION */}
       <ScrollSlideSection>
-        <section className="py-20 lg:py-32 bg-transparent transition-colors duration-300 relative z-10 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
-            <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-4">Our Methodology</h2>
-            <ScrollAnimatedHeading 
-              text="OUR PROCESS" 
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal leading-[1.1] tracking-tight mb-16 text-slate-900 dark:text-white uppercase drop-shadow-sm transition-opacity" 
-            />
+        <section className="py-16 lg:py-24 bg-transparent transition-colors duration-300 relative z-10 overflow-hidden">
+          <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Header Row */}
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-pink-600 dark:text-pink-400 font-normal uppercase tracking-widest text-xs sm:text-sm">OUR PROCESS</span>
+                  <span className="w-8 h-[2px] bg-pink-500 inline-block"></span>
+                </div>
+                <ScrollAnimatedHeading 
+                  text="A simple and transparent process" 
+                  className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+                />
+              </div>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-6 relative mt-16">
-              {/* Horizontal Connecting Line for Desktop */}
-              <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent z-0"></div>
+            {/* 5 Steps Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 relative">
+              {[
+                { step: '01', title: 'Discover', desc: 'Understand your goals and requirements.', icon: Search },
+                { step: '02', title: 'Plan', desc: 'Create the right strategy and roadmap.', icon: FileText },
+                { step: '03', title: 'Design', desc: 'Craft simple and effective designs.', icon: Pencil },
+                { step: '04', title: 'Develop', desc: 'Build, test and refine the solution.', icon: Code },
+                { step: '05', title: 'Launch & Support', desc: 'Deploy and provide ongoing support.', icon: Rocket }
+              ].map((p, i, arr) => {
+                const Icon = p.icon;
+                return (
+                  <div key={i} className="flex flex-col items-start relative group p-5 sm:p-6 rounded-2xl overflow-hidden transition-all h-full">
+                    {/* Dark background animating from bottom to top */}
+                    <div className="absolute inset-0 bg-[#0B1F3A] dark:bg-slate-800 origin-bottom transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out z-0"></div>
 
-              {processSteps.map((p, i) => (
-                 <div key={i} className="flex flex-col items-center relative z-10 group">
-                    <div className="w-20 h-20 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center text-2xl font-bold text-slate-900 dark:text-white mb-6 group-hover:-translate-y-2 group-hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-sky-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-0"></div>
-                      <span className="relative z-10 group-hover:text-white transition-colors duration-300">{p.step}</span>
+                    {/* Icon & Step Number */}
+                    <div className="flex items-center gap-4 mb-5 w-full relative z-10">
+                      <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#0B1F3A] dark:bg-sky-950 text-white flex items-center justify-center shrink-0 border border-slate-700/50 transition-colors">
+                        <Icon className="w-6 h-6 text-white" strokeWidth={2} />
+                      </div>
+                      <span className="text-3xl sm:text-4xl font-normal text-slate-400 dark:text-slate-500 tracking-tight group-hover:text-white transition-colors duration-300">
+                        {p.step}
+                      </span>
+                      {i < arr.length - 1 && (
+                        <ArrowRight className="hidden lg:block w-4 h-4 text-slate-300 dark:text-slate-700 ml-auto transition-colors" />
+                      )}
                     </div>
-                    <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-sky-500 transition-colors duration-300">{p.title}</h4>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed max-w-[220px]">
+
+                    <h4 className="text-lg font-normal text-slate-900 dark:text-white mb-2 group-hover:text-white transition-colors duration-300 relative z-10">
+                      {p.title}
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm lg:text-base leading-relaxed font-normal group-hover:text-slate-200 transition-colors duration-300 relative z-10">
                       {p.desc}
                     </p>
-                 </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
+
+          </div>
+        </section>
+      </ScrollSlideSection>
+
+      {/* INDUSTRIES WE SERVE SECTION */}
+      <ScrollSlideSection>
+        <section className="py-16 lg:py-24 bg-transparent transition-colors duration-300 relative z-20">
+          <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Header Row */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-6">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">INDUSTRIES WE SERVE</span>
+                  <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
+                </div>
+                <ScrollAnimatedHeading 
+                  text="Helping Businesses Across Industries" 
+                  className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+                />
+              </div>
+
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 text-sm font-normal text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors shrink-0"
+              >
+                Explore Services <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Industries Vertical Tabs Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 lg:h-[450px] pt-4">
+              {industriesList.map((ind, i) => {
+                const isActive = activeIndustry === i;
+                const Icon = ind.icon;
+                const isLast = i === industriesList.length - 1;
+                
+                return (
+                  <div 
+                    key={`ind-${i}`}
+                    onClick={() => setActiveIndustry(isActive ? null : i)}
+                    className={`group relative flex flex-col items-center justify-center cursor-pointer transition-all duration-300 overflow-hidden w-full h-[180px] lg:h-full py-4 lg:py-0 border-slate-300 dark:border-slate-700/60 ${
+                      i % 2 === 0 ? 'border-r' : ''
+                    } md:border-r ${
+                      (i + 1) % 4 === 0 ? 'md:border-r-0' : ''
+                    } lg:border-r ${
+                      isLast ? 'lg:border-r-0' : ''
+                    }`}
+                  >
+                     {/* Hover & Active Gradient Background matching ZAVYX navy blue */}
+                     <div 
+                        className={`absolute inset-0 transition-all duration-300 z-0 bg-gradient-to-b from-transparent to-[#0B1F3A]/15 dark:to-blue-400/15 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                     ></div>
+
+                    {/* Content Component */}
+                    <div className="relative w-full h-full flex lg:flex-col items-center justify-center gap-4 lg:gap-8 z-10 transition-transform duration-300 group-hover:-translate-y-1">
+                       <div className="relative w-10 h-10 lg:w-12 lg:h-12 shrink-0 mt-4 lg:mt-6">
+                         <Icon className={`w-full h-full absolute top-0 left-0 transition-opacity duration-300 p-1 ${isActive ? 'opacity-0' : 'opacity-100 group-hover:opacity-0 text-slate-800 dark:text-slate-200'}`} strokeWidth={1.5} />
+                         <Icon className={`w-full h-full absolute top-0 left-0 transition-all duration-300 p-1 text-[#0B1F3A] dark:text-blue-400 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} strokeWidth={1.5} />
+                       </div>
+                       
+                       <div className="relative w-full h-full lg:max-h-[300px] flex items-center justify-center overflow-visible">
+                         <span className={`lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-xl lg:text-[1.5rem] tracking-wider uppercase transition-all duration-300 ${isActive ? "opacity-0" : "text-slate-700 dark:text-slate-300 group-hover:opacity-0"}`}>
+                           {ind.title}
+                         </span>
+                         <span className={`lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-xl lg:text-[1.5rem] tracking-wider uppercase transition-all duration-300 text-[#0B1F3A] dark:text-blue-400 ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
+                           {ind.title}
+                         </span>
+                       </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* Expanded Details Panel */}
+            <div className={`transition-all duration-500 ease-in-out origin-top overflow-hidden w-full max-w-4xl mx-auto ${activeIndustry !== null ? 'max-h-[500px] opacity-100 mt-12 md:mt-16' : 'max-h-0 opacity-0 mt-0 pointer-events-none'}`}>
+              {activeIndustry !== null && (
+                <div className="bg-white dark:bg-slate-800/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8 md:p-14 w-full flex flex-col items-start text-left relative backdrop-blur-sm">
+                  {/* Accent Line matching Industry Color */}
+                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl opacity-80" style={{ backgroundColor: industriesList[activeIndustry].hex }}></div>
+                  
+                  <h3 className="text-3xl md:text-[2.5rem] font-normal text-slate-900 dark:text-white mb-2 leading-tight tracking-tight">
+                    {industriesList[activeIndustry].title}
+                  </h3>
+                  <div className="text-xl md:text-2xl font-normal mb-8 md:mb-10 opacity-90 tracking-wide" style={{ color: industriesList[activeIndustry].hex }}>
+                    {industriesList[activeIndustry].subheading}
+                  </div>
+                  <p className="text-base md:text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
+                    {industriesList[activeIndustry].desc}
+                  </p>
+                </div>
+              )}
+            </div>
+
           </div>
         </section>
       </ScrollSlideSection>
 
       {/* ENTERPRISE TECHNOLOGY STACK SECTION INLINED */}
       <ScrollSlideSection>
-      <section className="py-12 lg:py-24 bg-transparent transition-colors duration-300 overflow-hidden relative">
+      <section className="py-16 lg:py-28 mb-20 lg:mb-32 bg-transparent transition-colors duration-300 overflow-hidden relative">
         <style>
           {`
             @keyframes marquee-left {
@@ -326,74 +520,43 @@ export default function Home() {
           `}
         </style>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
-            <ScrollAnimatedHeading 
-               text="ENTERPRISE TECHNOLOGY STACK" 
-               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal leading-[1.1] tracking-tight mb-4 lg:mb-6 text-slate-900 dark:text-white uppercase text-center transition-opacity" 
-            />
-            <p className="text-slate-600 dark:text-slate-400 mt-4 text-base md:text-lg lg:text-xl font-normal max-w-4xl mx-auto leading-relaxed">
-               Scalable, high-performance infrastructure engineered utilizing industry-leading frameworks and robust deployment systems.
-            </p>
+        <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-6">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">OUR PLATFORMS</span>
+                <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
+              </div>
+              <ScrollAnimatedHeading 
+                text="Enterprise Technology Stack" 
+                className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+              />
+            </div>
           </div>
         </div>
 
         {/* Global Mask Wrapping the horizontal scrolling ecosystem */}
         <div 
            className="w-full relative z-10"
-           style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
         >
+          {/* Overlay gradients for smooth fade out at edges instead of WebkitMaskImage (which avoids backdrop-blur bleed bugs) */}
+          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white dark:from-[#050B14] to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white dark:from-[#050B14] to-transparent z-20 pointer-events-none"></div>
+          
           {/* ROW 1 : Left to Right Scroll */}
           <div className="flex overflow-hidden relative w-full mb-10 md:mb-12">
              <div className="flex w-max animate-marquee-left hover-pause items-center justify-start gap-8 md:gap-14 pl-4 pr-14">
                 {[...stackRow1, ...stackRow1].map((tech, idx) => {
                      const Icon = tech.icon;
                      return (
-                       <div key={`r1-${idx}`} className="group relative flex flex-col items-center justify-center py-4 px-2 w-[110px] md:w-[130px] h-[110px] md:h-[130px] cursor-pointer overflow-visible shrink-0 transition-transform hover:z-50">
-                         {/* THIN Top Right Bracket -> Logo Color Mapped */}
-                         <div className="absolute top-0 right-0 w-5 h-5 group-hover:w-full group-hover:h-full transition-all duration-500 ease-out">
-                            <div className="absolute inset-0 border-t-[1px] border-r-[1px] rounded-tr-lg group-hover:rounded-xl border-slate-400 dark:border-slate-600 opacity-40 group-hover:opacity-0 transition-opacity duration-300"></div>
-                            <div 
-                               className="absolute inset-0 border-t-[1px] border-r-[1px] rounded-tr-lg group-hover:rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500"
-                               style={{ borderColor: tech.hex }}
-                            ></div>
-                         </div>
-                         
-                         {/* THIN Bottom Left Bracket -> Logo Color Mapped */}
-                         <div className="absolute bottom-0 left-0 w-5 h-5 group-hover:w-full group-hover:h-full transition-all duration-500 ease-out">
-                            <div className="absolute inset-0 border-b-[1px] border-l-[1px] rounded-bl-lg group-hover:rounded-xl border-slate-400 dark:border-slate-600 opacity-40 group-hover:opacity-0 transition-opacity duration-300"></div>
-                            <div 
-                               className="absolute inset-0 border-b-[1px] border-l-[1px] rounded-bl-lg group-hover:rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500"
-                               style={{ borderColor: tech.hex }}
-                            ></div>
-                         </div>
-
-                         {/* Flat Background tint -> Logo Color Mapped */}
-                         <div 
-                            className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-[0.05] transition-opacity duration-300" 
-                            style={{ backgroundColor: tech.hex }}
-                         ></div>
-
-                         <div className="relative w-14 h-14 md:w-16 md:h-16 mb-2 mt-1">
-                           {/* Base grayscale icon active initially */}
+                       <div key={`r1-${idx}`} className="group relative flex items-center justify-center cursor-pointer overflow-visible shrink-0 transition-transform hover:z-50 mx-2 md:mx-4">
+                         <div className="relative w-10 h-10 md:w-12 md:h-12">
+                           {/* Colored tech logo always visible */}
                            <Icon 
-                              className="w-full h-full absolute top-0 left-0 text-slate-800 dark:text-slate-200 transition-opacity duration-300 opacity-100 group-hover:opacity-0 z-10" 
+                              className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:scale-110 z-20 font-light" 
+                              strokeWidth={1}
+                              style={{ color: tech.hex, filter: `drop-shadow(0px 4px 8px ${tech.hex}40)` }} 
                            />
-                           {/* Colored icon overlay active strictly on hover */}
-                           <Icon 
-                              className="w-full h-full absolute top-0 left-0 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-110 z-20" 
-                              style={{ color: tech.hex, filter: `drop-shadow(0px 4px 10px ${tech.hex}40)` }} 
-                           />
-                         </div>
-                         <div className="relative mt-2 flex justify-center w-full">
-                           {/* Base text active initially */}
-                           <span className="font-bold text-[12px] md:text-[14px] text-slate-800 dark:text-slate-200 transition-opacity duration-300 opacity-70 group-hover:opacity-0 whitespace-nowrap tracking-wide">
-                             {tech.name}
-                           </span>
-                           {/* Colored text active strictly on hover */}
-                           <span className="absolute top-0 left-1/2 -translate-x-1/2 font-bold text-[12px] md:text-[14px] transition-opacity duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap tracking-wide" style={{ color: tech.hex }}>
-                             {tech.name}
-                           </span>
                          </div>
                        </div>
                      )

@@ -35,15 +35,15 @@ const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
 
 export default function About() {
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 min-h-screen overflow-hidden transition-colors duration-300">
+    <div className="bg-white dark:bg-[#050B14] min-h-screen overflow-hidden transition-colors duration-300">
       
       {/* 1. HERO SECTION */}
-      <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+      <section className="relative bg-transparent pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
-            <h4 className="text-sky-500 font-bold tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
+            <h4 className="text-sky-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
               <span className="w-1.5 h-6 bg-sky-500 inline-block block"></span>
               Experience The Best IT Solutions
             </h4>
@@ -58,24 +58,24 @@ export default function About() {
                 to="/contact"
                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                  Explore More <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  Explore More <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
               <Link
                 to="/services"
                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                  View All Services <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  View All Services <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             </div>
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
             <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
               alt="Team collaborating" 
@@ -88,8 +88,8 @@ export default function About() {
       </section>
 
       {/* 2. MARQUEE BANNER */}
-      <div className="bg-sky-500 py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-full shadow-xl">
-        <div className="animate-[marquee_50s_linear_infinite] flex items-center justify-around min-w-max text-white font-bold tracking-widest uppercase text-sm">
+      <div className="bg-sky-500 py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-xl border border-sky-400">
+        <div className="animate-[marquee_50s_linear_infinite] flex items-center justify-around min-w-max text-white font-normal tracking-widest uppercase text-sm">
           {[...Array(6)].map((_, i) => (
             <React.Fragment key={i}>
               <span className="mx-6">*</span><span>Website Development</span>
@@ -110,7 +110,7 @@ export default function About() {
           {/* Left Collage */}
           <ScrollSlideSection className="relative grid grid-cols-2 gap-4 h-[350px] sm:h-[500px]">
              {/* Center Badge Oval/Circle */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-rose-500 rounded-full border-[6px] sm:border-8 border-slate-50 dark:border-slate-900 flex items-center justify-center text-white text-center font-bold leading-tight shadow-xl">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-rose-500 rounded-full border-[6px] sm:border-8 border-slate-50 dark:border-slate-900 flex items-center justify-center text-white text-center font-normal leading-tight shadow-xl">
                <span className="text-xs sm:text-sm uppercase tracking-wider">Startup<br />Energy</span>
              </div>
              
@@ -134,35 +134,35 @@ export default function About() {
 
           {/* Right Content */}
           <ScrollSlideSection delay="100ms" className="flex flex-col text-left">
-            <h4 className="text-amber-500 font-bold tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
+            <h4 className="text-amber-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
               <span className="w-6 h-0.5 bg-amber-500 inline-block block"></span>
               About Us
             </h4>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
               Transforming Ideas<br /> into Digital Reality
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 border-l-4 border-emerald-500 pl-4">
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 border-l-4 border-emerald-500 pl-4 font-normal">
               ZAVYX InfoTech was founded with a singular purpose: to deliver unparalleled digital experiences that empower businesses to scale securely and efficiently. We are hitting the ground running on day one with relentless startup energy.
             </p>
             
             <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-10">
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white">Day 1</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Energy & Drive</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 dark:text-white">Day 1</span>
+                <span className="text-xs sm:text-sm font-normal text-slate-500 uppercase tracking-wider mt-1">Energy & Drive</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white">100%</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Commitment</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 dark:text-white">100%</span>
+                <span className="text-xs sm:text-sm font-normal text-slate-500 uppercase tracking-wider mt-1">Commitment</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white">24/7</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Dedication</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 dark:text-white">24/7</span>
+                <span className="text-xs sm:text-sm font-normal text-slate-500 uppercase tracking-wider mt-1">Dedication</span>
               </div>
             </div>
 
             <div className="flex flex-col mt-4">
-              <span className="font-[cursive] text-4xl text-slate-800 dark:text-slate-200 opacity-80 mb-2">Zavyx InfoTech</span>
-              <span className="text-xs uppercase font-bold text-slate-500 tracking-widest">Board of Directors • Founders</span>
+              <span className="font-[cursive] text-4xl text-slate-800 dark:text-slate-200 opacity-80 mb-2 font-normal">ZAVYX InfoTech</span>
+              <span className="text-xs uppercase font-normal text-slate-500 tracking-widest">Board of Directors • Founders</span>
             </div>
           </ScrollSlideSection>
           
@@ -170,10 +170,10 @@ export default function About() {
       </section>
 
       {/* 4. MISSION & VISION OVERLAP */}
-      <section className="py-16 md:py-24 relative mx-4 sm:mx-8 rounded-[40px] mb-20 overflow-hidden">
+      <section className="py-16 md:py-24 relative mx-4 sm:mx-8 mb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           
-          <ScrollSlideSection className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 p-8 sm:p-12 rounded-[30px] shadow-xl relative overflow-hidden group">
+          <ScrollSlideSection className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 p-8 sm:p-12 rounded-xl relative overflow-hidden group">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl group-hover:bg-sky-500/20 transition-all duration-500"></div>
             <div className="w-16 h-16 rounded-2xl bg-sky-50 dark:bg-slate-900 text-sky-500 border border-sky-100 dark:border-slate-700 flex items-center justify-center mb-6 shadow-sm">
               <Target className="w-8 h-8" />
@@ -184,7 +184,7 @@ export default function About() {
             </p>
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 p-8 sm:p-12 rounded-[30px] shadow-xl relative overflow-hidden group">
+          <ScrollSlideSection delay="100ms" className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 p-8 sm:p-12 rounded-xl relative overflow-hidden group">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all duration-500"></div>
             <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-slate-900 text-emerald-500 border border-emerald-100 dark:border-slate-700 flex items-center justify-center mb-6 shadow-sm">
               <Rocket className="w-8 h-8" />
@@ -201,7 +201,7 @@ export default function About() {
       {/* 5. OUR TEAM */}
       <section className="py-20 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 overflow-hidden">
         <ScrollSlideSection className="text-center max-w-3xl mx-auto mb-16">
-          <h4 className="text-sky-500 font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
+          <h4 className="text-sky-500 font-normal tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
             <span className="w-6 h-0.5 bg-sky-500 inline-block block"></span>
             Our Professionals
             <span className="w-6 h-0.5 bg-sky-500 inline-block block"></span>
@@ -227,9 +227,9 @@ export default function About() {
               img: imgDirector, colorId: 'sky'
             },
             { 
-              name: "RAMYA R", title: "RELATIONSHIP MANAGER", 
-              desc: "Acts as a key communication point between clients and the project team throughout the engagement.",
-              img: imgRM, colorId: 'rose'
+              name: "VIJAYADARSHINI N M", title: "UI/UX DESIGNER", 
+              desc: "Creates user experiences and interfaces designed around usability, clarity and business objectives.",
+              img: imgUX, colorId: 'sky'
             },
             { 
               name: "ARCHANA S", title: "HR MANAGER", 
@@ -237,19 +237,19 @@ export default function About() {
               img: imgHR, colorId: 'emerald'
             },
             { 
-              name: "VIJAYADARSHINI N M", title: "UI/UX DESIGNER", 
-              desc: "Creates user experiences and interfaces designed around usability, clarity and business objectives.",
-              img: imgUX, colorId: 'sky'
-            },
-            { 
-              name: "VASUKI T", title: "FULL STACK DEVELOPER", 
-              desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
-              img: imgDev, colorId: 'emerald'
+              name: "RAMYA R", title: "RELATIONSHIP MANAGER", 
+              desc: "Acts as a key communication point between clients and the project team throughout the engagement.",
+              img: imgRM, colorId: 'rose'
             },
             { 
               name: "NITHYA SRI S", title: "DATA ANALYST", 
               desc: "Analyzes datasets to streamline metrics and drastically improve digital workflow efficiency.",
               img: imgDA, colorId: 'amber'
+            },
+            { 
+              name: "VASUKI T", title: "FULL STACK DEVELOPER", 
+              desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
+              img: imgDev, colorId: 'emerald'
             }
           ].map((member, idx) => {
              const rings = {
@@ -262,22 +262,22 @@ export default function About() {
              return (
                <ScrollSlideSection key={idx} delay={`${(idx % 4) * 100}ms`} className="flex flex-col text-center px-1 sm:px-4 items-center">
                  
-                 <div className="relative w-[210px] h-[210px] sm:w-[240px] sm:h-[240px] mb-8 group cursor-pointer shrink-0">
+                 <div className="relative w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] mb-6 group cursor-pointer shrink-0">
                    {/* Background track circle */}
-                   <div className="absolute inset-0 rounded-full border-[8px] border-slate-100 dark:border-slate-800"></div>
+                   <div className="absolute inset-0 rounded-full border-[4px] border-slate-100 dark:border-slate-800"></div>
                    
                    {/* Animated foreground ring */}
-                   <div className={`absolute inset-0 rounded-full border-[8px] border-b-transparent border-l-transparent transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-[360deg] z-10 ${rings[member.colorId]}`}></div>
+                   <div className={`absolute inset-0 rounded-full border-[4px] border-b-transparent border-l-transparent transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-[360deg] z-10 ${rings[member.colorId]}`}></div>
                    
                    {/* Inner circular image wrapper for perfect cut */}
-                   <div className="absolute inset-[10px] sm:inset-[12px] rounded-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-2 border-white dark:border-slate-800 z-0">
+                   <div className="absolute inset-[6px] sm:inset-[8px] rounded-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-2 border-white dark:border-slate-800 z-0">
                      <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
                    </div>
                  </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">{member.title}</h3>
-                 <p className="text-xs sm:text-[13px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-4">{member.name}</p>
-                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px]">
+                  <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-wider mb-2">{member.title}</h3>
+                 <p className="text-xs sm:text-[13px] font-normal text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-4">{member.name}</p>
+                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px] font-normal">
                    {member.desc}
                  </p>
                  
@@ -287,34 +287,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* 6. CTA SECTION */}
-      <section className="py-20 md:py-28 bg-transparent overflow-hidden text-center max-w-4xl mx-auto px-4 sm:px-6 relative z-20">
+      {/* 6. CTA SECTION - Banner Style */}
+      <section className="py-20 md:py-28 bg-transparent max-w-[1300px] mx-auto px-4 sm:px-6 relative z-20">
         <ScrollSlideSection>
-           <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
-             Have a Business Challenge to Solve?
-           </h2>
-           <p className="text-slate-600 dark:text-slate-400 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-             Tell us what you're trying to build, improve or automate. We'll help you understand the possible technology approach and next steps.
-           </p>
-           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-             <Link
-               to="/contact"
-               className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
-             >
-               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-               <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                 Talk to Our Team <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+           <div className="relative bg-gradient-to-r from-[#F2F7FF] to-white dark:from-slate-800 dark:to-slate-900 rounded-xl overflow-hidden flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 border border-sky-100/50 dark:border-slate-700/50 shadow-sm">
+             
+             {/* Left side geometric overlapping triangles simulating abstract branding */}
+             <div className="absolute top-0 left-0 w-64 h-full pointer-events-none opacity-[0.35]">
+               <div className="absolute -left-10 -top-10 w-48 h-64 bg-sky-400 mix-blend-multiply dark:mix-blend-screen" style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}></div>
+               <div className="absolute left-10 top-12 w-40 h-40 bg-pink-400 mix-blend-multiply dark:mix-blend-screen" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+               <div className="absolute -left-5 bottom-0 w-56 h-48 bg-emerald-300 mix-blend-multiply dark:mix-blend-screen" style={{ clipPath: 'polygon(0 100%, 100% 100%, 0 0)' }}></div>
+             </div>
+
+             <div className="relative z-10 flex-1 max-w-2xl text-left mb-8 md:mb-0">
+               <span className="text-slate-500 dark:text-slate-400 uppercase tracking-widest text-xs font-normal mb-3 block">
+                 READY TO GET STARTED?
                </span>
-             </Link>
-             <Link
-               to="/services"
-               className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
-             >
-               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-               <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                 Explore Services <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
-               </span>
-             </Link>
+               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-4 leading-[1.1]">
+                 Have a <span className="text-sky-500">Business Challenge</span> to Solve?
+               </h2>
+               <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg mb-0 leading-relaxed font-normal">
+                 Tell us what you're trying to build, improve or automate. We'll help you understand the possible technology approach and next steps.
+               </p>
+             </div>
+
+             <div className="relative z-10 flex shrink-0">
+               <Link
+                 to="/contact"
+                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+               >
+                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                   Get a Quote <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                 </span>
+               </Link>
+             </div>
+             
            </div>
         </ScrollSlideSection>
       </section>

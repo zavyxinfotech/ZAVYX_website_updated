@@ -133,16 +133,7 @@ export const AnimatedHeroText = ({ text }) => {
           }
           .char-hover {
             display: inline-block;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease-out;
-            cursor: default;
           }
-          .char-hover:hover {
-            transform: translateY(-12px) scale(1.15);
-          }
-          .hover-c0:hover { color: #0284c7; } /* Sky */
-          .hover-c1:hover { color: #d70e69; } /* Magenta */
-          .hover-c2:hover { color: #39b54a; } /* Green */
-          .hover-c3:hover { color: #f5a623; } /* Gold */
         `}
       </style>
       <span className="inline-block text-slate-900 dark:text-white transition-colors duration-300">

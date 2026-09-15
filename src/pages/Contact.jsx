@@ -47,11 +47,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300">
+    <div className="bg-white dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300">
       <style>{`
-        .contact-hero-title span {
-          color: #ffffff !important;
-        }
         @keyframes floatMinimal {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-12px); }
@@ -61,30 +58,21 @@ export default function Contact() {
         }
       `}</style>
       
-      {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden flex items-center justify-center h-screen">
-
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-            alt="Contact Hero" 
-            className="w-full h-full object-cover opacity-80"
-          />
-          <div className="absolute inset-0 bg-slate-900/60 dark:bg-slate-900/80"></div>
-        </div>
-        <div className="relative z-10 text-center px-4">
-          <ScrollSlideSection direction="up">
-            <h1 className="text-5xl md:text-7xl font-normal text-white tracking-tight leading-[1.1] drop-shadow-[0_4px_25px_rgba(0,0,0,0.5)] contact-hero-title">
-              <AnimatedHeroText text="Contact" />
+      {/* 1. HERO SECTION NO BACKGROUND IMAGE */}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-transparent">
+        <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center text-center">
+          <ScrollSlideSection direction="up" className="w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+              <AnimatedHeroText text="Contact & Support" />
             </h1>
           </ScrollSlideSection>
         </div>
       </section>
 
       {/* 2. INFO CARDS SECTION */}
-      <section className="py-16 sm:py-24 relative bg-slate-50 dark:bg-slate-900 z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-10 sm:-mt-16 rounded-[40px] shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.1)] mb-10 overflow-hidden">
+      <section className="py-16 sm:py-24 relative bg-transparent dark:bg-slate-900 z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-10 sm:-mt-16 rounded-[40px] shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.1)] mb-10 overflow-hidden">
         <ScrollSlideSection direction="up" className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest text-sky-700 bg-sky-100 border border-sky-300 uppercase mb-4 shadow-sm">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-normal tracking-widest text-sky-700 bg-sky-100 border border-sky-300 uppercase mb-4 shadow-sm">
             Contact Info
           </span>
           <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
@@ -101,9 +89,9 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-2xl bg-sky-50 dark:bg-slate-900 text-sky-500 flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                <MapPin className="w-8 h-8" />
             </div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Location...</h4>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-sky-500 transition-colors">Visit Us At</h3>
-            <p className="text-lg font-medium text-slate-500 dark:text-slate-400 leading-[1.6]">
+            <h4 className="text-[10px] font-normal text-slate-400 uppercase tracking-widest mb-2">Location...</h4>
+            <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-3 group-hover:text-sky-500 transition-colors">Visit Us At</h3>
+            <p className="text-lg font-normal text-slate-500 dark:text-slate-400 leading-[1.6]">
               TeesZone Clothing Pvt Ltd. #2155, Fortune City, Global Market – Texvalley, Erode – 638102, Tamil Nadu.
             </p>
           </ScrollSlideSection>
@@ -113,9 +101,9 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-slate-900 text-amber-500 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                <Phone className="w-8 h-8" />
             </div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">24/7 Service...</h4>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-amber-500 transition-colors">Call Us On</h3>
-            <a href="tel:+916382721178" className="text-lg font-semibold text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors block">
+            <h4 className="text-[10px] font-normal text-slate-400 uppercase tracking-widest mb-2">24/7 Service...</h4>
+            <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-3 group-hover:text-amber-500 transition-colors">Call Us On</h3>
+            <a href="tel:+916382721178" className="text-lg font-normal text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors block">
               Tel: +91 63827 21178
             </a>
           </ScrollSlideSection>
@@ -125,9 +113,9 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-2xl bg-rose-50 dark:bg-slate-900 text-rose-500 flex items-center justify-center mb-6 group-hover:bg-rose-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                <Mail className="w-8 h-8" />
             </div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Drop a Line...</h4>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-rose-500 transition-colors">Mail Address</h3>
-            <a href="mailto:hello@zavyx.in" className="text-lg font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-500 transition-colors block break-all">
+            <h4 className="text-[10px] font-normal text-slate-400 uppercase tracking-widest mb-2">Drop a Line...</h4>
+            <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-3 group-hover:text-rose-500 transition-colors">Mail Address</h3>
+            <a href="mailto:hello@zavyx.in" className="text-lg font-normal text-slate-500 dark:text-slate-400 hover:text-rose-500 transition-colors block break-all">
               hello@zavyx.in
             </a>
           </ScrollSlideSection>
@@ -137,9 +125,9 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-slate-900 text-emerald-500 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                <Clock className="w-8 h-8" />
             </div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Office Hours...</h4>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-emerald-500 transition-colors">Opening Time</h3>
-            <p className="text-lg font-medium text-slate-500 dark:text-slate-400">
+            <h4 className="text-[10px] font-normal text-slate-400 uppercase tracking-widest mb-2">Office Hours...</h4>
+            <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-3 group-hover:text-emerald-500 transition-colors">Opening Time</h3>
+            <p className="text-lg font-normal text-slate-500 dark:text-slate-400">
               Mon–Fri: 9:30 AM – 6:00 PM IST<br />
               Saturday & Sunday (Closed)
             </p>
@@ -148,7 +136,7 @@ export default function Contact() {
       </section>
 
       {/* 3. REACH & GET IN TOUCH FORM SECTION */}
-      <section className="py-20 relative bg-slate-50 dark:bg-slate-900 overflow-hidden">
+      <section className="py-20 relative bg-transparent dark:bg-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
             
@@ -169,14 +157,14 @@ export default function Contact() {
                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 flex items-center justify-center mb-3 sm:mb-4 backdrop-blur-md shadow-inner">
                    <HeadphonesIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                  </div>
-                 <h4 className="text-base sm:text-lg font-bold mb-2 leading-tight drop-shadow-md">Chat With Live !</h4>
-                 <p className="text-[10px] sm:text-xs text-rose-100 mb-4 opacity-90 leading-relaxed font-medium">
+                 <h4 className="text-base sm:text-lg font-normal mb-2 leading-tight drop-shadow-md">Chat With Live !</h4>
+                 <p className="text-[10px] sm:text-xs text-rose-100 mb-4 opacity-90 leading-relaxed font-normal">
                    Porto erat gravida adipisci quibusdam faucibus diem molestiae? Ante, arcu, commodo.
                  </p>
                  <button className="relative inline-flex h-10 overflow-hidden rounded-md p-[2px] group w-max shadow-sm">
-                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                   <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-4 gap-2 text-xs z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                     Let's Chat <ArrowRight className="w-3.5 h-3.5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                   <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-4 gap-2 text-xs z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                     Let's Chat <ArrowRight className="w-3.5 h-3.5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                    </span>
                  </button>
               </div>

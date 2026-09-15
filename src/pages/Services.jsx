@@ -21,6 +21,7 @@ import {
 import { AnimatedHeroText } from '../components/HeroEffects';
 
 import heroVid from '../../assets/Videos/animo-showcase-stream-720p.webm';
+import introVideo from '../../assets/Videos/ZAVYX_software_company_introduction.mp4';
 import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
 import imgEcom from '../../assets/images/E_commerce_Stores_Service_background.png';
 import imgCrm from '../../assets/images/CRM_ERM_service_background.png';
@@ -152,16 +153,15 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-slate-50 dark:bg-[#050B14] min-h-screen transition-colors duration-300">
+    <div className="bg-white dark:bg-[#050B14] min-h-screen transition-colors duration-300">
       
       {/* 1. HERO BANNER */}
-      <section className="relative bg-transparent pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+      <section className="relative bg-transparent pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
-            <h4 className="text-sky-500 font-bold tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
-              <span className="w-1.5 h-6 bg-sky-500 inline-block block"></span>
+            <h4 className="text-sky-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
               OUR TECHNICAL CAPABILITIES
             </h4>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
@@ -175,18 +175,18 @@ export default function Services() {
                 to="/contact"
                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                  Get Started <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  Get Started <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
               <Link
                 to="/about"
                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
               >
-                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0a192f_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0a192f] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                  Our Agency <ArrowRight className="w-5 h-5 text-[#0a192f] group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                  Our Agency <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             </div>
@@ -210,8 +210,7 @@ export default function Services() {
       <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <ScrollSlideSection>
-             <h4 className="text-emerald-500 font-bold tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center gap-2">
-               <span className="w-4 h-4 bg-emerald-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
+             <h4 className="text-emerald-500 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center gap-2">
                What we do
              </h4>
              <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
@@ -228,7 +227,7 @@ export default function Services() {
                Whether you\'re looking to modernize legacy systems, automate critical pipelines, or build highly responsive consumer platforms, we\'re here to guide you every step of the way.
              </p>
              
-             <h4 className="font-bold text-slate-900 dark:text-white text-xl mb-6">Key Areas We Focus On:</h4>
+             <h4 className="font-normal text-slate-900 dark:text-white text-xl mb-6">Key Areas We Focus On:</h4>
              
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -241,7 +240,7 @@ export default function Services() {
                 ].map((item, i) => (
                    <div key={i} className="flex items-center gap-3">
                      <CheckCircle className="w-5 h-5 text-amber-500 shrink-0" />
-                     <span className="text-slate-700 dark:text-slate-300 font-semibold">{item}</span>
+                     <span className="text-slate-700 dark:text-slate-300 font-normal">{item}</span>
                    </div>
                 ))}
              </div>
@@ -254,21 +253,23 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <ScrollSlideSection className="shrink-0 relative">
-               <h4 className="text-amber-500 font-bold tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center gap-2">
-                 <span className="w-4 h-4 bg-amber-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
+               <h4 className="text-amber-500 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center gap-2">
                  Why Choose Us?
                </h4>
                <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-10">
                  Why Choose Us for <span className="text-slate-500 dark:text-slate-400 font-light">Your Tech Transformation Strategy?</span>
                </h2>
                
-               <div className="relative w-full h-[350px] sm:h-[450px] rounded-[40px] overflow-hidden shadow-2xl border-[8px] border-slate-50 dark:border-slate-800">
-                  <img src={laptopMockup} alt="Mockup" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-slate-900/20"></div>
-                  {/* Play Button Mock */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.4)]">
-                     <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-slate-900 border-b-[12px] border-b-transparent ml-2"></div>
-                  </div>
+               <div className="relative w-full h-[350px] sm:h-[450px] rounded-[40px] overflow-hidden border-[8px] border-slate-50 dark:border-slate-800">
+                  <video 
+                     src={introVideo} 
+                     autoPlay 
+                     loop 
+                     muted 
+                     playsInline
+                     className="w-full h-full object-cover" 
+                  />
+                  <div className="absolute inset-0 bg-slate-900/10 pointer-events-none"></div>
                </div>
             </ScrollSlideSection>
 
@@ -281,12 +282,12 @@ export default function Services() {
                ].map((feature, i) => {
                  const Icon = feature.icon;
                  return (
-                   <div key={i} className="flex gap-6 bg-slate-50 dark:bg-slate-800 p-6 sm:p-8 rounded-[30px] border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                   <div key={i} className="flex gap-6 bg-slate-50 dark:bg-slate-800 p-6 sm:p-8 rounded-[30px] border border-slate-200 dark:border-slate-700 hover:-translate-y-1 transition-all duration-300 group">
                       <div className={`w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center ${feature.color} border border-current/20`}>
                          <Icon className="w-6 h-6" />
                       </div>
                       <div className="flex flex-col">
-                         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h3>
+                         <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-2">{feature.title}</h3>
                          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{feature.desc}</p>
                       </div>
                    </div>
@@ -300,8 +301,7 @@ export default function Services() {
       {/* 4. OUR SERVICES GRID */}
       <section className="py-24 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
          <ScrollSlideSection className="text-center max-w-4xl mx-auto mb-16">
-            <h4 className="text-sky-500 font-bold tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-center gap-2">
-              <span className="w-4 h-4 bg-sky-500 text-white rounded-sm flex items-center justify-center text-[10px]">&plus;</span>
+            <h4 className="text-sky-500 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-center gap-2">
               Our Services
             </h4>
             <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1]">
@@ -317,13 +317,13 @@ export default function Services() {
                     key={svc.id} 
                     delay={`${(idx % 3) * 100}ms`}
                  >
-                    <Link to={svc.path} className="group block bg-white dark:bg-slate-800 rounded-[40px] overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-500 h-[420px] flex flex-col relative">
+                    <Link to={svc.path} className="group block bg-white dark:bg-slate-800 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-500 h-[420px] flex flex-col relative">
                        {/* Top Text Content */}
                        <div className="p-8 relative z-10 flex-1">
-                          <h3 className={`text-2xl font-bold text-slate-900 dark:text-white mb-3 transition-colors duration-300 ${svc.hoverColor}`}>
+                          <h3 className={`text-2xl font-normal text-slate-900 dark:text-white mb-3 transition-colors duration-300 ${svc.hoverColor}`}>
                              {svc.title}
                           </h3>
-                          <p className="text-slate-500 dark:text-slate-400 text-sm md:text-[15px] font-medium leading-relaxed max-w-[85%]">
+                          <p className="text-slate-500 dark:text-slate-400 text-sm md:text-[15px] font-normal leading-relaxed max-w-[85%]">
                              {svc.desc}
                           </p>
                           {/* Corner Arrow */}
@@ -335,7 +335,7 @@ export default function Services() {
                        {/* Bottom Image & Icon */}
                        <div className="relative h-[220px] w-full mt-auto">
                           <img src={svc.img} alt={svc.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                          <div className={`absolute bottom-6 left-6 w-14 h-14 flex items-center justify-center rounded-2xl text-white shadow-lg ${svc.color}`}>
+                          <div className={`absolute bottom-6 left-6 w-14 h-14 flex items-center justify-center rounded-2xl text-white ${svc.color}`}>
                              <Icon className="w-7 h-7" />
                           </div>
                           {/* Inner Shadow Overlay for depth */}
