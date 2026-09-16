@@ -265,9 +265,8 @@ export default function Home() {
                   text="A Technology Partner You Can Trust" 
                   className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 transition-opacity"
                 />
-
                 <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-8 font-normal max-w-xl">
-                  ZAVYX Infotech Private Limited is a growing technology company focused on helping businesses use modern digital solutions to work smarter, connect better and grow with confidence.
+                  ZAVYX Infotech is a growing technology company focused on helping businesses use modern digital solutions to work smarter, connect better and grow with confidence.
                 </p>
 
                 <div className="mb-10">
@@ -495,77 +494,62 @@ export default function Home() {
         </section>
       </ScrollSlideSection>
 
-      {/* ENTERPRISE TECHNOLOGY STACK SECTION INLINED */}
+      {/* TESTIMONIALS SECTION */}
       <ScrollSlideSection>
       <section className="py-16 lg:py-28 mb-20 lg:mb-32 bg-transparent transition-colors duration-300 overflow-hidden relative">
-        <style>
-          {`
-            @keyframes marquee-left {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            @keyframes marquee-right {
-              0% { transform: translateX(-50%); }
-              100% { transform: translateX(0); }
-            }
-            .animate-marquee-left {
-              animation: marquee-left 45s linear infinite;
-            }
-            .animate-marquee-right {
-              animation: marquee-right 45s linear infinite;
-            }
-            .hover-pause:hover {
-              animation-play-state: paused !important;
-            }
-          `}
-        </style>
-        
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-6">
-            <div>
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">OUR PLATFORMS</span>
-                <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
-              </div>
-              <ScrollAnimatedHeading 
-                text="Enterprise Technology Stack" 
-                className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
-              />
+          <div className="flex flex-col mb-14">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">TESTIMONIALS</span>
+              <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
             </div>
-          </div>
-        </div>
-
-        {/* Global Mask Wrapping the horizontal scrolling ecosystem */}
-        <div 
-           className="w-full relative z-10"
-        >
-          {/* Overlay gradients for smooth fade out at edges instead of WebkitMaskImage (which avoids backdrop-blur bleed bugs) */}
-          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white dark:from-[#050B14] to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white dark:from-[#050B14] to-transparent z-20 pointer-events-none"></div>
-          
-          {/* ROW 1 : Left to Right Scroll */}
-          <div className="flex overflow-hidden relative w-full mb-10 md:mb-12">
-             <div className="flex w-max animate-marquee-left hover-pause items-center justify-start gap-8 md:gap-14 pl-4 pr-14">
-                {[...stackRow1, ...stackRow1].map((tech, idx) => {
-                     const Icon = tech.icon;
-                     return (
-                       <div key={`r1-${idx}`} className="group relative flex items-center justify-center cursor-pointer overflow-visible shrink-0 transition-transform hover:z-50 mx-2 md:mx-4">
-                         <div className="relative w-10 h-10 md:w-12 md:h-12">
-                           {/* Colored tech logo always visible */}
-                           <Icon 
-                              className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:scale-110 z-20 font-light" 
-                              strokeWidth={1}
-                              style={{ color: tech.hex, filter: `drop-shadow(0px 4px 8px ${tech.hex}40)` }} 
-                           />
-                         </div>
-                       </div>
-                     )
-                })}
-             </div>
+            <ScrollAnimatedHeading 
+              text="What Our Clients Say" 
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+            />
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                text: "ZAVYX Infotech completely transformed our business workflow. The custom software they delivered was highly scalable and exactly what we needed to take our operations to the next level.",
+                author: "James T.",
+                role: "CTO, TechCorp",
+                initial: "J"
+              },
+              {
+                text: "Their team's attention to detail and modern design sensibilities are unmatched. Our e-commerce sales doubled in the first quarter after their platform redesign.",
+                author: "Sarah H.",
+                role: "Marketing Director, LuxBrand",
+                initial: "S"
+              },
+              {
+                text: "Partnering with ZAVYX allowed us to automate critical pipelines that were dragging our efficiency down. Highly recommend their engineering and DevOps services.",
+                author: "Michael R.",
+                role: "VP Engineering, BuildStart",
+                initial: "M"
+              }
+            ].map((t, idx) => (
+              <div key={idx} className="bg-slate-50 dark:bg-slate-800/80 p-8 rounded-[30px] border border-slate-200 dark:border-slate-700/50 flex flex-col justify-between">
+                <div>
+                  <svg className="w-8 h-8 text-sky-500 mb-6 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                  <p className="text-slate-600 dark:text-slate-300 font-normal leading-relaxed text-[15px] sm:text-base mb-8">
+                    "{t.text}"
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-800 dark:text-white font-normal text-lg">
+                    {t.initial}
+                  </div>
+                  <div>
+                    <h4 className="text-slate-900 dark:text-white font-normal">{t.author}</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm font-normal">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-
       </section>
       </ScrollSlideSection>
 

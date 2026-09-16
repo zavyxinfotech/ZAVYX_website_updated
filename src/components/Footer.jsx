@@ -17,58 +17,58 @@ export default function Footer() {
             <Link to="/">
               <img src={logoUrl} alt="ZAVYX Infotech" className="h-14 md:h-16 lg:h-20 w-auto object-contain object-left mb-6 dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.8))_drop-shadow(0_0_2px_rgba(255,255,255,0.5))] transition-all duration-300 hover:scale-105 origin-left" />
             </Link>
-            <p className="text-[14px] md:text-[15px] text-slate-600 dark:text-slate-400 leading-relaxed mb-8 font-medium">
+            <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 font-normal">
               Empowering growing businesses with intelligent web architecture, seamless automation, and scalable CRM environments.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/zavyxindia/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-all">
-                <FaFacebook className="w-5 h-5" />
+            <div className="flex items-center gap-6">
+              <a href="https://www.facebook.com/zavyxindia/" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">
+                <FaFacebook className="w-7 h-7 md:w-8 md:h-8" />
               </a>
-              <a href="https://www.instagram.com/zavyx_infotech?igsi=cG15M3dzMmNxeW9p" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-pink-500 dark:hover:text-pink-400 transition-all">
-                <FaInstagram className="w-5 h-5" />
+              <a href="https://www.instagram.com/zavyx_infotech?igsi=cG15M3dzMmNxeW9p" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+                <FaInstagram className="w-7 h-7 md:w-8 md:h-8" />
               </a>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col">
-            <h3 className="text-base md:text-[17px] font-bold text-slate-900 dark:text-white uppercase tracking-wider">Quick Links</h3>
+            <h3 className="text-lg md:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-wider">Quick Links</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 lg:my-6 w-full max-w-[200px]" />
             <div className="flex flex-col gap-3 md:gap-4">
-              <Link to="/" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Home</Link>
-              <Link to="/about" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">About Us</Link>
-              <Link to="/services" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Services</Link>
-              <Link to="/contact" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Contact Us</Link>
-              <Link to="#" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors">Privacy Policy</Link>
+              <Link to="/" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors">Home</Link>
+              <Link to="/about" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors">About Us</Link>
+              <Link to="/services" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors">Services</Link>
+              <Link to="/contact" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors">Contact Us</Link>
+              <Link to="#" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors">Privacy Policy</Link>
             </div>
           </div>
 
           {/* Column 3: Our Services */}
           <div className="flex flex-col">
-            <h3 className="text-base md:text-[17px] font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Services</h3>
+            <h3 className="text-lg md:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-wider">Our Services</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 lg:my-6 w-full max-w-[200px]" />
             <div className="flex flex-col gap-3 md:gap-4">
-              <Link to="/services/websites-web-apps" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors block truncate">Websites & Web Apps</Link>
-              <Link to="/services/crm-erp-systems" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors block truncate">CRM & ERP Systems</Link>
-              <Link to="/services/mobile-apps" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors block truncate">Mobile Apps</Link>
-              <Link to="/services/ai-automation" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors block truncate">AI & Automation</Link>
-              <Link to="/services/cloud-infrastructure" className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 hover:text-sky-500 font-medium transition-colors block truncate">Cloud Solutions</Link>
+              <Link to="/services/websites-web-apps" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors block truncate">Websites & Web Apps</Link>
+              <Link to="/services/crm-erp-systems" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors block truncate">CRM & ERP Systems</Link>
+              <Link to="/services/mobile-apps" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors block truncate">Mobile Apps</Link>
+              <Link to="/services/ai-automation" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors block truncate">AI & Automation</Link>
+              <Link to="/services/cloud-infrastructure" className="text-base md:text-lg text-slate-600 dark:text-slate-400 hover:text-sky-500 font-normal transition-colors block truncate">Cloud Solutions</Link>
              </div>
           </div>
 
           {/* Column 4: Contact */}
           <div className="flex flex-col">
-            <h3 className="text-base md:text-[17px] font-bold text-slate-900 dark:text-white uppercase tracking-wider">Get In Touch</h3>
+            <h3 className="text-lg md:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-wider">Get In Touch</h3>
             <hr className="border-slate-300 dark:border-slate-700 my-4 lg:my-6 w-full" />
             <div className="flex flex-col gap-3 md:gap-4">
-              <span className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 font-medium">+91 63827 21178</span>
-              <span className="text-[15px] md:text-base text-slate-600 dark:text-slate-400 font-medium">hello@zavyx.in</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-normal">+91 63827 21178</span>
+              <span className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-normal">hello@zavyx.in</span>
               <div className="flex flex-col gap-1 max-w-sm mt-1">
-                <span className="text-[15px] md:text-base text-slate-800 dark:text-slate-200 font-bold leading-snug">ZAVYX InfoTech Private Limited</span>
-                <span className="text-xs md:text-[13px] text-slate-500 dark:text-slate-400 font-medium leading-snug mt-[-2px]">(TeesZone Clothing Private Limited)</span>
-                <span className="text-[13px] md:text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[90%] mt-1">#2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
+                <span className="text-base md:text-lg text-slate-800 dark:text-slate-200 font-normal leading-snug">ZAVYX InfoTech</span>
+                <span className="text-sm md:text-base text-slate-500 dark:text-slate-400 font-normal leading-snug mt-[-2px]">(TeesZone Clothing Private Limited)</span>
+                <span className="text-sm md:text-base text-slate-500 dark:text-slate-400 font-normal leading-relaxed max-w-[90%] mt-1">#2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India</span>
               </div>
-              <span className="text-[15px] md:text-base text-sky-500 dark:text-sky-400 font-semibold mt-1">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
+              <span className="text-base md:text-lg text-sky-500 dark:text-sky-400 font-normal mt-1">Mon–Fri, 9:30 AM – 6:00 PM IST</span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
       
       {/* Copyright Bar */}
       <div className="w-full text-center z-10 py-6 mt-10 lg:mt-16 relative bg-transparent border-t border-slate-200 dark:border-slate-800">
-        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-[0.15em]">
+        <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 font-normal uppercase tracking-[0.2em]">
            © {new Date().getFullYear()} ZAVYX InfoTech. All rights reserved.
         </p>
       </div>

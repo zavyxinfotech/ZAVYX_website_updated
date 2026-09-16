@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award, ArrowRight } from 'lucide-react';
+import { Target, Rocket, Users, ChevronRight, CheckCircle, Shield, Award, ArrowRight, BarChart3 } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import imgFounder from '../../assets/images/team/Founder.webp';
 import imgDirector from '../../assets/images/team/Head_of_operations.webp';
 import imgHR from '../../assets/images/team/HR_Manager.webp';
@@ -8,6 +9,7 @@ import imgRM from '../../assets/images/team/Relationship_Manager.webp';
 import imgUX from '../../assets/images/team/UI_Ux_Designer.jpeg';
 import imgDev from '../../assets/images/team/Full_Stack_developer.webp';
 import imgDA from '../../assets/images/team/Data_Analyst.webp';
+import aboutHeroImage from '../../assets/images/about_page_Hero_img.jpeg';
 import { AnimatedHeroText } from '../components/HeroEffects';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
@@ -75,13 +77,45 @@ export default function About() {
             </div>
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-              alt="Team collaborating" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <ScrollSlideSection delay="100ms" className="relative w-[340px] sm:w-[450px] lg:w-[550px] xl:w-[580px] max-w-[85vw] aspect-square mx-auto flex items-center justify-center lg:ml-[10%] mt-8 lg:mt-0">
+            
+            {/* Base organically shaped container for identical contouring (using inline styles to ensure perfect cross-browser blob rendering) */}
+            
+            {/* Background Blob 1: Yellow arc (offset top/left) */}
+            <div className="absolute inset-0 bg-[#FFF5D1] dark:bg-yellow-500/20 -translate-x-4 sm:-translate-x-6 -translate-y-4 sm:-translate-y-6 scale-[1.03] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+            
+            {/* Background Blob 2: Light blue curve (offset left/bottom) */}
+            <div className="absolute inset-0 bg-[#E8F4FF] dark:bg-sky-500/20 -translate-x-6 sm:-translate-x-10 translate-y-4 sm:translate-y-6 scale-[1.05] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+            
+            {/* Background Blob 3: Pink curve (offset bottom right) */}
+            <div className="absolute inset-0 bg-[#FFEAED] dark:bg-rose-500/20 translate-x-2 sm:translate-x-4 translate-y-3 sm:translate-y-5 scale-[1.02] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+
+            {/* Main organic image frame container matching contours exactly */}
+            <div className="relative w-full h-full z-10 overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-white ring-1 ring-slate-100 dark:ring-slate-800" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}>
+              <img 
+                src={aboutHeroImage} 
+                alt="Professional Business Solutions" 
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 to-transparent dark:from-slate-900/40"></div>
+            </div>
+
+            {/* Floating text: Smarter Solutions (Moved Top Right OUTSIDE the image container) */}
+            <div className="absolute top-[8%] sm:top-[12%] right-[-5%] sm:right-[-12%] text-[#1E293B] dark:text-white text-left font-medium text-[15px] sm:text-[18px] lg:text-[20px] leading-[1.25] drop-shadow-[0_4px_10px_rgba(255,255,255,0.5)] z-30">
+              Smarter<br/>Solutions<br/>Brighter<br/>Business
+              <div className="w-6 sm:w-8 h-[2px] sm:h-[3px] bg-[#FFD100] mt-2.5 rounded-full shadow-sm"></div>
+            </div>
+
+            {/* Floating Card: Ideas to Impact (Minimal Glassmorphism, Pushed Outward left) */}
+            <div className="absolute bottom-[20%] left-[-15%] sm:left-[-25%] lg:left-[-20%] z-30 bg-white/40 dark:bg-slate-900/50 backdrop-blur-md p-4 rounded-[20px] shadow-none flex flex-col items-center justify-center gap-2 aspect-square w-[110px] sm:w-[130px] border border-white/60 dark:border-slate-700/50">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center bg-[#E8F4FF] dark:bg-slate-700 shrink-0">
+                <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-[#0070F3]" />
+              </div>
+              <div className="text-center">
+                <h4 className="text-[#1E293B] dark:text-white font-medium text-[14px] sm:text-[16px] leading-[1.2]">Ideas<br/><span className="text-slate-600 dark:text-slate-400 font-normal">to Impact</span></h4>
+              </div>
+            </div>
+
           </ScrollSlideSection>
           
         </div>
@@ -110,24 +144,24 @@ export default function About() {
           {/* Left Collage */}
           <ScrollSlideSection className="relative grid grid-cols-2 gap-4 h-[350px] sm:h-[500px]">
              {/* Center Badge Oval/Circle */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-rose-500 rounded-full border-[6px] sm:border-8 border-slate-50 dark:border-slate-900 flex items-center justify-center text-white text-center font-normal leading-tight shadow-xl">
-               <span className="text-xs sm:text-sm uppercase tracking-wider">Startup<br />Energy</span>
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-32 sm:h-32 bg-gradient-to-br from-sky-400 to-emerald-400 rounded-full flex items-center justify-center text-white text-center font-normal leading-tight shadow-xl">
+               <span className="text-xs sm:text-sm uppercase tracking-wider font-semibold">Startup<br />Energy</span>
              </div>
              
              {/* Box 1 - Top Left */}
-             <div className="rounded-tl-[80px] rounded-br-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-sky-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[90%] align-bottom self-end">
+             <div className="rounded-tl-[80px] rounded-br-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-sky-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[90%] align-bottom self-end">
                 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 2 - Top Right */}
-             <div className="rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-emerald-500 transition-colors duration-500 cursor-pointer relative z-0 w-[90%] h-full">
+             <div className="rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-emerald-500 transition-colors duration-500 cursor-pointer relative z-0 w-[90%] h-full">
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 3 - Bottom Left */}
-             <div className="rounded-bl-[80px] rounded-tr-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-amber-500 transition-colors duration-500 cursor-pointer relative z-0 w-[80%] h-[90%] justify-self-end mt-4">
+             <div className="rounded-bl-[80px] rounded-tr-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-amber-500 transition-colors duration-500 cursor-pointer relative z-0 w-[80%] h-[90%] justify-self-end mt-4">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 4 - Bottom Right */}
-             <div className="rounded-br-[80px] rounded-tl-[40px] overflow-hidden shadow-lg border-[6px] border-slate-50 dark:border-slate-800 hover:border-rose-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[80%] mt-4">
+             <div className="rounded-br-[80px] rounded-tl-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-rose-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[80%] mt-4">
                 <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
           </ScrollSlideSection>
@@ -162,7 +196,7 @@ export default function About() {
 
             <div className="flex flex-col mt-4">
               <span className="font-[cursive] text-4xl text-slate-800 dark:text-slate-200 opacity-80 mb-2 font-normal">ZAVYX InfoTech</span>
-              <span className="text-xs uppercase font-normal text-slate-500 tracking-widest">Board of Directors • Founders</span>
+              <span className="text-[11px] sm:text-xs uppercase font-medium text-slate-500 tracking-widest">Executive Leadership Team</span>
             </div>
           </ScrollSlideSection>
           
@@ -219,37 +253,43 @@ export default function About() {
             { 
               name: "SAKTHIVEL S", title: "FOUNDER", 
               desc: "Drives the company's vision and strategy to scale global enterprise operations safely.",
-              img: imgFounder, colorId: 'amber'
+              img: imgFounder, colorId: 'sky',
+              linkedin: "https://www.linkedin.com/in/sakthivel007?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
               name: "SARANYA SAKTHIVEL", title: "HEAD OF OPERATIONS", 
               desc: "Oversees structural growth and high-level management across all engineering sectors.",
-              img: imgDirector, colorId: 'sky'
+              img: imgDirector, colorId: 'emerald'
             },
             { 
               name: "VIJAYADARSHINI N M", title: "UI/UX DESIGNER", 
               desc: "Creates user experiences and interfaces designed around usability, clarity and business objectives.",
-              img: imgUX, colorId: 'sky'
+              img: imgUX, colorId: 'rose',
+              linkedin: "https://www.linkedin.com/in/vijayadharshini-n-m-81466a270?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
               name: "ARCHANA S", title: "HR MANAGER", 
               desc: "Cultivates our world-class talent and maintains a cutting-edge operational environment.",
-              img: imgHR, colorId: 'emerald'
+              img: imgHR, colorId: 'amber',
+              linkedin: "https://www.linkedin.com/in/archanaplakkal?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
               name: "RAMYA R", title: "RELATIONSHIP MANAGER", 
               desc: "Acts as a key communication point between clients and the project team throughout the engagement.",
-              img: imgRM, colorId: 'rose'
+              img: imgRM, colorId: 'sky',
+              linkedin: "https://www.linkedin.com/in/ramya-ravindran-368968125?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
               name: "NITHYA SRI S", title: "DATA ANALYST", 
               desc: "Analyzes datasets to streamline metrics and drastically improve digital workflow efficiency.",
-              img: imgDA, colorId: 'amber'
+              img: imgDA, colorId: 'emerald',
+              linkedin: "https://www.linkedin.com/in/nithya-sri-s-46b66738b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
               name: "VASUKI T", title: "FULL STACK DEVELOPER", 
               desc: "Architects and writes robust codebase infrastructure powering high-performing client applications.",
-              img: imgDev, colorId: 'emerald'
+              img: imgDev, colorId: 'rose',
+              linkedin: "https://www.linkedin.com/in/vasuki-fullstackdeveloper?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             }
           ].map((member, idx) => {
              const rings = {
@@ -273,6 +313,18 @@ export default function About() {
                    <div className="absolute inset-[6px] sm:inset-[8px] rounded-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-2 border-white dark:border-slate-800 z-0">
                      <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
                    </div>
+
+                   {/* Added: Link Arrow anchored bottom-left */}
+                   {member.linkedin && (
+                     <a 
+                       href={member.linkedin} 
+                       target="_blank" 
+                       rel="noreferrer" 
+                       className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 z-30 w-10 h-10 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-sky-50 dark:hover:bg-slate-700 transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-sky-500"
+                     >
+                       <ArrowRight className="w-5 h-5 -rotate-45" />
+                     </a>
+                   )}
                  </div>
 
                   <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-wider mb-2">{member.title}</h3>
