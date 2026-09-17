@@ -5,7 +5,7 @@ import logoUrl from '../../assets/logo/logo.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-transparent transition-colors duration-300 overflow-hidden relative pt-16 md:pt-24 flex flex-col justify-between">
+    <footer className="bg-gradient-to-br from-[#E6F0FD] via-[#F4F7FE] to-[#FEEAE8] dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 transition-colors duration-300 overflow-hidden relative pt-16 md:pt-24 flex flex-col justify-between">
       
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 w-full mb-10 md:my-auto">
         

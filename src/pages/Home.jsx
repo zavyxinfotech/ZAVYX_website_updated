@@ -89,6 +89,36 @@ const stackRow1 = [
 
 export default function Home() {
   const [activeIndustry, setActiveIndustry] = useState(null);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const testimonialsList = [
+    {
+      text: "It’s a super product with professional support team. I can’t wait to see the future features.",
+      author: "Emily Peterson",
+      role: "CEO",
+      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      text: "We’ve been looking for this product since the creation of our business. The best for exporting getting the right results and for free.",
+      author: "Adrien Jacob",
+      role: "Head of Sales",
+      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      text: "This product has exceeded my expectations. I highly recommend it!",
+      author: "Sarah Jones",
+      role: "Marketing Manager",
+      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    }
+  ];
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonialsList.length);
+    }, 4000);
+    return () => clearInterval(t);
+  }, [testimonialsList.length]);
+
 
   const industriesList = [
     { title: 'Retail & E-commerce', icon: ShoppingCart, hex: '#0284C7', subheading: 'Digital storefronts connecting the globe', desc: 'Transform your retail experience with advanced e-commerce solutions, seamless integrations, and modern digital shopping platforms engineered for performance and scale.' },
@@ -129,9 +159,9 @@ export default function Home() {
                   to="/contact"
                   className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                 >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                    Get Started <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Get Started <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
@@ -139,9 +169,9 @@ export default function Home() {
                   to="/services"
                   className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                 >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                    Explore Our Services <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Explore Our Services <ArrowRight className="w-5 h-5 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -274,9 +304,9 @@ export default function Home() {
                     to="/about"
                     className="relative inline-flex h-12 sm:h-13 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                   >
-                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#0B1F3A] dark:bg-white text-white dark:text-[#0B1F3A] font-normal px-6 gap-2 text-sm sm:text-base z-10 transition-all border border-transparent group-hover:border-transparent">
-                      Learn More About Us <ArrowRight className="w-4 h-4 text-white dark:text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] dark:bg-white text-white dark:text-[#00016E] font-normal px-6 gap-2 text-sm sm:text-base z-10 transition-all border border-transparent group-hover:border-transparent">
+                      Learn More About Us <ArrowRight className="w-4 h-4 text-white dark:text-[#00016E] group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
                 </div>
@@ -369,11 +399,11 @@ export default function Home() {
                 return (
                   <div key={i} className="flex flex-col items-start relative group p-5 sm:p-6 rounded-2xl overflow-hidden transition-all h-full">
                     {/* Dark background animating from bottom to top */}
-                    <div className="absolute inset-0 bg-[#0B1F3A] dark:bg-slate-800 origin-bottom transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out z-0"></div>
+                    <div className="absolute inset-0 bg-[#00016E] dark:bg-slate-800 origin-bottom transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out z-0"></div>
 
                     {/* Icon & Step Number */}
                     <div className="flex items-center gap-4 mb-5 w-full relative z-10">
-                      <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#0B1F3A] dark:bg-sky-950 text-white flex items-center justify-center shrink-0 border border-slate-700/50 transition-colors">
+                      <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#00016E] dark:bg-sky-950 text-white flex items-center justify-center shrink-0 border border-slate-700/50 transition-colors">
                         <Icon className="w-6 h-6 text-white" strokeWidth={2} />
                       </div>
                       <span className="text-3xl sm:text-4xl font-normal text-slate-400 dark:text-slate-500 tracking-tight group-hover:text-white transition-colors duration-300">
@@ -425,18 +455,16 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Industries Vertical Tabs Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 lg:h-[450px] pt-4">
+            {/* Industries Expanding Cards Row */}
+            <div className="flex flex-wrap lg:flex-nowrap w-full lg:h-[450px] pt-4">
               {industriesList.map((ind, i) => {
-                const isActive = activeIndustry === i;
                 const Icon = ind.icon;
                 const isLast = i === industriesList.length - 1;
                 
                 return (
                   <div 
                     key={`ind-${i}`}
-                    onClick={() => setActiveIndustry(isActive ? null : i)}
-                    className={`group relative flex flex-col items-center justify-center cursor-pointer transition-all duration-300 overflow-hidden w-full h-[180px] lg:h-full py-4 lg:py-0 border-slate-300 dark:border-slate-700/60 ${
+                    className={`group relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-out overflow-hidden w-full md:w-[25%] lg:w-auto lg:flex-1 lg:hover:flex-[3.5] h-[120px] md:h-[180px] lg:h-full hover:h-[280px] md:hover:h-[300px] lg:hover:h-full border-slate-300 dark:border-slate-700/60 ${
                       i % 2 === 0 ? 'border-r' : ''
                     } md:border-r ${
                       (i + 1) % 4 === 0 ? 'md:border-r-0' : ''
@@ -444,25 +472,40 @@ export default function Home() {
                       isLast ? 'lg:border-r-0' : ''
                     }`}
                   >
-                     {/* Hover & Active Gradient Background matching ZAVYX navy blue */}
+                     {/* Hover Gradient Background matching blue and green combo */}
                      <div 
-                        className={`absolute inset-0 transition-all duration-300 z-0 bg-gradient-to-b from-transparent to-[#0B1F3A]/15 dark:to-blue-400/15 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                        className="absolute inset-0 transition-opacity duration-500 z-0 bg-gradient-to-br from-[rgba(2,132,199,0.85)] to-[rgba(57,181,74,0.85)] opacity-0 group-hover:opacity-100"
                      ></div>
 
-                    {/* Content Component */}
-                    <div className="relative w-full h-full flex lg:flex-col items-center justify-center gap-4 lg:gap-8 z-10 transition-transform duration-300 group-hover:-translate-y-1">
-                       <div className="relative w-10 h-10 lg:w-12 lg:h-12 shrink-0 mt-4 lg:mt-6">
-                         <Icon className={`w-full h-full absolute top-0 left-0 transition-opacity duration-300 p-1 ${isActive ? 'opacity-0' : 'opacity-100 group-hover:opacity-0 text-slate-800 dark:text-slate-200'}`} strokeWidth={1.5} />
-                         <Icon className={`w-full h-full absolute top-0 left-0 transition-all duration-300 p-1 text-[#0B1F3A] dark:text-blue-400 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} strokeWidth={1.5} />
+                    {/* Idle Content (Vertical Text) */}
+                    <div className="absolute inset-0 w-full h-full flex flex-row lg:flex-col items-center justify-center gap-4 lg:gap-8 z-10 transition-all duration-500 ease-out group-hover:opacity-0 group-hover:scale-95 pointer-events-none">
+                       <div className="relative w-10 h-10 lg:w-12 lg:h-12 shrink-0 text-slate-800 dark:text-slate-200">
+                         <Icon className="w-full h-full p-1" strokeWidth={1.5} />
+                       </div>
+                       <div className="relative w-auto h-auto lg:w-full lg:h-full lg:max-h-[300px] flex items-center justify-center">
+                         <span className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-lg lg:text-[1.5rem] tracking-wider uppercase text-slate-700 dark:text-slate-300">
+                           {ind.title}
+                         </span>
+                       </div>
+                    </div>
+
+                    {/* Expanded Content (Horizontal / Hover Card) */}
+                    <div className="absolute inset-0 p-5 lg:p-8 flex flex-col justify-end text-left transition-all duration-500 ease-out z-20 opacity-0 scale-105 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
+                       <div className="w-12 h-12 lg:w-16 lg:h-16 mb-auto rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/30 text-white">
+                         <Icon className="w-6 h-6 lg:w-8 lg:h-8" strokeWidth={1.5} />
                        </div>
                        
-                       <div className="relative w-full h-full lg:max-h-[300px] flex items-center justify-center overflow-visible">
-                         <span className={`lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-xl lg:text-[1.5rem] tracking-wider uppercase transition-all duration-300 ${isActive ? "opacity-0" : "text-slate-700 dark:text-slate-300 group-hover:opacity-0"}`}>
+                       <div className="flex flex-col gap-1 lg:gap-3 w-full max-w-full overflow-hidden">
+                         <h3 className="text-3xl lg:text-5xl font-normal text-white truncate w-full">
                            {ind.title}
-                         </span>
-                         <span className={`lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-xl lg:text-[1.5rem] tracking-wider uppercase transition-all duration-300 text-[#0B1F3A] dark:text-blue-400 ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
-                           {ind.title}
-                         </span>
+                         </h3>
+                         <div className="text-white/95 text-base lg:text-lg font-normal tracking-wide opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-150 truncate">
+                           {ind.subheading}
+                         </div>
+                         <div className="w-0 group-hover:w-12 lg:group-hover:w-16 h-[2px] bg-white transition-all duration-700 delay-300 mt-1 mb-1 lg:mt-2 lg:mb-2"></div>
+                         <p className="text-white/95 text-sm lg:text-base leading-relaxed line-clamp-3 lg:line-clamp-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200 lg:whitespace-normal font-normal">
+                           {ind.desc}
+                         </p>
                        </div>
                     </div>
                   </div>
@@ -470,86 +513,100 @@ export default function Home() {
               })}
             </div>
 
-            {/* Expanded Details Panel */}
-            <div className={`transition-all duration-500 ease-in-out origin-top overflow-hidden w-full max-w-4xl mx-auto ${activeIndustry !== null ? 'max-h-[500px] opacity-100 mt-12 md:mt-16' : 'max-h-0 opacity-0 mt-0 pointer-events-none'}`}>
-              {activeIndustry !== null && (
-                <div className="bg-white dark:bg-slate-800/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8 md:p-14 w-full flex flex-col items-start text-left relative backdrop-blur-sm">
-                  {/* Accent Line matching Industry Color */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl opacity-80" style={{ backgroundColor: industriesList[activeIndustry].hex }}></div>
-                  
-                  <h3 className="text-3xl md:text-[2.5rem] font-normal text-slate-900 dark:text-white mb-2 leading-tight tracking-tight">
-                    {industriesList[activeIndustry].title}
-                  </h3>
-                  <div className="text-xl md:text-2xl font-normal mb-8 md:mb-10 opacity-90 tracking-wide" style={{ color: industriesList[activeIndustry].hex }}>
-                    {industriesList[activeIndustry].subheading}
-                  </div>
-                  <p className="text-base md:text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
-                    {industriesList[activeIndustry].desc}
-                  </p>
-                </div>
-              )}
-            </div>
-
           </div>
         </section>
       </ScrollSlideSection>
 
       {/* TESTIMONIALS SECTION */}
+      {/* TESTIMONIALS SECTION */}
       <ScrollSlideSection>
-      <section className="py-16 lg:py-28 mb-20 lg:mb-32 bg-transparent transition-colors duration-300 overflow-hidden relative">
-        <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col mb-14">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">TESTIMONIALS</span>
-              <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
-            </div>
-            <ScrollAnimatedHeading 
-              text="What Our Clients Say" 
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                text: "ZAVYX Infotech completely transformed our business workflow. The custom software they delivered was highly scalable and exactly what we needed to take our operations to the next level.",
-                author: "James T.",
-                role: "CTO, TechCorp",
-                initial: "J"
-              },
-              {
-                text: "Their team's attention to detail and modern design sensibilities are unmatched. Our e-commerce sales doubled in the first quarter after their platform redesign.",
-                author: "Sarah H.",
-                role: "Marketing Director, LuxBrand",
-                initial: "S"
-              },
-              {
-                text: "Partnering with ZAVYX allowed us to automate critical pipelines that were dragging our efficiency down. Highly recommend their engineering and DevOps services.",
-                author: "Michael R.",
-                role: "VP Engineering, BuildStart",
-                initial: "M"
-              }
-            ].map((t, idx) => (
-              <div key={idx} className="bg-slate-50 dark:bg-slate-800/80 p-8 rounded-[30px] border border-slate-200 dark:border-slate-700/50 flex flex-col justify-between">
-                <div>
-                  <svg className="w-8 h-8 text-sky-500 mb-6 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
-                  <p className="text-slate-600 dark:text-slate-300 font-normal leading-relaxed text-[15px] sm:text-base mb-8">
-                    "{t.text}"
-                  </p>
+      <section className="pt-20 lg:pt-24 pb-16 lg:pb-24 overflow-hidden relative bg-transparent transition-colors duration-300">
+        
+        {/* Constrained Header Container */}
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col">
+            {/* Header Row */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 lg:mb-14 gap-6 w-full">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-emerald-600 dark:text-emerald-400 font-normal uppercase tracking-widest text-xs sm:text-sm">TESTIMONIALS</span>
+                  <span className="w-8 h-[2px] bg-emerald-500 inline-block"></span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-800 dark:text-white font-normal text-lg">
-                    {t.initial}
+                <ScrollAnimatedHeading 
+                  text="What Our Customers Say" 
+                  className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+                />
+              </div>
+            </div>
+        </div>
+
+        {/* FULL WIDTH SLIDER */}
+        <div className="relative w-full h-[380px] lg:h-[420px] flex items-center justify-center overflow-visible mt-6 lg:mt-8">
+          {testimonialsList.map((t, idx) => {
+            
+            let positionOffset = idx - activeTestimonial;
+            // Wrap indices for a seamless 3-item look
+            if (positionOffset === -2) positionOffset = 1;
+            if (positionOffset === 2) positionOffset = -1;
+
+            const isCenter = positionOffset === 0;
+
+            return (
+              <div 
+                key={idx} 
+                className="absolute w-[90%] max-w-[380px] md:max-w-[420px] lg:max-w-[500px] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                style={{
+                  transform: `translateX(${positionOffset * 105}%) scale(${isCenter ? 1 : 0.85})`,
+                  opacity: isCenter ? 1 : 0.4,
+                  zIndex: isCenter ? 10 : 0
+                }}
+              >
+                <div className="flex flex-col bg-white dark:bg-slate-800 rounded-[20px] overflow-hidden w-full h-full border border-slate-100/50 dark:border-slate-700/50">
+                  {/* Top part with Quote and Text */}
+                  <div className="p-8 pt-10 flex flex-col flex-grow bg-white dark:bg-slate-800">
+                    <Quote className="w-12 h-12 text-sky-400 fill-sky-200 dark:fill-sky-900 mb-6 rotate-180 opacity-60" />
+                    <p className="text-slate-600 dark:text-slate-300 font-normal leading-relaxed lg:text-lg min-h-[100px]">
+                      {t.text}
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="text-slate-900 dark:text-white font-normal">{t.author}</h4>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm font-normal">{t.role}</p>
+                  {/* Bottom part with Author */}
+                  <div className="px-8 py-6 bg-slate-50 dark:bg-slate-900/50 flex items-center gap-4">
+                    <img src={t.img} alt={t.author} className="w-12 h-12 rounded-full object-cover shadow-none border-0" />
+                    <div className="flex flex-col">
+                      <h4 className="text-slate-900 dark:text-white font-semibold text-[17px]">{t.author}</h4>
+                      <p className="text-sky-500 dark:text-sky-400 text-[14px] font-medium">{t.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
+        
+        {/* Constrained Navigation Controls */}
+        <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-center gap-6 mt-12 relative z-10 w-full">
+          <button 
+            onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonialsList.length) % testimonialsList.length)}
+            className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center text-sky-500 hover:bg-sky-50 dark:hover:bg-slate-700 transition-colors"
+          >
+            <ArrowRight className="w-4 h-4 rotate-180" />
+          </button>
+          <div className="flex gap-2">
+             {testimonialsList.map((_, idx) => (
+               <button 
+                 key={idx} 
+                 onClick={() => setActiveTestimonial(idx)}
+                 className={`rounded-full transition-all duration-300 ${idx === activeTestimonial ? 'w-2.5 h-2.5 bg-sky-500' : 'w-2 h-2 bg-slate-200 dark:bg-slate-700 mt-[1px]'}`}
+               />
+             ))}
+          </div>
+          <button 
+            onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonialsList.length)}
+            className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center text-sky-500 hover:bg-sky-50 dark:hover:bg-slate-700 transition-colors"
+          >
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+
       </section>
       </ScrollSlideSection>
 

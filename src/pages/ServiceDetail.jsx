@@ -170,9 +170,9 @@ export default function ServiceDetail() {
                    to="/contact"
                    className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-full shadow-sm relative z-10"
                  >
-                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#0B1F3A_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                   <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#0B1F3A] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
-                     Request Proposal <ArrowRight className="w-5 h-5 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                   <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">
+                     Request Proposal <ArrowRight className="w-5 h-5 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                    </span>
                  </Link>
                </ScrollSlideSection>
