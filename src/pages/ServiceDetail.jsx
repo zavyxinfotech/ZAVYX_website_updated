@@ -1019,26 +1019,26 @@ function WebsitesWebAppsView() {
 
 function EcommerceStoresView() {
   const ecommerceServices = [
-    { title: 'Custom E-commerce Store Development', desc: 'Feature-rich, scalable, and secure online stores tailored to your brand.', icon: ShoppingCart, color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400' },
-    { title: 'Payment Gateway Integration', desc: 'Secure and seamless payment processing with multiple options.', icon: CreditCard, color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400' },
-    { title: 'Product & Inventory Management', desc: 'Easy product upload, stock management, and order tracking.', icon: Package, color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400' },
-    { title: 'Mobile-Optimized Stores', desc: 'Fully responsive and mobile-friendly stores for a smooth shopping experience.', icon: Smartphone, color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400' },
-    { title: 'SEO & Marketing Integration', desc: 'Built-in SEO, analytics, and marketing tools to boost your sales.', icon: TrendingUp, color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400' },
-    { title: 'Ongoing Support & Maintenance', desc: 'Reliable support to keep your store running smoothly.', icon: Headphones, color: 'bg-indigo-50 text-indigo-500 dark:bg-indigo-950/40 dark:text-indigo-400' }
+    { title: 'Custom E-commerce Store Development', desc: 'Feature-rich, scalable, and secure online stores tailored to your brand.', icon: ShoppingCart, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' },
+    { title: 'Payment Gateway Integration', desc: 'Secure and seamless payment processing with multiple options.', icon: CreditCard, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' },
+    { title: 'Product & Inventory Management', desc: 'Easy product upload, stock management, and order tracking.', icon: Package, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' },
+    { title: 'Mobile-Optimized Stores', desc: 'Fully responsive and mobile-friendly stores for a smooth shopping experience.', icon: Smartphone, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' },
+    { title: 'SEO & Marketing Integration', desc: 'Built-in SEO, analytics, and marketing tools to boost your sales.', icon: TrendingUp, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' },
+    { title: 'Ongoing Support & Maintenance', desc: 'Reliable support to keep your store running smoothly.', icon: Headphones, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' }
   ];
 
   const growthPillars = [
-    { title: 'Strategic Approach', desc: 'Focused on your business goals.', icon: Rocket },
-    { title: 'Industry Expertise', desc: 'Proven e-commerce experience.', icon: Award },
-    { title: 'Scalable Solutions', desc: 'Grow without limitations.', icon: Layers },
-    { title: 'Dedicated Support', desc: "We're with you every step.", icon: ShieldCheck }
+    { title: 'Strategic Approach', desc: 'Focused on your business goals', icon: Compass },
+    { title: 'Industry Expertise', desc: 'Proven e-commerce experience', icon: Award },
+    { title: 'Scalable Solutions', desc: 'Grow without limitations', icon: TrendingUp },
+    { title: 'Dedicated Support', desc: "We're with you every step", icon: Heart }
   ];
 
   const platforms = [
-    { name: 'Shopify', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg' },
-    { name: 'WooCommerce', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg' },
+    { name: 'shopify', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg' },
+    { name: 'WOO COMMERCE', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg' },
     { name: 'Magento', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg' },
-    { name: 'BigCommerce', url: officialTechLogos['BigCommerce'] || 'https://cdn.worldvectorlogo.com/logos/bigcommerce-1.svg' },
+    { name: 'BIGCOMMERCE', url: officialTechLogos['BigCommerce'] || 'https://cdn.worldvectorlogo.com/logos/bigcommerce-1.svg' },
     { name: 'PrestaShop', url: 'https://cdn.worldvectorlogo.com/logos/prestashop.svg' },
     { name: 'Custom Solutions', url: officialTechLogos['React'] }
   ];
@@ -1047,11 +1047,14 @@ function EcommerceStoresView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-24 pb-12 sm:pt-32 lg:pt-36 lg:pb-24 min-h-[85vh] flex flex-col justify-center overflow-hidden">
+      <section className="relative pt-20 pb-12 sm:pt-28 lg:pt-32 lg:pb-20 min-h-[85vh] flex flex-col justify-center overflow-hidden">
+        {/* Soft Background Accents */}
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
-        
+        <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
+
         <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
@@ -1060,17 +1063,20 @@ function EcommerceStoresView() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Hero Text */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm flex items-center justify-start gap-2 mb-3">
+              <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-3">
                 E-COMMERCE STORES
               </h4>
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
-                Powerful Online Stores<br />for a <span className="text-slate-900 dark:text-white font-normal inline-block">Stronger Tomorrow</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+                Powerful Online Stores<br />
+                for a <span className="text-sky-600 dark:text-sky-400 font-normal">Stronger Tomorrow</span>
               </h1>
-              <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl font-normal">
                 We design and develop high-converting e-commerce stores that help you reach more customers, increase sales, and grow your brand in the digital marketplace.
               </p>
               
+              {/* Signature Conic-Gradient CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-10">
                 <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -1080,37 +1086,45 @@ function EcommerceStoresView() {
                 </Link>
                 <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white text-[#00016E] dark:bg-slate-900 dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] dark:border-sky-500 group-hover:border-transparent">
-                    Explore Our Work <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-900 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] dark:border-sky-500 group-hover:border-transparent">
+                    Explore Our Work
                   </span>
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
+              {/* Stats Metrics */}
+              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200/60 dark:border-slate-800/60">
                 <div>
-                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl tracking-tight mb-1 font-normal">100+</div>
-                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal mt-1">E-commerce Projects</div>
+                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-normal tracking-tight mb-1">100+</div>
+                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">E-commerce Projects</div>
                 </div>
                 <div>
-                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl tracking-tight mb-1 font-normal">250+</div>
-                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal mt-1">Happy Clients</div>
+                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-normal tracking-tight mb-1">250+</div>
+                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Happy Clients</div>
                 </div>
                 <div>
-                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl tracking-tight mb-1 font-normal">5+</div>
-                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal mt-1">Years of Experience</div>
+                  <div className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-normal tracking-tight mb-1">5+</div>
+                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Years of Experience</div>
                 </div>
               </div>
             </ScrollSlideSection>
 
-            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex flex-col items-center justify-center">
-              <img src={ecommerceHeroImg} alt="E-commerce Hero" className="w-full max-w-[650px] relative z-10 scale-100 lg:scale-110 object-contain drop-shadow-sm" />
+            {/* Hero Right Visual */}
+            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex items-center justify-center">
+              <div className="relative w-full max-w-[650px] group cursor-pointer">
+                <img 
+                  src={ecommerceHeroImg} 
+                  alt="E-commerce Stores Platform Preview" 
+                  className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02] filter drop-shadow-xl" 
+                />
+              </div>
             </ScrollSlideSection>
           </div>
         </div>
       </section>
 
       {/* 2. OUR E-COMMERCE SERVICES */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60 mt-8">
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60">
         <ScrollSlideSection direction="up" className="mb-10 text-left flex flex-col items-start lg:flex-row lg:justify-between lg:items-end">
           <div className="max-w-xl">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
@@ -1120,35 +1134,59 @@ function EcommerceStoresView() {
               Complete E-commerce Solutions for Your Business
             </h2>
           </div>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md font-normal mt-4 lg:mt-0 text-left lg:text-right">
+          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-md font-normal mt-4 lg:mt-0 text-left lg:text-right">
             From strategy to launch, we provide end-to-end e-commerce solutions tailored to your business goals.
           </p>
         </ScrollSlideSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-6 gap-4">
+        {/* Desktop View: 3-Column Card Grid */}
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ecommerceServices.map((srv, idx) => {
             const Icon = srv.icon;
             return (
-              <ScrollSlideSection key={idx} delay={idx * 100 + "ms"} className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all rounded-2xl p-6 flex flex-row gap-5">
-                <div className={"w-14 h-14 rounded-xl flex items-center justify-center shrink-0 " + srv.color}>
-                  <Icon className="w-6 h-6 fill-current opacity-80" />
+              <ScrollSlideSection key={idx} delay={idx * 80 + "ms"} className="bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all rounded-2xl p-6 flex flex-col justify-between group">
+                <div>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 shrink-0 ${srv.color}`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2 group-hover:text-sky-600 transition-colors">
+                    {srv.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed mb-6">
+                    {srv.desc}
+                  </p>
                 </div>
-                <div className="flex flex-col justify-between items-start">
-                  <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-2">{srv.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm font-normal mb-4">{srv.desc}</p>
-                  <Link to="/contact" className="text-sky-600 dark:text-sky-400 text-sm font-normal flex items-center gap-1 group transition-all">
-                    Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                <Link to="/contact" className="text-sky-600 dark:text-sky-400 text-xs sm:text-sm font-normal flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Learn More <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </ScrollSlideSection>
+            );
+          })}
+        </div>
+
+        {/* Mobile View: Compact List Rows matching Mockup */}
+        <div className="sm:hidden flex flex-col gap-3">
+          {ecommerceServices.map((srv, idx) => {
+            const Icon = srv.icon;
+            return (
+              <Link key={idx} to="/contact" className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/60 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow transition-all group">
+                <div className="flex items-center gap-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${srv.color}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-sm font-normal text-slate-900 dark:text-white text-left">{srv.title}</span>
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-sky-600 transition-colors shrink-0" />
+              </Link>
             );
           })}
         </div>
       </section>
 
-      {/* 3. WHY CHOOSE US / GROWTH PARTNER */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-12 bg-sky-50/50 dark:bg-slate-900 border-y border-slate-200/60 dark:border-slate-800/60">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* 3. WHY CHOOSE US / Your E-commerce Growth Partner */}
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Content */}
           <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
               WHY CHOOSE US?
@@ -1156,42 +1194,38 @@ function EcommerceStoresView() {
             <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
               Your E-commerce Growth Partner
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg font-normal mb-10">
-              We combine strategy, technology, and e-commerce expertise to build online stores that deliver real results. Our focus is on creating seamless shopping experiences that turn visitors into loyal customers.
+            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base font-normal leading-relaxed mb-8 max-w-lg">
+              We combine creativity, technology, and e-commerce expertise to build online stores that deliver real results. Our focus is on creating seamless shopping experiences that turn visitors into loyal customers.
             </p>
             
-            <div className="grid grid-cols-2 gap-x-8 gap-y-8 w-full">
-              {growthPillars.map((item, idx) => (
-                <div key={idx} className="flex flex-col gap-2">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/50 text-sky-500 flex items-center justify-center shadow-sm">
-                    <item.icon className="w-5 h-5" />
+            {/* 4 Pillars */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-6 w-full">
+              {growthPillars.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div key={idx} className="flex flex-col items-start text-left gap-1">
+                    <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-1">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h4 className="text-xs sm:text-sm font-normal text-slate-900 dark:text-white">{item.title}</h4>
+                    <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-normal leading-normal">{item.desc}</p>
                   </div>
-                  <h4 className="text-base font-normal text-slate-900 dark:text-white mt-1">{item.title}</h4>
-                  <p className="text-xs text-slate-500 font-normal leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </ScrollSlideSection>
 
-          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 flex justify-end">
-            <div className="relative w-full max-w-[600px] rounded-3xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
-              <img src={ecommerceWomanImg} alt="E-commerce Growth Partner" className="w-full h-full object-cover" />
-              <div className="absolute bottom-6 right-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-lg flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-900/50 text-emerald-600 flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-sm font-normal text-slate-900 dark:text-white">+145% Sales Growth</div>
-                  <div className="text-xs text-slate-500 font-normal">Average Client ROI</div>
-                </div>
-              </div>
+          {/* Right Image */}
+          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[560px] rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+              <img src={ecommerceWomanImg} alt="Your E-commerce Growth Partner" className="w-full h-auto object-cover" />
             </div>
           </ScrollSlideSection>
         </div>
       </section>
 
       {/* 4. PLATFORMS WE WORK WITH */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-8">
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60">
         <ScrollSlideSection direction="up" className="mb-10 text-left">
           <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
             PLATFORMS WE WORK WITH
@@ -1201,12 +1235,12 @@ function EcommerceStoresView() {
           </h2>
         </ScrollSlideSection>
 
-        <div className="flex flex-wrap items-center justify-start gap-x-10 gap-y-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {platforms.map((p, idx) => (
             <ScrollSlideSection key={idx} delay={idx * 60 + "ms"} direction="up">
-              <div className="flex flex-col items-center gap-3 group cursor-pointer">
-                <img src={p.url} alt={p.name} className="w-16 h-16 object-contain transition-all duration-300 group-hover:scale-110 filter drop-shadow-sm" />
-                <span className="text-sm font-normal text-slate-600 dark:text-slate-300 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">{p.name}</span>
+              <div className="bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all rounded-2xl p-5 flex flex-col items-center justify-center gap-3 group cursor-pointer h-32">
+                <img src={p.url} alt={p.name} className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-300 group-hover:scale-110 filter drop-shadow-sm" />
+                <span className="text-xs sm:text-sm font-normal text-slate-700 dark:text-slate-300 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors text-center">{p.name}</span>
               </div>
             </ScrollSlideSection>
           ))}
@@ -1214,7 +1248,7 @@ function EcommerceStoresView() {
       </section>
 
       {/* 5. SUCCESS STORIES */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 bg-slate-100/50 dark:bg-slate-900 border-y border-slate-200/60 dark:border-slate-800/60 mt-8">
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60">
         <ScrollSlideSection direction="up" className="mb-10 text-left">
           <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
             SUCCESS STORIES
@@ -1224,30 +1258,36 @@ function EcommerceStoresView() {
           </h2>
         </ScrollSlideSection>
 
-        <ScrollSlideSection direction="up" delay="100ms" className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 sm:p-10 flex flex-col lg:flex-row gap-10 lg:gap-14 items-center shadow-sm hover:shadow-md transition-shadow">
+        <ScrollSlideSection direction="up" delay="100ms" className="bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 rounded-3xl p-6 sm:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center shadow-sm hover:shadow-md transition-all">
+          {/* Left Image */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
             <img src={fashionCaseStudyImg} alt="Fashion E-commerce Case Study" className="w-full h-auto object-cover" />
           </div>
+
+          {/* Right Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-start gap-4 text-left">
-            <div className="bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Case Study</div>
+            <div className="bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 text-xs font-normal px-3 py-1 rounded-full uppercase tracking-wider">
+              CASE STUDY
+            </div>
             <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white leading-snug">
               Building a High-Converting Fashion E-commerce Store
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base font-normal leading-relaxed mb-6">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-normal leading-relaxed mb-4">
               We developed a feature-rich online store for a fashion brand with seamless shopping experience, secure payments, and marketing integrations. The result was a 2.5x increase in sales within 6 months.
             </p>
-            <div className="grid grid-cols-3 gap-4 w-full relative pt-6 border-t border-slate-100 dark:border-slate-700">
+            
+            <div className="grid grid-cols-3 gap-4 w-full pt-6 border-t border-slate-100 dark:border-slate-700">
               <div className="flex flex-col">
                 <div className="text-sky-600 dark:text-sky-400 text-2xl sm:text-3xl font-normal tracking-tight">2.5x</div>
-                <div className="text-slate-500 text-xs sm:text-sm font-normal mt-1">Increase in Sales</div>
+                <div className="text-slate-500 text-xs font-normal mt-1">Increase in Sales</div>
               </div>
               <div className="flex flex-col">
                 <div className="text-sky-600 dark:text-sky-400 text-2xl sm:text-3xl font-normal tracking-tight">40%</div>
-                <div className="text-slate-500 text-xs sm:text-sm font-normal mt-1">More Customers</div>
+                <div className="text-slate-500 text-xs font-normal mt-1">More Customers</div>
               </div>
               <div className="flex flex-col">
                 <div className="text-sky-600 dark:text-sky-400 text-2xl sm:text-3xl font-normal tracking-tight">60%</div>
-                <div className="text-slate-500 text-xs sm:text-sm font-normal mt-1">Higher Engagement</div>
+                <div className="text-slate-500 text-xs font-normal mt-1">Higher Engagement</div>
               </div>
             </div>
           </div>
@@ -1255,16 +1295,16 @@ function EcommerceStoresView() {
       </section>
 
       {/* 6. BOTTOM CTA BANNER */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-8 mb-4">
-        <div className="relative rounded-3xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-sky-50 to-blue-50 dark:from-slate-800 dark:to-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm">
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60 mb-4">
+        <div className="relative rounded-3xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-sky-50/70 via-blue-50/50 to-sky-50/70 dark:from-slate-800 dark:to-slate-800 border border-slate-200/80 dark:border-slate-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm">
           <div className="relative z-10 text-left">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
               LET'S BUILD TOGETHER
             </h4>
-            <h2 className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white mb-2">
               Ready to Start Your Online Store?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-normal max-w-xl">
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal max-w-xl">
               Let's turn your products into a successful online business.
             </p>
           </div>
