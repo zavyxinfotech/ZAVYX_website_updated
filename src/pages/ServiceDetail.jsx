@@ -3158,30 +3158,61 @@ function CloudInfrastructureView() {
 
 export default function ServiceDetail() {
   const { serviceId } = useParams();
-  const currentServiceKey = serviceId || 'websites-web-apps';
+  const rawKey = decodeURIComponent(serviceId || '').toLowerCase();
+  const normalizedKey = rawKey.replace(/[\s_]+/g, '-');
 
-  if (currentServiceKey === 'websites-web-apps') {
+  if (
+    normalizedKey === 'websites-web-apps' || 
+    normalizedKey === 'websites' || 
+    normalizedKey === 'web-apps'
+  ) {
     return <WebsitesWebAppsView />;
   }
-  if (currentServiceKey === 'cloud-infrastructure') {
+  if (
+    normalizedKey === 'cloud-infrastructure' || 
+    normalizedKey === 'cloud'
+  ) {
     return <CloudInfrastructureView />;
   }
-  if (currentServiceKey === 'digital-marketing-seo') {
+  if (
+    normalizedKey === 'digital-marketing-seo' || 
+    normalizedKey === 'digital-marketing' || 
+    normalizedKey === 'seo'
+  ) {
     return <DigitalMarketingView />;
   }
-  if (currentServiceKey === 'branding-creative') {
+  if (
+    normalizedKey === 'branding-creative' || 
+    normalizedKey === 'branding' || 
+    normalizedKey === 'creative'
+  ) {
     return <BrandingCreativeView />;
   }
-  if (currentServiceKey === 'e-commerce-stores') {
+  if (
+    normalizedKey === 'e-commerce-stores' || 
+    normalizedKey === 'ecommerce-stores' || 
+    normalizedKey === 'ecommerce' ||
+    normalizedKey === 'e-commerce'
+  ) {
     return <EcommerceStoresView />;
   }
-  if (currentServiceKey === 'whatsapp-api-bots') {
+  if (
+    normalizedKey === 'whatsapp-api-bots' || 
+    normalizedKey === 'whatsapp-api' || 
+    normalizedKey === 'whatsapp'
+  ) {
     return <WhatsAppApiBotsView />;
   }
-  if (currentServiceKey === 'mobile-apps') {
+  if (
+    normalizedKey === 'mobile-apps' || 
+    normalizedKey === 'mobile'
+  ) {
     return <MobileAppsView />;
   }
-  if (currentServiceKey === 'ai-automation') {
+  if (
+    normalizedKey === 'ai-automation' || 
+    normalizedKey === 'ai'
+  ) {
     return <AiAutomationView />;
   }
   return <WebsitesWebAppsView />;
