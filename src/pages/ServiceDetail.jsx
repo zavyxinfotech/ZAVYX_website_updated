@@ -3618,58 +3618,6 @@ function CrmErpSystemsView() {
         </div>
       </section>
 
-      {/* 7. FREQUENTLY ASKED QUESTIONS (FAQ) */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <ScrollSlideSection direction="up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="max-w-xl text-left">
-            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
-              FAQ
-            </h4>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-slate-900 dark:text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          <div className="text-left md:text-right">
-            <span className="text-slate-500 dark:text-slate-400 text-sm font-normal block mb-1">
-              Got more questions? We're here to help.
-            </span>
-            <Link to="/contact" className="text-sky-600 dark:text-sky-400 font-medium text-sm hover:underline inline-flex items-center gap-1">
-              Contact Us <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </ScrollSlideSection>
-
-        {/* 2-Column Accordion FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-left">
-          {faqs.map((faq, idx) => {
-            const isOpen = openFaqIndex === idx;
-            return (
-              <ScrollSlideSection key={idx} delay={`${idx * 40}ms`} direction="up">
-                <div 
-                  onClick={() => toggleFaq(idx)}
-                  className="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 cursor-pointer shadow-sm hover:shadow transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-base sm:text-lg font-normal text-slate-900 dark:text-white">
-                      {faq.q}
-                    </h3>
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center shrink-0">
-                      {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                    </div>
-                  </div>
-
-                  {isOpen && (
-                    <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 font-normal leading-relaxed border-t border-slate-100 dark:border-slate-700/60 pt-3 animate-in fade-in-0 duration-200">
-                      {faq.a}
-                    </p>
-                  )}
-                </div>
-              </ScrollSlideSection>
-            );
-          })}
-        </div>
-      </section>
-
     </div>
   );
 }
