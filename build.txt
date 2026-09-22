@@ -1,3 +1,0 @@
-﻿[36mvite v8.2.2 [32mbuilding client environment for production...[36m[39m
-transforming...
-Γ£ô 1882 modules transformed.

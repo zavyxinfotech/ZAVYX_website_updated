@@ -180,9 +180,6 @@ export default function Services() {
         <div className="max-w-[1300px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           <ScrollSlideSection className="flex flex-col text-center lg:text-left">
-            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
-              OUR SERVICES
-            </h4>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
               Tailored Technology<br className="hidden lg:block"/> Solutions for a <br className="hidden lg:block"/>
               Stronger Tomorrow

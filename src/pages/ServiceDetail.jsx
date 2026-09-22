@@ -463,11 +463,7 @@ function WebsitesWebAppsView() {
             
             {/* Hero Left Content */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                OUR SERVICE
-              </h4>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white whitespace-nowrap">
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Websites & Web Apps
               </h1>
 
@@ -1066,12 +1062,9 @@ function EcommerceStoresView() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Hero Text */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                E-COMMERCE STORES
-              </h4>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Powerful Online Stores<br />
-                for a <span className="text-sky-600 dark:text-sky-400 font-normal">Stronger Tomorrow</span>
+                for a Stronger Tomorrow
               </h1>
               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
                 We design and develop high-converting e-commerce stores that help you reach more customers, increase sales, and grow your brand in the digital marketplace.
@@ -1428,12 +1421,9 @@ function WhatsAppApiBotsView() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Hero Left Content */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                WHATSAPP API & BOTS
-              </h4>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Smarter Conversations.<br />
-                <span className="text-sky-600 dark:text-sky-400 font-normal">Automated Growth.</span>
+                Automated Growth.
               </h1>
               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 font-normal">
                 Leverage WhatsApp Business API and intelligent bots to automate conversations, enhance customer engagement, and scale your business with seamless, secure, and reliable messaging solutions.
@@ -1993,13 +1983,9 @@ function MobileAppsView() {
             
             {/* Hero Left Content */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                MOBILE APP DEVELOPMENT
-              </h4>
-
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Powerful Mobile Apps<br />
-                for a <span className="text-sky-600 dark:text-sky-400 font-normal">Smarter Tomorrow</span>
+                for a Smarter Tomorrow
               </h1>
 
               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 font-normal">
@@ -2471,17 +2457,14 @@ function DigitalMarketingView() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
              <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-               <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                 DIGITAL MARKETING & SEO
-               </h4>
                <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
-                 Grow Your Brand<br />in the <span className="text-sky-600 dark:text-sky-400 font-normal">Digital World</span>
+                 Grow Your Brand<br />in the Digital World
                </h1>
                <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
                  We create data-driven digital marketing strategies and SEO solutions that help your business get more visibility, attract the right audience, and achieve measurable growth.
                </p>
                
-               <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-10">
+               <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
                   <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
                     <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
@@ -2798,11 +2781,8 @@ function BrandingCreativeView() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
              <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-               <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm flex items-center justify-start gap-2 mb-3">
-                 BRANDING & CREATIVE
-               </h4>
                <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
-                 Creative Brand Identity &amp; Strategy<br />for a <span className="text-sky-600 dark:text-sky-400 font-normal">Stronger Tomorrow</span>
+                 Creative Brand Identity &amp; Strategy<br />for a Stronger Tomorrow
                </h1>
                <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
                  We create meaningful brands and stunning creative designs that help your business stand out, connect with your audience, and leave a lasting impression.
@@ -3148,11 +3128,8 @@ function CloudInfrastructureView() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
              <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-               <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm flex items-center justify-start gap-2 mb-3">
-                 CLOUD & INFRASTRUCTURE
-               </h4>
                <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
-                 Scalable Cloud Infrastructure<br />for a <span className="text-sky-600 dark:text-sky-400 font-normal">Stronger Tomorrow</span>
+                 Scalable Cloud Infrastructure<br />for a Stronger Tomorrow
                </h1>
                <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
                  We design, build, and manage secure, scalable, and high-performance cloud environments that help your business grow without limits.
@@ -3179,7 +3156,7 @@ function CloudInfrastructureView() {
                  <img 
                    src={cloudBgImg} 
                    alt="Cloud Infrastructure" 
-                   className="w-full h-auto max-h-[460px] lg:max-h-[520px] object-contain transition-transform duration-700 group-hover:scale-[1.03] filter drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal" 
+                   className="w-full h-auto max-h-[460px] lg:max-h-[520px] object-contain transition-transform duration-700 group-hover:scale-[1.03] filter drop-shadow-2xl" 
                  />
                </div>
              </ScrollSlideSection>
@@ -3589,20 +3566,16 @@ function CrmErpSystemsView() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center gap-2">
-                CRM & ERP SYSTEMS
-              </h4>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.7rem] font-normal leading-[1.14] tracking-tight mb-5 text-slate-900 dark:text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Unified Business Management for a <br className="hidden sm:inline" />
-                <span className="text-sky-600 dark:text-sky-400 font-normal">Stronger Tomorrow</span>
+                Stronger Tomorrow
               </h1>
 
               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 font-normal">
                 Streamline your operations, strengthen customer relationships, and drive growth with an integrated CRM & ERP solution.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-10">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
                 <Link
                   to="/contact"
                   className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
@@ -3625,20 +3598,63 @@ function CrmErpSystemsView() {
               </div>
 
               {/* Stats Metrics */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 dark:border-slate-800">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight">100+</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Businesses Transformed</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
+            <div className="flex items-center gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <Users className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
+                  100+
                 </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight">250+</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Happy Clients</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight">5+</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Years of Experience</div>
+                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
+                  Businesses Transformed
                 </div>
               </div>
+            </div>
+
+            <div className="flex items-center gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <Heart className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
+                  250+
+                </div>
+                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
+                  Happy Clients
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <Award className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
+                  5+
+                </div>
+                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
+                  Years of Experience
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
+                  99%
+                </div>
+                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
+                  Operational Success
+                </div>
+              </div>
+            </div>
+          </div>
             </ScrollSlideSection>
 
             {/* Hero Right Image Mockup */}
@@ -3870,15 +3886,15 @@ function CrmErpSystemsView() {
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 dark:border-slate-700">
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">40%</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Increase in Sales</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Increase in Sales</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">30%</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Operational Efficiency</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Operational Efficiency</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">60%</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Faster Reporting</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Faster Reporting</div>
                 </div>
               </div>
             </div>
@@ -4058,12 +4074,8 @@ function AiAutomationView() {
             
             {/* Hero Left Content */}
             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-3 flex items-center justify-start gap-2">
-                AI & AUTOMATION
-              </h4>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] xl:text-[3.5rem] font-normal leading-[1.15] tracking-tight mb-5 text-slate-900 dark:text-white">
-                Intelligent Automation for a <span className="text-sky-600 dark:text-sky-400 font-normal">Smarter Tomorrow</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+                Intelligent Automation for a Smarter Tomorrow
               </h1>
 
               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-6 font-normal">
@@ -4348,7 +4360,7 @@ function AiAutomationView() {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white">Reduce Manual Work</h4>
-                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Automate repetitive and time-consuming tasks.</p>
+                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Automate repetitive and time-consuming tasks.</p>
                 </div>
               </div>
 
@@ -4358,7 +4370,7 @@ function AiAutomationView() {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white">Faster Decisions</h4>
-                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Get real-time insights and make smarter decisions.</p>
+                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Get real-time insights and make smarter decisions.</p>
                 </div>
               </div>
 
@@ -4368,7 +4380,7 @@ function AiAutomationView() {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white">Fewer Errors</h4>
-                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Minimize human errors and ensure consistency.</p>
+                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Minimize human errors and ensure consistency.</p>
                 </div>
               </div>
 
@@ -4378,7 +4390,7 @@ function AiAutomationView() {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white">Scalable Operations</h4>
-                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Grow your business without operational limits.</p>
+                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Grow your business without operational limits.</p>
                 </div>
               </div>
             </div>
@@ -4583,15 +4595,15 @@ function AiAutomationView() {
               <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-4 border-t border-slate-200/60 dark:border-slate-700/60">
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">70%</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Faster Processing</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Faster Processing</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">90%</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Higher Accuracy</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Higher Accuracy</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-normal text-sky-600 dark:text-sky-400 tracking-tight">50+</div>
-                  <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">Hours Saved Weekly</div>
+                  <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Hours Saved Weekly</div>
                 </div>
               </div>
             </div>
