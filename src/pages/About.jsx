@@ -195,7 +195,7 @@ export default function About() {
             </div>
 
             <div className="flex flex-col mt-4">
-              <span className="font-[cursive] text-4xl text-slate-800 dark:text-slate-200 opacity-80 mb-2 font-normal">ZAVYX InfoTech</span>
+              <span className="font-['Space_Grotesk'] text-4xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">ZAVYX InfoTech</span>
               <span className="text-[11px] sm:text-xs uppercase font-medium text-slate-500 tracking-widest">Executive Leadership Team</span>
             </div>
           </ScrollSlideSection>

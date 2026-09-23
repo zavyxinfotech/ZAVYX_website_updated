@@ -45,7 +45,7 @@ export default function Navbar() {
           
           <Link 
             to="/" 
-            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal tracking-tight hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
               location.pathname === '/' ? 'text-sky-600 dark:text-sky-400 after:scale-x-100' : 'after:scale-x-0'
             }`}
           >
@@ -54,7 +54,7 @@ export default function Navbar() {
 
           <Link 
             to="/about" 
-            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal tracking-tight hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
               location.pathname === '/about' ? 'text-sky-600 dark:text-sky-400 after:scale-x-100' : 'after:scale-x-0'
             }`}
           >
@@ -69,7 +69,7 @@ export default function Navbar() {
           >
             <Link 
               to="/services" 
-              className={`flex items-center gap-1 text-slate-800 dark:text-slate-100 text-[17px] font-normal hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left group-hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+              className={`flex items-center gap-1 text-slate-800 dark:text-slate-100 text-[17px] font-normal tracking-tight hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left group-hover:after:scale-x-100 after:transition-transform after:duration-300 ${
                 location.pathname.startsWith('/services') ? 'text-sky-600 dark:text-sky-400 after:scale-x-100' : 'after:scale-x-0'
               }`}
             >
@@ -84,7 +84,7 @@ export default function Navbar() {
                   <Link
                     key={idx}
                     to={svc.path}
-                    className="px-4 py-2.5 text-[16px] text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50/80 dark:hover:bg-slate-800 rounded-xl transition-all font-normal flex items-center justify-between group/link"
+                    className="px-4 py-2.5 text-[16px] text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50/80 dark:hover:bg-slate-800 rounded-xl transition-all font-normal tracking-tight flex items-center justify-between group/link"
                   >
                     <span className="flex items-center gap-2">
                       {svc.title}
@@ -98,7 +98,7 @@ export default function Navbar() {
 
           <Link 
             to="/contact" 
-            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+            className={`text-slate-800 dark:text-slate-100 text-[17px] font-normal tracking-tight hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-sky-500 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
               location.pathname === '/contact' ? 'text-sky-600 dark:text-sky-400 after:scale-x-100' : 'after:scale-x-0'
             }`}
           >
@@ -134,7 +134,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="px-6 py-2.5 border-b border-slate-200/50 dark:border-slate-800/80 transition-colors shrink-0"
           >
-            <span className="font-normal text-slate-800 dark:text-slate-100 text-lg">Home</span>
+            <span className="font-normal tracking-tight text-slate-800 dark:text-slate-100 text-lg">Home</span>
           </Link>
 
           <Link 
@@ -142,7 +142,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="px-6 py-2.5 border-b border-slate-200/50 dark:border-slate-800/80 transition-colors shrink-0"
           >
-            <span className="font-normal text-slate-800 dark:text-slate-100 text-lg">About Us</span>
+            <span className="font-normal tracking-tight text-slate-800 dark:text-slate-100 text-lg">About Us</span>
           </Link>
 
           {/* Services Dropdown - Mobile */}
@@ -151,7 +151,7 @@ export default function Navbar() {
               <Link 
                 to="/services" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-normal text-slate-800 dark:text-slate-100 text-lg flex-1"
+                className="font-normal tracking-tight text-slate-800 dark:text-slate-100 text-lg flex-1"
               >
                 Services
               </Link>
@@ -184,7 +184,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="px-6 py-2.5 transition-colors shrink-0"
           >
-            <span className="font-normal text-slate-800 dark:text-slate-100 text-lg">Contact</span>
+            <span className="font-normal tracking-tight text-slate-800 dark:text-slate-100 text-lg">Contact</span>
           </Link>
 
         </div>

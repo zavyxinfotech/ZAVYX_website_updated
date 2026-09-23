@@ -36,7 +36,7 @@ import { AnimatedHeroText } from '../components/HeroEffects';
 import heroBgDesktop from '../../assets/images/Hero_bg_desktop_view.png';
 import heroBgMobile from '../../assets/images/Hero_bg_mobile_view.png';
 
-const ScrollSlideSection = ({ children, className = '' }) => {
+const ScrollSlideSection = ({ children, className = '', delay = '0ms', direction = 'left' }) => {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -53,12 +53,21 @@ const ScrollSlideSection = ({ children, className = '' }) => {
     return () => observer.disconnect();
   }, []);
 
+  const translateMap = {
+    left: '-translate-x-12',
+    right: 'translate-x-12',
+    up: 'translate-y-20',
+    down: '-translate-y-12'
+  };
+  const translateClass = translateMap[direction] || '-translate-x-12';
+
   return (
     <div 
       ref={containerRef} 
-      className={`transition-all duration-1000 ease-out transform ${
-        isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+      className={`transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
+        isVisible ? 'translate-x-0 translate-y-0 opacity-100' : `${translateClass} opacity-0`
       } ${className}`}
+      style={{ transitionDelay: delay }}
     >
       {children}
     </div>
@@ -114,21 +123,21 @@ export default function Home() {
 
   useEffect(() => {
     const t = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonialsList.length);
+      setActiveTestimonial((prev) => (prev - 1 + testimonialsList.length) % testimonialsList.length);
     }, 4000);
     return () => clearInterval(t);
   }, [testimonialsList.length]);
 
 
   const industriesList = [
-    { title: 'Retail & E-commerce', icon: ShoppingCart, hex: '#0284C7', subheading: 'Digital storefronts connecting the globe', desc: 'Transform your retail experience with advanced e-commerce solutions, seamless integrations, and modern digital shopping platforms engineered for performance and scale.' },
-    { title: 'Manufacturing', icon: Factory, hex: '#EA580C', subheading: 'Smart production and automation', desc: 'Optimize your supply chain and factory floor operations with real-time tracking, intelligent integrations, and highly reliable modern production software.' },
-    { title: 'Healthcare', icon: HeartPulse, hex: '#16A34A', subheading: 'Secure and connected patient care', desc: 'Enhance patient care with highly secure, compliant digital health platforms, telemedicine applications, and streamlined digital medical record systems.' },
-    { title: 'Education', icon: GraduationCap, hex: '#2563EB', subheading: 'E-learning and campus technology', desc: 'Empower remote learning through intuitive educational platforms, robust student portals, and highly scalable virtual classroom environments.' },
-    { title: 'Real Estate', icon: Building2, hex: '#7C3AED', subheading: 'Innovative property tech solutions', desc: 'Bridge the gap between property agents and buyers using advanced digital property management softwares, immersive virtual tours, and modern CRM platforms.' },
-    { title: 'Logistics', icon: Truck, hex: '#E11D48', subheading: 'Supply chain tracking & optimization', desc: 'Monitor easily and manage fleets globally in real time with our customized digital routing, intelligent logistics tracking, and warehouse management systems.' },
-    { title: 'Media & Entertainment', icon: Tv, hex: '#0D9488', subheading: 'High-bandwidth content delivery', desc: 'Instantly deliver high-quality digital content flawlessly to your audience with our reliable, high-uptime streaming architecture and active engagement tools.' },
-    { title: 'Travel & Tourism', icon: Globe, hex: '#14B8A6', subheading: 'Booking and hospitality portals', desc: 'Create unforgettable trips for your customers using comprehensive online booking engines, dynamic hospitality systems, and specialized travel CRMs.' }
+    { title: 'Retail & E-commerce', icon: ShoppingCart, img: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1000&q=80', subheading: 'Digital storefronts connecting the globe', desc: 'Transform your retail experience with advanced e-commerce solutions, seamless integrations, and modern digital shopping platforms engineered for performance and scale.' },
+    { title: 'Manufacturing', icon: Factory, img: 'https://images.unsplash.com/photo-1565439390234-fcac3e4811b3?auto=format&fit=crop&w=1000&q=80', subheading: 'Smart production and automation', desc: 'Optimize your supply chain and factory floor operations with real-time tracking, intelligent integrations, and highly reliable modern production software.' },
+    { title: 'Healthcare', icon: HeartPulse, img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80', subheading: 'Secure and connected patient care', desc: 'Enhance patient care with highly secure, compliant digital health platforms, telemedicine applications, and streamlined digital medical record systems.' },
+    { title: 'Education', icon: GraduationCap, img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80', subheading: 'E-learning and campus technology', desc: 'Empower remote learning through intuitive educational platforms, robust student portals, and highly scalable virtual classroom environments.' },
+    { title: 'Real Estate', icon: Building2, img: 'https://images.unsplash.com/photo-1560518846-993d56b0606b?auto=format&fit=crop&w=1000&q=80', subheading: 'Innovative property tech solutions', desc: 'Bridge the gap between property agents and buyers using advanced digital property management softwares, immersive virtual tours, and modern CRM platforms.' },
+    { title: 'Logistics', icon: Truck, img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80', subheading: 'Supply chain tracking & optimization', desc: 'Monitor easily and manage fleets globally in real time with our customized digital routing, intelligent logistics tracking, and warehouse management systems.' },
+    { title: 'Media & Entertainment', icon: Tv, img: 'https://images.unsplash.com/photo-1470229722913-7c090be5bc64?auto=format&fit=crop&w=1000&q=80', subheading: 'High-bandwidth content delivery', desc: 'Instantly deliver high-quality digital content flawlessly to your audience with our reliable, high-uptime streaming architecture and active engagement tools.' },
+    { title: 'Travel & Tourism', icon: Globe, img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80', subheading: 'Booking and hospitality portals', desc: 'Create unforgettable trips for your customers using comprehensive online booking engines, dynamic hospitality systems, and specialized travel CRMs.' }
   ];
 
   return (
@@ -207,7 +216,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT COLUMN: Building Graphic & Overlays with Shared Stacking Context for Seamless Blending */}
-            <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-end mt-6 lg:mt-0">
+            <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-end mt-2 md:mt-4 lg:mt-0 -top-8 lg:top-0">
               
               {/* Soft Ambient Logo Blue Background Circle Shape - Decreased Brightness */}
               <div className="absolute -left-12 sm:-left-20 lg:-left-28 top-1/2 -translate-y-1/2 w-[360px] h-[360px] sm:w-[480px] sm:h-[480px] lg:w-[580px] lg:h-[580px] rounded-full bg-[#e0f2fe]/50 dark:bg-sky-950/20 pointer-events-none z-0" />
@@ -234,7 +243,7 @@ export default function Home() {
                       WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
                       maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)'
                     }}
-                    className="block md:hidden w-full h-auto object-cover rounded-2xl max-h-[580px] transform scale-110" 
+                    className="block md:hidden w-[110%] -ml-[5%] h-auto object-cover rounded-2xl max-h-[580px]" 
                   />
                 </div>
 
@@ -435,82 +444,110 @@ export default function Home() {
           <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Header Row */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-6">
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">INDUSTRIES WE SERVE</span>
-                  <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
+            <div className="flex flex-col justify-between gap-4 lg:gap-6 mb-10 lg:mb-14 w-full">
+              <div className="flex flex-row items-center justify-between w-full">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-[10px] sm:text-xs md:text-sm">INDUSTRIES WE SERVE</span>
+                  <span className="w-6 sm:w-8 h-[2px] bg-sky-500 inline-block"></span>
                 </div>
-                <ScrollAnimatedHeading 
-                  text="Helping Businesses Across Industries" 
-                  className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
-                />
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors shrink-0"
+                >
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
               </div>
-
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-sm font-normal text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors shrink-0"
-              >
-                Explore Services <ArrowRight className="w-4 h-4" />
-              </Link>
+              
+              <ScrollAnimatedHeading 
+                text="Helping Businesses Across Industries" 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] transition-opacity"
+              />
             </div>
 
             {/* Industries Expanding Cards Row */}
-            <div className="flex flex-wrap lg:flex-nowrap w-full lg:h-[450px] pt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3 lg:gap-4 pt-4 pb-8 relative z-20 group/grid">
               {industriesList.map((ind, i) => {
                 const Icon = ind.icon;
-                const isLast = i === industriesList.length - 1;
                 
                 return (
-                  <div 
+                  <ScrollSlideSection 
                     key={`ind-${i}`}
-                    className={`group relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-out overflow-hidden w-full md:w-[25%] lg:w-auto lg:flex-1 lg:hover:flex-[3.5] h-[120px] md:h-[180px] lg:h-full hover:h-[280px] md:hover:h-[300px] lg:hover:h-full border-slate-300 dark:border-slate-700/60 ${
-                      i % 2 === 0 ? 'border-r' : ''
-                    } md:border-r ${
-                      (i + 1) % 4 === 0 ? 'md:border-r-0' : ''
-                    } lg:border-r ${
-                      isLast ? 'lg:border-r-0' : ''
-                    }`}
+                    direction="up"
+                    delay={`${(i % 4) * 100}ms`}
+                    className="w-full shrink-0"
                   >
-                     {/* Hover Gradient Background matching blue and green combo */}
                      <div 
-                        className="absolute inset-0 transition-opacity duration-500 z-0 bg-gradient-to-br from-[rgba(2,132,199,0.85)] to-[rgba(57,181,74,0.85)] opacity-0 group-hover:opacity-100"
-                     ></div>
-
-                    {/* Idle Content (Vertical Text) */}
-                    <div className="absolute inset-0 w-full h-full flex flex-row lg:flex-col items-center justify-center gap-4 lg:gap-8 z-10 transition-all duration-500 ease-out group-hover:opacity-0 group-hover:scale-95 pointer-events-none">
-                       <div className="relative w-10 h-10 lg:w-12 lg:h-12 shrink-0 text-slate-800 dark:text-slate-200">
-                         <Icon className="w-full h-full p-1" strokeWidth={1.5} />
-                       </div>
-                       <div className="relative w-auto h-auto lg:w-full lg:h-full lg:max-h-[300px] flex items-center justify-center">
-                         <span className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:-rotate-90 whitespace-nowrap font-normal text-lg lg:text-[1.5rem] tracking-wider uppercase text-slate-700 dark:text-slate-300">
+                        onMouseEnter={() => setActiveIndustry(i)}
+                        onMouseLeave={() => setActiveIndustry(null)}
+                        onClick={() => setActiveIndustry(i)}
+                        className={`group relative flex flex-row items-center gap-3 lg:gap-4 p-3 lg:p-4 w-full h-[80px] lg:h-[100px] rounded-xl border transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-md bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 ${
+                          activeIndustry !== null && activeIndustry !== i ? 'blur-sm opacity-60' : 'hover:border-sky-400'
+                        }`}
+                     >
+                        <div className={`w-10 h-10 lg:w-12 lg:h-12 shrink-0 flex items-center justify-center transition-colors ${activeIndustry === i ? 'text-sky-600 dark:text-sky-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-sky-600'} `}>
+                          <Icon className="w-7 h-7 lg:w-8 lg:h-8" strokeWidth={1.5} />
+                        </div>
+                        <div className={`font-normal text-base lg:text-lg tracking-wide uppercase transition-colors ${activeIndustry === i ? 'text-sky-700 dark:text-sky-300' : 'text-slate-700 dark:text-slate-200'}`}>
                            {ind.title}
-                         </span>
-                       </div>
-                    </div>
-
-                    {/* Expanded Content (Horizontal / Hover Card) */}
-                    <div className="absolute inset-0 p-5 lg:p-8 flex flex-col justify-end text-left transition-all duration-500 ease-out z-20 opacity-0 scale-105 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
-                       <div className="w-12 h-12 lg:w-16 lg:h-16 mb-auto rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/30 text-white">
-                         <Icon className="w-6 h-6 lg:w-8 lg:h-8" strokeWidth={1.5} />
-                       </div>
-                       
-                       <div className="flex flex-col gap-1 lg:gap-3 w-full max-w-full overflow-hidden">
-                         <h3 className="text-3xl lg:text-5xl font-normal text-white truncate w-full">
-                           {ind.title}
-                         </h3>
-                         <div className="text-white/95 text-base lg:text-lg font-normal tracking-wide opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-150 truncate">
-                           {ind.subheading}
-                         </div>
-                         <div className="w-0 group-hover:w-12 lg:group-hover:w-16 h-[2px] bg-white transition-all duration-700 delay-300 mt-1 mb-1 lg:mt-2 lg:mb-2"></div>
-                         <p className="text-white/95 text-sm lg:text-base leading-relaxed line-clamp-3 lg:line-clamp-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200 lg:whitespace-normal font-normal">
-                           {ind.desc}
-                         </p>
-                       </div>
-                    </div>
-                  </div>
-                )
+                        </div>
+                     </div>
+                  </ScrollSlideSection>
+                );
               })}
+            </div>
+
+            {/* Global Hover / Click Overlay */}
+            <div 
+               className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-500 pointer-events-none ${
+                 activeIndustry !== null ? 'opacity-100' : 'opacity-0'
+               }`}
+            >
+               {/* Blurred Overlay Background - No pointer events to allow hovering underlying cards */}
+               <div className="absolute inset-0 bg-white/5 dark:bg-slate-900/10 pointer-events-none"></div>
+               
+               {/* Center Persistent Explanation Cards */}
+               {industriesList.map((ind, i) => {
+                  const Icon = ind.icon;
+                  return (
+                    <div 
+                       key={`modal-${i}`}
+                       className={`absolute p-4 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                          activeIndustry === i ? 'opacity-100 scale-100 z-20 pointer-events-auto' : 'opacity-0 scale-95 -z-10 pointer-events-none'
+                       }`}
+                    >
+                       <div className="relative w-full min-w-[85vw] md:min-w-[500px] max-w-xl p-6 lg:p-10 rounded-3xl flex flex-col justify-end text-left shadow-2xl overflow-hidden border border-white/20 mt-10 pointer-events-auto">
+                          <div className="absolute inset-0 bg-gradient-to-br from-[rgba(2,132,199,0.98)] to-[rgba(57,181,74,0.98)] shadow-inner"></div>
+                          
+                          <div className="relative z-10 flex flex-col items-start gap-4">
+                            <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white shadow-sm hover:scale-105 transition-transform">
+                              <Icon className="w-7 h-7 lg:w-8 lg:h-8" strokeWidth={1.5} />
+                            </div>
+                            
+                            <div className="flex flex-col gap-2 w-full">
+                              <h3 className="text-2xl lg:text-3xl font-normal text-white">
+                                {ind.title}
+                              </h3>
+                              <div className="text-white/95 text-base lg:text-lg font-normal tracking-wide">
+                                {ind.subheading}
+                              </div>
+                              <div className="w-16 h-[2px] bg-white mt-1 mb-1"></div>
+                              <p className="text-white/95 text-sm lg:text-base leading-relaxed font-normal">
+                                {ind.desc}
+                              </p>
+                            </div>
+                          </div>
+                          
+                          <button 
+                            onClick={(e) => { e.stopPropagation(); setActiveIndustry(null); }}
+                            onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); setActiveIndustry(null); }}
+                            className="absolute top-4 right-4 lg:top-5 lg:right-5 w-10 h-10 lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/40 transition-colors z-50 cursor-pointer"
+                          >
+                             ✕
+                          </button>
+                       </div>
+                    </div>
+                  );
+               })}
             </div>
 
           </div>
