@@ -76,13 +76,13 @@ export default function Contact() {
     window.open(whatsappUrl, '_blank');
   };
 
-  const mapUrl = "https://www.google.com/maps/search/?api=1&query=ZAVYX+InfoTech+TeesZone+Clothing+Fortune+City+Global+Market+Texvalley+Erode+638102";
+  const mapUrl = "https://www.google.com/maps/search/?api=1&query=%232155%2C%20Fortune%20City%2C%20Global%20Market%20%E2%80%93%20Texvalley%2C%20NH%20544%20Bengaluru%E2%80%93Cochin%20National%20Highway%2C%20Chithode%2C%20Erode%20%E2%80%93%20638102%2C%20Tamil%20Nadu%2C%20India";
 
   return (
     <div className="bg-white dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-20 lg:pb-12">
       
       {/* 1. HERO SECTION WITH ZAVYX LOGO COLOR BACKGROUND ACCENTS */}
-      <section className="relative pt-20 pb-8 lg:pt-24 lg:pb-14 overflow-hidden bg-transparent">
+      <section className="relative min-h-[100dvh] lg:min-h-0 flex flex-col justify-center lg:block pt-24 lg:pt-24 pb-4 lg:pb-14 overflow-hidden bg-transparent">
         {/* Decorative Background Accents using ZAVYX Logo Color Theme */}
         <div className="absolute top-0 right-0 w-[45vw] h-[45vw] bg-gradient-to-bl from-sky-100/70 via-pink-100/40 to-amber-100/40 rounded-bl-[140px] -z-10 hidden lg:block opacity-80 dark:from-sky-900/30 dark:via-pink-900/20 dark:to-amber-900/20 blur-3xl pointer-events-none"></div>
         <div className="absolute -left-16 top-20 w-72 h-72 bg-sky-100/70 rounded-full blur-3xl -z-10 opacity-70 dark:bg-sky-900/20 pointer-events-none"></div>
@@ -90,24 +90,24 @@ export default function Contact() {
         <div className="absolute right-12 bottom-10 w-80 h-80 bg-emerald-100/60 rounded-full blur-3xl -z-10 opacity-60 dark:bg-emerald-900/20 pointer-events-none"></div>
         <div className="absolute left-1/4 bottom-0 w-60 h-60 bg-amber-100/60 rounded-full blur-3xl -z-10 opacity-50 dark:bg-amber-900/20 pointer-events-none"></div>
 
-        <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-3 sm:gap-8 lg:gap-14 lg:items-center">
           
           {/* Hero Left Content */}
-          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-start gap-2">
+          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl order-1">
+            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2 sm:mb-4 flex items-center justify-start gap-2">
               GET IN TOUCH
             </h4>
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
+            <h1 className="text-4xl min-[400px]:text-[2.6rem] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] leading-tight font-normal tracking-tight mb-2 sm:mb-4 text-slate-900 dark:text-white">
               Let's Build <br className="hidden sm:block"/>
               Something Great <br className="hidden sm:block"/>
               <span className="text-slate-900 dark:text-white">Together.</span>
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 font-normal max-w-xl lg:max-w-2xl">
+            <p className="block text-slate-600 dark:text-slate-300 text-[14px] min-[400px]:text-[15px] sm:text-lg lg:text-xl leading-relaxed sm:leading-relaxed mb-3 sm:mb-6 font-normal max-w-xl lg:max-w-2xl">
               Have a project in mind or need expert advice? We're here to help. Reach out to us and we'll respond within 24 business hours.
             </p>
 
-            {/* CTA Buttons Row - Matching Homepage Signature Button Design & Hover Effects */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-5 mt-2 mb-2">
+            {/* CTA Buttons Row - DESKTOP ONLY */}
+            <div className="hidden lg:flex flex-wrap items-center gap-4 sm:gap-5 mt-2 mb-2">
               <a
                 href="tel:+916382721178"
                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
@@ -133,8 +133,8 @@ export default function Contact() {
           </ScrollSlideSection>
 
           {/* Hero Right Image - Clean Circular Frame with ZAVYX Logo Gradient Arc & Badges (No Grey Disc, No Dotted Lines) */}
-          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[540px] sm:max-w-[590px] aspect-square flex items-center justify-center p-2 sm:p-4 group cursor-pointer">
+          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end order-2 mt-4 lg:mt-0">
+            <div className="relative w-full max-w-[280px] min-[400px]:max-w-[400px] sm:max-w-[590px] aspect-square flex items-center justify-center p-2 sm:p-4 group cursor-pointer">
 
               {/* Orbiting Curved Gradient Arc Ring using ZAVYX Logo Colors (No Dotted Track) */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none -z-10" viewBox="0 0 500 500">
@@ -174,8 +174,32 @@ export default function Contact() {
               <div className="absolute top-[81.8%] left-[81.8%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
                 <Headphones className="w-5 h-5 sm:w-6 sm:h-6 text-[#00b84c]" />
               </div>
-
             </div>
+          </ScrollSlideSection>
+
+          {/* MOBILE ONLY CTA BUTTONS (Single Line Inline row) */}
+          <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center w-full gap-2 min-[400px]:gap-3 order-3 mt-4 sm:mt-6 mb-2">
+              <a
+                href="tel:+916382721178"
+                className="relative flex-1 inline-flex h-12 min-[400px]:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 min-[400px]:px-4 text-[12px] min-[400px]:text-sm z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap text-center">
+                  Schedule Call <ArrowRight className="w-3.5 h-3.5 min-[400px]:w-4 min-[400px]:h-4 text-white group-hover:translate-x-1" />
+                </span>
+              </a>
+
+              <a
+                href="https://wa.me/916382721178"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex-1 inline-flex h-12 min-[400px]:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-2 min-[400px]:px-4 text-[12px] min-[400px]:text-sm z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap text-center">
+                  WhatsApp <ArrowRight className="w-3.5 h-3.5 min-[400px]:w-4 min-[400px]:h-4 text-[#00016E] group-hover:translate-x-1" />
+                </span>
+              </a>
           </ScrollSlideSection>
 
         </div>
@@ -439,7 +463,7 @@ export default function Contact() {
               <div className="relative w-full h-[320px] lg:h-[380px] rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700 mt-2 shadow-none">
                 <iframe
                   title="ZAVYX Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15647.781329241517!2d77.6712349!3d11.339678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f4c39b925b3%3A0xc3b8a1c89008bc5b!2sTexvalley!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=%232155%2C%20Fortune%20City%2C%20Global%20Market%20%E2%80%93%20Texvalley%2C%20NH%20544%20Bengaluru%E2%80%93Cochin%20National%20Highway%2C%20Chithode%2C%20Erode%20%E2%80%93%20638102%2C%20Tamil%20Nadu%2C%20India&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -454,26 +478,6 @@ export default function Contact() {
 
         </div>
       </section>
-
-      {/* 4. MOBILE STICKY BOTTOM ACTION BAR */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200/80 dark:border-slate-800 p-3 flex lg:hidden items-center justify-between gap-3 shadow-none">
-        <a 
-          href="tel:+916382721178"
-          className="flex-1 py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
-        >
-          <Phone className="w-4 h-4 text-[#0284c7]" />
-          <span>Call Now</span>
-        </a>
-        <a 
-          href="https://wa.me/916382721178"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all"
-        >
-          <MessageCircle className="w-4 h-4" />
-          <span>WhatsApp</span>
-        </a>
-      </div>
 
     </div>
   );

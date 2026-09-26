@@ -107,9 +107,14 @@ export default function Navbar() {
 
         </nav>
 
-        {/* Right Nav Block Placeholder for centering logic */}
+        {/* Right Nav Block CTA */}
         <div className="hidden md:flex flex-1 justify-end items-center">
-          {/* Empty spacer to keep the logo perfectly pushed left against equal opposite nav-bounds */}
+          <a href="tel:9962294949" className="relative inline-flex h-10 sm:h-11 lg:h-12 overflow-hidden rounded-full p-[2px] group w-max shadow-sm cursor-pointer">
+            <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-[#00016E] text-white font-medium px-5 lg:px-7 gap-2 text-sm lg:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+              Start a Project <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
         </div>
 
         {/* Mobile Toggle Hamburger (Clean 3 lines only no background) */}

@@ -10,7 +10,7 @@ export default function FloatingActions() {
   const messagesEndRef = useRef(null);
 
   const [messages, setMessages] = useState([
-    { text: "Hi there! 👋 I'm ZEDEX. Welcome to Zavyx InfoTech. How can we help you scale your business today?", sender: 'bot' }
+    { text: "Hi there! 👋 I'm ZX. Welcome to Zavyx InfoTech. How can we help you scale your business today?", sender: 'bot' }
   ]);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -72,12 +72,12 @@ export default function FloatingActions() {
         {/* Call Now Option */}
         <a 
           href="tel:+916382721178" 
-          className="group flex items-center bg-sky-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-32 h-12 overflow-hidden"
+          className="group flex items-center bg-sky-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-10 sm:w-12 hover:w-28 sm:hover:w-32 h-10 sm:h-12 overflow-hidden"
         >
-          <div className="w-12 h-12 flex items-center justify-center shrink-0">
-            <Phone className="w-5 h-5 fill-current" />
+          <div className="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center shrink-0">
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
           </div>
-          <span className="whitespace-nowrap font-bold text-sm select-none">Call Now</span>
+          <span className="whitespace-nowrap font-bold text-[13px] sm:text-sm select-none">Call Now</span>
         </a>
 
         {/* WhatsApp Option (Exact SVG) */}
@@ -85,14 +85,14 @@ export default function FloatingActions() {
           href="https://wa.me/916382721178" 
           target="_blank" 
           rel="noreferrer" 
-          className="group flex items-center bg-emerald-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-12 hover:w-36 h-12 overflow-hidden"
+          className="group flex items-center bg-emerald-500 text-white rounded-l-xl shadow-lg transition-all duration-300 w-10 sm:w-12 hover:w-[124px] sm:hover:w-36 h-10 sm:h-12 overflow-hidden"
         >
-          <div className="w-12 h-12 flex items-center justify-center shrink-0">
-            <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+          <div className="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 fill-current">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
             </svg>
           </div>
-          <span className="whitespace-nowrap font-bold text-sm select-none">WhatsApp</span>
+          <span className="whitespace-nowrap font-bold text-[13px] sm:text-sm select-none">WhatsApp</span>
         </a>
 
         {/* AI Bot & Chat Interface Toggle */}
@@ -105,7 +105,7 @@ export default function FloatingActions() {
               ${introState === 'sliding-in' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
             `}>
               <div>
-                <div className="font-bold text-slate-900 dark:text-white text-sm mb-0.5 leading-snug">ZEDEX Assistant</div>
+                <div className="font-bold text-slate-900 dark:text-white text-sm mb-0.5 leading-snug">ZX Assistant</div>
                 <div className="text-xs text-slate-500 font-medium whitespace-nowrap">Instant answers & smart routing.</div>
               </div>
               <button 
@@ -121,12 +121,12 @@ export default function FloatingActions() {
           {(introState === 'icon-only' || chatOpen) && (
             <button 
               onClick={() => setChatOpen(!chatOpen)}
-              className="group flex items-center bg-white dark:bg-slate-900 text-slate-800 dark:text-white rounded-l-xl shadow-lg border border-slate-100 dark:border-slate-800 transition-all duration-300 w-12 hover:w-[115px] h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
+              className="group flex items-center bg-white dark:bg-slate-900 text-slate-800 dark:text-white rounded-l-xl shadow-lg border border-slate-100 dark:border-slate-800 transition-all duration-300 w-10 sm:w-12 hover:w-[100px] sm:hover:w-[115px] h-10 sm:h-12 overflow-hidden z-20 animate-in fade-in slide-in-from-right-4"
             >
-              <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                {chatOpen ? <X className="w-5 h-5 text-slate-400" /> : <img src={faviconUrl} alt="ZEDEX" className="w-6 h-6 object-contain" />}
+              <div className="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center shrink-0">
+                {chatOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400" /> : <img src={faviconUrl} alt="ZX" className="w-5 h-5 sm:w-6 sm:h-6 object-contain" />}
               </div>
-              <span className="whitespace-nowrap font-bold text-[13.5px] select-none bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-emerald-500 to-rose-500">ZEDEX AI</span>
+              <span className="whitespace-nowrap font-bold text-[13px] sm:text-[13.5px] select-none bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-emerald-500 to-rose-500">ZX AI</span>
             </button>
           )}
         </div>
@@ -148,10 +148,10 @@ export default function FloatingActions() {
           <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 p-4 flex items-center justify-between shrink-0 relative z-10 transition-colors">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center shadow-sm p-1.5 transition-colors">
-                <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
+                <img src={faviconUrl} alt="ZX" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold text-[15px] text-slate-800 dark:text-white leading-tight">ZEDEX AI Assist</h3>
+                <h3 className="font-bold text-[15px] text-slate-800 dark:text-white leading-tight">ZX AI Assist</h3>
                 <p className="text-slate-400 text-[12px] font-medium mt-0.5">Powered by ZAVYX InfoTech</p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function FloatingActions() {
               <div key={idx} className={`flex gap-3 max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 ${msg.sender === 'user' ? 'self-end flex-row-reverse' : ''}`}>
                 {msg.sender === 'bot' && (
                   <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 dark:border-slate-700 p-1.5 transition-colors">
-                    <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
+                    <img src={faviconUrl} alt="ZX" className="w-full h-full object-contain" />
                   </div>
                 )}
                 <div className="flex flex-col gap-1.5">
@@ -195,7 +195,7 @@ export default function FloatingActions() {
             {isTyping && (
               <div className="flex gap-2.5 max-w-[85%] animate-in fade-in">
                 <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-1 shadow-sm border border-slate-100 dark:border-slate-700 p-1.5">
-                  <img src={faviconUrl} alt="ZEDEX" className="w-full h-full object-contain" />
+                  <img src={faviconUrl} alt="ZX" className="w-full h-full object-contain" />
                 </div>
                 <div className="bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 rounded-2xl rounded-tl-sm p-3.5 shadow-sm flex items-center gap-1 h-[42px]">
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce cursor-default" style={{ animationDelay: '0ms' }}></div>
@@ -216,7 +216,7 @@ export default function FloatingActions() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Ask ZEDEX anything..." 
+                placeholder="Ask ZX anything..." 
                 className="flex-1 bg-transparent border-none outline-none text-[14px] text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 py-1"
               />
               <button 
@@ -228,7 +228,7 @@ export default function FloatingActions() {
               </button>
             </div>
             <div className="text-center mt-2.5">
-              <span className="text-[10px] text-transparent bg-clip-text font-bold tracking-widest bg-gradient-to-r from-sky-500 via-emerald-500 to-rose-500">POWERED BY ZEDEX AI</span>
+              <span className="text-[10px] text-transparent bg-clip-text font-bold tracking-widest bg-gradient-to-r from-sky-500 via-emerald-500 to-rose-500">POWERED BY ZX AI</span>
             </div>
           </div>
 

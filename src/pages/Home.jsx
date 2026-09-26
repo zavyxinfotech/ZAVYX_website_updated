@@ -80,6 +80,96 @@ import {
 } from 'react-icons/fa';
 import { TbBrandNextjs, TbBrandTailwind } from 'react-icons/tb';
 
+const MobileIndustriesAccordion = ({ items }) => {
+  const containerRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const scrollY = -rect.top;
+      const maxScroll = rect.height - window.innerHeight;
+      
+      let currentProgress = scrollY / maxScroll;
+      if (currentProgress < 0) currentProgress = 0;
+      if (currentProgress > 1) currentProgress = 1;
+      
+      setProgress(maxScroll > 0 ? currentProgress : 0);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const activeIndex = Math.min(items.length - 1, Math.floor(progress * items.length));
+
+  return (
+    <div ref={containerRef} className="relative w-full" style={{ height: `${items.length * 80}vh` }}>
+      <div className="sticky top-0 h-[100dvh] flex flex-col justify-center items-center gap-3 w-full max-w-[400px] mx-auto overflow-hidden px-4 pointer-events-none z-10">
+        {items.map((item, idx) => {
+          const isActive = idx === activeIndex;
+          const IconComponent = item.icon;
+          
+          return (
+            <div 
+              key={idx}
+              className={`transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] relative overflow-hidden pointer-events-auto flex-shrink-0 ${
+                isActive 
+                  ? 'w-full h-[450px] rounded-[2rem] opacity-100 shadow-2xl' 
+                  : 'w-[92%] h-[60px] rounded-full opacity-80 shadow-md cursor-pointer hover:opacity-100'
+              }`}
+            >
+              {/* Force Light Theme Base Card for Inactive State */}
+              <div className="absolute inset-0 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700" />
+              
+              {/* Background Image fades in on Active */}
+              <div 
+                className={`absolute inset-0 transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}`} 
+                style={{ 
+                  backgroundImage: `url(${item.img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              />
+              <div className={`absolute inset-0 bg-black/50 transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+
+              <div className={`absolute w-full px-5 transition-all duration-700 flex items-center justify-between pointer-events-none z-20 ${
+                isActive ? 'top-6' : 'top-1/2 -translate-y-1/2'
+              }`}>
+                <h3 className={`font-semibold tracking-wide transition-all duration-700 truncate mr-3 ${
+                  isActive ? 'text-white text-2xl sm:text-3xl' : 'text-slate-800 dark:text-slate-200 text-sm uppercase'
+                }`}>
+                  {item.title}
+                </h3>
+                <div className={`flex items-center justify-center shrink-0 transition-all duration-700 ${
+                  isActive ? `w-12 h-12 rounded-xl text-white shadow-lg backdrop-blur-md bg-white/20 border border-white/30` : `w-8 h-8 rounded-full text-slate-500 dark:text-slate-400`
+                }`}>
+                  <IconComponent className={isActive ? "w-6 h-6" : "w-4 h-4"} />
+                </div>
+              </div>
+
+              <div className={`absolute bottom-6 left-6 right-6 flex flex-col gap-4 transition-all duration-700 pointer-events-none z-20 ${
+                isActive ? 'opacity-100 translate-y-0 delay-150' : 'opacity-0 translate-y-8'
+              }`}>
+                <div className="text-white font-medium text-lg lg:text-xl leading-snug drop-shadow-md">
+                   {item.subheading}
+                </div>
+                <p className="text-white/95 text-[13px] sm:text-sm leading-relaxed drop-shadow-sm">
+                  {item.desc}
+                </p>
+                <Link to="/contact" className="inline-flex items-center justify-center w-full bg-sky-600/90 backdrop-blur-md hover:bg-sky-500 text-white rounded-xl py-3.5 text-[13px] font-bold uppercase tracking-wider transition-colors pointer-events-auto mt-2">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 const stackRow1 = [
   { name: 'React', icon: FaReact, hex: '#61DAFB' },
   { name: 'Node.js', icon: FaNodeJs, hex: '#5FA04E' }, // Real Node.js color
@@ -440,7 +530,8 @@ export default function Home() {
 
       {/* INDUSTRIES WE SERVE SECTION */}
       <ScrollSlideSection>
-        <section className="py-16 lg:py-24 bg-transparent transition-colors duration-300 relative z-20">
+        {/* Adjusted padding to remove unwanted space below the section */}
+        <section className="pt-16 lg:pt-24 pb-4 lg:pb-16 bg-transparent transition-colors duration-300 relative z-20">
           <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Header Row */}
@@ -464,8 +555,13 @@ export default function Home() {
               />
             </div>
 
-            {/* Industries Expanding Cards Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3 lg:gap-4 pt-4 pb-8 relative z-20 group/grid">
+            {/* Mobile Scroll Accordion (Overrides grid and models) */}
+            <div className="block sm:hidden -mx-4">
+               <MobileIndustriesAccordion items={industriesList} />
+            </div>
+
+            {/* Industries Expanding Cards Row (Desktop / Tablet only) */}
+            <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 w-full gap-3 lg:gap-4 pt-4 pb-8 relative z-20 group/grid">
               {industriesList.map((ind, i) => {
                 const Icon = ind.icon;
                 
@@ -496,9 +592,9 @@ export default function Home() {
               })}
             </div>
 
-            {/* Global Hover / Click Overlay */}
+            {/* Global Hover / Click Overlay (Desktop / Tablet only) */}
             <div 
-               className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-500 pointer-events-none ${
+               className={`hidden sm:flex fixed inset-0 z-[100] items-center justify-center transition-all duration-500 pointer-events-none ${
                  activeIndustry !== null ? 'opacity-100' : 'opacity-0'
                }`}
             >
@@ -555,9 +651,9 @@ export default function Home() {
       </ScrollSlideSection>
 
       {/* TESTIMONIALS SECTION */}
-      {/* TESTIMONIALS SECTION */}
       <ScrollSlideSection>
-      <section className="pt-20 lg:pt-24 pb-16 lg:pb-24 overflow-hidden relative bg-transparent transition-colors duration-300">
+      {/* Adjusted top padding to synergize with Industries bottom padding fix */}
+      <section className="pt-8 lg:pt-16 pb-16 lg:pb-24 overflow-hidden relative bg-transparent transition-colors duration-300">
         
         {/* Constrained Header Container */}
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col">
