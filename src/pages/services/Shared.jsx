@@ -48,22 +48,20 @@ export const ScrollSlideSection = ({ children, className = '', delay = '0ms', di
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      }
-    }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
+      setIsVisible(entry.isIntersecting);
+    }, { threshold: 0, rootMargin: '40px 0px -5% 0px' });
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
-  const translateClass = direction === 'left' ? '-translate-x-10' : 
-                         direction === 'right' ? 'translate-x-10' : 
-                         direction === 'up' ? 'translate-y-10' : '-translate-y-10';
+  const translateClass = direction === 'left' ? '-translate-x-6 sm:-translate-x-12' : 
+                         direction === 'right' ? 'translate-x-6 sm:translate-x-12' : 
+                         direction === 'up' ? 'translate-y-6 sm:translate-y-12' : '-translate-y-6 sm:-translate-y-12';
 
   return (
     <div 
       ref={ref} 
-      className={`transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] ${isVisible ? 'translate-x-0 translate-y-0 opacity-100' : `${translateClass} opacity-0`} ${className}`}
+      className={`transition-all duration-[1000ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] ${isVisible ? 'translate-x-0 translate-y-0 opacity-100' : `${translateClass} opacity-0`} ${className}`}
       style={{ transitionDelay: delay }}
     >
       {children}

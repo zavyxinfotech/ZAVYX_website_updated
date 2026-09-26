@@ -238,6 +238,7 @@ export default function WhatsAppApiBotsView() {
           </div>
 
           {/* Stats Metrics Row */}
+          <ScrollSlideSection direction="up" delay="300ms">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
             <div className="flex items-center gap-4 py-1">
               <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
@@ -295,6 +296,8 @@ export default function WhatsAppApiBotsView() {
               </div>
             </div>
           </div>
+          </ScrollSlideSection>
+
         </div>
       </section>
 

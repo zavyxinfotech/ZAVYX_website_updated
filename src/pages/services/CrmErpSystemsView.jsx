@@ -253,8 +253,22 @@ export default function CrmErpSystemsView() {
                 </Link>
               </div>
 
-              {/* Stats Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
+            </ScrollSlideSection>
+
+            {/* Hero Right Image Mockup */}
+            <ScrollSlideSection direction="up" delay="150ms" className="lg:col-span-6 flex justify-center">
+              <div className="relative w-full max-w-xl">
+                <img 
+                  src={crmErpHeroImg} 
+                  alt="CRM & ERP Systems Graphic" 
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                />
+              </div>
+            </ScrollSlideSection>
+          </div>
+          {/* Stats Metrics */}
+              <ScrollSlideSection direction="up" delay="300ms">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
             <div className="flex items-center gap-4 py-1">
               <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
                 <Users className="w-6 h-6" />
@@ -311,19 +325,8 @@ export default function CrmErpSystemsView() {
               </div>
             </div>
           </div>
-            </ScrollSlideSection>
+          </ScrollSlideSection>
 
-            {/* Hero Right Image Mockup */}
-            <ScrollSlideSection direction="up" delay="150ms" className="lg:col-span-6 flex justify-center">
-              <div className="relative w-full max-w-xl">
-                <img 
-                  src={crmErpHeroImg} 
-                  alt="CRM & ERP Systems Graphic" 
-                  className="w-full h-auto object-contain drop-shadow-2xl"
-                />
-              </div>
-            </ScrollSlideSection>
-          </div>
         </div>
       </section>
 
@@ -368,12 +371,13 @@ export default function CrmErpSystemsView() {
                     Learn More <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </ScrollSlideSection>
+            </ScrollSlideSection>
             );
           })}
         </div>
 
         {/* Mobile View: Compact List Rows */}
+        <ScrollSlideSection direction="up" delay="100ms">
         <div className="sm:hidden flex flex-col divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
           {servicesList.map((svc, idx) => {
             const IconComp = svc.icon;
@@ -401,6 +405,7 @@ export default function CrmErpSystemsView() {
             );
           })}
         </div>
+        </ScrollSlideSection>
       </section>
 
       {/* 3. WHY CHOOSE OUR CRM & ERP SOLUTIONS (GROWTH PARTNER) */}
