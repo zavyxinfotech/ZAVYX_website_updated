@@ -175,10 +175,10 @@ export default function Services() {
         <div className="max-w-[1300px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 lg:gap-16 items-center">
           
           <ScrollSlideSection className="flex flex-col text-left items-start">
-            <h1 className="text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.15] tracking-tight mb-2 sm:mb-6 text-slate-900 dark:text-white text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white text-left">
               Tailored Technology Solutions for a Stronger Tomorrow
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-[13px] min-[400px]:text-[14px] sm:text-lg lg:text-xl leading-relaxed mb-3 sm:mb-8 max-w-lg mx-0 font-normal text-left">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
               From strategy to execution, we deliver innovative and scalable technology solutions that help businesses grow, operate smarter, and stay ahead in a digital world.
             </p>
 
