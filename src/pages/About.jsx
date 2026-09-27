@@ -41,18 +41,19 @@ export default function About() {
     <div className="bg-white dark:bg-[#050B14] min-h-screen overflow-hidden transition-colors duration-300">
       
       {/* 1. HERO SECTION */}
-      <section className="custom-mobile-hero relative bg-transparent pt-24 pb-10 md:pt-32 md:pb-16 overflow-hidden">
+      <section className="custom-mobile-hero relative bg-transparent pt-20 pb-4 sm:pt-32 sm:pb-16 overflow-hidden">
 
-        <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+        <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-left items-start">
-            <h1 className="text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-6 leading-[1.1] text-left">
+            <h1 className="text-2xl min-[400px]:text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-6 leading-[1.15] text-left">
               <AnimatedHeroText text="Where Creativity Meets Cutting-Edge Technology" />
             </h1>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg text-left">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-lg leading-relaxed mb-3 sm:mb-8 max-w-lg text-left">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
-            <div className="flex flex-row items-center gap-3 sm:gap-6 mb-4 lg:mb-12 w-full justify-start">
+            {/* Desktop Only CTA Buttons (Under description) */}
+            <div className="hidden lg:flex flex-row items-center gap-3 sm:gap-6 mb-12 w-full justify-start">
               <Link
                 to="/contact"
                 className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm flex-1 sm:flex-none"
@@ -74,12 +75,13 @@ export default function About() {
             </div>
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="relative w-full max-w-[280px] min-[400px]:max-w-[320px] sm:max-w-[450px] lg:max-w-[580px] aspect-square mx-auto flex items-center justify-center lg:ml-[10%] mt-4 lg:mt-0">
+          {/* Hero Image Section */}
+          <ScrollSlideSection delay="100ms" className="relative w-full max-w-[180px] min-[400px]:max-w-[220px] sm:max-w-[450px] lg:max-w-[580px] aspect-square mx-auto flex items-center justify-center lg:ml-[10%] mt-2 lg:mt-0">
             
             {/* Base organically shaped container */}
-            <div className="absolute inset-0 bg-[#FFF5D1] dark:bg-yellow-500/20 -translate-x-3 sm:-translate-x-6 -translate-y-3 sm:-translate-y-6 scale-[1.02] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
-            <div className="absolute inset-0 bg-[#E8F4FF] dark:bg-sky-500/20 -translate-x-4 sm:-translate-x-10 translate-y-3 sm:translate-y-6 scale-[1.03] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
-            <div className="absolute inset-0 bg-[#FFEAED] dark:bg-rose-500/20 translate-x-2 sm:translate-x-4 translate-y-2 sm:translate-y-5 scale-[1.01] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+            <div className="absolute inset-0 bg-[#FFF5D1] dark:bg-yellow-500/20 -translate-x-2 sm:-translate-x-6 -translate-y-2 sm:-translate-y-6 scale-[1.02] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+            <div className="absolute inset-0 bg-[#E8F4FF] dark:bg-sky-500/20 -translate-x-3 sm:-translate-x-10 translate-y-2 sm:translate-y-6 scale-[1.03] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
+            <div className="absolute inset-0 bg-[#FFEAED] dark:bg-rose-500/20 translate-x-1.5 sm:translate-x-4 translate-y-1.5 sm:translate-y-5 scale-[1.01] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
 
             {/* Main organic image frame container */}
             <div className="relative w-full h-full z-10 overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] bg-white ring-1 ring-slate-100 dark:ring-slate-800" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}>
@@ -92,22 +94,44 @@ export default function About() {
             </div>
 
             {/* Floating text: Smarter Solutions */}
-            <div className="absolute top-[5%] right-[0%] sm:right-[-8%] text-[#1E293B] dark:text-white text-left font-medium text-[13px] sm:text-[18px] lg:text-[20px] leading-[1.25] drop-shadow-[0_4px_10px_rgba(255,255,255,0.5)] z-30">
+            <div className="absolute top-[5%] right-[0%] sm:right-[-8%] text-[#1E293B] dark:text-white text-left font-medium text-[11px] min-[400px]:text-[12px] sm:text-[18px] lg:text-[20px] leading-[1.2] drop-shadow-[0_4px_10px_rgba(255,255,255,0.5)] z-30">
               Smarter<br/>Solutions<br/>Brighter<br/>Business
-              <div className="w-5 sm:w-8 h-[2px] sm:h-[3px] bg-[#FFD100] mt-1.5 sm:mt-2.5 rounded-full shadow-sm"></div>
+              <div className="w-4 sm:w-8 h-[2px] sm:h-[3px] bg-[#FFD100] mt-1 sm:mt-2.5 rounded-full shadow-sm"></div>
             </div>
 
             {/* Floating Card: Ideas to Impact */}
-            <div className="absolute bottom-[10%] left-[0%] sm:left-[-20%] z-30 bg-white/50 dark:bg-slate-900/60 backdrop-blur-md p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] shadow-none flex flex-col items-center justify-center gap-1 sm:gap-2 aspect-square w-[90px] sm:w-[130px] border border-white/60 dark:border-slate-700/50">
-              <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center bg-[#E8F4FF] dark:bg-slate-700 shrink-0">
-                <BarChart3 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#0070F3]" />
+            <div className="absolute bottom-[5%] left-[0%] sm:left-[-20%] z-30 bg-white/50 dark:bg-slate-900/60 backdrop-blur-md p-2 sm:p-4 rounded-[12px] sm:rounded-[20px] shadow-none flex flex-col items-center justify-center gap-1 sm:gap-2 aspect-square w-[75px] min-[400px]:w-[85px] sm:w-[130px] border border-white/60 dark:border-slate-700/50">
+              <div className="w-5 h-5 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center bg-[#E8F4FF] dark:bg-slate-700 shrink-0">
+                <BarChart3 className="w-3 h-3 sm:w-5 sm:h-5 text-[#0070F3]" />
               </div>
               <div className="text-center">
-                <h4 className="text-[#1E293B] dark:text-white font-medium text-[12px] sm:text-[16px] leading-[1.2]">Ideas<br/><span className="text-slate-600 dark:text-slate-400 font-normal">to Impact</span></h4>
+                <h4 className="text-[#1E293B] dark:text-white font-medium text-[10px] min-[400px]:text-[11px] sm:text-[16px] leading-[1.1]">Ideas<br/><span className="text-slate-600 dark:text-slate-400 font-normal">to Impact</span></h4>
               </div>
             </div>
 
           </ScrollSlideSection>
+
+          {/* Mobile Only CTA Buttons (Placed Below the Image) */}
+          <div className="flex lg:hidden flex-row items-center gap-2 sm:gap-6 mt-3 sm:mt-6 w-full justify-center">
+            <Link
+              to="/contact"
+              className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+            >
+              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
+                Explore More <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+            <Link
+              to="/services"
+              className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+            >
+              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
+                View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
 
         </div>
       </section>
