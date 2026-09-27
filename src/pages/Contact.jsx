@@ -90,19 +90,19 @@ export default function Contact() {
         <div className="absolute right-12 bottom-10 w-80 h-80 bg-emerald-100/60 rounded-full blur-3xl -z-10 opacity-60 dark:bg-emerald-900/20 pointer-events-none"></div>
         <div className="absolute left-1/4 bottom-0 w-60 h-60 bg-amber-100/60 rounded-full blur-3xl -z-10 opacity-50 dark:bg-amber-900/20 pointer-events-none"></div>
 
-        <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-3 sm:gap-8 lg:gap-14 lg:items-center">
+        <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-1 sm:gap-8 lg:gap-14 lg:items-center">
           
           {/* Hero Left Content */}
           <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-2xl mx-0 order-1">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2 sm:mb-4 flex items-center justify-start gap-2">
               GET IN TOUCH
             </h4>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-2 sm:mb-6 text-slate-900 dark:text-white text-left">
               Let's Build <br className="hidden sm:block"/>
               Something Great <br className="hidden sm:block"/>
               <span className="text-slate-900 dark:text-white">Together.</span>
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-2 sm:mb-8 max-w-2xl font-normal text-left">
               Have a project in mind or need expert advice? We're here to help. Reach out to us and we'll respond within 24 business hours.
             </p>
 
@@ -133,8 +133,8 @@ export default function Contact() {
           </ScrollSlideSection>
 
           {/* Hero Right Image - Clean Circular Frame with ZAVYX Logo Gradient Arc & Badges (No Grey Disc, No Dotted Lines) */}
-          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end order-2 mt-4 lg:mt-0">
-            <div className="relative w-full max-w-[280px] min-[400px]:max-w-[400px] sm:max-w-[590px] aspect-square flex items-center justify-center p-2 sm:p-4 group cursor-pointer">
+          <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end order-2 mt-1 sm:mt-4 lg:mt-0">
+            <div className="relative w-full max-w-[260px] min-[400px]:max-w-[360px] sm:max-w-[590px] aspect-square flex items-center justify-center p-1 sm:p-4 group cursor-pointer">
 
               {/* Orbiting Curved Gradient Arc Ring using ZAVYX Logo Colors (No Dotted Track) */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none -z-10" viewBox="0 0 500 500">
@@ -161,24 +161,24 @@ export default function Contact() {
 
               {/* Floating Circular Icon Badges Aligned EXACTLY ON the Circle Line */}
               {/* Badge 1 - Left Edge (Monitor Icon in ZAVYX Cyan Blue) */}
-              <div className="absolute top-[50%] left-[5%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
-                <Monitor className="w-5 h-5 sm:w-6 sm:h-6 text-[#00a8ff]" />
+              <div className="absolute top-[50%] left-[5%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
+                <Monitor className="w-4 h-4 sm:w-6 sm:h-6 text-[#00a8ff]" />
               </div>
 
               {/* Badge 2 - Top Right Edge (Smartphone Icon in ZAVYX Hot Magenta Pink) */}
-              <div className="absolute top-[18.2%] left-[81.8%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
-                <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff007a]" />
+              <div className="absolute top-[18.2%] left-[81.8%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
+                <Smartphone className="w-4 h-4 sm:w-6 sm:h-6 text-[#ff007a]" />
               </div>
 
               {/* Badge 3 - Bottom Right Edge (Headphones Icon in ZAVYX Vibrant Green) */}
-              <div className="absolute top-[81.8%] left-[81.8%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
-                <Headphones className="w-5 h-5 sm:w-6 sm:h-6 text-[#00b84c]" />
+              <div className="absolute top-[81.8%] left-[81.8%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 flex items-center justify-center z-20 transition-all duration-300 group-hover:scale-110">
+                <Headphones className="w-4 h-4 sm:w-6 sm:h-6 text-[#00b84c]" />
               </div>
             </div>
           </ScrollSlideSection>
 
           {/* MOBILE ONLY CTA BUTTONS (Single Line Inline row) */}
-          <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center justify-end w-full gap-2 min-[400px]:gap-3 order-3 mt-4 sm:mt-6 mb-2">
+          <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center justify-end w-full gap-2 min-[400px]:gap-3 order-3 mt-2 sm:mt-6 mb-1">
               <a
                 href="tel:+916382721178"
                 className="relative flex-1 inline-flex h-12 min-[400px]:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
