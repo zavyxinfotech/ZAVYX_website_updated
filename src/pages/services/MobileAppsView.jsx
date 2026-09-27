@@ -124,7 +124,7 @@ export default function MobileAppsView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
+      <section className="custom-mobile-hero relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
         {/* Soft Background Accents */}
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
@@ -132,7 +132,7 @@ export default function MobileAppsView() {
         <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
@@ -140,38 +140,38 @@ export default function MobileAppsView() {
             <span className="text-sky-600 dark:text-sky-400 font-semibold">Mobile App Development</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* Hero Left Content */}
-            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Powerful Mobile Apps<br />
                 for a Smarter Tomorrow
               </h1>
 
-              <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-xl leading-relaxed mb-8 font-normal">
                 We design and develop high-performance mobile applications for Android and iOS that deliver seamless user experiences, solve real business problems, and create lasting value.
               </p>
 
               {/* Signature CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
+              <div className="hidden lg:flex flex-row items-start gap-2 sm:gap-6 mb-12 w-full">
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                    Discuss Your App Idea <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Discuss Your App Idea <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                    Explore Our Work <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    Explore Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -179,10 +179,10 @@ export default function MobileAppsView() {
 
             {/* Hero Right Visual: Dual Smartphone Mockup matching reference image */}
             <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center">
-              <div className="relative w-full max-w-[540px] flex items-center justify-center py-6">
+              <div className="relative w-full max-w-[540px] flex items-start justify-center py-6">
                 
                 {/* Dual Phone Frames Container */}
-                <div className="relative flex items-center justify-center gap-4 sm:gap-6">
+                <div className="relative flex items-start justify-center gap-4 sm:gap-6">
                   
                   {/* Left Phone: iOS App */}
                   <div className="relative w-[210px] sm:w-[250px] h-[410px] sm:h-[480px] rounded-[36px] bg-slate-900 p-3 shadow-2xl border-4 border-slate-800 -rotate-6 transition-transform duration-500 hover:rotate-0">
@@ -198,20 +198,20 @@ export default function MobileAppsView() {
 
                       {/* Mock App UI Card */}
                       <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-3 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col gap-2">
-                        <div className="w-8 h-8 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold text-xs">
+                        <div className="w-8 h-8 rounded-xl bg-sky-500 text-white flex items-start justify-center font-bold text-xs">
                           
                         </div>
                         <div className="h-2 w-24 bg-sky-200 dark:bg-sky-900 rounded-full"></div>
                         <div className="h-2 w-16 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
                       </div>
 
-                      <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center self-end text-xs font-bold shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-start justify-center self-end text-xs font-bold shadow-md">
                         →
                       </div>
                     </div>
 
                     {/* Floating Apple Icon Badge */}
-                    <div className="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 flex items-center justify-center text-slate-900 dark:text-white text-lg font-bold">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 flex items-start justify-center text-slate-900 dark:text-white text-lg font-bold">
                       
                     </div>
                   </div>
@@ -230,33 +230,58 @@ export default function MobileAppsView() {
 
                       {/* Mock App UI Card */}
                       <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-3 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col gap-2">
-                        <div className="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">
+                        <div className="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-start justify-center font-bold text-xs">
                           🤖
                         </div>
                         <div className="h-2 w-24 bg-emerald-200 dark:bg-emerald-900 rounded-full"></div>
                         <div className="h-2 w-16 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
                       </div>
 
-                      <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center self-end text-xs font-bold shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-start justify-center self-end text-xs font-bold shadow-md">
                         →
                       </div>
                     </div>
 
                     {/* Floating Android Icon Badge */}
-                    <div className="absolute -top-3 -right-3 w-10 h-10 rounded-2xl bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 flex items-center justify-center text-emerald-500 text-lg font-bold">
+                    <div className="absolute -top-3 -right-3 w-10 h-10 rounded-2xl bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 flex items-start justify-center text-emerald-500 text-lg font-bold">
                       🤖
                     </div>
                   </div>
                 </div>
               </div>
             </ScrollSlideSection>
+            {/* MOBILE ONLY CTA BUTTONS */}
+            <ScrollSlideSection direction="up" className="w-full">
+                <div className="flex lg:hidden flex-row items-start gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
+                <Link
+                  to="/contact"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Discuss Your App Idea <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    Explore Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </div>
+            </ScrollSlideSection>
+
           </div>
 
           {/* Startup Metrics Row */}
           <ScrollSlideSection direction="up" delay="300ms">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Smartphone className="w-6 h-6" />
               </div>
               <div>
@@ -269,8 +294,8 @@ export default function MobileAppsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Users className="w-6 h-6" />
               </div>
               <div>
@@ -283,8 +308,8 @@ export default function MobileAppsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Award className="w-6 h-6" />
               </div>
               <div>
@@ -297,8 +322,8 @@ export default function MobileAppsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
@@ -322,10 +347,10 @@ export default function MobileAppsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             OUR SERVICES
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             End-to-End Mobile App Development Services
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
             From idea to launch, we offer complete mobile app development services tailored to your business goals.
           </p>
         </ScrollSlideSection>
@@ -363,10 +388,10 @@ export default function MobileAppsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             OUR DEVELOPMENT PROCESS
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             From Idea to Launch in Simple Steps
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
             We follow a structured and agile process to deliver high-quality mobile applications.
           </p>
         </ScrollSlideSection>
@@ -407,10 +432,10 @@ export default function MobileAppsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             WHY CHOOSE US
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             Your Trusted Partner in Mobile App Development
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
             We combine technical expertise, creative design, and a user-first approach to build mobile apps that drive real business results.
           </p>
         </ScrollSlideSection>
@@ -510,7 +535,7 @@ export default function MobileAppsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             INDUSTRIES WE SERVE
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
             Mobile Apps for Every Industry
           </h2>
         </ScrollSlideSection>
@@ -552,7 +577,7 @@ export default function MobileAppsView() {
 
           <Link
             to="/contact"
-            className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10"
+            className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10"
           >
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">

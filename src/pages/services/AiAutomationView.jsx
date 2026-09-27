@@ -134,7 +134,7 @@ export default function AiAutomationView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION WITH ACCENTS */}
-      <section className="relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
+      <section className="custom-mobile-hero relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
         {/* Soft Background Accents */}
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         
@@ -144,7 +144,7 @@ export default function AiAutomationView() {
         <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
@@ -152,37 +152,37 @@ export default function AiAutomationView() {
             <span className="text-sky-600 dark:text-sky-400 font-semibold">AI Automation</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* Hero Left Content */}
-            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Intelligent Automation for a Smarter Tomorrow
               </h1>
 
-              <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-6 font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-xl leading-relaxed mb-6 font-normal">
                 Leverage the power of WhatsApp API and AI automation to reduce manual work, improve efficiency, and enable scalable business operations for a future-ready enterprise.
               </p>
 
               {/* Signature CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
+              <div className="hidden lg:flex flex-row items-start gap-2 sm:gap-6 mb-12 w-full">
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                    Explore Solutions <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Explore Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                    View Our Work <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    View Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
@@ -190,22 +190,22 @@ export default function AiAutomationView() {
 
             {/* Hero Right Hub Diagram Visual matching reference image */}
             <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center">
-              <div className="relative w-full max-w-[620px] aspect-square bg-transparent rounded-3xl p-6 sm:p-8 border-0 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full max-w-[620px] aspect-square bg-transparent rounded-3xl p-6 sm:p-8 border-0 flex items-start justify-center overflow-hidden">
                 
                 {/* Background Dotted Grid pattern */}
                 <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]" />
 
                 {/* Central Node Hub */}
-                <div className="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-sky-500 to-blue-600 dark:from-sky-600 dark:to-blue-700 text-white flex flex-col items-center justify-center p-3 shadow-2xl shadow-sky-500/30 group">
+                <div className="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-sky-500 to-blue-600 dark:from-sky-600 dark:to-blue-700 text-white flex flex-col items-start justify-center p-3 shadow-2xl shadow-sky-500/30 group">
                   <div className="absolute -inset-1 rounded-[26px] bg-sky-400/30 animate-pulse -z-10" />
                   <Bot className="w-10 h-10 sm:w-12 sm:h-12 mb-1 group-hover:scale-110 transition-transform" />
-                  <span className="text-xs sm:text-sm font-semibold tracking-wide text-center leading-tight">AI Automation</span>
+                  <span className="text-xs sm:text-sm font-semibold tracking-wide leading-tight">AI Automation</span>
                 </div>
 
                 {/* Floating Connected Nodes around central hub matching reference image */}
                 {/* Node 1: AI Assistant (Top Left) */}
-                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -215,8 +215,8 @@ export default function AiAutomationView() {
                 </div>
 
                 {/* Node 2: Document Processing (Top Right) */}
-                <div className="absolute top-6 right-6 sm:top-8 sm:right-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                <div className="absolute top-6 right-6 sm:top-8 sm:right-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-start justify-center shrink-0">
                     <FileText className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -226,8 +226,8 @@ export default function AiAutomationView() {
                 </div>
 
                 {/* Node 3: Predictive Analytics (Far Top Right) */}
-                <div className="absolute top-28 -right-2 sm:top-32 sm:right-2 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                <div className="absolute top-28 -right-2 sm:top-32 sm:right-2 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-start justify-center shrink-0">
                     <BarChart3 className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -237,8 +237,8 @@ export default function AiAutomationView() {
                 </div>
 
                 {/* Node 4: Chatbot 24/7 (Middle Left) */}
-                <div className="absolute top-32 -left-2 sm:top-36 sm:left-2 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+                <div className="absolute top-32 -left-2 sm:top-36 sm:left-2 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-start justify-center shrink-0">
                     <Headphones className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -248,8 +248,8 @@ export default function AiAutomationView() {
                 </div>
 
                 {/* Node 5: Workflow Automation (Middle Right) */}
-                <div className="absolute bottom-10 right-4 sm:bottom-12 sm:right-6 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                <div className="absolute bottom-10 right-4 sm:bottom-12 sm:right-6 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                     <Workflow className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -259,8 +259,8 @@ export default function AiAutomationView() {
                 </div>
 
                 {/* Node 6: Data Intelligence (Bottom Left) */}
-                <div className="absolute bottom-8 left-6 sm:bottom-10 sm:left-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                <div className="absolute bottom-8 left-6 sm:bottom-10 sm:left-8 bg-white dark:bg-slate-800/90 border-0 shadow-md rounded-2xl p-2.5 sm:p-3 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-start justify-center shrink-0">
                     <Database className="w-4 h-4" />
                   </div>
                   <div className="text-left">
@@ -271,13 +271,38 @@ export default function AiAutomationView() {
 
               </div>
             </ScrollSlideSection>
+            {/* MOBILE ONLY CTA BUTTONS */}
+            <ScrollSlideSection direction="up" className="w-full">
+                <div className="flex lg:hidden flex-row items-start gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
+                <Link
+                  to="/contact"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Explore Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    View Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </div>
+            </ScrollSlideSection>
+
           </div>
 
           {/* Startup Metrics Row */}
           <ScrollSlideSection direction="up" delay="300ms">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Bot className="w-6 h-6" />
               </div>
               <div>
@@ -290,8 +315,8 @@ export default function AiAutomationView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Users className="w-6 h-6" />
               </div>
               <div>
@@ -304,8 +329,8 @@ export default function AiAutomationView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Award className="w-6 h-6" />
               </div>
               <div>
@@ -318,8 +343,8 @@ export default function AiAutomationView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Zap className="w-6 h-6" />
               </div>
               <div>
@@ -344,10 +369,10 @@ export default function AiAutomationView() {
             OUR SERVICES
           </h4>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
               AI-Powered Solutions Built for Your Business
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg font-normal">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal">
               Leverage the power of AI and automation to reduce manual work, improve efficiency, and enable scalable business operations for a future-ready enterprise.
             </p>
           </div>
@@ -386,10 +411,10 @@ export default function AiAutomationView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             HOW IT WORKS
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             From Idea to Impact in 4 Simple Steps
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal">
             Our streamlined process ensures successful AI implementation with measurable results.
           </p>
         </ScrollSlideSection>
@@ -426,11 +451,11 @@ export default function AiAutomationView() {
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          <ScrollSlideSection direction="up" className="lg:col-span-5 flex flex-col text-left">
+          <ScrollSlideSection direction="up" className="lg:col-span-5 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
               TRANSFORM YOUR OPERATIONS
             </h4>
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
               Achieve More with AI and Automation
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
@@ -576,7 +601,7 @@ export default function AiAutomationView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             AI ACROSS YOUR BUSINESS
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
             Solutions for Every Department
           </h2>
         </ScrollSlideSection>
@@ -606,10 +631,10 @@ export default function AiAutomationView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             TECHNOLOGY & INTEGRATION
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             Seamless Integration with Your Existing Systems
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
             We integrate with your existing tools and infrastructure to ensure a smooth and secure AI implementation.
           </p>
         </ScrollSlideSection>
@@ -634,7 +659,7 @@ export default function AiAutomationView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             WHY CHOOSE US
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
             Your Trusted Partner in AI Transformation
           </h2>
         </ScrollSlideSection>
@@ -666,7 +691,7 @@ export default function AiAutomationView() {
         {/* SUCCESS STORY Box matching reference image */}
         <ScrollSlideSection direction="up" delay="100ms">
           <div className="bg-gradient-to-r from-sky-50/90 via-blue-50/50 to-pink-50/80 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-800/90 rounded-3xl p-8 sm:p-10 border border-slate-200/80 dark:border-slate-700/80 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="max-w-2xl text-left">
+            <div className="max-w-2xl mx-auto lg:mx-0 text-left">
               <span className="text-sky-600 dark:text-sky-400 font-semibold tracking-widest text-xs uppercase mb-2 block">
                 SUCCESS STORY
               </span>
@@ -720,7 +745,7 @@ export default function AiAutomationView() {
 
           <Link
             to="/contact"
-            className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10"
+            className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10"
           >
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">

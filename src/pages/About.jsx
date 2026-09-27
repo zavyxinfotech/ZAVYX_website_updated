@@ -41,11 +41,11 @@ export default function About() {
     <div className="bg-white dark:bg-[#050B14] min-h-screen overflow-hidden transition-colors duration-300">
       
       {/* 1. HERO SECTION */}
-      <section className="relative bg-transparent pt-24 pb-10 md:pt-32 md:pb-16 overflow-hidden">
+      <section className="custom-mobile-hero relative bg-transparent pt-24 pb-10 md:pt-32 md:pb-16 overflow-hidden">
 
         <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          <ScrollSlideSection className="flex flex-col text-center lg:text-left">
+          <ScrollSlideSection className="flex flex-col text-center lg:text-right lg:text-left items-end lg:items-start">
             <h4 className="text-sky-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center justify-center lg:justify-start gap-2">
               <span className="w-1.5 h-6 bg-sky-500 inline-block block"></span>
               Experience The Best IT Solutions
@@ -53,26 +53,26 @@ export default function About() {
             <h1 className="text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-6 leading-[1.1]">
               <AnimatedHeroText text="Where Creativity Meets Cutting-Edge Technology" />
             </h1>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-slate-600 dark:text-slate-400 text-[14px] sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 mt-4 sm:mt-8">
+            <div className="hidden lg:flex flex-row items-center gap-2 sm:gap-6 mb-12 w-full">
               <Link
                 to="/contact"
-                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-4 sm:px-8 gap-2 text-sm sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                  Explore More <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                  Explore More <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
               <Link
                 to="/services"
-                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-4 sm:px-8 gap-2 text-sm sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                  View All Services <ArrowRight className="w-5 h-5 text-[#00016E] group-hover:translate-x-1 transition-transform" />
+                  View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             </div>
@@ -118,6 +118,30 @@ export default function About() {
             </div>
 
           </ScrollSlideSection>
+            {/* MOBILE ONLY CTA BUTTONS */}
+            <ScrollSlideSection direction="up" className="w-full">
+                <div className="flex lg:hidden flex-row items-center gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
+              <Link
+                to="/contact"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-4 sm:px-8 gap-2 text-sm sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                  Explore More <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+              <Link
+                to="/services"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-4 sm:px-8 gap-2 text-sm sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                  View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </div>
+            </ScrollSlideSection>
+
           
         </div>
       </section>
@@ -168,7 +192,7 @@ export default function About() {
           </ScrollSlideSection>
 
           {/* Right Content */}
-          <ScrollSlideSection delay="100ms" className="flex flex-col text-left">
+          <ScrollSlideSection delay="100ms" className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h4 className="text-amber-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
               <span className="w-6 h-0.5 bg-amber-500 inline-block block"></span>
               About Us
@@ -349,7 +373,7 @@ export default function About() {
                <img src={zavyxLogoIcon} alt="Background Watermark" className="w-full h-full object-contain drop-shadow-lg" />
              </div>
 
-             <div className="relative z-10 flex-1 max-w-2xl text-left mb-8 md:mb-0">
+             <div className="relative z-10 flex-1 max-w-2xl mx-auto lg:mx-0 text-left mb-8 md:mb-0">
                <span className="text-slate-500 dark:text-slate-400 uppercase tracking-widest text-[10px] sm:text-xs font-normal mb-2 sm:mb-3 block">
                  READY TO GET STARTED?
                </span>
@@ -364,7 +388,7 @@ export default function About() {
              <div className="relative z-10 flex shrink-0">
                <Link
                  to="/contact"
-                 className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                 className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
                >
                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-normal px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 group-hover:border-transparent">

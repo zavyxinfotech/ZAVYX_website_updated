@@ -82,7 +82,7 @@ export default function Contact() {
     <div className="bg-white dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-20 lg:pb-12">
       
       {/* 1. HERO SECTION WITH ZAVYX LOGO COLOR BACKGROUND ACCENTS */}
-      <section className="relative min-h-[100dvh] lg:min-h-0 flex flex-col justify-center lg:block pt-24 lg:pt-24 pb-4 lg:pb-14 overflow-hidden bg-transparent">
+      <section className="custom-mobile-hero relative min-h-[100dvh] lg:min-h-0 flex flex-col justify-center lg:block pt-24 lg:pt-24 pb-4 lg:pb-14 overflow-hidden bg-transparent">
         {/* Decorative Background Accents using ZAVYX Logo Color Theme */}
         <div className="absolute top-0 right-0 w-[45vw] h-[45vw] bg-gradient-to-bl from-sky-100/70 via-pink-100/40 to-amber-100/40 rounded-bl-[140px] -z-10 hidden lg:block opacity-80 dark:from-sky-900/30 dark:via-pink-900/20 dark:to-amber-900/20 blur-3xl pointer-events-none"></div>
         <div className="absolute -left-16 top-20 w-72 h-72 bg-sky-100/70 rounded-full blur-3xl -z-10 opacity-70 dark:bg-sky-900/20 pointer-events-none"></div>
@@ -93,16 +93,16 @@ export default function Contact() {
         <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-3 sm:gap-8 lg:gap-14 lg:items-center">
           
           {/* Hero Left Content */}
-          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl order-1">
+          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-right lg:text-left items-end lg:items-start max-w-xl mx-auto lg:mx-0 lg:max-w-2xl mx-auto lg:mx-0 order-1">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2 sm:mb-4 flex items-center justify-start gap-2">
               GET IN TOUCH
             </h4>
-            <h1 className="text-4xl min-[400px]:text-[2.6rem] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] leading-tight font-normal tracking-tight mb-2 sm:mb-4 text-slate-900 dark:text-white">
+            <h1 className="text-[28px] min-[400px]:text-[32px] leading-[1.2] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] leading-tight font-normal tracking-tight mb-2 sm:mb-4 text-slate-900 dark:text-white">
               Let's Build <br className="hidden sm:block"/>
               Something Great <br className="hidden sm:block"/>
               <span className="text-slate-900 dark:text-white">Together.</span>
             </h1>
-            <p className="block text-slate-600 dark:text-slate-300 text-[14px] min-[400px]:text-[15px] sm:text-lg lg:text-xl leading-relaxed sm:leading-relaxed mb-3 sm:mb-6 font-normal max-w-xl lg:max-w-2xl">
+            <p className="block text-slate-600 dark:text-slate-300 text-[13px] min-[400px]:text-[14px] sm:text-[14px] lg:text-xl leading-relaxed sm:leading-relaxed mb-3 sm:mb-6 font-normal max-w-xl mx-auto lg:mx-0 lg:max-w-2xl mx-auto lg:mx-0">
               Have a project in mind or need expert advice? We're here to help. Reach out to us and we'll respond within 24 business hours.
             </p>
 
@@ -110,7 +110,7 @@ export default function Contact() {
             <div className="hidden lg:flex flex-wrap items-center gap-4 sm:gap-5 mt-2 mb-2">
               <a
                 href="tel:+916382721178"
-                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
@@ -122,7 +122,7 @@ export default function Contact() {
                 href="https://wa.me/916382721178"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
@@ -178,7 +178,7 @@ export default function Contact() {
           </ScrollSlideSection>
 
           {/* MOBILE ONLY CTA BUTTONS (Single Line Inline row) */}
-          <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center w-full gap-2 min-[400px]:gap-3 order-3 mt-4 sm:mt-6 mb-2">
+          <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center justify-end w-full gap-2 min-[400px]:gap-3 order-3 mt-4 sm:mt-6 mb-2">
               <a
                 href="tel:+916382721178"
                 className="relative flex-1 inline-flex h-12 min-[400px]:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
@@ -420,7 +420,7 @@ export default function Contact() {
                   {/* Signature Homepage Animated Border Button */}
                   <button
                     type="submit"
-                    className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-full shadow-none cursor-pointer"
+                    className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-full shadow-none cursor-pointer"
                   >
                     <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">

@@ -118,12 +118,12 @@ export default function CloudInfrastructureView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
+      <section className="custom-mobile-hero relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-cyan-300/20 dark:bg-cyan-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
         
         <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
@@ -131,26 +131,26 @@ export default function CloudInfrastructureView() {
             <span className="text-sky-600 dark:text-sky-400 font-semibold">Cloud & Infrastructure</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+             <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
+               <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                  Scalable Cloud Infrastructure<br />for a Stronger Tomorrow
                </h1>
-               <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
+               <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-xl leading-relaxed mb-8 max-w-xl font-normal">
                  We design, build, and manage secure, scalable, and high-performance cloud environments that help your business grow without limits.
                </p>
                
-               <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
-                  <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+               <div className="hidden lg:flex flex-row items-start gap-2 sm:gap-6 mb-12 w-full">
+                  <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
                     <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                      Discuss Your Cloud Project <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                    <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                      Discuss Your Cloud Project <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
-                  <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+                  <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
                     <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                      View Our Cloud Solutions <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                    <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                      View Our Cloud Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
                </div>
@@ -165,13 +165,31 @@ export default function CloudInfrastructureView() {
                  />
                </div>
              </ScrollSlideSection>
+            {/* MOBILE ONLY CTA BUTTONS */}
+            <ScrollSlideSection direction="up" className="w-full">
+                <div className="flex lg:hidden flex-row items-start gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
+                  <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
+                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                      Discuss Your Cloud Project <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                  <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
+                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                      View Our Cloud Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+               </div>
+            </ScrollSlideSection>
+
           </div>
 
           {/* Startup Metrics Row */}
           <ScrollSlideSection direction="up" delay="300ms">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Cloud className="w-6 h-6" />
               </div>
               <div>
@@ -184,8 +202,8 @@ export default function CloudInfrastructureView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Users className="w-6 h-6" />
               </div>
               <div>
@@ -198,8 +216,8 @@ export default function CloudInfrastructureView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Award className="w-6 h-6" />
               </div>
               <div>
@@ -212,8 +230,8 @@ export default function CloudInfrastructureView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
@@ -234,15 +252,15 @@ export default function CloudInfrastructureView() {
       {/* 2. OUR SERVICES */}
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 border-t border-slate-200/60 dark:border-slate-800/60 mt-8">
         <ScrollSlideSection direction="up" className="mb-10 text-left flex flex-col items-start lg:flex-row lg:justify-between lg:items-end">
-          <div className="max-w-xl">
+          <div className="max-w-xl mx-auto lg:mx-0">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
               OUR SERVICES
             </h4>
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
               Cloud &amp; Infrastructure Services
             </h2>
           </div>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md font-normal mt-4 lg:mt-0 text-left lg:text-right">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md mx-auto lg:mx-0 font-normal mt-4 lg:mt-0 text-left lg:text-right">
             End-to-end cloud solutions to help you modernize, scale, and stay secure in a fast-changing digital world.
           </p>
         </ScrollSlideSection>
@@ -270,14 +288,14 @@ export default function CloudInfrastructureView() {
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-12 bg-sky-50/50 dark:bg-slate-900/50 border-y border-slate-200/60 dark:border-slate-800/60">
          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <ScrollSlideSection direction="up" className="lg:col-span-5 flex flex-col items-start text-left">
+            <ScrollSlideSection direction="up" className="lg:col-span-5 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
               <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
                 OUR CLOUD APPROACH
               </h4>
-              <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-6">
                 Modern Architecture for a Scalable Future
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg font-normal mb-10">
+              <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal mb-10">
                 We build secure, resilient, and high-performing cloud infrastructure tailored to your business needs using industry best practices and modern technologies.
               </p>
               
@@ -302,7 +320,7 @@ export default function CloudInfrastructureView() {
       {/* 4. WHY CHOOSE ZAVYX */}
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-12 mb-10">
         <ScrollSlideSection direction="up" className="mb-10 text-left flex flex-col items-start lg:flex-row lg:justify-between lg:items-end">
-          <div className="max-w-xl">
+          <div className="max-w-xl mx-auto lg:mx-0">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
               WHY CHOOSE ZAVYX
             </h4>
@@ -333,7 +351,7 @@ export default function CloudInfrastructureView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
             REAL RESULTS
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
             Success Stories in the Cloud
           </h2>
         </ScrollSlideSection>
@@ -374,7 +392,7 @@ export default function CloudInfrastructureView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
             OUR PROCESS
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
             A Simple Path to Cloud Success
           </h2>
         </ScrollSlideSection>
@@ -418,12 +436,12 @@ export default function CloudInfrastructureView() {
             <h2 className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white mb-4">
               Ready to Build a Future-Ready Cloud?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-normal max-w-xl">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-normal max-w-xl mx-auto lg:mx-0">
               Let\'s turn your ideas into secure, scalable, and high-performing cloud solutions.
             </p>
           </div>
           <div className="relative z-10 shrink-0">
-             <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+             <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent">
                   Discuss Your Project <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />

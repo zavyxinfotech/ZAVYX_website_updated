@@ -118,13 +118,13 @@ export default function WhatsAppApiBotsView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION WITH ACCENTS */}
-      <section className="relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
+      <section className="custom-mobile-hero relative pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-emerald-300/20 dark:bg-emerald-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
         <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
@@ -132,42 +132,42 @@ export default function WhatsAppApiBotsView() {
             <span className="text-sky-600 dark:text-sky-400 font-semibold">WhatsApp API & Chatbots</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             {/* Hero Left Content */}
-            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col text-left max-w-xl lg:max-w-2xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
                 Smarter Conversations.<br />
                 Automated Growth.
               </h1>
-              <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl leading-relaxed mb-8 font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-xl leading-relaxed mb-8 font-normal">
                 Leverage WhatsApp Business API and intelligent bots to automate conversations, enhance customer engagement, and scale your business with seamless, secure, and reliable messaging solutions.
               </p>
               
               {/* Signature CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mb-2">
-                <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+              <div className="hidden lg:flex flex-row items-start gap-2 sm:gap-6 mb-12 w-full">
+                <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                    Explore WhatsApp Solutions <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Explore WhatsApp Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
-                <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+                <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                    View Demo <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    View Demo <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
             </ScrollSlideSection>
 
             {/* Hero Right Visual */}
-            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex items-center justify-end lg:pr-8">
-              <div className="relative w-full max-w-[550px] aspect-[4/3] flex items-center justify-center overflow-visible transform scale-105 lg:scale-110">
+            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex items-start justify-end lg:pr-8">
+              <div className="relative w-full max-w-[550px] aspect-[4/3] flex items-start justify-center overflow-visible transform scale-105 lg:scale-110">
                 {/* Visual Chat Mock */}
                 <div className="relative w-full max-w-[480px] lg:max-w-[520px] bg-slate-900 rounded-xl shadow-2xl flex border border-slate-800 overflow-hidden transform group-hover:scale-105 transition-transform duration-500 z-10">
                   {/* Left Sidebar */}
                   <div className="w-1/3 bg-slate-900 border-r border-slate-800 flex flex-col p-3">
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-start gap-2 mb-4">
                       <div className="w-6 h-6 rounded bg-sky-500" />
                       <span className="text-white text-sm font-semibold">ZAVYX</span>
                     </div>
@@ -181,7 +181,7 @@ export default function WhatsAppApiBotsView() {
                   </div>
                   {/* Right Chat Area */}
                   <div className="w-2/3 bg-white dark:bg-slate-900 flex flex-col">
-                    <div className="p-3 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+                    <div className="p-3 border-b border-slate-100 dark:border-slate-800 flex items-start gap-2">
                        <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
                          {/* avatar placeholder */}
                        </div>
@@ -197,8 +197,8 @@ export default function WhatsAppApiBotsView() {
                        <div className="self-start bg-white dark:bg-slate-800 p-2.5 rounded-r-xl rounded-tl-xl max-w-[85%] text-slate-700 dark:text-slate-300 shadow-sm border border-slate-200 dark:border-slate-700">
                          Hello Priya! Welcome to ZAVYX InfoTech. How can we help you today?
                          <div className="mt-2 flex flex-col gap-1.5 w-full">
-                           <div className="bg-sky-50 hover:bg-sky-100 dark:bg-sky-900/30 dark:hover:bg-sky-900/50 text-sky-600 dark:text-sky-400 py-1.5 px-3 rounded text-center cursor-pointer transition-colors border border-sky-200 dark:border-sky-800/50">Our Services</div>
-                           <div className="bg-sky-50 hover:bg-sky-100 dark:bg-sky-900/30 dark:hover:bg-sky-900/50 text-sky-600 dark:text-sky-400 py-1.5 px-3 rounded text-center cursor-pointer transition-colors border border-sky-200 dark:border-sky-800/50">Get a Quote</div>
+                           <div className="bg-sky-50 hover:bg-sky-100 dark:bg-sky-900/30 dark:hover:bg-sky-900/50 text-sky-600 dark:text-sky-400 py-1.5 px-3 rounded cursor-pointer transition-colors border border-sky-200 dark:border-sky-800/50">Our Services</div>
+                           <div className="bg-sky-50 hover:bg-sky-100 dark:bg-sky-900/30 dark:hover:bg-sky-900/50 text-sky-600 dark:text-sky-400 py-1.5 px-3 rounded cursor-pointer transition-colors border border-sky-200 dark:border-sky-800/50">Get a Quote</div>
                          </div>
                        </div>
                     </div>
@@ -206,8 +206,8 @@ export default function WhatsAppApiBotsView() {
                 </div>
 
                 {/* Floating Elements that pop out */}
-                <div className="absolute -top-6 -right-6 lg:-top-8 lg:-right-10 bg-white dark:bg-slate-800 border-0 shadow-lg rounded-xl p-2.5 flex items-center gap-2.5 z-20 hover:scale-105 transition-transform duration-300">
-                  <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-500 flex items-center justify-center">
+                <div className="absolute -top-6 -right-6 lg:-top-8 lg:-right-10 bg-white dark:bg-slate-800 border-0 shadow-lg rounded-xl p-2.5 flex items-start gap-2.5 z-20 hover:scale-105 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-500 flex items-start justify-center">
                     <MessageCircle className="w-5 h-5 fill-current" />
                   </div>
                   <div>
@@ -228,20 +228,38 @@ export default function WhatsAppApiBotsView() {
                        <div className="w-2 bg-sky-600 dark:bg-sky-500 h-[100%]"></div>
                     </div>
                     <div>
-                      <div className="text-[15px] font-bold text-emerald-500 flex items-center gap-1"><ArrowUpRight className="w-3 h-3" /> 32%</div>
+                      <div className="text-[15px] font-bold text-emerald-500 flex items-start gap-1"><ArrowUpRight className="w-3 h-3" /> 32%</div>
                       <div className="text-[11px] text-slate-500">This Month</div>
                     </div>
                   </div>
                 </div>
               </div>
             </ScrollSlideSection>
+            {/* MOBILE ONLY CTA BUTTONS */}
+            <ScrollSlideSection direction="up" className="w-full">
+                <div className="flex lg:hidden flex-row items-start gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
+                <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Explore WhatsApp Solutions <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+                <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer">
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    View Demo <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </div>
+            </ScrollSlideSection>
+
           </div>
 
           {/* Stats Metrics Row */}
           <ScrollSlideSection direction="up" delay="300ms">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <MessageSquare className="w-6 h-6" />
               </div>
               <div>
@@ -254,8 +272,8 @@ export default function WhatsAppApiBotsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Users className="w-6 h-6" />
               </div>
               <div>
@@ -268,8 +286,8 @@ export default function WhatsAppApiBotsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <Clock className="w-6 h-6" />
               </div>
               <div>
@@ -282,8 +300,8 @@ export default function WhatsAppApiBotsView() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 py-1">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
@@ -308,7 +326,7 @@ export default function WhatsAppApiBotsView() {
             OUR WHATSAPP API & BOT SOLUTIONS
           </h4>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
               WhatsApp API & Bot Solutions for Modern Businesses
             </h2>
             
@@ -352,7 +370,7 @@ export default function WhatsAppApiBotsView() {
               HOW IT WORKS
             </h4>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl">
+              <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
                 From Message to Meaningful Results
               </h2>
               
@@ -455,13 +473,13 @@ export default function WhatsAppApiBotsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             ANALYTICS & PERFORMANCE
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0 mb-4">
             Track Conversations. Measure Growth.
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md font-normal mb-6">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md mx-auto lg:mx-0 font-normal mb-6">
             Get real-time insights into your WhatsApp communication and campaign performance.
           </p>
-          <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+          <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
              <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
                View Live Analytics <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
@@ -559,7 +577,7 @@ export default function WhatsAppApiBotsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             WHY CHOOSE US
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             Why Choose Our WhatsApp Solutions?
           </h2>
         </ScrollSlideSection>
@@ -590,7 +608,7 @@ export default function WhatsAppApiBotsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             USE CASES
           </h4>
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white">
             Built for Every Business Need
           </h2>
         </ScrollSlideSection>
@@ -617,7 +635,7 @@ export default function WhatsAppApiBotsView() {
       {/* 7. BOTTOM CTA BANNER */}
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="relative rounded-3xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-sky-50 via-blue-50/50 to-pink-50/50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border border-slate-200/80 dark:border-slate-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm">
-          <div className="relative z-10 max-w-2xl">
+          <div className="relative z-10 max-w-2xl mx-auto lg:mx-0">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
               LET'S BUILD TOGETHER
             </h4>
@@ -628,7 +646,7 @@ export default function WhatsAppApiBotsView() {
               Let's turn conversations into opportunities with powerful WhatsApp solutions.
             </p>
           </div>
-          <Link to="/contact" className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10">
+          <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm shrink-0 cursor-pointer z-10">
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
               Get a Quote <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />

@@ -21,8 +21,14 @@ export default function ScrollAnimatedHeading({ text, className }) {
   const words = text.split(" ");
   let charCounter = 0;
 
+  const alignmentClass = className && className.includes('justify-center') 
+    ? 'justify-center' 
+    : className && className.includes('justify-end') 
+    ? 'justify-end' 
+    : 'justify-start text-left';
+
   return (
-    <div ref={containerRef} className={`inline-flex flex-wrap justify-center ${className}`}>
+    <div ref={containerRef} className={`flex flex-wrap ${alignmentClass} ${className}`}>
       <style>
         {`
           .scroll-anim-char {

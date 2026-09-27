@@ -31,18 +31,21 @@ export default function GridServices() {
 
   return (
     // pt-32 adds essential massive gap separating gracefully from absolute attached hero boundaries beneath
-    <section className="pt-24 lg:pt-40 lg:py-0 min-h-screen flex flex-col justify-center bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section className="pt-8 sm:pt-20 lg:pt-40 pb-6 sm:pb-16 lg:pb-0 min-h-0 sm:min-h-screen flex flex-col justify-center bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Compact Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-10 md:mb-16">
+        {/* Header Section: Matches About ZAVYX section alignment and tagline */}
+        <div className="flex flex-col items-start text-left max-w-4xl mb-10 md:mb-16">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm">OUR SERVICES</span>
+            <span className="w-8 h-[2px] bg-sky-500 inline-block"></span>
+          </div>
           <ScrollAnimatedHeading
-            text="COMPREHENSIVE DIGITAL SOLUTIONS"
-            className="text-3xl sm:text-4xl md:text-5xl font-normal text-slate-900 dark:text-white uppercase tracking-tight leading-tight text-center"
+            text="Comprehensive Digital Solutions"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4 text-left justify-start w-full"
           />
-          <p className="text-slate-600 dark:text-slate-400 mt-4 text-base md:text-lg lg:text-xl font-normal max-w-4xl mx-auto leading-relaxed">
-            Tailored technological capabilities engineered to drive growth, automation, <br className="hidden sm:block" />
-            and operational efficiency within your business architecture.
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg font-normal max-w-3xl leading-relaxed text-left">
+            Tailored technological capabilities engineered to drive growth, automation, and operational efficiency within your business architecture.
           </p>
         </div>
 
@@ -97,9 +100,9 @@ export default function GridServices() {
 
                 {/* Default Idle Content (Fades out on hover) */}
                 <div className="flex flex-col items-center transition-opacity duration-500 group-hover:opacity-0 relative z-20">
-                  {/* Floating Icon Wrapper */}
-                  <div className="mb-3 p-3.5 rounded-full bg-white dark:bg-slate-800/50 shadow-sm transition-all duration-300 group-hover:bg-sky-50 dark:group-hover:bg-slate-800 border-2 border-transparent group-hover:shadow-[0_0_20px_rgba(14,165,233,0.15)] relative z-20">
-                    <Icon className={`w-8 h-8 lg:w-10 lg:h-10 text-slate-700 dark:text-slate-300 group-hover:${svc.iconColor} transition-colors duration-300`} strokeWidth={1.5} />
+                  {/* Clean Icon Wrapper: NO border, NO background, NO shadow */}
+                  <div className="mb-3 p-1.5 flex items-center justify-center bg-transparent border-0 shadow-none relative z-20">
+                    <Icon className={`w-8 h-8 lg:w-10 lg:h-10 ${svc.iconColor} transition-colors duration-300`} strokeWidth={1.5} />
                   </div>
 
                   <h3 className="text-lg lg:text-xl font-normal text-slate-900 dark:text-white mb-2 transition-colors relative z-20 lg:whitespace-nowrap">

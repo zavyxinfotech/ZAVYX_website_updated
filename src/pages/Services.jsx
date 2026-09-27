@@ -167,41 +167,41 @@ export default function Services() {
     <div className="bg-white dark:bg-[#050B14] min-h-screen transition-colors duration-300 font-sans">
       
       {/* 1. HERO BANNER */}
-      <section className="relative bg-transparent pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden">
+      <section className="custom-mobile-hero relative bg-transparent pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden">
         {/* Background Decorative Shapes */}
         <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-sky-100 rounded-bl-[100px] -z-10 hidden lg:block opacity-50 dark:bg-slate-800/50"></div>
         <div className="absolute -left-10 lg:-left-20 top-40 w-32 h-32 bg-pink-100 rotate-45 -z-10 hidden md:block opacity-60 dark:bg-pink-900/20"></div>
 
         <div className="max-w-[1300px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          <ScrollSlideSection className="flex flex-col text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
+          <ScrollSlideSection className="flex flex-col text-center lg:text-right lg:text-left items-end lg:items-start">
+            <h1 className="text-3xl sm:text-4xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-6 text-slate-900 dark:text-white">
               Tailored Technology<br className="hidden lg:block"/> Solutions for a <br className="hidden lg:block"/>
               Stronger Tomorrow
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0 font-normal">
+            <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0 font-normal">
               From strategy to execution, we deliver innovative and scalable technology solutions that help businesses grow, operate smarter, and stay ahead in a digital world.
             </p>
 
             {/* Signature Homepage Animated Border Button Design */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-8 sm:mb-12">
+            <div className="hidden lg:flex flex-row items-center gap-2 sm:gap-6 mb-12 w-full">
               <Link
                 to="/contact"
-                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                  Discuss Your Project <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                  Discuss Your Project <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
 
               <Link
                 to="/projects"
-                className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+                className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
               >
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                  Explore Our Work <ArrowRight className="w-5 h-5 text-[#00016E] group-hover:translate-x-1 transition-transform" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                  Explore Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             </div>
@@ -322,7 +322,7 @@ export default function Services() {
                 <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-start gap-2">
                   WHY CHOOSE US?
                 </h4>
-                <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-10">
                   Why Choose Us for Your<br className="hidden lg:block"/> Tech Transformation<br className="hidden lg:block"/> Strategy?
                 </h2>
               </div>
@@ -360,7 +360,7 @@ export default function Services() {
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-4 flex items-center justify-center gap-2">
               Our Services
             </h4>
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1]">
               Tailored Services to <span className="text-slate-900 dark:text-white font-normal">Grow & Protect Your Business</span>
             </h2>
          </ScrollSlideSection>
@@ -427,7 +427,7 @@ export default function Services() {
             <h4 className="text-[#0284c7] font-semibold tracking-wider text-sm sm:text-base uppercase mb-3">
               LET'S BUILD TOGETHER
             </h4>
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4">
               Have a project in mind?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl lg:text-2xl font-normal">
@@ -437,7 +437,7 @@ export default function Services() {
           <ScrollSlideSection delay="100ms">
             <Link
               to="/contact"
-              className="relative inline-flex h-12 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
+              className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm"
             >
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 sm:px-10 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
