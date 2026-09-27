@@ -62,8 +62,8 @@ export default function About() {
                 We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
               </span>
             </p>
-            {/* Desktop Only CTA Buttons (Under description) */}
-            <div className="hidden lg:flex flex-row items-center gap-3 sm:gap-6 mb-12 w-full justify-start">
+            {/* Desktop Only CTA Buttons */}
+            <div className="hidden lg:flex flex-row items-center gap-3 sm:gap-6 mb-8 w-full justify-start">
               <Link
                 to="/contact"
                 className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group shadow-sm flex-1 sm:flex-none"
@@ -82,6 +82,22 @@ export default function About() {
                   View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
+            </div>
+
+            {/* Desktop Stats Row - Positioned BELOW Desktop CTA Buttons */}
+            <div className="hidden lg:grid grid-cols-3 gap-8 xl:gap-12 pt-5 border-t border-slate-200/80 dark:border-slate-800 w-full max-w-max text-left">
+              <div>
+                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
+                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
+              </div>
+              <div>
+                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
+                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
+              </div>
+              <div>
+                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
+                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
+              </div>
             </div>
           </ScrollSlideSection>
 
@@ -121,44 +137,46 @@ export default function About() {
 
           </ScrollSlideSection>
 
-          {/* Mobile Only CTA Buttons (Placed Below the Image) */}
-          <div className="flex lg:hidden flex-row items-center gap-2 sm:gap-6 mt-3 sm:mt-6 w-full justify-center">
-            <Link
-              to="/contact"
-              className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
-            >
-              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
-                Explore More <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-            <Link
-              to="/services"
-              className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
-            >
-              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
-                View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
+          {/* Mobile & Tablet Only Section: CTA Buttons followed by Stats Row BELOW CTA Buttons */}
+          <div className="flex lg:hidden flex-col items-center gap-4 w-full mt-3 sm:mt-6">
+            <div className="flex flex-row items-center gap-2 sm:gap-6 w-full justify-center">
+              <Link
+                to="/contact"
+                className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
+                  Explore More <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+              <Link
+                to="/services"
+                className="relative inline-flex h-9 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-white text-[#00016E] font-normal px-3 sm:px-8 gap-1.5 text-xs sm:text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap">
+                  View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </div>
+
+            {/* Mobile & Tablet Stats Row - Positioned BELOW Mobile CTA Buttons */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-8 py-3 border-t border-slate-200/80 dark:border-slate-800 w-full max-w-md mx-auto text-center mt-2">
+              <div className="text-center">
+                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
+                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
+              </div>
+              <div className="text-center">
+                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
+                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
+              </div>
+              <div className="text-center">
+                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
+                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
+              </div>
+            </div>
           </div>
 
-        </div>
-
-        {/* Startup Stats Row - 3 Columns matching Home page screenshot */}
-        <div className="grid grid-cols-3 gap-3 sm:gap-8 lg:gap-12 py-3 sm:py-4 border-t border-b sm:border-b-0 border-slate-200/80 dark:border-slate-800 w-full max-w-md lg:max-w-max mx-auto lg:mx-0 text-center lg:text-left mt-4 sm:mt-8">
-          <div className="text-center lg:text-left">
-            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
-            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
-          </div>
-          <div className="text-center lg:text-left">
-            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
-            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
-          </div>
-          <div className="text-center lg:text-left">
-            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
-            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
-          </div>
         </div>
 
       </section>
