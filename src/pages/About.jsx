@@ -76,7 +76,7 @@ export default function About() {
           </ScrollSlideSection>
 
           {/* Hero Image Section */}
-          <ScrollSlideSection delay="100ms" className="relative w-full max-w-[180px] min-[400px]:max-w-[220px] sm:max-w-[450px] lg:max-w-[580px] aspect-square mx-auto flex items-center justify-center lg:ml-[10%] mt-2 lg:mt-0">
+          <ScrollSlideSection delay="100ms" className="relative w-full max-w-[230px] min-[400px]:max-w-[270px] sm:max-w-[450px] lg:max-w-[580px] aspect-square mx-auto flex items-center justify-center lg:ml-[10%] mt-3 lg:mt-0">
             
             {/* Base organically shaped container */}
             <div className="absolute inset-0 bg-[#FFF5D1] dark:bg-yellow-500/20 -translate-x-2 sm:-translate-x-6 -translate-y-2 sm:-translate-y-6 scale-[1.02] z-0 mix-blend-multiply dark:mix-blend-normal transform-gpu" style={{ borderRadius: '25% 50% 50% 25% / 35% 50% 50% 35%' }}></div>
@@ -99,8 +99,8 @@ export default function About() {
               <div className="w-4 sm:w-8 h-[2px] sm:h-[3px] bg-[#FFD100] mt-1 sm:mt-2.5 rounded-full shadow-sm"></div>
             </div>
 
-            {/* Floating Card: Ideas to Impact */}
-            <div className="absolute bottom-[5%] left-[0%] sm:left-[-20%] z-30 bg-white/50 dark:bg-slate-900/60 backdrop-blur-md p-2 sm:p-4 rounded-[12px] sm:rounded-[20px] shadow-none flex flex-col items-center justify-center gap-1 sm:gap-2 aspect-square w-[75px] min-[400px]:w-[85px] sm:w-[130px] border border-white/60 dark:border-slate-700/50">
+            {/* Floating Card: Ideas to Impact (Shifted slightly left) */}
+            <div className="absolute bottom-[5%] left-[-8%] sm:left-[-22%] z-30 bg-white/50 dark:bg-slate-900/60 backdrop-blur-md p-2 sm:p-4 rounded-[12px] sm:rounded-[20px] shadow-none flex flex-col items-center justify-center gap-1 sm:gap-2 aspect-square w-[75px] min-[400px]:w-[85px] sm:w-[130px] border border-white/60 dark:border-slate-700/50">
               <div className="w-5 h-5 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center bg-[#E8F4FF] dark:bg-slate-700 shrink-0">
                 <BarChart3 className="w-3 h-3 sm:w-5 sm:h-5 text-[#0070F3]" />
               </div>
