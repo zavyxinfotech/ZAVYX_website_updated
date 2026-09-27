@@ -46,15 +46,15 @@ export default function About() {
         <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-left items-start">
-            <h1 className="text-[20px] min-[360px]:text-[23px] min-[400px]:text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-6 leading-[1.2] text-left">
-              <span className="block sm:inline">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-6 leading-[1.1] text-left">
+              <span className="block min-[480px]:inline">
                 <AnimatedHeroText text="Where Creativity Meets" />
               </span>{' '}
-              <span className="block sm:inline">
+              <span className="block min-[480px]:inline">
                 <AnimatedHeroText text="Cutting-Edge Technology" />
               </span>
             </h1>
-            <p className="text-sm sm:text-lg leading-relaxed mb-3 sm:mb-8 max-w-lg text-left text-slate-600 dark:text-slate-400 font-normal">
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-4 sm:mb-8 max-w-lg text-left">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
             {/* Desktop Only CTA Buttons (Under description) */}
