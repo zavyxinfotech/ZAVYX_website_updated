@@ -93,16 +93,16 @@ export default function Contact() {
         <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-3 sm:gap-8 lg:gap-14 lg:items-center">
           
           {/* Hero Left Content */}
-          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-right lg:text-left items-end lg:items-start max-w-xl mx-auto lg:mx-0 lg:max-w-2xl mx-auto lg:mx-0 order-1">
+          <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-2xl mx-0 order-1">
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2 sm:mb-4 flex items-center justify-start gap-2">
               GET IN TOUCH
             </h4>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white text-left">
               Let's Build <br className="hidden sm:block"/>
               Something Great <br className="hidden sm:block"/>
               <span className="text-slate-900 dark:text-white">Together.</span>
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
               Have a project in mind or need expert advice? We're here to help. Reach out to us and we'll respond within 24 business hours.
             </p>
 
