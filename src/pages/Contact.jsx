@@ -97,12 +97,12 @@ export default function Contact() {
             <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2 sm:mb-4 flex items-center justify-start gap-2">
               GET IN TOUCH
             </h4>
-            <h1 className="text-[28px] min-[400px]:text-[32px] leading-[1.2] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] leading-tight font-normal tracking-tight mb-2 sm:mb-4 text-slate-900 dark:text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white">
               Let's Build <br className="hidden sm:block"/>
               Something Great <br className="hidden sm:block"/>
               <span className="text-slate-900 dark:text-white">Together.</span>
             </h1>
-            <p className="block text-slate-600 dark:text-slate-300 text-[13px] min-[400px]:text-[14px] sm:text-[14px] lg:text-xl leading-relaxed sm:leading-relaxed mb-3 sm:mb-6 font-normal max-w-xl mx-auto lg:mx-0 lg:max-w-2xl mx-auto lg:mx-0">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal">
               Have a project in mind or need expert advice? We're here to help. Reach out to us and we'll respond within 24 business hours.
             </p>
 
