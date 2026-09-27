@@ -144,10 +144,36 @@ export default function About() {
           </div>
 
         </div>
+
+        {/* Horizontal Auto-Scrolling Stats Marquee */}
+        <div className="w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] py-3 sm:py-4 bg-slate-50/80 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-sm mt-4 sm:mt-8">
+          <div className="animate-[marquee_22s_linear_infinite] flex items-center justify-around min-w-max">
+            {[...Array(6)].map((_, i) => (
+              <React.Fragment key={i}>
+                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
+                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">100%</span>
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Client Focused</span>
+                </div>
+                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
+                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
+                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">Agile</span>
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Rapid Delivery</span>
+                </div>
+                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
+                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
+                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">24/7</span>
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Dedicated Support</span>
+                </div>
+                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
       </section>
 
-      {/* 2. MARQUEE BANNER */}
-      <div className="bg-sky-500 py-3 sm:py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-xl border border-sky-400">
+      {/* 2. SERVICES MARQUEE BANNER */}
+      <div className="bg-sky-500 py-3 sm:py-4 w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] rounded-xl border border-sky-400 mt-3 sm:mt-6">
         <div className="animate-[marquee_50s_linear_infinite] flex items-center justify-around min-w-max text-white font-normal tracking-widest uppercase text-[11px] sm:text-sm">
           {[...Array(6)].map((_, i) => (
             <React.Fragment key={i}>
