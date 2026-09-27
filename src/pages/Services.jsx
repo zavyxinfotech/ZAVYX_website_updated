@@ -172,13 +172,13 @@ export default function Services() {
         <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-sky-100 rounded-bl-[100px] -z-10 hidden lg:block opacity-50 dark:bg-slate-800/50"></div>
         <div className="absolute -left-10 lg:-left-20 top-40 w-32 h-32 bg-pink-100 rotate-45 -z-10 hidden md:block opacity-60 dark:bg-pink-900/20"></div>
 
-        <div className="max-w-[1300px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
+        <div className="max-w-[1300px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 lg:gap-16 items-center">
           
-          <ScrollSlideSection className="flex flex-col text-center lg:text-left items-center lg:items-start">
-            <h1 className="text-3xl sm:text-4xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white text-center lg:text-left">
+          <ScrollSlideSection className="flex flex-col text-left items-start">
+            <h1 className="text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-[3.4rem] xl:text-[3.8rem] font-normal leading-[1.15] tracking-tight mb-2 sm:mb-6 text-slate-900 dark:text-white text-left">
               Tailored Technology Solutions for a Stronger Tomorrow
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 font-normal text-center lg:text-left">
+            <p className="text-slate-600 dark:text-slate-300 text-[13px] min-[400px]:text-[14px] sm:text-lg lg:text-xl leading-relaxed mb-3 sm:mb-8 max-w-lg mx-0 font-normal text-left">
               From strategy to execution, we deliver innovative and scalable technology solutions that help businesses grow, operate smarter, and stay ahead in a digital world.
             </p>
 
@@ -223,8 +223,8 @@ export default function Services() {
 
           </ScrollSlideSection>
 
-          <ScrollSlideSection delay="100ms" className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[260px] sm:max-w-[400px] lg:max-w-[550px] aspect-square bg-transparent flex items-center justify-center group cursor-pointer">
+          <ScrollSlideSection delay="100ms" className="relative flex justify-center lg:justify-end my-0 sm:my-2">
+            <div className="relative w-full max-w-[240px] sm:max-w-[400px] lg:max-w-[550px] aspect-square bg-transparent flex items-center justify-center group cursor-pointer">
               <img 
                 src={heroImg} 
                 className="w-full h-full object-contain transition-all duration-500 ease-out group-hover:scale-105 group-hover:-translate-y-2 filter group-hover:drop-shadow-2xl" 
@@ -234,7 +234,7 @@ export default function Services() {
           </ScrollSlideSection>
 
           {/* Mobile & Tablet Only Section: CTA Buttons followed by Stats Row BELOW CTA Buttons */}
-          <div className="flex lg:hidden flex-col items-center gap-4 w-full mt-2">
+          <div className="flex lg:hidden flex-col items-center gap-3 w-full mt-1 sm:mt-2">
             
             {/* Mobile & Tablet CTA Buttons */}
             <div className="flex flex-row items-center gap-2 sm:gap-6 w-full justify-center">

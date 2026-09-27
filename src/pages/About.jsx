@@ -43,10 +43,10 @@ export default function About() {
       {/* 1. HERO SECTION */}
       <section className="custom-mobile-hero relative bg-transparent pt-20 pb-4 sm:pt-32 sm:pb-16 overflow-hidden">
 
-        <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
+        <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-4 lg:gap-12 items-center">
           
           <ScrollSlideSection className="flex flex-col text-left items-start">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-6 leading-[1.1] text-left">
+            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-6 leading-[1.1] text-left">
               <span className="block min-[480px]:inline">
                 <AnimatedHeroText text="Where Creativity Meets" />
               </span>{' '}
@@ -54,7 +54,7 @@ export default function About() {
                 <AnimatedHeroText text="Cutting-Edge Technology" />
               </span>
             </h1>
-            <p className="text-[14px] min-[360px]:text-[15px] sm:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-4 sm:mb-8 max-w-lg text-left">
+            <p className="text-[13px] min-[360px]:text-[14px] sm:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-3 sm:mb-8 max-w-lg text-left">
               <span className="block sm:hidden">
                 We are a team of passionate engineers, architects, and designers dedicated to helping businesses scale digital products.
               </span>
