@@ -145,28 +145,19 @@ export default function About() {
 
         </div>
 
-        {/* Horizontal Auto-Scrolling Stats Marquee */}
-        <div className="w-full flex overflow-hidden whitespace-nowrap relative z-20 mx-auto max-w-[95%] py-3 sm:py-4 bg-slate-50/80 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-sm mt-4 sm:mt-8">
-          <div className="animate-[marquee_22s_linear_infinite] flex items-center justify-around min-w-max">
-            {[...Array(6)].map((_, i) => (
-              <React.Fragment key={i}>
-                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
-                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">100%</span>
-                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Client Focused</span>
-                </div>
-                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
-                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
-                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">Agile</span>
-                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Rapid Delivery</span>
-                </div>
-                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
-                <div className="flex items-center gap-2.5 mx-6 sm:mx-10">
-                  <span className="text-xl sm:text-2xl font-light text-slate-900 dark:text-white tracking-tight">24/7</span>
-                  <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal">Dedicated Support</span>
-                </div>
-                <span className="text-sky-500 font-bold mx-2 sm:mx-4">•</span>
-              </React.Fragment>
-            ))}
+        {/* Startup Stats Row - 3 Columns matching Home page screenshot */}
+        <div className="grid grid-cols-3 gap-3 sm:gap-8 lg:gap-12 py-3 sm:py-4 border-t border-b sm:border-b-0 border-slate-200/80 dark:border-slate-800 w-full max-w-md lg:max-w-max mx-auto lg:mx-0 text-center lg:text-left mt-4 sm:mt-8">
+          <div className="text-center lg:text-left">
+            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
+            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
+          </div>
+          <div className="text-center lg:text-left">
+            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
+            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
+          </div>
+          <div className="text-center lg:text-left">
+            <h4 className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
+            <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
           </div>
         </div>
 
