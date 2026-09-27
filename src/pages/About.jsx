@@ -54,7 +54,7 @@ export default function About() {
                 <AnimatedHeroText text="Cutting-Edge Technology" />
               </span>
             </h1>
-            <p className="text-[13px] min-[360px]:text-[14px] sm:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-3 sm:mb-8 max-w-lg text-left">
+            <p className="text-base min-[360px]:text-[16px] sm:text-lg lg:text-xl leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-4 sm:mb-8 max-w-lg text-left">
               <span className="block sm:hidden">
                 We are a team of passionate engineers, architects, and designers dedicated to helping businesses scale digital products.
               </span>
@@ -82,22 +82,6 @@ export default function About() {
                   View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
-            </div>
-
-            {/* Desktop Stats Row - Positioned BELOW Desktop CTA Buttons */}
-            <div className="hidden lg:grid grid-cols-3 gap-8 xl:gap-12 pt-5 border-t border-slate-200/80 dark:border-slate-800 w-full max-w-max text-left">
-              <div>
-                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
-                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
-              </div>
-              <div>
-                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
-                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
-              </div>
-              <div>
-                <h4 className="text-3xl xl:text-4xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
-                <p className="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
-              </div>
             </div>
           </ScrollSlideSection>
 
@@ -137,7 +121,7 @@ export default function About() {
 
           </ScrollSlideSection>
 
-          {/* Mobile & Tablet Only Section: CTA Buttons followed by Stats Row BELOW CTA Buttons */}
+          {/* Mobile & Tablet Only Section: CTA Buttons */}
           <div className="flex lg:hidden flex-col items-center gap-4 w-full mt-3 sm:mt-6">
             <div className="flex flex-row items-center gap-2 sm:gap-6 w-full justify-center">
               <Link
@@ -158,22 +142,6 @@ export default function About() {
                   View All Services <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
-            </div>
-
-            {/* Mobile & Tablet Stats Row - Positioned BELOW Mobile CTA Buttons */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-8 py-3 border-t border-slate-200/80 dark:border-slate-800 w-full max-w-md mx-auto text-center mt-2">
-              <div className="text-center">
-                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
-              </div>
             </div>
           </div>
 
