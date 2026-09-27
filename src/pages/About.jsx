@@ -47,9 +47,11 @@ export default function About() {
           
           <ScrollSlideSection className="flex flex-col text-left items-start">
             <h1 className="text-2xl min-[400px]:text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-6 leading-[1.15] text-left">
-              <AnimatedHeroText text="Where Creativity Meets Cutting-Edge Technology" />
+              <AnimatedHeroText text="Where Creativity Meets" />
+              <br />
+              <AnimatedHeroText text="Cutting-Edge Technology" />
             </h1>
-            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-lg leading-relaxed mb-3 sm:mb-8 max-w-lg text-left">
+            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg leading-relaxed mb-3 sm:mb-8 max-w-lg text-left font-normal">
               We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
             {/* Desktop Only CTA Buttons (Under description) */}
