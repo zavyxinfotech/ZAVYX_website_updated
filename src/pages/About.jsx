@@ -54,7 +54,7 @@ export default function About() {
                 <AnimatedHeroText text="Cutting-Edge Technology" />
               </span>
             </h1>
-            <p className="text-[13px] sm:text-base lg:text-lg leading-snug sm:leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-4 sm:mb-8 max-w-lg text-left">
+            <p className="text-[14px] min-[360px]:text-[15px] sm:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-normal mb-4 sm:mb-8 max-w-lg text-left">
               <span className="block sm:hidden">
                 We are a team of passionate engineers, architects, and designers dedicated to helping businesses scale digital products.
               </span>
