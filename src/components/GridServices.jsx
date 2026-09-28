@@ -8,7 +8,7 @@ import ScrollAnimatedHeading from './ScrollAnimatedHeading';
 
 import imgWeb from '../../assets/images/website_web_apps_home_page.jpeg';
 import imgEcom from '../../assets/images/E_commerce_home_page.jpeg';
-import imgCrm from '../../assets/images/CRM_ERP_systems_hero_img.jpeg';
+import imgCrm from '../../assets/images/CRM_ERP_services.jpeg';
 import imgWa from '../../assets/images/WhatsApp_API_and_chatbots.jpeg';
 import imgAi from '../../assets/images/AI_Automation_home_page.jpeg';
 import imgMob from '../../assets/images/mobile_apps.jpeg';

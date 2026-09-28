@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Monitor, ShoppingBag, ShoppingCart, Lock, CreditCard, Package, Smartphone, TrendingUp, Headphones, 
   Users, Database, Layers, BarChart3, Cpu, MessageSquare, Bot, Bell, Megaphone, Globe, Zap, Sparkles, 
   Award, ShieldCheck, Clock, CheckCircle2, Heart, Compass, FileText, Target, Server, Shield, Share2, 
-  Eye, Infinity, Check
+  Eye, Infinity, Check, ArrowUpRight, ArrowRight
 } from 'lucide-react';
 
-import webAppsHeroImg from '../../../assets/images/website_web_apps_hero_transparent.png';
+import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.png';
 import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.png';
-import crmErpHeroImg from '../../../assets/images/crm_erp_systems_hero_transparent.png';
-import whatsappHeroImg from '../../../assets/images/whatsapp_api_hero_transparent.png';
+import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.jpeg';
+import whatsappHeroImg from '../../../assets/images/whatsapp_API_hero_img.jpeg';
 import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.png';
 import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.png';
 import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.png';
@@ -17,9 +18,7 @@ import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.png
 import whatsappAnalyticsImg from '../../../assets/images/whatsapp_analytics_dashboard_visual.png';
 import digitalMarketingHeroImg from '../../../assets/images/digital_marketing_hero_transparent.png';
 import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.png';
-import brandingHeroImg from '../../../assets/images/Branding_Creative.png';
-import cloudBgImg from '../../../assets/images/Cloud_Infrastructure_service_background.png';
-import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.png';
+
 
 export const officialTechLogos = {
   'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
@@ -327,6 +326,431 @@ const pageConfigs = {
       processTag: 'OUR PROCESS',
       processTitle: 'A Simple Process for Real Results',
       processSub: 'We follow a proven process to plan, execute, and optimize your digital marketing campaigns.',
+      desc: 'Boost online sales with high-converting e-commerce web applications featuring instant checkout, inventory sync, and multi-currency support.',
+      heroImg: ecommerceHeroImg,
+      badgeText: 'Seamless Shopping Experience',
+      badgeText2: 'Boost Your Sales',
+      stats: [
+        { label: 'E-commerce Projects', val: '100+' },
+        { label: 'Happy Clients', val: '250+' },
+        { label: 'Years of Experience', val: '5+' }
+      ],
+      whatWeBuildTag: 'OUR E-COMMERCE SERVICES',
+      whatWeBuildTitle: 'Complete E-commerce Solutions for Your Business',
+      whatWeBuildSub: 'From strategy to launch, we provide end-to-end e-commerce solutions tailored to your business goals.',
+      cards: [
+        { title: 'Custom E-commerce Store Development', desc: 'Feature-rich, scalable, and secure online stores tailored to your brand.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: ShoppingCart },
+        { title: 'Payment Gateway Integration', desc: 'Secure and seamless payment processing with multiple options.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: CreditCard },
+        { title: 'Product & Inventory Management', desc: 'Easy product upload, stock management, and order tracking.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Package },
+        { title: 'Mobile-Optimized Stores', desc: 'Fully responsive and mobile-friendly stores for a smooth shopping experience.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Smartphone },
+        { title: 'SEO & Marketing Integration', desc: 'Built-in SEO, analytics, and marketing tools to boost your sales.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: TrendingUp },
+        { title: 'Ongoing Support & Maintenance', desc: 'Reliable support to keep your store running smoothly.', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400', icon: Headphones }
+      ],
+      whyTag: 'WHY CHOOSE US?',
+      whyTitle: 'Your E-commerce Growth Partner',
+      whyDesc: 'We combine creativity, technology, and e-commerce expertise to build online stores that deliver real results. Our focus is on creating seamless shopping experiences that turn visitors into loyal customers.',
+      pillars: [
+        { title: 'Strategic Approach', desc: 'Focused on your business goals' },
+        { title: 'Industry Expertise', desc: 'Proven e-commerce experience' },
+        { title: 'Scalable Solutions', desc: 'Grow without limitations' },
+        { title: 'Dedicated Support', desc: "We're with you every step" }
+      ],
+      whyVisual: ecommerceWomanImg,
+      platformsTag: 'PLATFORMS WE WORK WITH',
+      platformsTitle: 'Flexible Solutions for Every Business',
+      platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'PrestaShop', 'Custom Solutions'],
+      caseStudyTag: 'SUCCESS STORIES',
+      caseStudyTitle: 'Real Results for Real Businesses',
+      caseStudyVisual: fashionCaseStudyImg,
+      caseStudyHeader: 'Building a High-Converting Fashion E-commerce Store',
+      caseStudyDesc: 'We developed a feature-rich online store for a fashion brand with seamless shopping experience, secure payments, and marketing integrations. The result was a 2.5x increase in sales within 6 months.',
+      caseStudyStats: [
+        { val: '2.5x', label: 'Increase in Sales' },
+        { val: '40%', label: 'More Customers' },
+        { val: '60%', label: 'Higher Engagement' }
+      ],
+      ctaTitle: 'Ready to Start Your Online Store?',
+      ctaSub: "Let's turn your products into a successful online business.",
+      primaryCta: 'Discuss Your Project',
+      secondaryCta: 'Explore Our Work'
+    },
+
+    'crm-erp-systems': {
+      breadcrumb: 'CRM & ERP Systems',
+      tag: 'OUR CRM & ERP SOLUTIONS',
+      title: 'Custom CRM & ERP Systems for Operational Excellence',
+      subheadline: 'Streamline client management, sales pipelines, inventory tracking, and employee workflows with enterprise-grade ERP portals.',
+      desc: 'Centralize company data, automate complex business workflows, and empower leadership with real-time decision analytics.',
+      heroImg: crmErpHeroImg,
+      badgeText: 'Automated Operations & Analytics',
+      stats: [
+        { label: 'Enterprise Implementations', val: '85+' },
+        { label: 'Happy Enterprise Clients', val: '200+' },
+        { label: 'Years of ERP Expertise', val: '5+' }
+      ],
+      whatWeBuildTag: 'OUR CRM & ERP SERVICES',
+      whatWeBuildTitle: 'Tailored Enterprise Systems for Business Scaling',
+      whatWeBuildSub: 'We architect end-to-end custom CRM & ERP applications that eliminate operational bottlenecks.',
+      cards: [
+        { title: 'Custom CRM Development', desc: 'Manage leads, track customer interactions, and automate sales pipelines.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Users },
+        { title: 'Enterprise ERP Systems', desc: 'Centralize inventory, supply chain, HR, and financial management.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Database },
+        { title: 'Workflow & Process Automation', desc: 'Eliminate repetitive manual tasks with automated triggers and alerts.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Layers },
+        { title: 'Data Analytics & BI Dashboards', desc: 'Real-time executive reporting dashboards for data-driven decisions.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: BarChart3 },
+        { title: 'API & Gateway Integrations', desc: 'Seamlessly connect with payment processors, WhatsApp API, and email.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Cpu },
+        { title: 'Role-Based Security & Access', desc: 'Granular admin permission controls, encryption, and audit logs.', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400', icon: Lock }
+      ],
+      whyTag: 'WHY IT MATTERS',
+      whyTitle: 'Transform Your Business Operations',
+      whyDesc: 'A tailored CRM or ERP platform unifies company knowledge, boosts team productivity, and drastically reduces operational costs.',
+      checkmarks: [
+        'Centralizes company data & workflows',
+        'Increases team productivity & efficiency',
+        'Reduces operational costs & manual errors',
+        'Provides real-time business insights'
+      ],
+      whyVisual: crmDashboardImg,
+      processTag: 'IMPLEMENTATION PROCESS',
+      processTitle: 'From Architecture to Enterprise Rollout',
+      processSub: 'A rigorous engineering lifecycle for enterprise software.',
+      steps: [
+        { num: '01', title: 'Discovery', desc: 'Audit workflows and define system architecture' },
+        { num: '02', title: 'Blueprint', desc: 'Design database schema and API contracts' },
+        { num: '03', title: 'Development', desc: 'Engineered with high concurrency and security' },
+        { num: '04', title: 'Integration', desc: 'Connect legacy systems and third-party tools' },
+        { num: '05', title: 'Deployment', desc: 'User training, data migration, and go-live support' }
+      ],
+      techTitle: 'Enterprise Stack & Database Systems',
+      techs: ['PostgreSQL', 'MySQL', 'Node.js', 'Python', 'Docker', 'AWS', 'Zapier'],
+      benefits: [
+        { title: 'Unified Data', desc: 'Single source of truth for all departments' },
+        { title: 'Role Security', desc: 'Bank-grade access control & encryption' },
+        { title: 'Custom Dashboards', desc: 'Tailored KPIs for executive decision making' },
+        { title: '24/7 SLA Support', desc: 'Dedicated engineering maintenance support' }
+      ],
+      ctaTitle: 'Ready to Automate Your Business Operations?',
+      ctaSub: "Let's build a custom CRM/ERP system tailored specifically to your workflow.",
+      primaryCta: 'Discuss Your Project',
+      secondaryCta: 'Explore Systems'
+    },
+
+    'whatsapp-api-bots': {
+      breadcrumb: 'WhatsApp API & Bots',
+      tag: 'WHATSAPP API & BOTS',
+      title: 'Smarter Conversations. Automated Growth.',
+      subheadline: 'Leverage WhatsApp Business API and intelligent bots to automate conversations, enhance customer engagement, and scale your business with seamless, secure, and reliable messaging solutions.',
+      desc: 'Directly reach your customers on WhatsApp with automated broadcasting, AI support bots, order tracking, and instant lead capture.',
+      heroImg: whatsappHeroImg,
+      badgeText: 'WhatsApp Business API Connected',
+      stats: [
+        { label: 'Messages Processed', val: '10M+' },
+        { label: 'Businesses Enabled', val: '500+' },
+        { label: 'Delivery Success', val: '98%' },
+        { label: 'Customer Engagement', val: '24/7' }
+      ],
+      primaryCta: 'Explore WhatsApp Solutions',
+      secondaryCta: 'View Demo',
+      whatWeBuildTag: 'OUR WHATSAPP API & BOT SOLUTIONS',
+      whatWeBuildTitle: 'WhatsApp API & Bot Solutions for Modern Businesses',
+      whatWeBuildSub: 'We design and implement WhatsApp solutions that help you automate, engage, and grow — tailored to your business needs.',
+      cards: [
+        { title: 'WhatsApp Business API Integration', desc: 'Secure and official WhatsApp Business API setup with seamless integration to your systems.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: MessageSquare },
+        { title: 'AI Chatbots', desc: 'Intelligent chatbots to handle queries, provide instant answers, and automate workflows.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Bot },
+        { title: 'Automated Notifications', desc: 'Send order updates, appointment reminders, payment confirmations and more — automatically.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Bell },
+        { title: 'Marketing Campaigns', desc: 'Run targeted campaigns, product updates and promotions with high delivery rates.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: Megaphone },
+        { title: 'Customer Support Automation', desc: 'Automate FAQs, ticket creation and routing to the right team for faster resolution.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Headphones },
+        { title: 'CRM Integration', desc: 'Connect WhatsApp with your CRM to sync leads, customers and conversations.', color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400', icon: Database }
+      ],
+      workflowTag: 'HOW IT WORKS',
+      workflowTitle: 'From Message to Meaningful Results',
+      workflowSub: 'A seamless workflow that turns conversations into customers.',
+      workflowSteps: [
+        { num: '1', title: 'Customer Message', detail: "Hi! I'm interested in your services.", type: 'user' },
+        { num: '2', title: 'WhatsApp API', detail: 'Secure connection via WhatsApp Business API', type: 'api' },
+        { num: '3', title: 'Bot / Automation', items: ['Auto Reply', 'Smart Routing', 'Data Collection', 'Workflow Triggers'], type: 'bot' },
+        { num: '4', title: 'CRM System', items: ['Create / Update Lead', 'Sync Conversations', 'Track Customer Journey', 'Manage Follow-ups'], type: 'crm' },
+        { num: '5', title: 'Human Agent (If Needed)', detail: 'Sure! Let me assist you further.', type: 'agent' }
+      ],
+      analyticsTag: 'ANALYTICS & PERFORMANCE',
+      analyticsTitle: 'Track Conversations. Measure Growth.',
+      analyticsSub: 'Get real-time insights into your WhatsApp communication and campaign performance.',
+      analyticsBtn: 'View Live Analytics',
+      analyticsVisual: whatsappAnalyticsImg,
+      whyTag: 'WHY CHOOSE US',
+      whyTitle: 'Why Choose Our WhatsApp Solutions?',
+      whyGrid: [
+        { title: '24/7 Automation', desc: 'Never miss a customer with always-on bots.', icon: Clock, color: 'text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50' },
+        { title: 'Faster Responses', desc: 'Reduce response time and improve satisfaction.', icon: Zap, color: 'text-sky-500 bg-sky-50 dark:bg-sky-950/50' },
+        { title: 'Personalized Conversations', desc: 'Deliver tailored messages for better engagement.', icon: Sparkles, color: 'text-pink-500 bg-pink-50 dark:bg-pink-950/50' },
+        { title: 'Secure API Integration', desc: 'Official WhatsApp API with enterprise-grade security.', icon: ShieldCheck, color: 'text-indigo-500 bg-indigo-50 dark:bg-indigo-950/50' },
+        { title: 'Scalable Messaging', desc: 'Handle thousands of conversations effortlessly.', icon: BarChart3, color: 'text-purple-500 bg-purple-50 dark:bg-purple-950/50' },
+        { title: 'Actionable Analytics', desc: 'Make data-driven decisions with real insights.', icon: TrendingUp, color: 'text-amber-500 bg-amber-50 dark:bg-amber-950/50' }
+      ],
+      useCasesTag: 'USE CASES',
+      useCasesTitle: 'Built for Every Business Need',
+      useCases: ['Sales & Lead Generation', 'Customer Support', 'Order & Delivery Updates', 'Appointment Reminders', 'Payment Notifications', 'Surveys & Feedback'],
+      ctaTitle: 'Ready to Automate Your WhatsApp Communication?',
+      ctaSub: "Let's turn conversations into opportunities with powerful WhatsApp solutions.",
+      primaryCta: 'Get a Quote'
+    },
+
+    'digital-marketing-seo': {
+      breadcrumb: 'Digital Marketing & SEO',
+      tag: 'DIGITAL MARKETING & SEO',
+      title: 'Grow Your Brand in the Digital World',
+      subheadline: 'We create data-driven digital marketing strategies and SEO solutions that help your business get more visibility, attract the right audience, and achieve measurable growth.',
+      heroImg: digitalMarketingHeroImg,
+      badgeText: 'Grow Your Business',
+      stats: [
+        { label: 'Brands Promoted', val: '100+' },
+        { label: 'Happy Clients', val: '250+' },
+        { label: 'Years of Experience', val: '5+' }
+      ],
+      primaryCta: 'Discuss Your Goals',
+      secondaryCta: 'Explore Our Work',
+      whatWeBuildTag: 'OUR SERVICES',
+      whatWeBuildTitle: 'Comprehensive Digital Marketing Solutions',
+      whatWeBuildSub: 'From strategy to execution, we offer end-to-end digital marketing services tailored to your business goals.',
+      cards: [
+        { title: 'Search Engine Optimization (SEO)', desc: 'Improve your website ranking and get organic traffic from search engines.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Globe },
+        { title: 'Social Media Marketing', desc: 'Build your brand presence on Facebook, Instagram, LinkedIn and more.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Megaphone },
+        { title: 'Pay Per Click (PPC) Advertising', desc: 'Get instant visibility with targeted ad campaigns that deliver real results.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Zap },
+        { title: 'Content Marketing', desc: 'Engaging content that attracts, converts, and retains your audience.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Sparkles },
+        { title: 'Email Marketing', desc: 'Reach your customers with personalized email campaigns that drive action.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: Bell },
+        { title: 'Analytics & Reporting', desc: 'Track performance with detailed reports and data-driven insights.', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400', icon: BarChart3 }
+      ],
+      processTag: 'OUR PROCESS',
+      processTitle: 'A Simple Process for Real Results',
+      processSub: 'We follow a proven process to plan, execute, and optimize your digital marketing campaigns.',
+      steps: [
+        { num: '1', title: 'Research', desc: 'Understand your business and audience' },
+        { num: '2', title: 'Strategy', desc: 'Create a customized digital marketing plan' },
+        { num: '3', title: 'Execute', desc: 'Launch and manage campaigns across channels' },
+        { num: '4', title: 'Analyze', desc: 'Track performance and make data-driven improvements' },
+        { num: '5', title: 'Grow', desc: 'Achieve long-term growth and higher ROI' }
+      ],
+      whyTag: 'WHY CHOOSE US',
+      whyTitle: 'Your Trusted Partner in Digital Growth',
+      whyDesc: 'We combine creativity, data, and industry expertise to deliver digital marketing solutions that drive real business impact.',
+      whyVisual: digitalMarketingTrustedPartnerImg,
+      whyGrid: [
+        { title: 'Result-Oriented', desc: 'Focused on measurable results and ROI.', icon: Award, color: 'text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50' },
+        { title: 'Experienced Team', desc: 'Skilled professionals with proven expertise.', icon: Users, color: 'text-sky-500 bg-sky-50 dark:bg-sky-950/50' },
+        { title: 'Tailored Strategies', desc: 'Customized solutions for your unique goals.', icon: Sparkles, color: 'text-pink-500 bg-pink-50 dark:bg-pink-950/50' },
+        { title: 'Ongoing Support', desc: 'Continuous optimization and dedicated support.', icon: Headphones, color: 'text-purple-500 bg-purple-50 dark:bg-purple-950/50' }
+      ],
+      caseStudyTag: 'SUCCESS STORIES',
+      caseStudyTitle: 'Real Results for Real Businesses',
+      caseStudyVisual: analyticsDashboardImg,
+      caseStudyHeader: 'E-Commerce Brand Boosts Sales with SEO',
+      caseStudyDesc: 'We implemented a complete SEO and content marketing strategy for an e-commerce client, resulting in higher search rankings, increased website traffic, and a significant growth in online sales.',
+      caseStudyStats: [
+        { val: '230%', label: 'Increase in Organic Traffic' },
+        { val: '3x', label: 'More Conversions' },
+        { val: '150%', label: 'Revenue Growth' }
+      ],
+      ctaTitle: 'Ready to Grow Your Brand Online?',
+      ctaSub: "Let's create a data-driven digital marketing strategy tailored to your business goals.",
+      primaryCta: 'Discuss Your Goals',
+      secondaryCta: 'Explore Our Work'
+    },
+
+    'ecommerce-stores': {
+      breadcrumb: 'E-Commerce Stores',
+      tag: 'OUR E-COMMERCE SERVICES',
+      title: 'Custom E-Commerce Stores built for High Conversions',
+      subheadline: 'We design & build high-converting online stores that drive real business growth.',
+      desc: 'Feature-rich, scalable, and secure online stores tailored to your brand to showcase products and grow sales.',
+      heroImg: ecommerceHeroImg,
+      badgeText: 'Scalable Stores & Gateways',
+      stats: [
+        { label: 'Web Solutions Delivered', val: '50+' },
+        { label: 'Happy Clients', val: '40+' },
+        { label: 'Startup Energy & Speed', val: '100%' },
+        { label: 'Client Satisfaction', val: '99%' }
+      ],
+      services: [
+        { title: 'Custom E-commerce Store Development', desc: 'Feature-rich, scalable, and secure online stores tailored to your brand.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: ShoppingCart },
+        { title: 'Payment Gateway Integration', desc: 'Secure and seamless payment processing with multiple options.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: CreditCard },
+        { title: 'Product & Inventory Management', desc: 'Easy product upload, stock management, and order tracking.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Package },
+        { title: 'Mobile-Optimized Stores', desc: 'Fully responsive and mobile-friendly stores for a smooth shopping experience.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Smartphone },
+        { title: 'SEO & Marketing Integration', desc: 'Built-in SEO, analytics, and marketing tools to boost your sales.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: TrendingUp },
+        { title: 'Ongoing Support & Maintenance', desc: 'Reliable support to keep your store running smoothly.', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400', icon: Headphones }
+      ],
+      whyTag: 'WHY CHOOSE US?',
+      whyTitle: 'Your E-commerce Growth Partner',
+      whyDesc: 'We combine creativity, technology, and e-commerce expertise to build online stores that deliver real results. Our focus is on creating seamless shopping experiences that turn visitors into loyal customers.',
+      pillars: [
+        { title: 'Strategic Approach', desc: 'Focused on your business goals' },
+        { title: 'Industry Expertise', desc: 'Proven e-commerce experience' },
+        { title: 'Scalable Solutions', desc: 'Grow without limitations' },
+        { title: 'Dedicated Support', desc: "We're with you every step" }
+      ],
+      whyVisual: ecommerceWomanImg,
+      platformsTag: 'PLATFORMS WE WORK WITH',
+      platformsTitle: 'Flexible Solutions for Every Business',
+      platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'PrestaShop', 'Custom Solutions'],
+      caseStudyTag: 'SUCCESS STORIES',
+      caseStudyTitle: 'Real Results for Real Businesses',
+      caseStudyVisual: fashionCaseStudyImg,
+      caseStudyHeader: 'Building a High-Converting Fashion E-commerce Store',
+      caseStudyDesc: 'We developed a feature-rich online store for a fashion brand with seamless shopping experience, secure payments, and marketing integrations. The result was a 2.5x increase in sales within 6 months.',
+      caseStudyStats: [
+        { val: '2.5x', label: 'Increase in Sales' },
+        { val: '40%', label: 'More Customers' },
+        { val: '60%', label: 'Higher Engagement' }
+      ],
+      ctaTitle: 'Ready to Start Your Online Store?',
+      ctaSub: "Let's turn your products into a successful online business.",
+      primaryCta: 'Discuss Your Project',
+      secondaryCta: 'Explore Our Work'
+    },
+
+    'crm-erp-systems': {
+      breadcrumb: 'CRM & ERP Systems',
+      tag: 'OUR CRM & ERP SOLUTIONS',
+      title: 'Custom CRM & ERP Systems for Operational Excellence',
+      subheadline: 'Streamline client management, sales pipelines, inventory tracking, and employee workflows with enterprise-grade ERP portals.',
+      desc: 'Centralize company data, automate complex business workflows, and empower leadership with real-time decision analytics.',
+      heroImg: crmErpHeroImg,
+      badgeText: 'Automated Operations & Analytics',
+      stats: [
+        { label: 'Enterprise Implementations', val: '85+' },
+        { label: 'Happy Enterprise Clients', val: '200+' },
+        { label: 'Years of ERP Expertise', val: '5+' }
+      ],
+      whatWeBuildTag: 'OUR CRM & ERP SERVICES',
+      whatWeBuildTitle: 'Tailored Enterprise Systems for Business Scaling',
+      whatWeBuildSub: 'We architect end-to-end custom CRM & ERP applications that eliminate operational bottlenecks.',
+      cards: [
+        { title: 'Custom CRM Development', desc: 'Manage leads, track customer interactions, and automate sales pipelines.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Users },
+        { title: 'Enterprise ERP Systems', desc: 'Centralize inventory, supply chain, HR, and financial management.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Database },
+        { title: 'Workflow & Process Automation', desc: 'Eliminate repetitive manual tasks with automated triggers and alerts.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Layers },
+        { title: 'Data Analytics & BI Dashboards', desc: 'Real-time executive reporting dashboards for data-driven decisions.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: BarChart3 },
+        { title: 'API & Gateway Integrations', desc: 'Seamlessly connect with payment processors, WhatsApp API, and email.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Cpu },
+        { title: 'Role-Based Security & Access', desc: 'Granular admin permission controls, encryption, and audit logs.', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400', icon: Lock }
+      ],
+      whyTag: 'WHY IT MATTERS',
+      whyTitle: 'Transform Your Business Operations',
+      whyDesc: 'A tailored CRM or ERP platform unifies company knowledge, boosts team productivity, and drastically reduces operational costs.',
+      checkmarks: [
+        'Centralizes company data & workflows',
+        'Increases team productivity & efficiency',
+        'Reduces operational costs & manual errors',
+        'Provides real-time business insights'
+      ],
+      whyVisual: crmDashboardImg,
+      processTag: 'IMPLEMENTATION PROCESS',
+      processTitle: 'From Architecture to Enterprise Rollout',
+      processSub: 'A rigorous engineering lifecycle for enterprise software.',
+      steps: [
+        { num: '01', title: 'Discovery', desc: 'Audit workflows and define system architecture' },
+        { num: '02', title: 'Blueprint', desc: 'Design database schema and API contracts' },
+        { num: '03', title: 'Development', desc: 'Engineered with high concurrency and security' },
+        { num: '04', title: 'Integration', desc: 'Connect legacy systems and third-party tools' },
+        { num: '05', title: 'Deployment', desc: 'User training, data migration, and go-live support' }
+      ],
+      techTitle: 'Enterprise Stack & Database Systems',
+      techs: ['PostgreSQL', 'MySQL', 'Node.js', 'Python', 'Docker', 'AWS', 'Zapier'],
+      benefits: [
+        { title: 'Unified Data', desc: 'Single source of truth for all departments' },
+        { title: 'Role Security', desc: 'Bank-grade access control & encryption' },
+        { title: 'Custom Dashboards', desc: 'Tailored KPIs for executive decision making' },
+        { title: '24/7 SLA Support', desc: 'Dedicated engineering maintenance support' }
+      ],
+      ctaTitle: 'Ready to Automate Your Business Operations?',
+      ctaSub: "Let's build a custom CRM/ERP system tailored specifically to your workflow.",
+      primaryCta: 'Discuss Your Project',
+      secondaryCta: 'Explore Systems'
+    },
+
+    'whatsapp-api-bots': {
+      breadcrumb: 'WhatsApp API & Bots',
+      tag: 'WHATSAPP API & BOTS',
+      title: 'Smarter Conversations. Automated Growth.',
+      subheadline: 'Leverage WhatsApp Business API and intelligent bots to automate conversations, enhance customer engagement, and scale your business with seamless, secure, and reliable messaging solutions.',
+      desc: 'Directly reach your customers on WhatsApp with automated broadcasting, AI support bots, order tracking, and instant lead capture.',
+      heroImg: whatsappHeroImg,
+      badgeText: 'WhatsApp Business API Connected',
+      stats: [
+        { label: 'Messages Processed', val: '10M+' },
+        { label: 'Businesses Enabled', val: '500+' },
+        { label: 'Delivery Success', val: '98%' },
+        { label: 'Customer Engagement', val: '24/7' }
+      ],
+      primaryCta: 'Explore WhatsApp Solutions',
+      secondaryCta: 'View Demo',
+      whatWeBuildTag: 'OUR WHATSAPP API & BOT SOLUTIONS',
+      whatWeBuildTitle: 'WhatsApp API & Bot Solutions for Modern Businesses',
+      whatWeBuildSub: 'We design and implement WhatsApp solutions that help you automate, engage, and grow — tailored to your business needs.',
+      cards: [
+        { title: 'WhatsApp Business API Integration', desc: 'Secure and official WhatsApp Business API setup with seamless integration to your systems.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: MessageSquare },
+        { title: 'AI Chatbots', desc: 'Intelligent chatbots to handle queries, provide instant answers, and automate workflows.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Bot },
+        { title: 'Automated Notifications', desc: 'Send order updates, appointment reminders, payment confirmations and more — automatically.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Bell },
+        { title: 'Marketing Campaigns', desc: 'Run targeted campaigns, product updates and promotions with high delivery rates.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: Megaphone },
+        { title: 'Customer Support Automation', desc: 'Automate FAQs, ticket creation and routing to the right team for faster resolution.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Headphones },
+        { title: 'CRM Integration', desc: 'Connect WhatsApp with your CRM to sync leads, customers and conversations.', color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400', icon: Database }
+      ],
+      workflowTag: 'HOW IT WORKS',
+      workflowTitle: 'From Message to Meaningful Results',
+      workflowSub: 'A seamless workflow that turns conversations into customers.',
+      workflowSteps: [
+        { num: '1', title: 'Customer Message', detail: "Hi! I'm interested in your services.", type: 'user' },
+        { num: '2', title: 'WhatsApp API', detail: 'Secure connection via WhatsApp Business API', type: 'api' },
+        { num: '3', title: 'Bot / Automation', items: ['Auto Reply', 'Smart Routing', 'Data Collection', 'Workflow Triggers'], type: 'bot' },
+        { num: '4', title: 'CRM System', items: ['Create / Update Lead', 'Sync Conversations', 'Track Customer Journey', 'Manage Follow-ups'], type: 'crm' },
+        { num: '5', title: 'Human Agent (If Needed)', detail: 'Sure! Let me assist you further.', type: 'agent' }
+      ],
+      analyticsTag: 'ANALYTICS & PERFORMANCE',
+      analyticsTitle: 'Track Conversations. Measure Growth.',
+      analyticsSub: 'Get real-time insights into your WhatsApp communication and campaign performance.',
+      analyticsBtn: 'View Live Analytics',
+      analyticsVisual: whatsappAnalyticsImg,
+      whyTag: 'WHY CHOOSE US',
+      whyTitle: 'Why Choose Our WhatsApp Solutions?',
+      whyGrid: [
+        { title: '24/7 Automation', desc: 'Never miss a customer with always-on bots.', icon: Clock, color: 'text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50' },
+        { title: 'Faster Responses', desc: 'Reduce response time and improve satisfaction.', icon: Zap, color: 'text-sky-500 bg-sky-50 dark:bg-sky-950/50' },
+        { title: 'Personalized Conversations', desc: 'Deliver tailored messages for better engagement.', icon: Sparkles, color: 'text-pink-500 bg-pink-50 dark:bg-pink-950/50' },
+        { title: 'Secure API Integration', desc: 'Official WhatsApp API with enterprise-grade security.', icon: ShieldCheck, color: 'text-indigo-500 bg-indigo-50 dark:bg-indigo-950/50' },
+        { title: 'Scalable Messaging', desc: 'Handle thousands of conversations effortlessly.', icon: BarChart3, color: 'text-purple-500 bg-purple-50 dark:bg-purple-950/50' },
+        { title: 'Actionable Analytics', desc: 'Make data-driven decisions with real insights.', icon: TrendingUp, color: 'text-amber-500 bg-amber-50 dark:bg-amber-950/50' }
+      ],
+      useCasesTag: 'USE CASES',
+      useCasesTitle: 'Built for Every Business Need',
+      useCases: ['Sales & Lead Generation', 'Customer Support', 'Order & Delivery Updates', 'Appointment Reminders', 'Payment Notifications', 'Surveys & Feedback'],
+      ctaTitle: 'Ready to Automate Your WhatsApp Communication?',
+      ctaSub: "Let's turn conversations into opportunities with powerful WhatsApp solutions.",
+      primaryCta: 'Get a Quote'
+    },
+
+    'digital-marketing-seo': {
+      breadcrumb: 'Digital Marketing & SEO',
+      tag: 'DIGITAL MARKETING & SEO',
+      title: 'Grow Your Brand in the Digital World',
+      subheadline: 'We create data-driven digital marketing strategies and SEO solutions that help your business get more visibility, attract the right audience, and achieve measurable growth.',
+      heroImg: digitalMarketingHeroImg,
+      badgeText: 'Grow Your Business',
+      stats: [
+        { label: 'Brands Promoted', val: '100+' },
+        { label: 'Happy Clients', val: '250+' },
+        { label: 'Years of Experience', val: '5+' }
+      ],
+      primaryCta: 'Discuss Your Goals',
+      secondaryCta: 'Explore Our Work',
+      whatWeBuildTag: 'OUR SERVICES',
+      whatWeBuildTitle: 'Comprehensive Digital Marketing Solutions',
+      whatWeBuildSub: 'From strategy to execution, we offer end-to-end digital marketing services tailored to your business goals.',
+      cards: [
+        { title: 'Search Engine Optimization (SEO)', desc: 'Improve your website ranking and get organic traffic from search engines.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Globe },
+        { title: 'Social Media Marketing', desc: 'Build your brand presence on Facebook, Instagram, LinkedIn and more.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: Megaphone },
+        { title: 'Pay Per Click (PPC) Advertising', desc: 'Get instant visibility with targeted ad campaigns that deliver real results.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Zap },
+        { title: 'Content Marketing', desc: 'Engaging content that attracts, converts, and retains your audience.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Sparkles },
+        { title: 'Email Marketing', desc: 'Reach your customers with personalized email campaigns that drive action.', color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400', icon: Bell },
+        { title: 'Analytics & Reporting', desc: 'Track performance with detailed reports and data-driven insights.', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400', icon: BarChart3 }
+      ],
+      processTag: 'OUR PROCESS',
+      processTitle: 'A Simple Process for Real Results',
+      processSub: 'We follow a proven process to plan, execute, and optimize your digital marketing campaigns.',
       steps: [
         { num: '1', title: 'Research', desc: 'Understand your business and audience' },
         { num: '2', title: 'Strategy', desc: 'Create a customized digital marketing plan' },
@@ -370,3 +794,280 @@ const pageConfigs = {
       primaryCta: 'Get in Touch'
     }
   };
+
+export const ServiceStatsTicker = () => {
+  return (
+    <>
+      {/* Mobile Auto Scroll Ticker */}
+      <div className="flex lg:hidden overflow-hidden w-full py-2.5 border-t border-slate-200/80 dark:border-slate-800/80 my-2">
+        <div className="flex animate-marquee whitespace-nowrap gap-6 items-center">
+          {[1, 2].map((_, setIdx) => (
+            <div key={setIdx} className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <span className="text-base font-bold text-slate-900 dark:text-white">50+</span>
+                <span className="text-xs text-slate-600 dark:text-slate-400 font-normal">Web Solutions Delivered</span>
+              </div>
+              <span className="text-slate-300 dark:text-slate-700">|</span>
+              <div className="flex items-center gap-2">
+                <span className="text-base font-bold text-slate-900 dark:text-white">40+</span>
+                <span className="text-xs text-slate-600 dark:text-slate-400 font-normal">Happy Clients</span>
+              </div>
+              <span className="text-slate-300 dark:text-slate-700">|</span>
+              <div className="flex items-center gap-2">
+                <span className="text-base font-bold text-slate-900 dark:text-white">100%</span>
+                <span className="text-xs text-slate-600 dark:text-slate-400 font-normal">Startup Energy & Speed</span>
+              </div>
+              <span className="text-slate-300 dark:text-slate-700">|</span>
+              <div className="flex items-center gap-2">
+                <span className="text-base font-bold text-slate-900 dark:text-white">99%</span>
+                <span className="text-xs text-slate-600 dark:text-slate-400 font-normal">Client Satisfaction</span>
+              </div>
+              <span className="text-slate-300 dark:text-slate-700">|</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Grid Row */}
+      <div className="hidden lg:grid grid-cols-4 gap-8 mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
+        <div className="flex items-start gap-4 py-1">
+          <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <Users className="w-6 h-6" />
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">50+</div>
+            <div className="text-base text-slate-500 dark:text-slate-400 font-normal">Web Solutions Delivered</div>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 py-1">
+          <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <Award className="w-6 h-6" />
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">40+</div>
+            <div className="text-base text-slate-500 dark:text-slate-400 font-normal">Happy Clients</div>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 py-1">
+          <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <TrendingUp className="w-6 h-6" />
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">100%</div>
+            <div className="text-base text-slate-500 dark:text-slate-400 font-normal">Startup Energy & Speed</div>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 py-1">
+          <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+            <Heart className="w-6 h-6" />
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">99%</div>
+            <div className="text-base text-slate-500 dark:text-slate-400 font-normal">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const ServiceCardsSection = ({ 
+  tag = "WHAT WE BUILD", 
+  title = "Custom Web Solutions for Every Business Need", 
+  sub = "", 
+  cards = [] 
+}) => {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+
+  const goTo = (idx) => {
+    setActiveIdx(Math.max(0, Math.min(cards.length - 1, idx)));
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    // Only treat as horizontal swipe if horizontal movement > vertical
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) goTo(activeIdx + 1); // swipe left → next
+      else goTo(activeIdx - 1);         // swipe right → prev
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
+  return (
+    <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <ScrollSlideSection direction="up" className="mb-10 text-left">
+        {tag && (
+          <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
+            {tag}
+          </h4>
+        )}
+        <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-none mx-auto lg:mx-0 mb-2">
+          {title}
+        </h2>
+        {sub && (
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+            {sub}
+          </p>
+        )}
+      </ScrollSlideSection>
+
+      {/* MOBILE SWIPE CAROUSEL (block md:hidden) */}
+      <div className="block md:hidden">
+        {/* Card Viewport */}
+        <div
+          className="relative w-full overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Perspective wrapper */}
+          <div
+            className="relative mx-auto flex items-center justify-center"
+            style={{ height: 400, perspective: '900px' }}
+          >
+            {cards.map((card, idx) => {
+              const Icon = card.icon || Monitor;
+              const diff = idx - activeIdx;
+              const absDiff = Math.abs(diff);
+              const translateX = diff * 105;
+              const rotateY = diff * -28;
+              const scale = absDiff === 0 ? 1 : Math.max(0.78, 1 - absDiff * 0.14);
+              const opacity = absDiff > 1 ? 0 : absDiff === 0 ? 1 : 0.55;
+              const zIndex = absDiff === 0 ? 10 : 5 - absDiff;
+
+              return (
+                <div
+                  key={idx}
+                  className="absolute  p-6 dark:border-slate-700/80  flex flex-col justify-between group"
+                  style={{
+                    width: '88%',
+                    height: 360,
+                    transform: `translateX(${translateX}%) rotateY(${rotateY}deg) scale(${scale})`,
+                    opacity,
+                    zIndex,
+                    transformStyle: 'preserve-3d',
+                    transition: 'transform 0.38s cubic-bezier(0.25,0.8,0.25,1), opacity 0.38s ease',
+                    pointerEvents: absDiff === 0 ? 'auto' : 'none',
+                  }}
+                >
+                  {/* Top Header */}
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className={`w-14 h-14 rounded-none ${card.color || 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400'} flex items-center justify-center shrink-0 `}>
+                        <Icon className="w-7 h-7" />
+                      </div>
+                      <div className="w-11 h-11  dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center group-hover:bg-[#00016E] group-hover:text-white group-hover:border-[#00016E] transition-all duration-300 shadow-sm shrink-0">
+                        <ArrowUpRight className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-2.5 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-normal">
+                      {card.desc}
+                    </p>
+                  </div>
+                  {/* Bottom Link */}
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between">
+                    <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                      Learn More <ArrowRight className="w-4 h-4 ml-0.5" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Dots + Arrow Nav */}
+        <div className="flex items-center justify-center gap-4 mt-5">
+          <button
+            onClick={() => goTo(activeIdx - 1)}
+            disabled={activeIdx === 0}
+            className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 disabled:opacity-30 transition-all hover:bg-slate-100 dark:hover:bg-slate-800"
+            aria-label="Previous card"
+          >
+            <ArrowRight className="w-4 h-4 rotate-180" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            {cards.map((_, dotIdx) => {
+              const isActive = activeIdx === dotIdx;
+              return (
+                <button
+                  key={dotIdx}
+                  onClick={() => goTo(dotIdx)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    isActive
+                      ? 'w-7 bg-sky-600 dark:bg-sky-400'
+                      : 'w-2 bg-slate-300 dark:bg-slate-700'
+                  }`}
+                  aria-label={`Go to card ${dotIdx + 1}`}
+                />
+              );
+            })}
+          </div>
+
+          <button
+            onClick={() => goTo(activeIdx + 1)}
+            disabled={activeIdx === cards.length - 1}
+            className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 disabled:opacity-30 transition-all hover:bg-slate-100 dark:hover:bg-slate-800"
+            aria-label="Next card"
+          >
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* DESKTOP GRID CARDS (hidden md:grid) */}
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cards.map((card, idx) => {
+          const Icon = card.icon || Monitor;
+          return (
+            <ScrollSlideSection key={idx} delay={`${idx * 80}ms`} direction="up">
+              <div className="bg-white dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full group">
+                <div>
+                  {/* Top Header: Circular Icon Left, Arrow Badge Right */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-14 h-14 rounded-full ${card.color || 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400'} flex items-center justify-center shrink-0 shadow-sm`}>
+                      <Icon className="w-7 h-7" />
+                    </div>
+                    <div className="w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center group-hover:bg-[#00016E] group-hover:text-white group-hover:border-[#00016E] transition-all duration-300 shadow-sm shrink-0">
+                      <ArrowUpRight className="w-5 h-5" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed font-normal mb-6">
+                    {card.desc}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between">
+                  <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                    Learn More <ArrowRight className="w-4 h-4 ml-0.5" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollSlideSection>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+

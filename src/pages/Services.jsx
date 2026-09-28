@@ -22,15 +22,15 @@ import {
 
 import heroImg from '../../assets/images/service_hero_transparent.png';
 import introVideo from '../../assets/Videos/ZAVYX_software_company_introduction.mp4';
-import imgWeb from '../../assets/images/Websites_Web_apps_service_background.png';
-import imgEcom from '../../assets/images/E_commerce_Stores_Service_background.png';
-import imgCrm from '../../assets/images/CRM_ERM_service_background.png';
+import imgWeb from '../../assets/images/website_web_apps_home_page.jpeg';
+import imgEcom from '../../assets/images/E_commerce_home_page.jpeg';
+import imgCrm from '../../assets/images/CRM_ERP_services.jpeg';
 import imgWa from '../../assets/images/WhatsApp_API_and_chatbots.jpeg';
-import imgAi from '../../assets/images/Ai_Automation_service_background.png';
+import imgAi from '../../assets/images/AI_Automation_home_page.jpeg';
 import imgMob from '../../assets/images/mobile_apps.jpeg';
-import imgSeo from '../../assets/images/Digital_marketing_SEO_service_background.png';
-import imgBrand from '../../assets/images/Branding_creative_service_background.png';
-import imgCloud from '../../assets/images/Cloud_Infrastructure_service_background.png';
+import imgSeo from '../../assets/images/Digital_marketing_SEO_home_page.jpeg';
+import imgBrand from '../../assets/images/Branding_Creative_home_page.jpeg';
+import imgCloud from '../../assets/images/Cloud_infrastructure_Home_pagejpeg.jpeg';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
   const ref = useRef(null);

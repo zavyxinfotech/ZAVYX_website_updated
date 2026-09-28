@@ -68,301 +68,138 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import webAppsHeroImg from '../../../assets/images/website_web_apps_hero_transparent.png';
-import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.png';
-import crmErpHeroImg from '../../../assets/images/crm_erp_systems_hero_transparent.png';
-import whatsappHeroImg from '../../../assets/images/whatsapp_api_hero_transparent.png';
+import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.png';
 
-import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.png';
-import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.png';
-import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.png';
-import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.png';
-import whatsappAnalyticsImg from '../../../assets/images/whatsapp_analytics_dashboard_visual.png';
-import digitalMarketingHeroImg from '../../../assets/images/digital_marketing_hero_transparent.png';
-import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.png';
-import brandingHeroImg from '../../../assets/images/Branding_Creative.png';
-import cloudBgImg from '../../../assets/images/Cloud_Infrastructure_service_background.png';
-import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.png';
 
-import { ScrollSlideSection, officialTechLogos } from './Shared';
+import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
 
 export default function WebsitesWebAppsView() {
   return (
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-[100dvh] transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION WITH ACCENTS */}
-      <section className="custom-mobile-hero relative pt-24 pb-8 lg:pt-28 lg:pb-10 overflow-hidden bg-transparent min-h-[100dvh] lg:min-h-[90vh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-28 lg:pb-10 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
         {/* Soft Background Accents */}
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         
         {/* Soft pink accent geometry on top right */}
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
-        <div className="max-w-[1350px] w-full mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-[1350px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col justify-between h-full">
           
           {/* Breadcrumb */}
-          <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-5 font-normal">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-2 sm:mb-5 font-normal">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/services" className="hover:text-sky-600 transition-colors">Services</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-sky-600 dark:text-sky-400 font-semibold">Websites & Web Apps</span>
+            <span className="text-sky-600 dark:text-sky-400 font-semibold truncate">Websites & Web Apps</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-8 lg:gap-12 items-center">
             
             {/* Hero Left Content */}
-            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-[1.12] tracking-tight mb-5 text-slate-900 dark:text-white">
+            <ScrollSlideSection direction="up" className="lg:col-span-6 flex flex-col items-start text-left max-w-2xl mx-0">
+              <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[3.8rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-2 sm:mb-4 text-slate-900 dark:text-white text-left">
                 Websites & Web Apps
               </h1>
 
-              <p className="text-slate-600 dark:text-slate-300 text-[14px] sm:text-xl leading-relaxed mb-4 font-normal">
-                Modern, high-performance web applications designed for speed, SEO, and seamless user experiences.
-              </p>
-              
-              <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-8 font-normal">
-                We design and develop custom websites and web applications that help businesses grow, engage users, and achieve real results in the digital world.
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-2 sm:mb-6 max-w-2xl font-normal text-left line-clamp-3">
+                Modern, high-performance web applications designed for speed, SEO, and seamless user experiences. We design custom websites that scale.
               </p>
 
-              {/* Signature CTA Buttons */}
-              <div className="hidden lg:flex flex-row items-start gap-2 sm:gap-6 mb-12 w-full">
+              {/* Signature CTA Buttons - DESKTOP ONLY */}
+              <div className="hidden lg:flex flex-row items-center gap-4 sm:gap-6 mt-2 mb-2 w-full">
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                    Discuss Your Project <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                    Discuss Your Project <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
 
                 <Link
                   to="/contact"
-                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
+                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer"
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                    View Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
+                  <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-6 sm:px-8 gap-2 text-base sm:text-lg z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
+                    View Our Work <ArrowRight className="w-5 h-5 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </div>
             </ScrollSlideSection>
 
-            {/* Hero Right Image & Badge - Increased image size in desktop view */}
-            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[720px] lg:max-w-[780px] group cursor-pointer">
-                {/* Floating pill badge on top right of laptop */}
-                <div className="absolute -top-3 right-2 sm:-top-5 sm:right-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-slate-100 dark:border-slate-700 shadow-xl rounded-2xl p-3 sm:p-4 flex items-start gap-3 z-30 transition-transform duration-300 group-hover:-translate-y-1">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sky-50 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0 border border-sky-100 dark:border-sky-800/50">
-                    <Globe className="w-5 h-5" />
+            {/* Hero Right Image */}
+            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-5 relative flex justify-center lg:justify-end my-1 sm:my-2 lg:my-0">
+              <div className="relative w-full max-w-[200px] min-[300px]:max-w-[340px] sm:max-w-[580px] lg:max-w-[780px] group cursor-pointer">
+                {/* Floating pill badge on top right */}
+                <div className="absolute -top-2 right-1 sm:-top-5 sm:right-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-slate-100 dark:border-slate-700 shadow-lg rounded-xl sm:rounded-2xl p-2 sm:p-4 flex items-center sm:items-start gap-2 sm:gap-3 z-30">
+                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-sky-50 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-100 dark:border-sky-800/50">
+                    <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div className="flex flex-col items-start">
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight">Responsive</span>
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight">Fast</span>
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight">Secure</span>
+                    <span className="text-[10px] sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight">Responsive</span>
+                    <span className="text-[10px] sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight hidden sm:block">Fast & Secure</span>
                   </div>
                 </div>
 
-                <div className="relative bg-transparent flex items-start justify-center p-0 shadow-none">
+                <div className="relative bg-transparent flex items-center justify-center p-0 shadow-none">
                   <img 
                     src={webAppsHeroImg} 
                     alt="Websites & Web Apps" 
-                    className="w-full h-auto max-h-[460px] lg:max-h-[520px] object-contain transition-transform duration-700 group-hover:scale-[1.03] filter drop-shadow-2xl"
+                    className="w-full h-auto max-h-[200px] min-[400px]:max-h-[240px] sm:max-h-[460px] lg:max-h-[520px] object-contain filter drop-shadow-2xl"
                   />
                 </div>
               </div>
             </ScrollSlideSection>
-            {/* MOBILE ONLY CTA BUTTONS */}
-            <ScrollSlideSection direction="up" className="w-full">
-                <div className="flex lg:hidden flex-row items-start gap-2 sm:gap-6 mt-8 mb-6 w-full justify-center">
-                <Link
-                  to="/contact"
-                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
-                >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                    Discuss Your Project <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
 
-                <Link
-                  to="/contact"
-                  className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
-                >
-                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="inline-flex h-full w-full items-start justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 sm:px-8 gap-1.5 sm:gap-2 text-[11px] sm:text-lg whitespace-nowrap z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent">
-                    View Our Work <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 text-[#00016E] dark:text-sky-400 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-              </div>
+            {/* MOBILE ONLY CTA BUTTONS (Single line inline row) */}
+            <ScrollSlideSection direction="up" className="lg:hidden flex flex-row items-center justify-center w-full gap-2 min-[400px]:gap-3 mt-1 sm:mt-4 mb-2">
+              <Link
+                to="/contact"
+                className="relative flex-1 inline-flex h-11 min-[400px]:h-12 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-2 text-[11px] min-[400px]:text-xs z-10 transition-all border border-[#00016E] group-hover:border-transparent whitespace-nowrap text-center">
+                  Discuss Project <ArrowRight className="w-3.5 h-3.5 text-white ml-1" />
+                </span>
+              </Link>
+
+              <Link
+                to="/contact"
+                className="relative flex-1 inline-flex h-11 min-[400px]:h-12 overflow-hidden rounded-md p-[2px] group shadow-sm cursor-pointer"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-white dark:bg-slate-800 text-[#00016E] dark:text-sky-400 font-semibold px-2 text-[11px] min-[400px]:text-xs z-10 transition-all border border-slate-200 dark:border-slate-700 group-hover:border-transparent whitespace-nowrap text-center">
+                  View Our Work <ArrowRight className="w-3.5 h-3.5 text-[#00016E] dark:text-sky-400 ml-1" />
+                </span>
+              </Link>
             </ScrollSlideSection>
 
-
           </div>
 
-          {/* Startup Metrics Row - Aligned properly with balanced spacing & tailored startup content */}
-          <ScrollSlideSection direction="up" delay="300ms">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-10 lg:mt-12 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
-            <div className="flex items-start gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
-                <Users className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
-                  50+
-                </div>
-                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
-                  Web Solutions Delivered
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
-                <Award className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
-                  40+
-                </div>
-                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
-                  Happy Clients
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
-                <TrendingUp className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
-                  100%
-                </div>
-                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
-                  Startup Energy & Speed
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 py-1">
-              <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-start justify-center shrink-0">
-                <Heart className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight leading-tight">
-                  99%
-                </div>
-                <div className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">
-                  Client Satisfaction
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Service Auto Scroll Ticker Row */}
+          <ScrollSlideSection direction="up" delay="200ms">
+            <ServiceStatsTicker />
           </ScrollSlideSection>
 
         </div>
       </section>
 
       {/* 2. WHAT WE BUILD SECTION */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <ScrollSlideSection direction="up" className="mb-10 text-left">
-          <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
-            WHAT WE BUILD
-          </h4>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
-              Custom Web Solutions for Every Business Need
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal">
-              From business websites to complex web applications, we build scalable, secure, and user-friendly solutions tailored to your goals.
-            </p>
-          </div>
-        </ScrollSlideSection>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
-          <ScrollSlideSection delay="0ms" direction="up">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-700/80 hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between h-full group shadow-sm hover:shadow-md">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center mb-5 shrink-0 shadow-md shadow-sky-500/20">
-                  <Monitor className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                  Business Websites
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal mb-6">
-                  Professional, SEO-friendly websites that build your brand and attract more customers.
-                </p>
-              </div>
-              <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollSlideSection>
-
-          {/* Card 2 */}
-          <ScrollSlideSection delay="80ms" direction="up">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-700/80 hover:border-pink-500/40 transition-all duration-300 flex flex-col justify-between h-full group shadow-sm hover:shadow-md">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-pink-500 text-white flex items-center justify-center mb-5 shrink-0 shadow-md shadow-pink-500/20">
-                  <ShoppingBag className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
-                  Web Applications
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal mb-6">
-                  Custom web apps to automate processes, manage data, and improve productivity.
-                </p>
-              </div>
-              <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollSlideSection>
-
-          {/* Card 3 */}
-          <ScrollSlideSection delay="160ms" direction="up">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between h-full group shadow-sm hover:shadow-md">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center mb-5 shrink-0 shadow-md shadow-emerald-500/20">
-                  <ShoppingCart className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                  E-commerce Websites
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal mb-6">
-                  High-converting online stores with secure payment gateways and scalable architecture.
-                </p>
-              </div>
-              <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollSlideSection>
-
-          {/* Card 4 */}
-          <ScrollSlideSection delay="240ms" direction="up">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-700/80 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between h-full group shadow-sm hover:shadow-md">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-purple-500 text-white flex items-center justify-center mb-5 shrink-0 shadow-md shadow-purple-500/20">
-                  <Lock className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                  Web Portals
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal mb-6">
-                  Customer portals, employee portals, and admin dashboards tailored to your workflow.
-                </p>
-              </div>
-              <Link to="/contact" className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollSlideSection>
-        </div>
-      </section>
+      <ServiceCardsSection 
+        tag="WHAT WE BUILD" 
+        title="Custom Web Solutions for Every Business Need" 
+        cards={[
+          { title: 'Business Websites', desc: 'Professional, SEO-friendly websites that build your brand and attract more customers.', color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Monitor },
+          { title: 'Web Applications', desc: 'Custom web apps to automate processes, manage data, and improve productivity.', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: ShoppingBag },
+          { title: 'E-commerce Websites', desc: 'High-converting online stores with secure payment gateways and scalable architecture.', color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: ShoppingCart },
+          { title: 'Web Portals', desc: 'Customer portals, employee portals, and admin dashboards tailored to your workflow.', color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Lock }
+        ]} 
+      />
 
       {/* 3. WHY IT MATTERS SECTION */}
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -407,10 +244,10 @@ export default function WebsitesWebAppsView() {
             <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-pink-200/60 dark:bg-pink-900/20 rounded-3xl -z-10 transform rotate-12 blur-lg pointer-events-none" />
 
             {/* Dashboard Window Container */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-2xl overflow-hidden">
+            <div className="bg-white dark:bg-slate-800  dark:border-slate-700  overflow-hidden">
               
               {/* Window Header */}
-              <div className="bg-slate-50 dark:bg-slate-900/80 px-4 py-3 border-b border-slate-200/80 dark:border-slate-700/80 flex items-center justify-between">
+              <div className="px-4 py-3 border-b border-slate-200/80 dark:border-slate-700/80 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
@@ -533,14 +370,9 @@ export default function WebsitesWebAppsView() {
           <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
             OUR DEVELOPMENT PROCESS
           </h4>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
-              From Idea to Launch
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal">
-              A streamlined process to ensure your web solution is delivered with quality and on time.
-            </p>
-          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
+            From Idea to Launch
+          </h2>
         </ScrollSlideSection>
 
         {/* 5-Step Process Timeline */}
@@ -548,7 +380,7 @@ export default function WebsitesWebAppsView() {
           {/* Horizontal Connecting Line */}
           <div className="hidden md:block absolute top-10 left-[8%] right-[8%] h-0.5 bg-slate-200 dark:bg-slate-700 -z-0" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 relative z-10">
             {[
               { num: '01', title: 'Discover', desc: 'Understand your goals and requirements', icon: Compass },
               { num: '02', title: 'Plan', desc: 'Create strategy and project roadmap', icon: FileText },
@@ -560,8 +392,8 @@ export default function WebsitesWebAppsView() {
               return (
                 <ScrollSlideSection key={idx} delay={`${idx * 100}ms`} direction="up">
                   <div className="flex flex-col items-center text-center group process-step-group">
-                    <div className="w-16 h-16 rounded-full bg-white dark:bg-slate-800 border-2 border-sky-400/80 dark:border-sky-500/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-md mb-4 group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300 relative bg-white">
-                      <StepIcon className="w-6 h-6" />
+                    <div className="w-16 h-16 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] m-3 bg-white dark:bg-slate-800 border-1 border-sky-400/80 dark:border-sky-500/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-md mb-4 group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300 relative bg-white">
+                      <StepIcon className="w-6 h-6 " />
                     </div>
                     <span className="text-sm sm:text-base font-normal text-sky-600 dark:text-sky-400 uppercase tracking-widest mb-1">
                       {step.num}
