@@ -121,7 +121,7 @@ export default function About() {
 
             {/* Floating text: Smarter Solutions */}
             <div className="absolute top-[5%] right-[0%] sm:right-[-8%] text-[#1E293B] dark:text-white text-left font-medium text-[11px] min-[400px]:text-[12px] sm:text-[18px] lg:text-[20px] leading-[1.2] drop-shadow-[0_4px_10px_rgba(255,255,255,0.5)] z-30">
-              Smarter<br/>Solutions<br/>Brighter<br/>Business
+              Technology<br/>Expertise<br/>Growth<br/>Driven by Innovation
               <div className="w-4 sm:w-8 h-[2px] sm:h-[3px] bg-[#FFD100] mt-1 sm:mt-2.5 rounded-full shadow-sm"></div>
             </div>
 
@@ -311,7 +311,7 @@ export default function About() {
         <div className="flex flex-wrap justify-center gap-x-2 gap-y-10 sm:gap-x-10 sm:gap-y-16 mt-8 sm:mt-10">
           {[
             { 
-              name: "SAKTHIVEL S", title: "FOUNDER", 
+              name: "SAKTHIVEL M", title: "FOUNDER", 
               desc: "Drives the company's vision and strategy to scale global enterprise operations safely.",
               img: imgFounder, colorId: 'sky',
               linkedin: "https://www.linkedin.com/in/sakthivel007?utm_source=share_via&utm_content=profile&utm_medium=member_android"
@@ -328,7 +328,7 @@ export default function About() {
               linkedin: "https://www.linkedin.com/in/vijayadharshini-n-m-81466a270?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             },
             { 
-              name: "ARCHANA S", title: "HR MANAGER", 
+              name: "ARCHANA R", title: "HR MANAGER", 
               desc: "Cultivates our world-class talent and maintains a cutting-edge operational environment.",
               img: imgHR, colorId: 'amber',
               linkedin: "https://www.linkedin.com/in/archanaplakkal?utm_source=share_via&utm_content=profile&utm_medium=member_android"
