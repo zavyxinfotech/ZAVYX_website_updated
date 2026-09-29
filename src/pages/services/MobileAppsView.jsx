@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+﻿import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -74,6 +74,7 @@ import mobilewhychooseus from '../../../assets/images/mobile_apps.jpeg';
 
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
+import { pageConfigs } from './Shared';
 
 export default function MobileAppsView() {
   const mobileServices = [
@@ -202,7 +203,7 @@ export default function MobileAppsView() {
 
           {/* Service Auto Scroll Ticker Row */}
           <ScrollSlideSection direction="up" delay="200ms">
-            <ServiceStatsTicker />
+            <ServiceStatsTicker stats={pageConfigs['mobile-apps'].stats} />
           </ScrollSlideSection>
 
         </div>

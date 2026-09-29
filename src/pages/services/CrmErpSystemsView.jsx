@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+﻿import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -76,6 +76,7 @@ import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.png
 import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.png';
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
+import { pageConfigs } from './Shared';
 
 export default function CrmErpSystemsView() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -250,7 +251,7 @@ export default function CrmErpSystemsView() {
 
           {/* Service Auto Scroll Ticker Row */}
           <ScrollSlideSection direction="up" delay="200ms">
-            <ServiceStatsTicker />
+            <ServiceStatsTicker stats={pageConfigs['crm-erp-systems'].stats} />
           </ScrollSlideSection>
 
         </div>

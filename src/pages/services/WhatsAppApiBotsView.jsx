@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+﻿import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -73,6 +73,7 @@ import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero_img.png';
 
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
+import { pageConfigs } from './Shared';
 
 export default function WhatsAppApiBotsView() {
   const whatsappServices = [
@@ -187,7 +188,7 @@ export default function WhatsAppApiBotsView() {
 
           {/* Service Auto Scroll Ticker Row */}
           <ScrollSlideSection direction="up" delay="200ms">
-            <ServiceStatsTicker />
+            <ServiceStatsTicker stats={pageConfigs['whatsapp-api-bots'].stats} />
           </ScrollSlideSection>
 
         </div>

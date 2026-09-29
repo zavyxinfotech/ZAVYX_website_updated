@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+﻿import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -72,6 +72,7 @@ import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.pn
 
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
+import { pageConfigs } from './Shared';
 
 export default function WebsitesWebAppsView() {
   return (
@@ -183,7 +184,7 @@ export default function WebsitesWebAppsView() {
 
           {/* Service Auto Scroll Ticker Row */}
           <ScrollSlideSection direction="up" delay="200ms">
-            <ServiceStatsTicker />
+            <ServiceStatsTicker stats={pageConfigs['websites-web-apps'].stats} />
           </ScrollSlideSection>
 
         </div>

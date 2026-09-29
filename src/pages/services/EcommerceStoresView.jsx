@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+﻿import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -75,6 +75,7 @@ import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_s
 
 
 import { ScrollSlideSection, ServiceStatsTicker, ServiceCardsSection } from './Shared';
+import { pageConfigs } from './Shared';
 
 export default function EcommerceStoresView() {
   const ecommerceServices = [
@@ -193,7 +194,7 @@ export default function EcommerceStoresView() {
 
           {/* Service Auto Scroll Ticker Row */}
           <ScrollSlideSection direction="up" delay="200ms">
-            <ServiceStatsTicker />
+            <ServiceStatsTicker stats={pageConfigs['ecommerce-stores'].stats} />
           </ScrollSlideSection>
 
         </div>
