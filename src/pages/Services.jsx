@@ -178,7 +178,7 @@ export default function Services() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white text-left">
               Tailored Technology Solutions for a Stronger Tomorrow
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-xl lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
               From strategy to execution, we deliver innovative and scalable technology solutions that help businesses grow, operate smarter, and stay ahead in a digital world.
             </p>
 
@@ -262,15 +262,15 @@ export default function Services() {
             <div className="grid grid-cols-3 gap-3 sm:gap-8 py-3 border-t border-slate-200/80 dark:border-slate-800 w-full max-w-md mx-auto text-center mt-2">
               <div className="text-center">
                 <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">100%</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
+                <p className="text-[11px] sm:text-lg font-normal text-slate-500 dark:text-slate-400 mt-0.5">Client Focused</p>
               </div>
               <div className="text-center">
-                <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
+                <h4 className="text-3xl sm:text-3xl lg:text-xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">Agile</h4>
+                <p className="text-lg sm:text-lg lg:text-xl font-normal text-slate-500 dark:text-slate-400 mt-0.5">Rapid Delivery</p>
               </div>
               <div className="text-center">
                 <h4 className="text-xl sm:text-3xl font-normal text-slate-900 dark:text-white tracking-tight mb-0.5">24/7</h4>
-                <p className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
+                <p className="text-[11px] sm:text-lg font-normal text-slate-500 dark:text-slate-400 mt-0.5">Dedicated Support</p>
               </div>
             </div>
 

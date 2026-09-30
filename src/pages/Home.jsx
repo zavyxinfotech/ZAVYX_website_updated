@@ -479,13 +479,13 @@ export default function Home() {
   return (
     <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300">
       {/* REDESIGNED HERO SECTION MATCHING EXACT REFERENCE LAYOUT */}
-      <section className="custom-mobile-hero relative overflow-hidden bg-white dark:bg-slate-900 pt-24 pb-2 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24 min-h-0 sm:min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center transition-colors duration-300">
+      <section className="custom-mobile-hero relative overflow-hidden bg-white dark:bg-slate-900 pt-20 pb-2 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24 min-h-0 sm:min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center transition-colors duration-300">
         <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 relative z-20 flex flex-col justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
             {/* LEFT COLUMN: Text Content, Image, CTAs & Startup Stats Counter */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center text-left relative z-20">
               {/* Hero Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-4 sm:mb-6 text-slate-900 dark:text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-tight sm:leading-[1.12] tracking-tight mb-3 sm:mb-6 text-slate-900 dark:text-white">
                 Digital Solutions That Move Your Business{" "}
                 <span className="text-slate-900 dark:text-white font-normal inline-block">
                   Forward
@@ -493,23 +493,23 @@ export default function Home() {
               </h1>
 
               {/* Sub-headline / Paragraph */}
-              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-[18px] sm:text-lg lg:text-xl leading-normal sm:leading-relaxed mb-3 sm:mb-8 max-w-2xl font-normal">
                 We empower businesses with smart technology solutions that drive
                 efficiency, connection, and sustainable growth.
               </p>
 
               {/* MOBILE ONLY IMAGE SECTION: Soft Blue Background Circle + Overlays + Uncropped Image */}
-              <div className="block lg:hidden -mt-12 mb-2 relative w-full flex flex-col items-center justify-center">
+              <div className="block lg:hidden -mt-10 sm:-mt-12 mb-2 relative w-full flex flex-col items-center justify-center">
                 {/* Container for Image & Overlays */}
                 <div className="relative w-full max-w-[340px] mx-auto flex items-center justify-center">
                   {/* Soft Ambient Logo Blue Background Circle Shape - Shifted lower */}
-                  <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] h-[270px] rounded-full bg-[#e0f2fe]/70 dark:bg-sky-950/40 pointer-events-none z-0" />
+                  <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[270px] sm:h-[270px] rounded-full bg-[#e0f2fe]/70 dark:bg-sky-950/40 pointer-events-none z-0" />
 
                   {/* Uncropped Mobile Building Image */}
                   <img
                     src={heroBgMobile}
                     alt="ZAVYX Infotech Mobile Building"
-                    className="w-full max-w-[340px] max-h-[295px] h-auto object-contain z-10 mx-auto transform scale-105"
+                    className="w-full max-w-[325px] sm:max-w-[340px] max-h-[275px] sm:max-h-[295px] h-auto object-contain z-10 mx-auto transform scale-105"
                   />
 
                   {/* People / Ideas / Solutions Overlay directly UPON the image (shifted lower) */}
@@ -545,7 +545,7 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons Row - One line on mobile */}
-              <div className="flex flex-row items-center gap-2.5 sm:gap-6 my-4 sm:mb-12 w-full">
+              <div className="flex flex-row items-center gap-2.5 sm:gap-6 my-2.5 sm:mb-12 w-full">
                 <Link
                   to="/contact"
                   className="relative inline-flex h-11 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"
