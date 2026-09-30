@@ -515,14 +515,14 @@ export default function Home() {
                   {/* People / Ideas / Solutions Overlay directly UPON the image (shifted lower) */}
                   <div className="absolute top-[22%] left-[5%] z-30 flex flex-col text-left pointer-events-none">
                     <div className="w-5 h-[2px] bg-sky-500 mb-1" />
-                    <div className="text-slate-800 dark:text-slate-100 font-semibold text-[13.5px] leading-tight tracking-tight">
+                    <div className="text-slate-800 dark:text-slate-100 font-semibold text-sm leading-tight tracking-tight">
                       <div>People</div>
                       <div>Technology</div>
                       <div className="text-slate-900 dark:text-white font-bold">
                         Impact
                       </div>
                     </div>
-                    <div className="text-[11px] text-slate-500 dark:text-slate-400 font-normal mt-0.5">
+                    <div className="text-xs text-slate-500 dark:text-slate-400 font-normal mt-0.5">
                       Building What's Next
                     </div>
                   </div>
