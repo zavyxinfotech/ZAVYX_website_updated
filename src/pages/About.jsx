@@ -6,10 +6,10 @@ import imgFounder from '../../assets/images/team/Founder.webp';
 import imgDirector from '../../assets/images/team/Head_of_operations.webp';
 import imgHR from '../../assets/images/team/HR_Manager.webp';
 import imgRM from '../../assets/images/team/Relationship_Manager.webp';
-import imgUX from '../../assets/images/team/UI_Ux_Designer.jpeg';
+import imgUX from '../../assets/images/team/UI_Ux_Designer.webp';
 import imgDev from '../../assets/images/team/Full_Stack_developer.webp';
 import imgDA from '../../assets/images/team/Data_Analyst.webp';
-import aboutHeroImage from '../../assets/images/about_page_Hero_img.jpeg';
+import aboutHeroImage from '../../assets/images/about_page_Hero_img.webp';
 import { AnimatedHeroText } from '../components/HeroEffects';
 import zavyxLogoIcon from '../../assets/logo/ZAVYX_logo_image.png';
 

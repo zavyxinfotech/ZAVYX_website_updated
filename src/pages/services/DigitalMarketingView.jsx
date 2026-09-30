@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -70,10 +70,9 @@ import {
 
 
 
-import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.png';
-
-import digitalMarketingHeroImg from '../../../assets/images/Digital_marketing_hero_img.png';
-import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.png';
+import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.webp';
+import digitalMarketingHeroImg from '../../../assets/images/Digital_marketing_hero_img.webp';
+import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.webp';
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
 import { pageConfigs } from './Shared';

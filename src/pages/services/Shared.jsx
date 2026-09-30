@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Monitor, ShoppingBag, ShoppingCart, Lock, CreditCard, Package, Smartphone, TrendingUp, Headphones, 
@@ -7,17 +7,17 @@ import {
   Eye, Infinity, Check, ArrowUpRight, ArrowRight
 } from 'lucide-react';
 
-import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.png';
-import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.png';
-import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.jpeg';
-import whatsappHeroImg from '../../../assets/images/whatsapp_API_hero_img.jpeg';
-import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.png';
-import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.png';
-import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.png';
-import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.png';
-import whatsappAnalyticsImg from '../../../assets/images/whatsapp_analytics_dashboard_visual.png';
-import digitalMarketingHeroImg from '../../../assets/images/digital_marketing_hero_transparent.png';
-import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.png';
+import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.webp';
+import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.webp';
+import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.webp';
+import whatsappHeroImg from '../../../assets/images/whatsapp_API_hero_img.webp';
+import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.webp';
+import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.webp';
+import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.webp';
+import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.webp';
+import whatsappAnalyticsImg from '../../../assets/images/whatsapp_analytics_dashboard_visual.webp';
+import digitalMarketingHeroImg from '../../../assets/images/digital_marketing_hero_transparent.webp';
+import digitalMarketingTrustedPartnerImg from '../../../assets/images/digital_marketing_trusted_partner_visual.webp';
 
 
 export const officialTechLogos = {

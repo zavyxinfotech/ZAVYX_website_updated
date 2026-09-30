@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -69,7 +69,7 @@ import {
 } from 'lucide-react';
 
 
-import cloudHeroImg from '../../../assets/images/Clooud_Infrastructure_hero_img.png';
+import cloudHeroImg from '../../../assets/images/Clooud_Infrastructure_hero_img.webp';
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
 import { pageConfigs } from './Shared';

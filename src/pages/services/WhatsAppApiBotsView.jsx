@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -68,7 +68,7 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero_img.png';
+import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero_img.webp';
 
 
 

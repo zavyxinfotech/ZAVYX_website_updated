@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -68,10 +68,9 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.png';
-
-import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.png';
-import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.png';
+import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.webp';
+import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.webp';
+import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.webp';
 
 
 import { ScrollSlideSection, ServiceStatsTicker, ServiceCardsSection } from './Shared';

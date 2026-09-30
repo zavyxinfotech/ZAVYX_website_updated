@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -69,12 +69,11 @@ import {
 } from 'lucide-react';
 
 
-import brandingHeroImg from '../../../assets/images/Branding_Creative_Herom_img.png';
-
-import logoDesign from '../../../assets/images/Logo_Brand_identity.jpeg';
-import packagedesign from '../../../assets/images/packaging_design.jpeg';
-import brandingcollateral from '../../../assets/images/Brand_collateral.jpeg';
-import socialmediacreative from '../../../assets/images/social_media_creative.jpeg';
+import brandingHeroImg from '../../../assets/images/Branding_Creative_Herom_img.webp';
+import logoDesign from '../../../assets/images/Logo_Brand_identity.webp';
+import packagedesign from '../../../assets/images/packaging_design.webp';
+import brandingcollateral from '../../../assets/images/Brand_collateral.webp';
+import socialmediacreative from '../../../assets/images/Social_media_creative.webp';
 
 
 

@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -68,12 +68,9 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.png';
-
-
-import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.png';
-
-import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.png';
+import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.webp';
+import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.webp';
+import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.webp';
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
 import { pageConfigs } from './Shared';

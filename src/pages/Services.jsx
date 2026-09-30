@@ -20,17 +20,17 @@ import {
   Pause
 } from 'lucide-react';
 
-import heroImg from '../../assets/images/service_hero_transparent.png';
+import heroImg from '../../assets/images/service_hero_transparent.webp';
 import introVideo from '../../assets/Videos/ZAVYX_software_company_introduction.mp4';
-import imgWeb from '../../assets/images/website_web_apps_home_page.jpeg';
-import imgEcom from '../../assets/images/E_commerce_home_page.jpeg';
-import imgCrm from '../../assets/images/CRM_ERP_services.jpeg';
-import imgWa from '../../assets/images/WhatsApp_API_and_chatbots.jpeg';
-import imgAi from '../../assets/images/AI_Automation_home_page.jpeg';
-import imgMob from '../../assets/images/mobile_apps.jpeg';
-import imgSeo from '../../assets/images/Digital_marketing_SEO_home_page.jpeg';
-import imgBrand from '../../assets/images/Branding_Creative_home_page.jpeg';
-import imgCloud from '../../assets/images/Cloud_infrastructure_Home_pagejpeg.jpeg';
+import imgWeb from '../../assets/images/website_web_apps_home_page.webp';
+import imgEcom from '../../assets/images/E_commerce_home_page.webp';
+import imgCrm from '../../assets/images/CRM_ERP_services.webp';
+import imgWa from '../../assets/images/WhatsApp_API_and_chatbots.webp';
+import imgAi from '../../assets/images/AI_Automation_home_page.webp';
+import imgMob from '../../assets/images/mobile_apps.webp';
+import imgSeo from '../../assets/images/Digital_marketing_SEO_home_page.webp';
+import imgBrand from '../../assets/images/Branding_Creative_home_page.webp';
+import imgCloud from '../../assets/images/Cloud_infrastructure_Home_pagejpeg.webp';
 
 const ScrollSlideSection = ({ children, className = '', delay='0ms' }) => {
   const ref = useRef(null);

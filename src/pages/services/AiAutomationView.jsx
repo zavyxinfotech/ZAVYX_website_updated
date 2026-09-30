@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -69,8 +69,8 @@ import {
 } from 'lucide-react';
 
 
-import aiHeroImg from '../../../assets/images/AI_Automation_hero_img.png';
-import aitransformyourideasImg from '../../../assets/images/AI_automations_transform_your_operations.jpeg';
+import aiHeroImg from '../../../assets/images/AI_Automation_hero_img.webp';
+import aitransformyourideasImg from '../../../assets/images/AI_automations_transform_your_operations.webp';
 
 
 

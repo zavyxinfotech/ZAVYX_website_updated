@@ -15,7 +15,7 @@ import {
   Smartphone
 } from 'lucide-react';
 
-import contactHeroImg from '../../assets/images/contact_hero_person_call.png';
+import contactHeroImg from '../../assets/images/contact_hero_person_call.webp';
 
 const ScrollSlideSection = ({ children, className = '', delay = '0ms', direction = 'up' }) => {
   const ref = useRef(null);

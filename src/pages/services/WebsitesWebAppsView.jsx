@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -68,7 +68,7 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.png';
+import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.webp';
 
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';

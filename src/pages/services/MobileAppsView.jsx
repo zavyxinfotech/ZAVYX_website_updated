@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -68,8 +68,8 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import mobileHeroImg from '../../../assets/images/Mobile_apps_Hero_Img.png';
-import mobilewhychooseus from '../../../assets/images/mobile_apps.jpeg';
+import mobileHeroImg from '../../../assets/images/Mobile_apps_Hero_Img.webp';
+import mobilewhychooseus from '../../../assets/images/mobile_apps.webp';
 
 
 
