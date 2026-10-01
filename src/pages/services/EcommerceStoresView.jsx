@@ -78,12 +78,12 @@ import { pageConfigs } from './Shared';
 
 export default function EcommerceStoresView() {
   const ecommerceServices = [
-    { title: 'Custom E-commerce Store Development', desc: 'Feature-rich, scalable, and secure online stores tailored to your brand.', icon: ShoppingCart, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' },
-    { title: 'Payment Gateway Integration', desc: 'Secure and seamless payment processing with multiple options.', icon: CreditCard, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' },
-    { title: 'Product & Inventory Management', desc: 'Easy product upload, stock management, and order tracking.', icon: Package, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' },
-    { title: 'Mobile-Optimized Stores', desc: 'Fully responsive and mobile-friendly stores for a smooth shopping experience.', icon: Smartphone, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' },
-    { title: 'SEO & Marketing Integration', desc: 'Built-in SEO, analytics, and marketing tools to boost your sales.', icon: TrendingUp, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' },
-    { title: 'Ongoing Support & Maintenance', desc: 'Reliable support to keep your store running smoothly.', icon: Headphones, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' }
+    { title: <span className="text-xl sm:text-2xl">Custom E-commerce Store Development</span>, desc: <span className="text-base sm:text-lg">Feature-rich, scalable, and secure online stores tailored to your brand.</span>, icon: ShoppingCart, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' },
+    { title: <span className="text-xl sm:text-2xl">Payment Gateway Integration</span>, desc: <span className="text-base sm:text-lg">Secure and seamless payment processing with multiple options.</span>, icon: CreditCard, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' },
+    { title: <span className="text-xl sm:text-2xl">Product & Inventory Management</span>, desc: <span className="text-base sm:text-lg">Easy product upload, stock management, and order tracking.</span>, icon: Package, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' },
+    { title: <span className="text-xl sm:text-2xl">Mobile-Optimized Stores</span>, desc: <span className="text-base sm:text-lg">Fully responsive and mobile-friendly stores for a smooth shopping experience.</span>, icon: Smartphone, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' },
+    { title: <span className="text-xl sm:text-2xl">SEO & Marketing Integration</span>, desc: <span className="text-base sm:text-lg">Built-in SEO, analytics, and marketing tools to boost your sales.</span>, icon: TrendingUp, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' },
+    { title: <span className="text-xl sm:text-2xl">Ongoing Support & Maintenance</span>, desc: <span className="text-base sm:text-lg">Reliable support to keep your store running smoothly.</span>, icon: Headphones, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' }
   ];
 
   const growthPillars = [
@@ -218,7 +218,7 @@ export default function EcommerceStoresView() {
             <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
               Your E-Commerce Growth Partner
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+            <p className="text-slate-600 dark:text-slate-300 text-xl sm:text-2xl leading-relaxed mb-6 font-normal">
               We don't just build online stores; we build digital shopping experiences that attract buyers, increase conversion rates, and turn first-time shoppers into loyal brand advocates.
             </p>
 
@@ -230,8 +230,8 @@ export default function EcommerceStoresView() {
                     <div className="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center">
                       <PillarIcon className="w-4 h-4" />
                     </div>
-                    <h4 className="text-sm font-semibold text-slate-900 dark:text-white">{pillar.title}</h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 font-normal">{pillar.desc}</p>
+                    <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">{pillar.title}</h4>
+                    <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">{pillar.desc}</p>
                   </div>
                 );
               })}
@@ -260,7 +260,7 @@ export default function EcommerceStoresView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             How We Build Your Store
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-xl mx-auto lg:mx-0 font-normal">
             A battle-tested 5-step process to bring your online store to life efficiently.
           </p>
         </ScrollSlideSection>
@@ -276,10 +276,10 @@ export default function EcommerceStoresView() {
                       <StepIcon className="w-7 h-7" />
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-lg font-bold text-sky-600 dark:text-sky-400">{step.num}</span>
-                      <h3 className="text-2xl  text-slate-900 dark:text-white">{step.title}</h3>
+                      <span className="text-xl sm:text-2xl font-bold text-sky-600 dark:text-sky-400">{step.num}</span>
+                      <h3 className="text-2xl sm:text-3xl text-slate-900 dark:text-white">{step.title}</h3>
                     </div>
-                    <p className="text-md sm:text-sm text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

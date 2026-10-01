@@ -79,12 +79,12 @@ import { pageConfigs } from './Shared';
 
 export default function AiAutomationView() {
   const whatsappServices = [
-    { title: 'Intelligent Workflow Automation', desc: 'Automate repetitive chat tasks and streamline business workflows via WhatsApp Business API.', icon: Workflow, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
-    { title: 'AI Chatbots & Virtual Assistants', desc: 'Build intelligent assistants for customer support, internal operations, and lead qualification 24/7.', icon: Bot, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
-    { title: 'Document & Data Automation', desc: 'Extract, process, and send instant messaging receipts, order updates, and notifications.', icon: FileText, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' },
-    { title: 'Predictive Analytics & Insights', desc: 'Turn your conversation data into accurate predictions and actionable growth insights.', icon: BarChart3, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
-    { title: 'AI Content & Process Intelligence', desc: 'Leverage AI to analyze, generate and optimize business content and processes.', icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
-    { title: 'Custom AI Integrations', desc: 'Integrate AI into your existing systems with tailored solutions for your business.', icon: Cpu, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
+    { title: <span className="text-xl sm:text-2xl">Intelligent Workflow Automation</span>, desc: <span className="text-base sm:text-lg">Automate repetitive chat tasks and streamline business workflows via WhatsApp Business API.</span>, icon: Workflow, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
+    { title: <span className="text-xl sm:text-2xl">AI Chatbots & Virtual Assistants</span>, desc: <span className="text-base sm:text-lg">Build intelligent assistants for customer support, internal operations, and lead qualification 24/7.</span>, icon: Bot, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
+    { title: <span className="text-xl sm:text-2xl">Document & Data Automation</span>, desc: <span className="text-base sm:text-lg">Extract, process, and send instant messaging receipts, order updates, and notifications.</span>, icon: FileText, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' },
+    { title: <span className="text-xl sm:text-2xl">Predictive Analytics & Insights</span>, desc: <span className="text-base sm:text-lg">Turn your conversation data into accurate predictions and actionable growth insights.</span>, icon: BarChart3, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
+    { title: <span className="text-xl sm:text-2xl">AI Content & Process Intelligence</span>, desc: <span className="text-base sm:text-lg">Leverage AI to analyze, generate and optimize business content and processes.</span>, icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
+    { title: <span className="text-xl sm:text-2xl">Custom AI Integrations</span>, desc: <span className="text-base sm:text-lg">Integrate AI into your existing systems with tailored solutions for your business.</span>, icon: Cpu, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
   ];
 
   const workflowSteps = [
@@ -237,7 +237,7 @@ export default function AiAutomationView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             From Idea to Impact in 4 Simple Steps
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-xl mx-auto lg:mx-0 font-normal">
             Our streamlined process ensures successful AI implementation with measurable results.
           </p>
         </ScrollSlideSection>
@@ -248,14 +248,14 @@ export default function AiAutomationView() {
               <div className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 border-0 shadow-sm hover:shadow-md transition-all h-full flex flex-col justify-between relative group">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="w-8 h-8 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-bold text-sm flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800">
+                    <span className="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-bold text-lg sm:text-xl flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800">
                       {step.num}
                     </span>
-                    <h3 className="text-xl font-normal text-slate-900 dark:text-white">
+                    <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                  <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -398,10 +398,10 @@ export default function AiAutomationView() {
                     <ItemIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

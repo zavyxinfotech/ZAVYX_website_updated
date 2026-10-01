@@ -92,12 +92,12 @@ export default function CloudInfrastructureView() {
   ];
 
   const services = [
-    { title: 'Cloud Migration & Modernization', desc: 'Seamless migration to the cloud with minimal downtime and improved performance.', color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Cloud },
-    { title: 'AWS / Azure / Google Cloud Infrastructure', desc: 'Design and manage robust infrastructure on leading cloud platforms.', color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Server },
-    { title: 'DevOps & CI/CD', desc: 'Automate your development lifecycle with modern DevOps practices and CI/CD pipelines.', color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Infinity },
-    { title: 'Cloud Security', desc: 'Protect your data, applications, and infrastructure with advanced security practices.', color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Shield },
-    { title: 'Infrastructure Monitoring', desc: 'Proactive monitoring and alerting to ensure high availability and optimal performance.', color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: Activity },
-    { title: 'Backup & Disaster Recovery', desc: 'Ensure business continuity with reliable backup and disaster recovery solutions.', color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Database }
+    { title: <span className="text-xl sm:text-2xl">Cloud Migration & Modernization</span>, desc: <span className="text-base sm:text-lg">Seamless migration to the cloud with minimal downtime and improved performance.</span>, color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Cloud },
+    { title: <span className="text-xl sm:text-2xl">AWS / Azure / Google Cloud Infrastructure</span>, desc: <span className="text-base sm:text-lg">Design and manage robust infrastructure on leading cloud platforms.</span>, color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Server },
+    { title: <span className="text-xl sm:text-2xl">DevOps & CI/CD</span>, desc: <span className="text-base sm:text-lg">Automate your development lifecycle with modern DevOps practices and CI/CD pipelines.</span>, color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Infinity },
+    { title: <span className="text-xl sm:text-2xl">Cloud Security</span>, desc: <span className="text-base sm:text-lg">Protect your data, applications, and infrastructure with advanced security practices.</span>, color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Shield },
+    { title: <span className="text-xl sm:text-2xl">Infrastructure Monitoring</span>, desc: <span className="text-base sm:text-lg">Proactive monitoring and alerting to ensure high availability and optimal performance.</span>, color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: Activity },
+    { title: <span className="text-xl sm:text-2xl">Backup & Disaster Recovery</span>, desc: <span className="text-base sm:text-lg">Ensure business continuity with reliable backup and disaster recovery solutions.</span>, color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Database }
   ];
 
   return (
@@ -207,11 +207,11 @@ export default function CloudInfrastructureView() {
               <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-6">
                 Modern Architecture for a Scalable Future
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal mb-10">
+              <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-lg mx-auto lg:mx-0 font-normal mb-10">
                 We build secure, resilient, and high-performing cloud infrastructure tailored to your business needs using industry best practices and modern technologies.
               </p>
               
-              <ul className="space-y-4 w-full text-slate-700 dark:text-slate-300 font-normal">
+              <ul className="space-y-4 w-full text-slate-700 dark:text-slate-300 font-normal text-base sm:text-lg">
                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" /> Highly Available &amp; Scalable</li>
                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" /> Secure by Design</li>
                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" /> Automated &amp; Cost-Optimized</li>
@@ -249,7 +249,7 @@ export default function CloudInfrastructureView() {
                 <div className={"w-18 h-18 rounded-full flex items-center justify-center mb-4 shadow-sm " + item.color}>
                   <item.icon className="w-8 h-8 fill-current opacity-80" strokeWidth={1.5} />
                 </div>
-                <h4 className="text-sm font-normal text-slate-900 dark:text-white leading-tight">{item.title}</h4>
+                <h4 className="text-base sm:text-lg font-medium text-slate-900 dark:text-white leading-tight">{item.title}</h4>
              </ScrollSlideSection>
            ))}
         </div>
@@ -278,10 +278,10 @@ export default function CloudInfrastructureView() {
                         <div className="w-16 h-16 rounded-none bg-white dark:bg-slate-800 text-sky-500 border border-sky-100 flex items-center justify-center shrink-0 shadow-sm relative z-10 mb-5">
                           <StepIcon className="w-6 h-6 opacity-90" strokeWidth={2.5} />
                         </div>
-                        <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl">{step.num}</span> {step.title}
+                        <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                          <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
                         </h3>
-                        <p className="text-md text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
+                        <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
                       </div>
                       {idx !== processSteps.length - 1 && (
                          <div className="absolute top-7 left-full w-full h-[1px] bg-sky-200 dark:bg-slate-700 -z-0 transform -translate-x-[50%]">

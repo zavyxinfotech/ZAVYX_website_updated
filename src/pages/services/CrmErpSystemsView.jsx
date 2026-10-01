@@ -84,38 +84,38 @@ export default function CrmErpSystemsView() {
 
   const servicesList = [
     { 
-      title: 'CRM Implementation', 
-      desc: 'Manage leads, customers, and interactions with a centralized CRM system.', 
+      title: <span className="text-xl sm:text-2xl">CRM Implementation</span>, 
+      desc: <span className="text-base sm:text-lg">Manage leads, customers, and interactions with a centralized CRM system.</span>, 
       icon: Users, 
       color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' 
     },
     { 
-      title: 'Sales & Order Management', 
-      desc: 'Automate your sales process from quotation to order fulfillment.', 
+      title: <span className="text-xl sm:text-2xl">Sales & Order Management</span>, 
+      desc: <span className="text-base sm:text-lg">Automate your sales process from quotation to order fulfillment.</span>, 
       icon: ShoppingCart, 
       color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' 
     },
     { 
-      title: 'Inventory Management', 
-      desc: 'Track stock, manage warehouses and ensure real-time inventory visibility.', 
+      title: <span className="text-xl sm:text-2xl">Inventory Management</span>, 
+      desc: <span className="text-base sm:text-lg">Track stock, manage warehouses and ensure real-time inventory visibility.</span>, 
       icon: Package, 
       color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' 
     },
     { 
-      title: 'Purchase Management', 
-      desc: 'Simplify procurement and vendor management with automated workflows.', 
+      title: <span className="text-xl sm:text-2xl">Purchase Management</span>, 
+      desc: <span className="text-base sm:text-lg">Simplify procurement and vendor management with automated workflows.</span>, 
       icon: CreditCard, 
       color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' 
     },
     { 
-      title: 'Finance & Accounting', 
-      desc: 'Manage invoices, payments, expenses and financial reports with ease.', 
+      title: <span className="text-xl sm:text-2xl">Finance & Accounting</span>, 
+      desc: <span className="text-base sm:text-lg">Manage invoices, payments, expenses and financial reports with ease.</span>, 
       icon: DollarSign, 
       color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' 
     },
     { 
-      title: 'HR & Employee Management', 
-      desc: 'Streamline attendance, payroll, leaves and employee performance tracking.', 
+      title: <span className="text-xl sm:text-2xl">HR & Employee Management</span>, 
+      desc: <span className="text-base sm:text-lg">Streamline attendance, payroll, leaves and employee performance tracking.</span>, 
       icon: Briefcase, 
       color: 'bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400' 
     }
@@ -275,7 +275,7 @@ export default function CrmErpSystemsView() {
               More Than Software – <br className="hidden sm:inline" />
               A Smarter Way to Grow
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-normal leading-relaxed mb-8">
+            <p className="text-slate-600 dark:text-slate-300 text-xl sm:text-2xl font-normal leading-relaxed mb-8">
               We combine industry expertise, modern technology, and a customer-first approach to deliver CRM & ERP solutions that create real business impact.
             </p>
 
@@ -288,10 +288,10 @@ export default function CrmErpSystemsView() {
                       <PillarIcon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-normal text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-1">
                         {pillar.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                         {pillar.desc}
                       </p>
                     </div>

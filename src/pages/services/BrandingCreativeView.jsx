@@ -98,12 +98,12 @@ export default function BrandingCreativeView() {
   ];
 
   const services = [
-    { title: 'Brand Strategy', desc: 'Define your brand\'s purpose, positioning, and identity for long-term success.', color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Layout },
-    { title: 'Logo & Identity Design', desc: 'Create unique and memorable logos and visual identity systems that represent your brand.', color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Package },
-    { title: 'Marketing Collateral', desc: 'Brochures, business cards, presentations, and more to strengthen your brand presence.', color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: FileText },
-    { title: 'Social Media Creatives', desc: 'Scroll-stopping designs for social media that engage and grow your audience.', color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Megaphone },
-    { title: 'Packaging Design', desc: 'Creative packaging that makes your product stand out on every shelf.', color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: ShoppingBag },
-    { title: 'UI/UX Design', desc: 'Modern and user-friendly designs for websites and applications.', color: 'bg-blue-50 text-blue-500 dark:bg-blue-950/40 dark:text-blue-400', icon: Smartphone }
+    { title: <span className="text-xl sm:text-2xl">Brand Strategy</span>, desc: <span className="text-base sm:text-lg">Define your brand's purpose, positioning, and identity for long-term success.</span>, color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Layout },
+    { title: <span className="text-xl sm:text-2xl">Logo & Identity Design</span>, desc: <span className="text-base sm:text-lg">Create unique and memorable logos and visual identity systems that represent your brand.</span>, color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Package },
+    { title: <span className="text-xl sm:text-2xl">Marketing Collateral</span>, desc: <span className="text-base sm:text-lg">Brochures, business cards, presentations, and more to strengthen your brand presence.</span>, color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: FileText },
+    { title: <span className="text-xl sm:text-2xl">Social Media Creatives</span>, desc: <span className="text-base sm:text-lg">Scroll-stopping designs for social media that engage and grow your audience.</span>, color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: Megaphone },
+    { title: <span className="text-xl sm:text-2xl">Packaging Design</span>, desc: <span className="text-base sm:text-lg">Creative packaging that makes your product stand out on every shelf.</span>, color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: ShoppingBag },
+    { title: <span className="text-xl sm:text-2xl">UI/UX Design</span>, desc: <span className="text-base sm:text-lg">Modern and user-friendly designs for websites and applications.</span>, color: 'bg-blue-50 text-blue-500 dark:bg-blue-950/40 dark:text-blue-400', icon: Smartphone }
   ];
 
   return (
@@ -211,7 +211,7 @@ export default function BrandingCreativeView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-xl mx-auto lg:mx-0">
             From Ideas to Impact
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md mx-auto lg:mx-0 font-normal mt-4">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-md mx-auto lg:mx-0 font-normal mt-4">
             We follow a strategic and collaborative process to create brands that inspire and deliver results.
           </p>
         </ScrollSlideSection>
@@ -227,10 +227,10 @@ export default function BrandingCreativeView() {
                       <div className="w-18 h-18 rounded-full bg-white dark:bg-slate-800 text-sky-500 border border-sky-100 flex items-center justify-center shrink-0 shadow-sm relative z-10 mb-5">
                         <StepIcon className="w-8 h-8 opacity-90" />
                       </div>
-                      <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                        <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl">{step.num}</span> {step.title}
+                      <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                        <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
                       </h3>
-                      <p className="text-md text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
+                      <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
                     </div>
                     {idx !== processSteps.length - 1 && (
                       <div className="absolute top-7 left-full w-full h-[1px] bg-slate-200 dark:bg-slate-700 -z-0 transform -translate-x-[50%]">
@@ -266,7 +266,7 @@ export default function BrandingCreativeView() {
               <div className="w-16 h-16 rounded-full bg-amber-500/20 blur-2xl absolute center" />
               <img src={logoDesign} alt="Lumina" className="h-full object-contain filter saturate-50 group-hover:saturate-100 transition-all opacity-80 group-hover:scale-105 group-hover:opacity-100" />
             </div>
-            <div className="py-4 px-2 font-normal text-slate-900 dark:text-slate-300 text-sm text-center border-t border-slate-100 dark:border-slate-800">
+            <div className="py-4 px-2 font-medium text-slate-900 dark:text-slate-300 text-base sm:text-lg text-center border-t border-slate-100 dark:border-slate-800">
               Logo &amp; Brand Identity
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function BrandingCreativeView() {
             <div className="h-48 bg-[#E9E4DB] flex items-center justify-center relative overflow-hidden p-4 group">
               <img src={packagedesign} alt="Leafy" className="h-full object-cover filter group-hover:scale-105 transition-all w-1/2 opacity-70" />
             </div>
-            <div className="py-4 px-2 font-normal text-slate-900 dark:text-slate-300 text-sm text-center border-t border-slate-100 dark:border-slate-800">
+            <div className="py-4 px-2 font-medium text-slate-900 dark:text-slate-300 text-base sm:text-lg text-center border-t border-slate-100 dark:border-slate-800">
               Packaging Design
             </div>
           </div>
@@ -284,7 +284,7 @@ export default function BrandingCreativeView() {
             <div className="h-48  flex items-center justify-center relative overflow-hidden group">
               <img src={brandingcollateral} alt="Nexa" className="h-full object-cover filter group-hover:scale-105 transition-all opacity-40 grayscale group-hover:grayscale-0" />
             </div>
-            <div className="py-4 px-2 font-normal text-slate-900 dark:text-slate-300 text-sm text-center border-t border-slate-100 dark:border-slate-800">
+            <div className="py-4 px-2 font-medium text-slate-900 dark:text-slate-300 text-base sm:text-lg text-center border-t border-slate-100 dark:border-slate-800">
               Brand Collateral
             </div>
           </div>
@@ -293,7 +293,7 @@ export default function BrandingCreativeView() {
             <div className="h-48 bg-pink-50 flex items-center justify-center relative overflow-hidden group">
               <img src={socialmediacreative} alt="Social" className="h-full object-cover filter group-hover:scale-105 transition-all opacity-60 mix-blend-multiply" />
             </div>
-            <div className="py-4 px-2 font-normal text-slate-900 dark:text-slate-300 text-sm text-center border-t border-slate-100 dark:border-slate-800">
+            <div className="py-4 px-2 font-medium text-slate-900 dark:text-slate-300 text-base sm:text-lg text-center border-t border-slate-100 dark:border-slate-800">
               Social Media Creatives
             </div>
           </div>

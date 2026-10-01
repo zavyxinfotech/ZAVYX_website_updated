@@ -94,12 +94,12 @@ export default function DigitalMarketingView() {
   ];
 
   const services = [
-    { title: 'Search Engine Optimization (SEO)', desc: 'Improve your website ranking and get organic traffic from search engines.', color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Search },
-    { title: 'Social Media Marketing', desc: 'Build your brand presence on Facebook, Instagram, LinkedIn and more.', color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Megaphone },
-    { title: 'Pay Per Click (PPC) Advertising', desc: 'Get instant visibility with targeted ad campaigns that deliver real results.', color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Target },
-    { title: 'Content Marketing', desc: 'Engaging content that attracts, converts, and retains your audience.', color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: FileText },
-    { title: 'Email Marketing', desc: 'Reach your customers with personalized email campaigns that drive action.', color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: Mail },
-    { title: 'Analytics & Reporting', desc: 'Track performance with detailed reports and data-driven insights.', color: 'bg-blue-50 text-blue-500 dark:bg-blue-950/40 dark:text-blue-400', icon: BarChart3 }
+    { title: <span className="text-xl sm:text-2xl">Search Engine Optimization (SEO)</span>, desc: <span className="text-base sm:text-lg">Improve your website ranking and get organic traffic from search engines.</span>, color: 'bg-sky-50 text-sky-500 dark:bg-sky-950/40 dark:text-sky-400', icon: Search },
+    { title: <span className="text-xl sm:text-2xl">Social Media Marketing</span>, desc: <span className="text-base sm:text-lg">Build your brand presence on Facebook, Instagram, LinkedIn and more.</span>, color: 'bg-pink-50 text-pink-500 dark:bg-pink-950/40 dark:text-pink-400', icon: Megaphone },
+    { title: <span className="text-xl sm:text-2xl">Pay Per Click (PPC) Advertising</span>, desc: <span className="text-base sm:text-lg">Get instant visibility with targeted ad campaigns that deliver real results.</span>, color: 'bg-emerald-50 text-emerald-500 dark:bg-emerald-950/40 dark:text-emerald-400', icon: Target },
+    { title: <span className="text-xl sm:text-2xl">Content Marketing</span>, desc: <span className="text-base sm:text-lg">Engaging content that attracts, converts, and retains your audience.</span>, color: 'bg-purple-50 text-purple-500 dark:bg-purple-950/40 dark:text-purple-400', icon: FileText },
+    { title: <span className="text-xl sm:text-2xl">Email Marketing</span>, desc: <span className="text-base sm:text-lg">Reach your customers with personalized email campaigns that drive action.</span>, color: 'bg-amber-50 text-amber-500 dark:bg-amber-950/40 dark:text-amber-400', icon: Mail },
+    { title: <span className="text-xl sm:text-2xl">Analytics & Reporting</span>, desc: <span className="text-base sm:text-lg">Track performance with detailed reports and data-driven insights.</span>, color: 'bg-blue-50 text-blue-500 dark:bg-blue-950/40 dark:text-blue-400', icon: BarChart3 }
   ];
 
   return (
@@ -207,7 +207,7 @@ export default function DigitalMarketingView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-3xl mx-auto lg:mx-0">
             A Simple Process for Real Results
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-md mx-auto lg:mx-0 font-normal mt-4">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-md mx-auto lg:mx-0 font-normal mt-4">
             We follow a proven process to plan, execute, and optimize your digital marketing campaigns.
           </p>
         </ScrollSlideSection>
@@ -223,10 +223,10 @@ export default function DigitalMarketingView() {
                         <div className="w-18 h-18 rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-500 border-2 border-sky-100 flex items-center justify-center shrink-0 shadow-sm relative z-10 mb-4">
                           <StepIcon className="w-6 h-6 opacity-80" />
                         </div>
-                        <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          {step.num} <span className="text-slate-900 dark:text-slate-100">{step.title}</span>
+                        <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                          <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> <span className="text-slate-900 dark:text-slate-100">{step.title}</span>
                         </h3>
-                        <p className="text-md text-slate-500 max-w-[140px] text-center font-normal">{step.desc}</p>
+                        <p className="text-base sm:text-lg text-slate-500 max-w-[140px] text-center font-normal">{step.desc}</p>
                       </div>
                       {idx !== processSteps.length - 1 && (
                          <div className="absolute top-7 left-1/2 w-full h-[1.5px] bg-sky-100 dark:bg-sky-900/50 -z-0">
@@ -251,7 +251,7 @@ export default function DigitalMarketingView() {
               <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-4">
                 Your Trusted Partner<br/>in Digital Growth
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-normal mb-8">
+              <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-lg mx-auto lg:mx-0 font-normal mb-8">
                 We combine creativity, data, and industry expertise to deliver digital marketing solutions that drive real business impact.
               </p>
               
@@ -261,8 +261,8 @@ export default function DigitalMarketingView() {
                      <div className={'w-10 h-10 rounded-lg flex items-center justify-center ' + item.color}>
                        <item.icon className="w-3 h-5 fill-current opacity-80" />
                      </div>
-                     <h4 className="text-lg font-normal text-slate-900 dark:text-white">{item.title}</h4>
-                     <p className="text-md text-slate-500 font-normal">{item.desc}</p>
+                     <h4 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-white">{item.title}</h4>
+                     <p className="text-base sm:text-lg text-slate-500 font-normal">{item.desc}</p>
                    </div>
                  ))}
               </div>

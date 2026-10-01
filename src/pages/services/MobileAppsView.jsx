@@ -78,12 +78,12 @@ import { pageConfigs } from './Shared';
 
 export default function MobileAppsView() {
   const mobileServices = [
-    { title: 'iOS App Development', desc: 'High-performance, secure, and scalable apps for iPhone and iPad using Swift and modern frameworks.', icon: Smartphone, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
-    { title: 'Android App Development', desc: 'Feature-rich Android apps with modern UI/UX and robust performance using Kotlin.', icon: ShoppingCart, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
-    { title: 'Cross-Platform Development', desc: 'Build once, run everywhere with Flutter or React Native for faster time-to-market.', icon: Layers, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400' },
-    { title: 'UI/UX Design', desc: 'Intuitive and engaging designs that deliver exceptional user experiences.', icon: Layout, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
-    { title: 'App Maintenance & Support', desc: 'Keep your app secure, updated and running smoothly with our ongoing support.', icon: Gauge, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
-    { title: 'App Consulting', desc: 'Turn your idea into a successful product with expert guidance and technical consulting.', icon: Compass, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
+    { title: <span className="text-xl sm:text-2xl">iOS App Development</span>, desc: <span className="text-base sm:text-lg">High-performance, secure, and scalable apps for iPhone and iPad using Swift and modern frameworks.</span>, icon: Smartphone, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
+    { title: <span className="text-xl sm:text-2xl">Android App Development</span>, desc: <span className="text-base sm:text-lg">Feature-rich Android apps with modern UI/UX and robust performance using Kotlin.</span>, icon: ShoppingCart, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
+    { title: <span className="text-xl sm:text-2xl">Cross-Platform Development</span>, desc: <span className="text-base sm:text-lg">Build once, run everywhere with Flutter or React Native for faster time-to-market.</span>, icon: Layers, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400' },
+    { title: <span className="text-xl sm:text-2xl">UI/UX Design</span>, desc: <span className="text-base sm:text-lg">Intuitive and engaging designs that deliver exceptional user experiences.</span>, icon: Layout, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
+    { title: <span className="text-xl sm:text-2xl">App Maintenance & Support</span>, desc: <span className="text-base sm:text-lg">Keep your app secure, updated and running smoothly with our ongoing support.</span>, icon: Gauge, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
+    { title: <span className="text-xl sm:text-2xl">App Consulting</span>, desc: <span className="text-base sm:text-lg">Turn your idea into a successful product with expert guidance and technical consulting.</span>, icon: Compass, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
   ];
 
   const processSteps = [
@@ -226,7 +226,7 @@ export default function MobileAppsView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             From Idea to Launch in Simple Steps
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-2xl mx-auto lg:mx-0 font-normal">
             We follow a structured and agile process to deliver high-quality mobile applications.
           </p>
         </ScrollSlideSection>
@@ -241,10 +241,10 @@ export default function MobileAppsView() {
                     <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3 shrink-0">
                       <StepIcon className="w-5 h-5" />
                     </div>
-                    <span className="text-lg font-normal text-slate-900 dark:text-white block mb-1">
-                      <span className=" text-lg sm:text-sm font-semibold text-sky-600 dark:text-sky-400 mr-1">{step.num}</span> {step.title}
+                    <span className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white block mb-2">
+                      <span className="text-xl sm:text-2xl font-bold text-sky-600 dark:text-sky-400 mr-2">{step.num}</span> {step.title}
                     </span>
-                    <p className="text-2xl sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -270,7 +270,7 @@ export default function MobileAppsView() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white mb-2">
             Your Trusted Partner in Mobile App Development
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+          <p className="text-slate-600 dark:text-slate-400 text-xl sm:text-2xl max-w-2xl mx-auto lg:mx-0 font-normal">
             We combine technical expertise, creative design, and a user-first approach to build mobile apps that drive real business results.
           </p>
         </ScrollSlideSection>
@@ -288,10 +288,10 @@ export default function MobileAppsView() {
                       <ItemIcon className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-normal text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
