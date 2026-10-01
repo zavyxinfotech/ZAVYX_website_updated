@@ -54,13 +54,8 @@ export default function About() {
                 <AnimatedHeroText text="Cutting-Edge Technology" />
               </span>
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
-              <span className="block sm:hidden">
-                We are a team of passionate engineers, architects, and designers dedicated to helping businesses scale digital products.
-              </span>
-              <span className="hidden sm:inline">
-                We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
-              </span>
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal text-left">
+              We are a team of passionate software engineers, cloud architects, and product designers dedicated to helping businesses scale with reliable digital products.
             </p>
             {/* Desktop Only CTA Buttons */}
             <div className="hidden lg:flex flex-row items-center gap-3 sm:gap-6 mb-8 w-full justify-start">

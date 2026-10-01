@@ -499,21 +499,21 @@ export default function Home() {
               </p>
 
               {/* MOBILE ONLY IMAGE SECTION: Soft Blue Background Circle + Overlays + Uncropped Image */}
-              <div className="block lg:hidden -mt-10 sm:-mt-12 mb-2 relative w-full flex flex-col items-center justify-center">
+              <div className="block lg:hidden -mt-6 sm:-mt-8 mb-6 sm:mb-8 relative w-full flex flex-col items-center justify-center">
                 {/* Container for Image & Overlays */}
-                <div className="relative w-full max-w-[340px] mx-auto flex items-center justify-center">
+                <div className="relative w-full max-w-[380px] sm:max-w-[420px] mx-auto flex items-center justify-center">
                   {/* Soft Ambient Logo Blue Background Circle Shape - Shifted lower */}
-                  <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[270px] sm:h-[270px] rounded-full bg-[#e0f2fe]/70 dark:bg-sky-950/40 pointer-events-none z-0" />
+                  <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[320px] sm:h-[320px] rounded-full bg-[#e0f2fe]/70 dark:bg-sky-950/40 pointer-events-none z-0" />
 
                   {/* Uncropped Mobile Building Image */}
                   <img
                     src={heroBgMobile}
                     alt="ZAVYX Infotech Mobile Building"
-                    className="w-full max-w-[325px] sm:max-w-[340px] max-h-[275px] sm:max-h-[295px] h-auto object-contain z-10 mx-auto transform scale-105"
+                    className="w-full max-w-[360px] sm:max-w-[390px] max-h-[310px] sm:max-h-[335px] h-auto object-contain z-10 mx-auto transform scale-110"
                   />
 
                   {/* People / Ideas / Solutions Overlay directly UPON the image (shifted lower) */}
-                  <div className="absolute top-[22%] left-[5%] z-30 flex flex-col text-left pointer-events-none">
+                  <div className="absolute top-[20%] left-[5%] z-30 flex flex-col text-left pointer-events-none">
                     <div className="w-5 h-[2px] bg-sky-500 mb-1" />
                     <div className="text-slate-800 dark:text-slate-100 font-semibold text-[11px] leading-tight tracking-tight">
                       <div>People</div>
@@ -528,7 +528,7 @@ export default function Home() {
                   </div>
 
                   {/* Turning Ideas into Real Impact Overlay Card (shifted inwards away from floating WhatsApp icon) */}
-                  <div className="absolute bottom-[2%] right-[14%] z-20 bg-white dark:bg-slate-800 rounded-lg shadow-md px-2 py-1 border border-slate-100 dark:border-slate-700/60 flex items-center gap-1.5 max-w-[155px]">
+                  <div className="absolute bottom-[2%] right-[12%] z-20 bg-white dark:bg-slate-800 rounded-lg shadow-md px-2.5 py-1 border border-slate-100 dark:border-slate-700/60 flex items-center gap-1.5 max-w-[160px]">
                     <div className="w-5.5 h-5.5 rounded-md bg-gradient-to-tr from-[#ec4899] to-[#f43f5e] text-white flex items-center justify-center shrink-0 shadow-sm">
                       <TrendingUp className="w-3 h-3 stroke-[2.5]" />
                     </div>
@@ -545,7 +545,7 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons Row - One line on mobile */}
-              <div className="flex flex-row items-center gap-2.5 sm:gap-6 my-2.5 sm:mb-12 w-full">
+              <div className="flex flex-row items-center gap-2.5 sm:gap-6 mt-4 mb-4 sm:mb-12 w-full">
                 <Link
                   to="/contact"
                   className="relative inline-flex h-11 sm:h-14 overflow-hidden rounded-md p-[2px] group flex-1 sm:flex-none shadow-sm cursor-pointer"

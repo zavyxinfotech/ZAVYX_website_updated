@@ -459,8 +459,8 @@ export const ServiceStatsTicker = ({ stats = [] }) => {
               {displayStats.map((stat, idx) => (
                 <React.Fragment key={idx}>
                   <div className="flex items-center gap-2">
-                    <span className="text-base font-bold text-slate-900 dark:text-white">{stat.val}</span>
-                    <span className="text-xs text-slate-600 dark:text-slate-400 font-normal">{stat.label}</span>
+                    <span className="text-3xl font-normal text-slate-900 dark:text-white">{stat.val}</span>
+                    <span className="text-lg text-slate-600 dark:text-slate-400 font-normal">{stat.label}</span>
                   </div>
                   <span className="text-slate-300 dark:text-slate-700">|</span>
                 </React.Fragment>
