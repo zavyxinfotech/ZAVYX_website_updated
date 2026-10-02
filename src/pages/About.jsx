@@ -205,19 +205,19 @@ export default function About() {
              
              {/* Box 1 - Top Left */}
              <div className="rounded-tl-[80px] rounded-br-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-sky-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[90%] align-bottom self-end">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="About Image 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 2 - Top Right */}
              <div className="rounded-tr-[80px] rounded-bl-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-emerald-500 transition-colors duration-500 cursor-pointer relative z-0 w-[90%] h-full">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="About Image 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 3 - Bottom Left */}
              <div className="rounded-bl-[80px] rounded-tr-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-amber-500 transition-colors duration-500 cursor-pointer relative z-0 w-[80%] h-[90%] justify-self-end mt-4">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="About Image 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
              {/* Box 4 - Bottom Right */}
              <div className="rounded-br-[80px] rounded-tl-[40px] overflow-hidden shadow-lg border-[3px] border-slate-50 dark:border-slate-800 hover:border-rose-500 transition-colors duration-500 cursor-pointer relative z-10 w-full h-[80%] mt-4">
-                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Image 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="About Image 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
              </div>
           </ScrollSlideSection>
 

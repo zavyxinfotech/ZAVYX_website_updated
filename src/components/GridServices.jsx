@@ -85,9 +85,8 @@ export default function GridServices() {
                 {/* Precision left border highlight mapped to literal logo/shade colors natively */}
                 <div className={`absolute left-0 top-0 bottom-0 w-[4px] ${svc.bgColor} scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center z-20`}></div>
 
-                {/* Sliding Image Background on Hover */}
                 <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] z-0 pointer-events-none opacity-0 group-hover:opacity-100 overflow-hidden">
-                  <img src={svc.image} className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" alt={svc.title} />
+                  <img src={svc.image} loading="lazy" className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" alt={svc.title} />
                 </div>
 
                 {/* Hover States: Top-left Title & Bottom-right Arrow */}
