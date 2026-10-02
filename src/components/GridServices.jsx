@@ -44,7 +44,7 @@ export default function GridServices() {
             text="Comprehensive Digital Solutions"
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4 text-left justify-start w-full"
           />
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg font-normal max-w-3xl leading-relaxed text-left">
+          <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl lg:text-2xl font-normal max-w-3xl leading-relaxed text-left">
             Tailored technological capabilities engineered to drive growth, automation, and operational efficiency within your business architecture.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function GridServices() {
                     {svc.title}
                   </h3>
 
-                  <p className="text-slate-600 dark:text-slate-400 text-sm md:text-[15px] lg:text-base font-normal leading-relaxed md:leading-snug max-w-[280px] lg:max-w-[320px] relative z-20">
+                  <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg lg:text-xl font-normal leading-relaxed md:leading-snug max-w-[300px] lg:max-w-[340px] relative z-20">
                     {svc.desc}
                   </p>
                 </div>

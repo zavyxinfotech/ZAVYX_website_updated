@@ -78,12 +78,12 @@ import { pageConfigs } from './Shared';
 
 export default function EcommerceStoresView() {
   const ecommerceServices = [
-    { title: <span className="text-xl sm:text-2xl">Custom E-commerce Store Development</span>, desc: <span className="text-base sm:text-lg">Feature-rich, scalable, and secure online stores tailored to your brand.</span>, icon: ShoppingCart, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' },
-    { title: <span className="text-xl sm:text-2xl">Payment Gateway Integration</span>, desc: <span className="text-base sm:text-lg">Secure and seamless payment processing with multiple options.</span>, icon: CreditCard, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' },
-    { title: <span className="text-xl sm:text-2xl">Product & Inventory Management</span>, desc: <span className="text-base sm:text-lg">Easy product upload, stock management, and order tracking.</span>, icon: Package, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' },
-    { title: <span className="text-xl sm:text-2xl">Mobile-Optimized Stores</span>, desc: <span className="text-base sm:text-lg">Fully responsive and mobile-friendly stores for a smooth shopping experience.</span>, icon: Smartphone, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' },
-    { title: <span className="text-xl sm:text-2xl">SEO & Marketing Integration</span>, desc: <span className="text-base sm:text-lg">Built-in SEO, analytics, and marketing tools to boost your sales.</span>, icon: TrendingUp, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' },
-    { title: <span className="text-xl sm:text-2xl">Ongoing Support & Maintenance</span>, desc: <span className="text-base sm:text-lg">Reliable support to keep your store running smoothly.</span>, icon: Headphones, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' }
+    { title: <span className="text-2xl sm:text-3xl font-normal">Custom E-commerce Store Development</span>, desc: <span className="text-lg sm:text-xl">Feature-rich, scalable, and secure online stores tailored to your brand.</span>, icon: ShoppingCart, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Payment Gateway Integration</span>, desc: <span className="text-lg sm:text-xl">Secure and seamless payment processing with multiple options.</span>, icon: CreditCard, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Product & Inventory Management</span>, desc: <span className="text-lg sm:text-xl">Easy product upload, stock management, and order tracking.</span>, icon: Package, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Mobile-Optimized Stores</span>, desc: <span className="text-lg sm:text-xl">Fully responsive and mobile-friendly stores for a smooth shopping experience.</span>, icon: Smartphone, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">SEO & Marketing Integration</span>, desc: <span className="text-lg sm:text-xl">Built-in SEO, analytics, and marketing tools to boost your sales.</span>, icon: TrendingUp, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Ongoing Support & Maintenance</span>, desc: <span className="text-lg sm:text-xl">Reliable support to keep your store running smoothly.</span>, icon: Headphones, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' }
   ];
 
   const growthPillars = [
@@ -104,7 +104,7 @@ export default function EcommerceStoresView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
@@ -230,8 +230,8 @@ export default function EcommerceStoresView() {
                     <div className="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center">
                       <PillarIcon className="w-4 h-4" />
                     </div>
-                    <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">{pillar.title}</h4>
-                    <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">{pillar.desc}</p>
+                    <h4 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">{pillar.title}</h4>
+                    <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal">{pillar.desc}</p>
                   </div>
                 );
               })}
@@ -276,10 +276,10 @@ export default function EcommerceStoresView() {
                       <StepIcon className="w-7 h-7" />
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xl sm:text-2xl font-bold text-sky-600 dark:text-sky-400">{step.num}</span>
-                      <h3 className="text-2xl sm:text-3xl text-slate-900 dark:text-white">{step.title}</h3>
+                      <span className="text-xl sm:text-2xl font-normal text-sky-600 dark:text-sky-400">{step.num}</span>
+                      <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">{step.title}</h3>
                     </div>
-                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                    <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -300,7 +300,7 @@ export default function EcommerceStoresView() {
         <ScrollSlideSection direction="up">
           <div className="bg-gradient-to-r from-sky-50/90 via-blue-50/50 to-pink-50/80 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-800/90 p-8 sm:p-12   dark:border-slate-700/80  flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="max-w-2xl text-left">
-              <span className="text-sky-600  dark:text-sky-400 font-semibold tracking-widest text-2xl sm:text-md lg:text-2xl uppercase mb-2 block">
+              <span className="text-sky-600  dark:text-sky-400 font-normal tracking-widest text-2xl sm:text-md lg:text-2xl uppercase mb-2 block">
                 SUCCESS STORY
               </span>
               <h3 className="text-3xl  sm:text-xl lg:text-3xl  font-normal text-slate-900 dark:text-white mb-3">

@@ -68,7 +68,7 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.webp';
+import crmErpHeroImg from '../../../assets/images/CRM_ERP_systems_hero.webp';
 import crmDashboardImg from '../../../assets/images/crm_erp_dashboard_mockup.webp';
 import crmGrowthPartnerImg from '../../../assets/images/crm_erp_growth_partner.webp';
 
@@ -84,38 +84,38 @@ export default function CrmErpSystemsView() {
 
   const servicesList = [
     { 
-      title: <span className="text-xl sm:text-2xl">CRM Implementation</span>, 
-      desc: <span className="text-base sm:text-lg">Manage leads, customers, and interactions with a centralized CRM system.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">CRM Implementation</span>, 
+      desc: <span className="text-lg sm:text-xl">Manage leads, customers, and interactions with a centralized CRM system.</span>, 
       icon: Users, 
       color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400' 
     },
     { 
-      title: <span className="text-xl sm:text-2xl">Sales & Order Management</span>, 
-      desc: <span className="text-base sm:text-lg">Automate your sales process from quotation to order fulfillment.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">Sales & Order Management</span>, 
+      desc: <span className="text-lg sm:text-xl">Automate your sales process from quotation to order fulfillment.</span>, 
       icon: ShoppingCart, 
       color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/50 dark:text-pink-400' 
     },
     { 
-      title: <span className="text-xl sm:text-2xl">Inventory Management</span>, 
-      desc: <span className="text-base sm:text-lg">Track stock, manage warehouses and ensure real-time inventory visibility.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">Inventory Management</span>, 
+      desc: <span className="text-lg sm:text-xl">Track stock, manage warehouses and ensure real-time inventory visibility.</span>, 
       icon: Package, 
       color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' 
     },
     { 
-      title: <span className="text-xl sm:text-2xl">Purchase Management</span>, 
-      desc: <span className="text-base sm:text-lg">Simplify procurement and vendor management with automated workflows.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">Purchase Management</span>, 
+      desc: <span className="text-lg sm:text-xl">Simplify procurement and vendor management with automated workflows.</span>, 
       icon: CreditCard, 
       color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400' 
     },
     { 
-      title: <span className="text-xl sm:text-2xl">Finance & Accounting</span>, 
-      desc: <span className="text-base sm:text-lg">Manage invoices, payments, expenses and financial reports with ease.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">Finance & Accounting</span>, 
+      desc: <span className="text-lg sm:text-xl">Manage invoices, payments, expenses and financial reports with ease.</span>, 
       icon: DollarSign, 
       color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400' 
     },
     { 
-      title: <span className="text-xl sm:text-2xl">HR & Employee Management</span>, 
-      desc: <span className="text-base sm:text-lg">Streamline attendance, payroll, leaves and employee performance tracking.</span>, 
+      title: <span className="text-2xl sm:text-3xl font-normal">HR & Employee Management</span>, 
+      desc: <span className="text-lg sm:text-xl">Streamline attendance, payroll, leaves and employee performance tracking.</span>, 
       icon: Briefcase, 
       color: 'bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400' 
     }
@@ -161,7 +161,7 @@ export default function CrmErpSystemsView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
@@ -288,10 +288,10 @@ export default function CrmErpSystemsView() {
                       <PillarIcon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-1">
                         {pillar.title}
                       </h3>
-                      <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                      <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                         {pillar.desc}
                       </p>
                     </div>
@@ -346,7 +346,7 @@ export default function CrmErpSystemsView() {
                   <div className={`w-12 h-12 rounded-xl ${ind.color} flex items-center justify-center transition-transform group-hover:scale-110`}>
                     <IndIcon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-sm sm:text-base font-normal text-slate-900 dark:text-white">
+                  <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white">
                     {ind.title}
                   </h3>
                 </div>

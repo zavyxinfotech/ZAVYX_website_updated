@@ -70,6 +70,7 @@ import {
 
 
 import cloudHeroImg from '../../../assets/images/Clooud_Infrastructure_hero_img.webp';
+import ourCloudApproachImg from '../../../assets/images/Cloud_infrastructure_our_cloud_approach.webp';
 
 import { ScrollSlideSection, officialTechLogos, ServiceStatsTicker, ServiceCardsSection } from './Shared';
 import { pageConfigs } from './Shared';
@@ -104,7 +105,7 @@ export default function CloudInfrastructureView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-cyan-300/20 dark:bg-cyan-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
         
@@ -197,8 +198,8 @@ export default function CloudInfrastructureView() {
       />
       
       {/* 3. OUR CLOUD APPROACH */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-12 bg-sky-50/50 dark:bg-slate-900/50 border-y border-slate-200/60 dark:border-slate-800/60">
-         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="py-6 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-2 sm:mt-12 bg-sky-50/50 dark:bg-slate-900/50 border-y border-slate-200/60 dark:border-slate-800/60">
+         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-12 items-center">
             
             <ScrollSlideSection direction="up" className="lg:col-span-5 flex flex-col items-start text-left max-w-xl lg:max-w-2xl">
               <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
@@ -219,11 +220,11 @@ export default function CloudInfrastructureView() {
               </ul>
             </ScrollSlideSection>
 
-            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-7 flex justify-end">
-               <div className="relative w-full h-full  overflow-hidden  flex items-center justify-center  dark:border-slate-700 p-8">
+            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-7 flex justify-center lg:justify-end w-full">
+               <div className="relative w-full h-full overflow-hidden flex items-center justify-center dark:border-slate-700 p-0 sm:p-8 mt-2 sm:mt-0">
                   <div className="absolute top-10 right-10 w-32 h-32 bg-sky-300/30 blur-2xl rounded-full"></div>
                   <div className="absolute bottom-10 left-10 w-32 h-32 bg-indigo-300/30 blur-2xl"></div>
-                  <img src={cloudHeroImg} alt="Cloud Approach Architecture" className="w-full object-contain relative z-10 scale-90 mix-blend-multiply dark:mix-blend-normal" />
+                  <img src={ourCloudApproachImg} alt="Cloud Approach Architecture" className="w-full object-contain relative z-10 transform scale-110 sm:scale-90 -translate-y-4 sm:translate-y-0 mix-blend-multiply dark:mix-blend-normal" />
                </div>
             </ScrollSlideSection>
          </div>
@@ -249,7 +250,7 @@ export default function CloudInfrastructureView() {
                 <div className={"w-18 h-18 rounded-full flex items-center justify-center mb-4 shadow-sm " + item.color}>
                   <item.icon className="w-8 h-8 fill-current opacity-80" strokeWidth={1.5} />
                 </div>
-                <h4 className="text-base sm:text-lg font-medium text-slate-900 dark:text-white leading-tight">{item.title}</h4>
+                <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white leading-tight">{item.title}</h4>
              </ScrollSlideSection>
            ))}
         </div>
@@ -257,7 +258,7 @@ export default function CloudInfrastructureView() {
 
 
       {/* 5. OUR PROCESS */}
-      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 mt-12 bg-transparent">
+      <section className="py-4 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 my-4 sm:my-12 bg-transparent">
         <ScrollSlideSection direction="up" className="mb-10 text-left">
           <h4 className="text-sky-600 dark:text-sky-400 font-normal uppercase tracking-widest text-xs sm:text-sm mb-2">
             OUR PROCESS
@@ -279,7 +280,7 @@ export default function CloudInfrastructureView() {
                           <StepIcon className="w-6 h-6 opacity-90" strokeWidth={2.5} />
                         </div>
                         <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
+                          <span className="font-normal text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
                         </h3>
                         <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
                       </div>

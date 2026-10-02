@@ -9,8 +9,8 @@ import {
 
 import webAppsHeroImg from '../../../assets/images/website_webapps_hero_image.webp';
 import ecommerceHeroImg from '../../../assets/images/e_commerce_stores_hero_transparent.webp';
-import crmErpHeroImg from '../../../assets/images/CRM_ERP__systems_hero_img.webp';
-import whatsappHeroImg from '../../../assets/images/whatsapp_API_hero_img.webp';
+import crmErpHeroImg from '../../../assets/images/CRM_ERP_systems_hero.webp';
+import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero.webp';
 import analyticsDashboardImg from '../../../assets/images/website_analytics_dashboard_mockup.webp';
 import ecommerceWomanImg from '../../../assets/images/ecommerce_growth_partner_v2.webp';
 import fashionCaseStudyImg from '../../../assets/images/fashion_ecommerce_case_study.webp';
@@ -458,9 +458,9 @@ export const ServiceStatsTicker = ({ stats = [] }) => {
             <div key={setIdx} className="flex items-center gap-6">
               {displayStats.map((stat, idx) => (
                 <React.Fragment key={idx}>
-                  <div className="flex items-center gap-2">
-                    <span className="text-3xl font-normal text-slate-900 dark:text-white">{stat.val}</span>
-                    <span className="text-lg text-slate-600 dark:text-slate-400 font-normal">{stat.label}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-4xl sm:text-5xl font-light tracking-wide text-slate-900 dark:text-white">{stat.val}</span>
+                    <span className="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 font-light">{stat.label}</span>
                   </div>
                   <span className="text-slate-300 dark:text-slate-700">|</span>
                 </React.Fragment>

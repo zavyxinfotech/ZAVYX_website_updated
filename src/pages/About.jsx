@@ -222,7 +222,7 @@ export default function About() {
           </ScrollSlideSection>
 
           {/* Right Content */}
-          <ScrollSlideSection delay="100ms" className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <ScrollSlideSection delay="100ms" className="flex flex-col items-start lg:items-start text-left lg:text-left">
             <h4 className="text-amber-500 font-normal tracking-widest text-sm uppercase mb-4 flex items-center gap-2">
               <span className="w-6 h-0.5 bg-amber-500 inline-block block"></span>
               About Us
@@ -230,7 +230,7 @@ export default function About() {
             <h2 className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-6 leading-[1.1]">
               Transforming Ideas<br /> into Digital Reality
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-10 border-l-[3px] sm:border-l-4 border-emerald-500 pl-3 sm:pl-4 font-normal">
+            <p className="text-slate-600 dark:text-slate-400 text-[16px] sm:text-[18px] lg:text-xl leading-relaxed mb-6 sm:mb-10 border-l-[3px] sm:border-l-4 border-emerald-500 pl-3 sm:pl-4 font-normal">
               ZAVYX InfoTech was founded with a singular purpose: to deliver unparalleled digital experiences that empower businesses to scale securely and efficiently. We are hitting the ground running on day one with relentless startup energy.
             </p>
             
@@ -268,7 +268,7 @@ export default function About() {
               <Target className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="text-xl sm:text-3xl font-normal tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">Our Mission</h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
               To empower enterprises and growing startups with high-performance software solutions, seamless cloud automation, and high-impact digital experiences. We measure our success directly by the ROI we generate for you.
             </p>
           </ScrollSlideSection>
@@ -279,7 +279,7 @@ export default function About() {
               <Rocket className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="text-xl sm:text-3xl font-normal tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">Our Vision</h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
               To be the most trusted technology engineering partner globally, known for innovation, speed of execution, and uncompromising code quality that stands the test of structural demands over long durations.
             </p>
           </ScrollSlideSection>
@@ -298,7 +298,7 @@ export default function About() {
           <h2 className="text-2xl min-[400px]:text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-6 leading-[1.1]">
             Meet the Minds Behind the Machine
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg px-2">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg px-2">
             Our expert team of engineers and creative directors work harmoniously to translate your vision into a measurable digital asset.
           </p>
         </ScrollSlideSection>
@@ -372,7 +372,7 @@ export default function About() {
 
                  <h3 className="text-[13px] min-[400px]:text-[15px] sm:text-xl font-normal text-slate-900 dark:text-white uppercase tracking-tight sm:tracking-wider mb-1 sm:mb-2">{member.title}</h3>
                  <p className="text-[10px] min-[400px]:text-[11px] sm:text-[13px] font-normal text-slate-500 dark:text-slate-400 uppercase tracking-widest sm:tracking-[0.2em] mb-2 sm:mb-4">{member.name}</p>
-                 <p className="text-[11px] min-[400px]:text-[12px] sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px] font-normal px-2">
+                 <p className="text-[13px] min-[400px]:text-[14px] sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-[280px] font-normal px-2">
                    {member.desc}
                  </p>
                  
@@ -410,7 +410,7 @@ export default function About() {
                <h2 className="text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4 leading-[1.1]">
                  Have a <span className="text-sky-500">Business Challenge</span> to Solve?
                </h2>
-               <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-lg mb-0 leading-relaxed font-normal">
+               <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg mb-0 leading-relaxed font-normal">
                  Tell us what you're trying to build, improve or automate. We'll help you understand the possible technology approach and next steps.
                </p>
              </div>

@@ -152,14 +152,14 @@ const MobileProcessSection = ({ steps }) => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1]">
             A simple and transparent process
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
             Our structured 5-step methodology ensures seamless execution and
             predictable success.
           </p>
         </div>
 
         {/* Step Card Container */}
-        <div className="relative w-full max-w-[285px] h-[215px] my-auto flex items-center justify-center">
+        <div className="relative w-full max-w-[285px] h-[240px] my-auto flex items-center justify-center">
           {steps.map((p, i) => {
             const Icon = p.icon;
             const isActive = i === activeIndex;
@@ -185,7 +185,7 @@ const MobileProcessSection = ({ steps }) => {
             return (
               <div
                 key={i}
-                className={`absolute inset-0 p-4 rounded-2xl transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] flex flex-col justify-between ${transformClass}`}
+                className={`absolute inset-0 px-5 py-3.5 rounded-2xl transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] flex flex-col justify-between ${transformClass}`}
               >
                 <div className="flex items-center justify-between w-full">
                   {/* Icon Container: No border, no background color, no shadow */}
@@ -210,14 +210,14 @@ const MobileProcessSection = ({ steps }) => {
                     {p.title}
                   </h4>
                   <p
-                    className={`text-sm sm:text-base leading-relaxed font-normal ${isActive ? "text-slate-200" : "text-slate-400"}`}
+                    className={`text-[15px] sm:text-lg leading-relaxed font-normal ${isActive ? "text-slate-200" : "text-slate-400"}`}
                   >
                     {p.desc}
                   </p>
 
                   {/* Highlights right below description with no space between them, and bottom padding before footer */}
                   {p.highlights && (
-                    <div className="flex flex-wrap gap-2 pt-0.5 pb-3">
+                    <div className="flex flex-wrap gap-2 pt-0.5 pb-1">
                       {p.highlights.map((h, hIdx) => (
                         <span
                           key={hIdx}
@@ -305,8 +305,8 @@ const MobileIndustriesAccordion = ({ items }) => {
                 onClick={() => setActiveIndex(idx)}
                 className={`transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] relative overflow-hidden rounded-none cursor-pointer ${
                   isActive
-                    ? "w-full h-[235px] p-4 opacity-100 shadow-none bg-gradient-to-br from-[#0284c7] via-[#0284c7] to-[#39b54a] text-white border-t border-white/30 border-x-0 border-b-0 flex flex-col justify-between"
-                    : "w-full h-[40px] bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 border-x-0 border-b-0 opacity-90 shadow-none px-3.5 flex items-center justify-between"
+                    ? "w-full h-[285px] p-4 opacity-100 shadow-none bg-gradient-to-br from-[#0284c7] via-[#0284c7] to-[#39b54a] text-white border-t border-white/30 border-x-0 border-b-0 flex flex-col justify-between"
+                    : "w-full h-[55px] bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 border-x-0 border-b-0 opacity-90 shadow-none px-3.5 flex items-center justify-between"
                 }`}
               >
                 {/* Header Row: Title + Clean Icon */}
@@ -314,10 +314,10 @@ const MobileIndustriesAccordion = ({ items }) => {
                   className={`flex items-center justify-between w-full ${isActive ? "mb-1" : "h-full"}`}
                 >
                   <h3
-                    className={`tracking-wide transition-all truncate mr-2 ${
+                    className={`tracking-wide transition-all font-normal pr-2 ${
                       isActive
-                        ? "text-white text-lg sm:text-xl font-normal"
-                        : "text-slate-800 dark:text-slate-200 text-sm sm:text-base font-normal uppercase"
+                        ? "text-white text-xl sm:text-2xl"
+                        : "text-slate-800 dark:text-slate-200 text-base sm:text-lg uppercase"
                     }`}
                   >
                     {item.title}
@@ -340,7 +340,7 @@ const MobileIndustriesAccordion = ({ items }) => {
                         {item.subheading}
                       </div>
                       <div className="w-10 h-[1.5px] bg-white/60 mb-1.5" />
-                      <p className="text-white/95 text-xs sm:text-sm leading-relaxed font-normal line-clamp-3">
+                      <p className="text-white/95 text-base sm:text-lg leading-relaxed font-normal overflow-visible whitespace-normal">
                         {item.desc}
                       </p>
                     </div>
@@ -572,32 +572,32 @@ export default function Home() {
               {/* Startup Stats Counter Row - Black text & non-bold */}
               <div className="grid grid-cols-3 gap-3 sm:gap-8 pt-4 sm:pt-6 border-t border-slate-200/80 dark:border-slate-800">
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
                     Day 1
                   </div>
-                  <div className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
+                  <div className="text-sm sm:text-base font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
                     Startup Drive
                   </div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
                     100
                     <span className="text-slate-900 dark:text-white font-normal">
                       %
                     </span>
                   </div>
-                  <div className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
+                  <div className="text-sm sm:text-base font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
                     Dedicated Focus
                   </div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-900 dark:text-white tracking-tight">
                     24
                     <span className="text-slate-900 dark:text-white font-normal">
                       /7
                     </span>
                   </div>
-                  <div className="text-[11px] sm:text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
+                  <div className="text-sm sm:text-base font-normal text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1">
                     Agile Support
                   </div>
                 </div>
@@ -684,7 +684,7 @@ export default function Home() {
                   text="A Technology Partner You Can Trust"
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 transition-opacity"
                 />
-                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 font-normal max-w-xl">
+                <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8 font-normal max-w-xl">
                   ZAVYX Infotech is a growing technology company focused on
                   helping businesses use modern digital solutions to work
                   smarter, connect better and grow with confidence.
@@ -712,7 +712,7 @@ export default function Home() {
                         strokeWidth={1.5}
                       />
                     </div>
-                    <span className="text-sm sm:text-base font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                    <span className="text-lg sm:text-xl font-normal text-slate-800 dark:text-slate-200 leading-snug">
                       Client-Centric Approach
                     </span>
                   </div>
@@ -724,7 +724,7 @@ export default function Home() {
                         strokeWidth={1.5}
                       />
                     </div>
-                    <span className="text-sm sm:text-base font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                    <span className="text-lg sm:text-xl font-normal text-slate-800 dark:text-slate-200 leading-snug">
                       Collaborative and Transparent
                     </span>
                   </div>
@@ -736,7 +736,7 @@ export default function Home() {
                         strokeWidth={1.5}
                       />
                     </div>
-                    <span className="text-sm sm:text-base font-normal text-slate-800 dark:text-slate-200 leading-snug">
+                    <span className="text-lg sm:text-xl font-normal text-slate-800 dark:text-slate-200 leading-snug">
                       Reliable and Supportive
                     </span>
                   </div>

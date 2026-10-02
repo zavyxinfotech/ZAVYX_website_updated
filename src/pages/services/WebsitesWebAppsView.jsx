@@ -142,8 +142,8 @@ export default function WebsitesWebAppsView() {
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div className="flex flex-col items-start">
-                    <span className="text-[10px] sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight">Responsive</span>
-                    <span className="text-[10px] sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-tight hidden sm:block">Fast & Secure</span>
+                    <span className="text-[10px] sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-tight">Responsive</span>
+                    <span className="text-[10px] sm:text-sm font-normal text-slate-800 dark:text-slate-200 leading-tight hidden sm:block">Fast & Secure</span>
                   </div>
                 </div>
 
@@ -196,10 +196,10 @@ export default function WebsitesWebAppsView() {
         tag="WHAT WE BUILD" 
         title="Custom Web Solutions for Every Business Need" 
         cards={[
-          { title: <span className="text-xl sm:text-2xl">Business Websites</span>, desc: <span className="text-base sm:text-lg">Professional, SEO-friendly websites that build your brand and attract more customers.</span>, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Monitor },
-          { title: <span className="text-xl sm:text-2xl">Web Applications</span>, desc: <span className="text-base sm:text-lg">Custom web apps to automate processes, manage data, and improve productivity.</span>, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: ShoppingBag },
-          { title: <span className="text-xl sm:text-2xl">E-commerce Websites</span>, desc: <span className="text-base sm:text-lg">High-converting online stores with secure payment gateways and scalable architecture.</span>, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: ShoppingCart },
-          { title: <span className="text-xl sm:text-2xl">Web Portals</span>, desc: <span className="text-base sm:text-lg">Customer portals, employee portals, and admin dashboards tailored to your workflow.</span>, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Lock }
+          { title: <span className="text-2xl sm:text-3xl font-normal">Business Websites</span>, desc: <span className="text-lg sm:text-xl">Professional, SEO-friendly websites that build your brand and attract more customers.</span>, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400', icon: Monitor },
+          { title: <span className="text-2xl sm:text-3xl font-normal">Web Applications</span>, desc: <span className="text-lg sm:text-xl">Custom web apps to automate processes, manage data, and improve productivity.</span>, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400', icon: ShoppingBag },
+          { title: <span className="text-2xl sm:text-3xl font-normal">E-commerce Websites</span>, desc: <span className="text-lg sm:text-xl">High-converting online stores with secure payment gateways and scalable architecture.</span>, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400', icon: ShoppingCart },
+          { title: <span className="text-2xl sm:text-3xl font-normal">Web Portals</span>, desc: <span className="text-lg sm:text-xl">Customer portals, employee portals, and admin dashboards tailored to your workflow.</span>, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400', icon: Lock }
         ]} 
       />
 
@@ -254,7 +254,7 @@ export default function WebsitesWebAppsView() {
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 ml-2">ZAVYX Website Analytics</span>
+                  <span className="text-xs font-normal text-slate-600 dark:text-slate-300 ml-2">ZAVYX Website Analytics</span>
                 </div>
                 <div className="text-[11px] text-slate-400 bg-slate-200/60 dark:bg-slate-800 px-3 py-1 rounded-md">
                   zavyx.com/analytics
@@ -283,7 +283,7 @@ export default function WebsitesWebAppsView() {
                 {/* Main Graph Area */}
                 <div className="col-span-12 sm:col-span-9 flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">Website Analytics</h3>
+                    <h3 className="text-sm font-normal text-slate-800 dark:text-slate-200">Website Analytics</h3>
                     <div className="text-xs text-sky-600 font-semibold bg-sky-50 dark:bg-sky-950 px-2.5 py-1 rounded-md">This Month</div>
                   </div>
 
@@ -397,13 +397,13 @@ export default function WebsitesWebAppsView() {
                     <div className="w-16 h-16 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] m-3 bg-white dark:bg-slate-800 border-1 border-sky-400/80 dark:border-sky-500/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-md mb-4 group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300 relative bg-white">
                       <StepIcon className="w-6 h-6 " />
                     </div>
-                    <span className="text-sm sm:text-base font-normal text-sky-600 dark:text-sky-400 uppercase tracking-widest mb-1">
+                    <span className="text-base sm:text-lg font-normal text-sky-600 dark:text-sky-400 uppercase tracking-widest mb-1">
                       {step.num}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-normal leading-relaxed max-w-[220px]">
+                    <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal leading-relaxed max-w-[220px]">
                       {step.desc}
                     </p>
                   </div>
@@ -473,10 +473,10 @@ export default function WebsitesWebAppsView() {
                       <BIcon className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-1">
                         {b.title}
                       </h3>
-                      <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                      <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                         {b.desc}
                       </p>
                     </div>

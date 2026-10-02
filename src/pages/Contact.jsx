@@ -222,10 +222,10 @@ export default function Contact() {
                 <span className="text-[11px] font-normal text-slate-400 dark:text-slate-400 tracking-widest uppercase block mb-1">
                   LOCATION
                 </span>
-                <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
                   Visit Us At
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                <p className="text-[15px] sm:text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                   ZAVYX InfoTech (TeesZone Clothing Private Limited), #2155, Fortune City, Global Market – Texvalley, NH 544 Bengaluru–Cochin National Highway, Chithode, Erode – 638102, Tamil Nadu, India.
                 </p>
               </div>
@@ -245,16 +245,16 @@ export default function Contact() {
                 <span className="text-[11px] font-normal text-slate-400 dark:text-slate-400 tracking-widest uppercase block mb-1">
                   24/7 SERVICE
                 </span>
-                <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
                   Call Us On
                 </h3>
-                <p className="text-sm sm:text-base font-normal text-slate-800 dark:text-slate-200 mb-3">
+                <p className="text-base sm:text-lg font-normal text-slate-800 dark:text-slate-200 mb-3">
                   +91 63827 21178
                 </p>
               </div>
               <a 
                 href="tel:+916382721178" 
-                className="text-xs sm:text-sm font-normal text-[#0284c7] dark:text-sky-400 hover:underline inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform mt-2"
+                className="text-[15px] sm:text-base font-normal text-[#0284c7] dark:text-sky-400 hover:underline inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform mt-2"
               >
                 Call Now <ArrowRight className="w-3.5 h-3.5" />
               </a>
@@ -274,16 +274,16 @@ export default function Contact() {
                 <span className="text-[11px] font-normal text-slate-400 dark:text-slate-400 tracking-widest uppercase block mb-1">
                   DROP A LINE
                 </span>
-                <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
                   Mail Address
                 </h3>
-                <p className="text-sm sm:text-base font-normal text-slate-800 dark:text-slate-200 mb-3 break-all">
+                <p className="text-base sm:text-lg font-normal text-slate-800 dark:text-slate-200 mb-3 break-all">
                   hello@zavyx.in
                 </p>
               </div>
               <a 
                 href="mailto:hello@zavyx.in" 
-                className="text-xs sm:text-sm font-normal text-[#0284c7] dark:text-sky-400 hover:underline inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform mt-2"
+                className="text-[15px] sm:text-base font-normal text-[#0284c7] dark:text-sky-400 hover:underline inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform mt-2"
               >
                 Send Email <ArrowRight className="w-3.5 h-3.5" />
               </a>
@@ -303,13 +303,13 @@ export default function Contact() {
                 <span className="text-[11px] font-normal text-slate-400 dark:text-slate-400 tracking-widest uppercase block mb-1">
                   OFFICE HOURS
                 </span>
-                <h3 className="text-lg font-normal text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
                   Opening Time
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                <p className="text-[15px] sm:text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                   Mon – Fri: 9:30 AM – 6:00 PM IST
                 </p>
-                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-500 font-normal mt-1">
+                <p className="text-[15px] sm:text-base lg:text-lg text-slate-500 dark:text-slate-500 font-normal mt-1">
                   Saturday & Sunday (Closed)
                 </p>
               </div>
@@ -354,7 +354,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your Name"
-                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
+                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
                       />
                     </div>
                     <div>
@@ -365,7 +365,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Your Email"
-                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
+                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
                       />
                     </div>
                   </div>
@@ -379,7 +379,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Phone Number"
-                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
+                        className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all"
                       />
                     </div>
                     <div className="relative">
@@ -387,7 +387,7 @@ export default function Contact() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full appearance-none rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all cursor-pointer"
+                        className="w-full appearance-none rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all cursor-pointer"
                       >
                         <option value="" disabled className="text-slate-400">Service Interested In</option>
                         <option value="Websites & Web Apps">Websites & Web Apps</option>
@@ -413,7 +413,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Your Message"
-                      className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all resize-none"
+                      className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 px-4 py-3.5 text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#0284c7] transition-all resize-none"
                     ></textarea>
                   </div>
 

@@ -69,8 +69,13 @@ import {
 } from 'lucide-react';
 
 
-import aiHeroImg from '../../../assets/images/AI_Automation_hero_img.webp';
 import aitransformyourideasImg from '../../../assets/images/AI_automations_transform_your_operations.webp';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
 
 
 
@@ -79,12 +84,12 @@ import { pageConfigs } from './Shared';
 
 export default function AiAutomationView() {
   const whatsappServices = [
-    { title: <span className="text-xl sm:text-2xl">Intelligent Workflow Automation</span>, desc: <span className="text-base sm:text-lg">Automate repetitive chat tasks and streamline business workflows via WhatsApp Business API.</span>, icon: Workflow, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
-    { title: <span className="text-xl sm:text-2xl">AI Chatbots & Virtual Assistants</span>, desc: <span className="text-base sm:text-lg">Build intelligent assistants for customer support, internal operations, and lead qualification 24/7.</span>, icon: Bot, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
-    { title: <span className="text-xl sm:text-2xl">Document & Data Automation</span>, desc: <span className="text-base sm:text-lg">Extract, process, and send instant messaging receipts, order updates, and notifications.</span>, icon: FileText, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' },
-    { title: <span className="text-xl sm:text-2xl">Predictive Analytics & Insights</span>, desc: <span className="text-base sm:text-lg">Turn your conversation data into accurate predictions and actionable growth insights.</span>, icon: BarChart3, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
-    { title: <span className="text-xl sm:text-2xl">AI Content & Process Intelligence</span>, desc: <span className="text-base sm:text-lg">Leverage AI to analyze, generate and optimize business content and processes.</span>, icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
-    { title: <span className="text-xl sm:text-2xl">Custom AI Integrations</span>, desc: <span className="text-base sm:text-lg">Integrate AI into your existing systems with tailored solutions for your business.</span>, icon: Cpu, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
+    { title: <span className="text-2xl sm:text-3xl font-normal">Intelligent Workflow Automation</span>, desc: <span className="text-lg sm:text-xl">Automate repetitive chat tasks and streamline business workflows via WhatsApp Business API.</span>, icon: Workflow, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">AI Chatbots & Virtual Assistants</span>, desc: <span className="text-lg sm:text-xl">Build intelligent assistants for customer support, internal operations, and lead qualification 24/7.</span>, icon: Bot, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Document & Data Automation</span>, desc: <span className="text-lg sm:text-xl">Extract, process, and send instant messaging receipts, order updates, and notifications.</span>, icon: FileText, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Predictive Analytics & Insights</span>, desc: <span className="text-lg sm:text-xl">Turn your conversation data into accurate predictions and actionable growth insights.</span>, icon: BarChart3, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">AI Content & Process Intelligence</span>, desc: <span className="text-lg sm:text-xl">Leverage AI to analyze, generate and optimize business content and processes.</span>, icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Custom AI Integrations</span>, desc: <span className="text-lg sm:text-xl">Integrate AI into your existing systems with tailored solutions for your business.</span>, icon: Cpu, color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' }
   ];
 
   const workflowSteps = [
@@ -125,7 +130,7 @@ export default function AiAutomationView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION WITH ACCENTS */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
@@ -177,10 +182,10 @@ export default function AiAutomationView() {
             </ScrollSlideSection>
 
             {/* Hero Right Visual Diagram */}
-            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end my-0.5 sm:my-1 lg:my-0">
+            <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-6 relative flex justify-center lg:justify-end py-8 sm:py-10 my-0.5 sm:my-1 lg:my-0 lg:py-0">
               <div className="relative w-full max-w-[280px] min-[300px]:max-w-[400px] sm:max-w-[580px] lg:max-w-[780px] group cursor-pointer">
                   <img
-                    src={aiHeroImg}
+                    src={aitransformyourideasImg}
                     alt="AI & Automation"
                     className="w-full h-auto max-h-[250px] min-[400px]:max-h-[300px] sm:max-h-[460px] lg:max-h-[520px] object-cover rounded-2xl filter drop-shadow-2xl transform scale-110 sm:scale-100"
                   />
@@ -220,13 +225,85 @@ export default function AiAutomationView() {
         </div>
       </section>
 
-      {/* 2. WHAT WE BUILD SECTION */}
-      <ServiceCardsSection
-        tag="OUR SERVICES"
-        title="AI-Powered Solutions Built for Your Business"
-        sub="Leverage the power of AI and automation to reduce manual work, improve efficiency, and enable scalable business operations for a future-ready enterprise."
-        cards={whatsappServices}
-      />
+      {/* 2. WHAT WE BUILD SECTION (Custom Swiper for Mobile + Grid for Desktop) */}
+      <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full overflow-hidden">
+        <ScrollSlideSection direction="up" className="mb-10 text-left">
+          <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
+            OUR SERVICES
+          </h4>
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-normal tracking-tight leading-[1.1] text-slate-900 dark:text-white max-w-none mx-auto lg:mx-0 mb-2">
+            AI-Powered Solutions Built for Your Business
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+            Leverage the power of AI and automation to reduce manual work, improve efficiency, and enable scalable business operations for a future-ready enterprise.
+          </p>
+        </ScrollSlideSection>
+
+        {/* MOBILE SWIPER */}
+        <div className="block md:hidden pb-10">
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            modules={[EffectCards, Pagination]}
+            className="w-[85%] max-w-[340px] mx-auto h-[440px]"
+            pagination={{ clickable: true, dynamicBullets: true, el: '.swiper-pagination-cards' }}
+          >
+            {whatsappServices.map((card, idx) => {
+              const Icon = card.icon || Monitor;
+              return (
+                <SwiperSlide key={idx} className="bg-white dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)] flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`w-14 h-14 rounded-full ${card.color} flex items-center justify-center shrink-0 shadow-sm`}>
+                        <Icon className="w-7 h-7" />
+                      </div>
+                      <div className="w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center shadow-sm shrink-0">
+                        <ArrowUpRight className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-4">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6">
+                      {card.desc}
+                    </p>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+            <div className="swiper-pagination-cards flex justify-center mt-6"></div>
+          </Swiper>
+        </div>
+
+        {/* DESKTOP GRID */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {whatsappServices.map((card, idx) => {
+            const Icon = card.icon || Monitor;
+            return (
+              <ScrollSlideSection key={idx} delay={`${idx * 80}ms`} direction="up">
+                <div className="bg-white dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full group">
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`w-14 h-14 rounded-full ${card.color} flex items-center justify-center shrink-0 shadow-sm`}>
+                        <Icon className="w-7 h-7" />
+                      </div>
+                      <div className="w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 flex items-center justify-center group-hover:bg-[#00016E] group-hover:text-white group-hover:border-[#00016E] transition-all duration-300 shadow-sm shrink-0">
+                        <ArrowUpRight className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-normal text-slate-900 dark:text-white mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6">
+                      {card.desc}
+                    </p>
+                  </div>
+                </div>
+              </ScrollSlideSection>
+            );
+          })}
+        </div>
+      </section>
 
       {/* 3. HOW AI AUTOMATION WORKS SECTION */}
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -248,14 +325,14 @@ export default function AiAutomationView() {
               <div className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 border-0 shadow-sm hover:shadow-md transition-all h-full flex flex-col justify-between relative group">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-bold text-lg sm:text-xl flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800">
+                    <span className="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-normal text-lg sm:text-xl flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800">
                       {step.num}
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">
+                    <h3 className="text-3xl sm:text-4xl font-normal text-slate-900 dark:text-white">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
+                  <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -292,8 +369,8 @@ export default function AiAutomationView() {
                   <Zap className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-base font-semibold text-slate-900 dark:text-white">Reduce Manual Work</h4>
-                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Automate repetitive and time-consuming tasks.</p>
+                  <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-0.5">Reduce Manual Work</h4>
+                  <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal">Automate repetitive and time-consuming tasks.</p>
                 </div>
               </div>
 
@@ -302,8 +379,8 @@ export default function AiAutomationView() {
                   <TrendingUp className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-base font-semibold text-slate-900 dark:text-white">Faster Decisions</h4>
-                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Get real-time insights and make smarter decisions.</p>
+                  <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-0.5">Faster Decisions</h4>
+                  <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal">Get real-time insights and make smarter decisions.</p>
                 </div>
               </div>
 
@@ -312,8 +389,8 @@ export default function AiAutomationView() {
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-base font-semibold text-slate-900 dark:text-white">Fewer Errors</h4>
-                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Minimize human errors and ensure consistency.</p>
+                  <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-0.5">Fewer Errors</h4>
+                  <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal">Minimize human errors and ensure consistency.</p>
                 </div>
               </div>
 
@@ -322,8 +399,8 @@ export default function AiAutomationView() {
                   <Cpu className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-base font-semibold text-slate-900 dark:text-white">Scalable Operations</h4>
-                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-normal">Grow your business without operational limits.</p>
+                  <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-0.5">Scalable Operations</h4>
+                  <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-normal">Grow your business without operational limits.</p>
                 </div>
               </div>
             </div>
@@ -398,7 +475,7 @@ export default function AiAutomationView() {
                     <ItemIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white mb-2">
                       {item.title}
                     </h3>
                     <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed">

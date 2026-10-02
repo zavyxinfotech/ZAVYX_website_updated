@@ -70,8 +70,8 @@ import {
 
 
 import brandingHeroImg from '../../../assets/images/Branding_Creative_Herom_img.webp';
-import logoDesign from '../../../assets/images/Logo_Brand_identity.webp';
-import packagedesign from '../../../assets/images/packaging_design.webp';
+import logoDesign from '../../../assets/images/Logo_brand_identity.webp';
+import packagedesign from '../../../assets/images/Packaging_design.webp';
 import brandingcollateral from '../../../assets/images/Brand_collateral.webp';
 import socialmediacreative from '../../../assets/images/Social_media_creative.webp';
 
@@ -228,7 +228,7 @@ export default function BrandingCreativeView() {
                         <StepIcon className="w-8 h-8 opacity-90" />
                       </div>
                       <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                        <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
+                        <span className="font-normal text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> {step.title}
                       </h3>
                       <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-[140px] font-normal">{step.desc}</p>
                     </div>

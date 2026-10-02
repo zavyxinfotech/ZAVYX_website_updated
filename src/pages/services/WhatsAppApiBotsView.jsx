@@ -68,7 +68,7 @@ import {
   ArrowDown
 } from 'lucide-react';
 
-import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero_img.webp';
+import whatsappHeroImg from '../../../assets/images/Whatsapp_API_hero.webp';
 
 
 
@@ -77,12 +77,12 @@ import { pageConfigs } from './Shared';
 
 export default function WhatsAppApiBotsView() {
   const whatsappServices = [
-    { title: <span className="text-xl sm:text-2xl">WhatsApp Business API Integration</span>, desc: <span className="text-base sm:text-lg">Secure and official WhatsApp Business API setup with seamless integration to your systems.</span>, icon: MessageCircle, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400' },
-    { title: <span className="text-xl sm:text-2xl">AI Chatbots</span>, desc: <span className="text-base sm:text-lg">Intelligent chatbots to handle queries, provide instant answers, and automate workflows.</span>, icon: Bot, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
-    { title: <span className="text-xl sm:text-2xl">Automated Notifications</span>, desc: <span className="text-base sm:text-lg">Send order updates, appointment reminders, payment confirmations and more — automatically.</span>, icon: Bell, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
-    { title: <span className="text-xl sm:text-2xl">Marketing Campaigns</span>, desc: <span className="text-base sm:text-lg">Run targeted campaigns, product updates and promotions with high delivery rates.</span>, icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
-    { title: <span className="text-xl sm:text-2xl">Customer Support Automation</span>, desc: <span className="text-base sm:text-lg">Automate FAQs, ticket creation and routing to the right team for faster resolution.</span>, icon: Headphones, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
-    { title: <span className="text-xl sm:text-2xl">CRM Integration</span>, desc: <span className="text-base sm:text-lg">Connect WhatsApp with your CRM to sync leads, customers and conversations.</span>, icon: Database, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' }
+    { title: <span className="text-2xl sm:text-3xl font-normal">WhatsApp Business API Integration</span>, desc: <span className="text-lg sm:text-xl">Secure and official WhatsApp Business API setup with seamless integration to your systems.</span>, icon: MessageCircle, color: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">AI Chatbots</span>, desc: <span className="text-lg sm:text-xl">Intelligent chatbots to handle queries, provide instant answers, and automate workflows.</span>, icon: Bot, color: 'bg-pink-50 text-pink-600 dark:bg-pink-950/40 dark:text-pink-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Automated Notifications</span>, desc: <span className="text-lg sm:text-xl">Send order updates, appointment reminders, payment confirmations and more — automatically.</span>, icon: Bell, color: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Marketing Campaigns</span>, desc: <span className="text-lg sm:text-xl">Run targeted campaigns, product updates and promotions with high delivery rates.</span>, icon: Megaphone, color: 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">Customer Support Automation</span>, desc: <span className="text-lg sm:text-xl">Automate FAQs, ticket creation and routing to the right team for faster resolution.</span>, icon: Headphones, color: 'bg-purple-50 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
+    { title: <span className="text-2xl sm:text-3xl font-normal">CRM Integration</span>, desc: <span className="text-lg sm:text-xl">Connect WhatsApp with your CRM to sync leads, customers and conversations.</span>, icon: Database, color: 'bg-teal-50 text-teal-600 dark:bg-teal-950/40 dark:text-teal-400' }
   ];
 
   const whyChooseUs = [
@@ -107,7 +107,7 @@ export default function WhatsAppApiBotsView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION WITH ACCENTS */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-emerald-300/20 dark:bg-emerald-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
 
@@ -220,7 +220,7 @@ export default function WhatsAppApiBotsView() {
             <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-between lg:justify-between relative px-2 gap-10 lg:gap-0 lg:min-w-[900px]">
                {/* Step 1 */}
                <div className="relative z-10 flex flex-col items-center w-full lg:w-1/5 max-w-[280px] lg:max-w-none">
-                 <div className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200 mb-4 px-2">1. Customer Message</div>
+                 <div className="text-lg sm:text-xl font-normal text-slate-700 dark:text-slate-200 mb-4 px-2">1. Customer Message</div>
                  <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm w-[90%] flex items-start gap-3 relative h-[140px] transform transition-transform hover:-translate-y-1">
                    <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 shrink-0 overflow-hidden" />
                    <div className="bg-slate-100 dark:bg-slate-700/50 rounded-xl rounded-tl-none p-3 text-sm sm:text-base leading-snug text-slate-700 dark:text-slate-300 font-medium">
@@ -233,7 +233,7 @@ export default function WhatsAppApiBotsView() {
 
                {/* Step 2 */}
                <div className="relative z-10 flex flex-col items-center w-full lg:w-1/5 max-w-[280px] lg:max-w-none">
-                 <div className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200 mb-4 px-2">2. WhatsApp API</div>
+                 <div className="text-lg sm:text-xl font-normal text-slate-700 dark:text-slate-200 mb-4 px-2">2. WhatsApp API</div>
                  <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm w-[90%] flex flex-col items-center gap-2 relative h-[140px] transform transition-transform hover:-translate-y-1">
                    <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-500 flex items-center justify-center">
                      <MessageCircle className="w-6 h-6 fill-current" />
@@ -248,7 +248,7 @@ export default function WhatsAppApiBotsView() {
 
                {/* Step 3 */}
                <div className="relative z-10 flex flex-col items-center w-full lg:w-1/5 max-w-[280px] lg:max-w-none">
-                 <div className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200 mb-4 px-2">3. Bot / Automation</div>
+                 <div className="text-lg sm:text-xl font-normal text-slate-700 dark:text-slate-200 mb-4 px-2">3. Bot / Automation</div>
                  <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm w-[90%] flex flex-col items-center justify-center gap-2 relative h-[140px] transform transition-transform hover:-translate-y-1">
                    <div className="w-8 h-8 text-sky-500 flex items-center justify-center mb-1">
                      <Bot className="w-8 h-8" />
@@ -265,7 +265,7 @@ export default function WhatsAppApiBotsView() {
 
                {/* Step 4 */}
                <div className="relative z-10 flex flex-col items-center w-full lg:w-1/5 max-w-[280px] lg:max-w-none">
-                 <div className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200 mb-4 px-2">4. CRM System</div>
+                 <div className="text-lg sm:text-xl font-normal text-slate-700 dark:text-slate-200 mb-4 px-2">4. CRM System</div>
                  <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm w-[90%] flex flex-col items-center justify-center gap-2 relative h-[140px] transform transition-transform hover:-translate-y-1">
                    <div className="w-8 h-8 text-indigo-500 flex items-center justify-center mb-1">
                      <Database className="w-8 h-8" />
@@ -281,7 +281,7 @@ export default function WhatsAppApiBotsView() {
 
                {/* Step 5 */}
                <div className="relative z-10 flex flex-col items-center w-full lg:w-1/5 max-w-[280px] lg:max-w-none">
-                 <div className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200 mb-4 px-2">5. Human Agent</div>
+                 <div className="text-lg sm:text-xl font-normal text-slate-700 dark:text-slate-200 mb-4 px-2">5. Human Agent</div>
                  <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm w-[90%] flex items-center gap-3 relative h-[140px] transform transition-transform hover:-translate-y-1">
                    <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 shrink-0 overflow-hidden" />
                    <div className="bg-sky-50 dark:bg-sky-900/40 border border-sky-100 dark:border-sky-800 rounded-xl rounded-tl-none p-3 text-sm sm:text-base leading-snug text-slate-700 dark:text-slate-300 font-medium">
@@ -320,14 +320,14 @@ export default function WhatsAppApiBotsView() {
           <ScrollSlideSection direction="up" delay="100ms" className="lg:col-span-7">
           <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6 transform hover:-translate-y-2 transition-transform duration-500">
             <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-4">
-               <h3 className="text-lg font-bold text-slate-900 dark:text-white">WhatsApp Analytics</h3>
+               <h3 className="text-lg font-normal text-slate-900 dark:text-white">WhatsApp Analytics</h3>
                <div className="bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 flex items-center gap-1 border border-slate-200 dark:border-slate-700">
                  Last 30 Days <ChevronDown className="w-3 h-3" />
                </div>
             </div>
 
             {/* Metrics Row */}
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                <div>
                   <div className="text-sm font-semibold text-slate-600 dark:text-slate-400 flex items-center gap-1.5"><MessageCircle className="w-4 h-4 text-sky-500" /> 125,640</div>
                   <div className="text-[10px] text-slate-500">Messages Sent</div>
@@ -351,7 +351,7 @@ export default function WhatsAppApiBotsView() {
             </div>
 
             {/* Charts Row */}
-            <div className="grid grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                <div className="flex flex-col gap-2">
                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200">Conversation Trends</div>
                  <div className="relative h-24 w-full flex items-end gap-1.5 justify-between">
@@ -378,13 +378,13 @@ export default function WhatsAppApiBotsView() {
                    </div>
                    <div className="flex flex-col gap-1.5 w-full">
                      <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400">
-                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-sky-400" /> Customer Queries</span> <span className="font-bold">45%</span>
+                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-sky-400" /> Customer Queries</span> <span className="font-normal">45%</span>
                      </div>
                      <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400">
-                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-pink-400" /> Order Updates</span> <span className="font-bold">25%</span>
+                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-pink-400" /> Order Updates</span> <span className="font-normal">25%</span>
                      </div>
                      <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400">
-                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-emerald-400" /> Campaign Messages</span> <span className="font-bold">20%</span>
+                       <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-emerald-400" /> Campaign Messages</span> <span className="font-normal">20%</span>
                      </div>
                    </div>
                  </div>
@@ -416,7 +416,7 @@ export default function WhatsAppApiBotsView() {
                     <FeatureIcon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-1 leading-tight group-hover:text-sky-600 dark:group-hover:text-sky-400">{feature.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-normal text-slate-900 dark:text-white mb-1 leading-tight group-hover:text-sky-600 dark:group-hover:text-sky-400">{feature.title}</h3>
                     <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">{feature.desc}</p>
                   </div>
                 </div>
@@ -446,7 +446,7 @@ export default function WhatsAppApiBotsView() {
                   <div className={`w-12 h-12 rounded-xl ${useCase.color} flex items-center justify-center shrink-0 transition-transform group-hover:scale-110`}>
                     <CaseIcon className="w-6 h-6" />
                   </div>
-                  <span className="text-md font-semibold text-slate-800 dark:text-slate-200">
+                  <span className="text-md font-normal text-slate-800 dark:text-slate-200">
                     {useCase.title}
                   </span>
                 </div>

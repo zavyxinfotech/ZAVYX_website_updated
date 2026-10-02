@@ -242,7 +242,7 @@ export default function MobileAppsView() {
                       <StepIcon className="w-5 h-5" />
                     </div>
                     <span className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white block mb-2">
-                      <span className="text-xl sm:text-2xl font-bold text-sky-600 dark:text-sky-400 mr-2">{step.num}</span> {step.title}
+                      <span className="text-xl sm:text-2xl font-normal text-sky-600 dark:text-sky-400 mr-2">{step.num}</span> {step.title}
                     </span>
                     <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                       {step.desc}

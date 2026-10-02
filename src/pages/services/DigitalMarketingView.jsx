@@ -106,7 +106,7 @@ export default function DigitalMarketingView() {
     <div className="bg-slate-50/50 dark:bg-[#050B14] text-slate-900 dark:text-slate-50 min-h-screen transition-colors duration-300 font-sans pb-16 relative overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="custom-mobile-hero relative pt-20 pb-4 lg:pt-24 lg:pb-12 overflow-hidden bg-transparent min-h-[100dvh] flex flex-col justify-center">
+      <section className="custom-mobile-hero relative pt-20 pb-0 lg:pt-24 lg:pb-0 overflow-hidden bg-transparent min-h-[85dvh] flex flex-col justify-center">
         <div className="absolute top-0 right-0 w-[55vw] h-[55vw] bg-gradient-to-bl from-sky-200/60 via-blue-100/30 to-transparent rounded-bl-[160px] -z-10 hidden lg:block opacity-90 blur-3xl pointer-events-none" />
         <div className="absolute top-12 right-0 w-32 h-64 bg-pink-300/20 dark:bg-pink-900/10 rounded-l-full blur-2xl pointer-events-none -z-10" />
         
@@ -224,7 +224,7 @@ export default function DigitalMarketingView() {
                           <StepIcon className="w-6 h-6 opacity-80" />
                         </div>
                         <h3 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          <span className="font-semibold text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> <span className="text-slate-900 dark:text-slate-100">{step.title}</span>
+                          <span className="font-normal text-sky-700 dark:text-sky-400 text-xl sm:text-2xl">{step.num}</span> <span className="text-slate-900 dark:text-slate-100">{step.title}</span>
                         </h3>
                         <p className="text-base sm:text-lg text-slate-500 max-w-[140px] text-center font-normal">{step.desc}</p>
                       </div>
@@ -261,7 +261,7 @@ export default function DigitalMarketingView() {
                      <div className={'w-10 h-10 rounded-lg flex items-center justify-center ' + item.color}>
                        <item.icon className="w-3 h-5 fill-current opacity-80" />
                      </div>
-                     <h4 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-white">{item.title}</h4>
+                     <h4 className="text-xl sm:text-2xl font-normal text-slate-900 dark:text-white">{item.title}</h4>
                      <p className="text-base sm:text-lg text-slate-500 font-normal">{item.desc}</p>
                    </div>
                  ))}
@@ -279,21 +279,21 @@ export default function DigitalMarketingView() {
       <section className="py-12 sm:py-16 max-w-[1350px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="relative rounded-3xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-sky-50 to-blue-50 dark:from-slate-800 dark:to-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm">
           <div className="relative z-10 text-left">
-            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-xs sm:text-sm uppercase mb-2">
+            <h4 className="text-sky-600 dark:text-sky-400 font-normal tracking-widest text-base sm:text-lg uppercase mb-2">
               LET'S GROW TOGETHER
             </h4>
-            <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 dark:text-white mb-3">
               Ready to Take Your Business to the Next Level?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-6 font-normal">
+            <p className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl mb-6 font-normal">
               Let's create a digital marketing strategy that delivers real results.
             </p>
           </div>
           <div className="relative z-10 shrink-0">
-             <Link to="/contact" className="relative inline-flex h-10 sm:h-14 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
+             <Link to="/contact" className="relative inline-flex h-12 sm:h-16 overflow-hidden rounded-md p-[2px] group w-max shadow-sm cursor-pointer">
                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#00016E_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-6 sm:px-8 gap-2 text-base z-10 transition-all border border-[#00016E] group-hover:border-transparent">
-                  Get in Touch <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1" />
+                <span className="inline-flex h-full w-full items-center justify-center rounded-[4px] bg-[#00016E] text-white font-semibold px-8 sm:px-10 gap-2 text-lg sm:text-xl z-10 transition-all border border-[#00016E] group-hover:border-transparent">
+                  Get in Touch <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:translate-x-1 transition-transform" />
                 </span>
              </Link>
           </div>
